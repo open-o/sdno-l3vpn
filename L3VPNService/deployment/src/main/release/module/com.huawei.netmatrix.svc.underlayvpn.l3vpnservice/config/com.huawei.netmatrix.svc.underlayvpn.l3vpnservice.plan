@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan>
+    <artifact type="SDK" name="framework/com.bsp.sdk.framwork"/>
+    <artifact type="SDK" name="puer_cbb/com.puer.framework.cbb"/>
+    <artifact type="SDK" name="puer_cache/com.puer.framework.cache"/>
+    <artifact type="SDK" name="puer_container/com.puer.framework.container"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.sdk.netmatrix"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.cbb"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.sdk.event"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.sdk.inventory"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.model/com.huawei.netmatrix.model.vpn.wan"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.cbb.wanvpn/com.huawei.netmatrix.cbb.wanvpn.util"/>
+	<artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.cbb.wanvpn/com.huawei.netmatrix.cbb.wanvpn.inventory.sdk"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.cbb.wanvpn/com.huawei.netmatrix.cbb.wanvpn.dao"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.cbb.wanvpn/com.huawei.netmatrix.cbb.wanvpn.translator"/>
+    <artifact type="SDK" name="netmatrix_common/com.huawei.netmatrix.sdk.license"/>
+    <artifact type="SDK" name="rtsp_icto_commsvc_common"/>
+    <artifact type="SDK"
+              name="netmatrix_common/com.huawei.netmatrix.cbb.wanvpn/com.huawei.netmatrix.cbb.wanvpn.api.qos.qospolicyservice"/>
+    <artifact type="bundle" name="com.huawei.netmatrix.svc.underlayvpn.l3vpnservice"/>
+</plan>

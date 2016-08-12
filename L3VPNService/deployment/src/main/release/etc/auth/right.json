@@ -1,0 +1,133 @@
+[
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/action",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:modify"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}",
+		"method": "DELETE",
+		"action": "L3VPNService:l3vpn:delete"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:create"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}",
+		"method": "PUT",
+		"action": "L3VPNService:l3vpn:modify"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/tps",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:create"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/tppair",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:create"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/status",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/ne/{uuid}/terminalpoint",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{vpnId}/tps/{tpId}/action",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:modify"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{vpnUuid}/tps/{tpUuid}",
+		"method": "DELETE",
+		"action": "L3VPNService:l3vpn:delete"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{vpnUuid}/tps/{tpUuid}",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:modify"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/tepath",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{vpnId}/tps/{tpId}/route-protocol-specs/{uuid}",
+		"method": "DELETE",
+		"action": "L3VPNService:l3vpn:delete"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{vpnId}/tps/{tpId}/route-protocol-specs",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:create"
+	},
+    {
+        "uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/tunnelprotection",
+        "method": "PUT",
+        "action": "L3VPNService:l3vpn:modify"
+    },
+    {
+        "uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/tunnelbandwidth",
+        "method": "PUT",
+        "action": "L3VPNService:l3vpn:modify"
+    },
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/collect-task/{uuid}/status",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/collect-task/{uuid}/result",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/collect-task/collect",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:create"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/tunnels",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	}
+	,
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/{uuid}/ping",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:create"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/ping",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/l3vpns/ping",
+		"method": "DELETE",
+		"action": "L3VPNService:l3vpn:delete"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/notifications",
+		"method": "POST",
+		"action": "L3VPNService:l3vpn:get"
+	},
+	{
+		"uri-pattern": "/rest/svc/l3vpn/v1/notifications",
+		"method": "GET",
+		"action": "L3VPNService:l3vpn:get"
+	}
+]
