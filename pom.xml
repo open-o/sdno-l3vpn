@@ -14,11 +14,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>cbb</module>
-		<module>model</module>
-		<module>sbimodel</module>
-		<module>util</module>
-        <module>L3VPNService</module>
+        <module>util</module>
+        <module>translator</module>
+        <module>inventory</module>
+        <module>dao</module>
+        <module>service</module>
+        <module>model</module>
+        <module>deployment</module>
     </modules>
 
 </project>

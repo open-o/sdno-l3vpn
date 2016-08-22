@@ -4,12 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.openo.sdno</groupId>
-        <artifactId>l3vpnservice-root</artifactId>
+        <artifactId>wanvpn</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>l3vpnservice-deployment</artifactId>
-    <name>L3vpnServiceDeployment</name>
     <packaging>jar</packaging>
 
     <properties>
@@ -33,53 +32,56 @@
                 <version>1.5</version>
                 <executions>
                     <execution>
-                        <id>WanvpnService package</id>
+                        <id>l3vpnservice package</id>
                         <phase>package</phase>
                         <goals>
                             <goal>execute</goal>
                         </goals>
                         <configuration>
                             <source>
-                                System.out.println("******** Going
-                                to make release zip ********")
-
+                                System.out.println("******** Going to make release zip ********")
+                                projectName =
+                                "org.openo.sdno.l3vpnservice"
                                 deployFolder =
                                 "${project.build.directory}/deployoutput"
                                 deployUnzip =
                                 "${project.build.directory}/deployunzip"
                                 outfileName =
-                                "overlayvpnservice.${project.version}.zip"
-
+                                "${projectName}.${project.version}.zip"
                                 ant.delete(dir: "${deployFolder}")
-                                ant.mkdir(dir: "${deployFolder}")
+                                ant.mkdir(dir:
+                                "${deployFolder}")
 
-                                ant.delete(dir: "${deployUnzip}")
+                                ant.delete(dir:
+                                "${deployUnzip}")
                                 ant.mkdir(dir:
                                 "${deployUnzip}")
 
                                 ant.mkdir(dir:
-                                "${deployUnzip}/webapps/ROOT")
+                                "${deployUnzip}/webapps/")
                                 ant.mkdir(dir:
                                 "${deployUnzip}/logs")
 
-                                ant.copy(todir: "${deployUnzip}") {
+                                ant.copy(todir:
+                                "${deployUnzip}") {
                                 fileset(dir:
                                 "${basedir}/src/main/release"){
-                                exclude(name: "**/.gitignore")
+                                exclude(name:
+                                "**/.gitignore")
                                 }
                                 }
+
                                 ant.copy(todir:
-                                "${deployUnzip}/webapps/ROOT") {
+                                "${deployUnzip}/webapps/${projectName}-${project.version}") {
                                 fileset(dir:
-                                "${project.build.directory}/../../service/target/ROOT")
+                                "${project.build.directory}/../../service/target/${projectName}-${project.version}")
                                 }
 
                                 ant.zip(destfile:
                                 "${deployFolder}/${outfileName}") {
                                 fileset(dir: "${deployUnzip}")
                                 }
-                                System.out.println("******** completed.
-                                ************")
+                                System.out.println("******** completed. ************")
                             </source>
                         </configuration>
                     </execution>
