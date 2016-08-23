@@ -29,6 +29,12 @@ public enum RouteProtocolType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     RouteProtocolType(String commonName) {
         this.commonName = commonName;
     }

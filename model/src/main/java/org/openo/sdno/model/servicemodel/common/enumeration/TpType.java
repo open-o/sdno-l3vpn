@@ -29,6 +29,12 @@ public enum TpType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     TpType(String commonName) {
         this.commonName = commonName;
     }

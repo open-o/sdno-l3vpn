@@ -2,16 +2,16 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.openo.sdno</groupId>
-        <artifactId>wanvpn</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>org.openo.baseservice</groupId>
+        <artifactId>common-setting</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>org.openo.sdno</groupId>
-    <artifactId>org.openo.sdno.l3vpnmodel</artifactId>
+    <artifactId>org.openo.sdno.wanvpn.model</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>org.openo.sdno.l3vpnmodel</name>
+    <name>org.openo.sdno.wanvpn.model</name>
 
     <dependencies>
         <dependency>

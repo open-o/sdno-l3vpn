@@ -30,6 +30,12 @@ public enum ObjectType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     ObjectType(String commonName) {
         this.commonName = commonName;
     }

@@ -29,6 +29,12 @@ public enum OperStatus implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     OperStatus(String commonName) {
         this.commonName = commonName;
     }

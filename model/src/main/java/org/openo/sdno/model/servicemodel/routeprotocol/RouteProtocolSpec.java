@@ -45,6 +45,8 @@ public class RouteProtocolSpec extends AbstractSvcModel {
     @ContainerSizeDesc(maxSize = 1000)
     private List<NVString> addtionalInfo;
 
+    private BgpProtocolItem bgpRoute;
+
     private StaticRouteTable staticRoute;
 
     /**
@@ -52,6 +54,13 @@ public class RouteProtocolSpec extends AbstractSvcModel {
      */
     public List<NVString> getAddtionalInfo() {
         return addtionalInfo;
+    }
+
+    /**
+     * @return Returns the bgpRoute.
+     */
+    public BgpProtocolItem getBgpRoute() {
+        return bgpRoute;
     }
 
     /**
@@ -78,6 +87,13 @@ public class RouteProtocolSpec extends AbstractSvcModel {
      */
     public void setAddtionalInfo(List<NVString> addtionalInfo) {
         this.addtionalInfo = addtionalInfo;
+    }
+
+    /**
+     * @param bgpRoute The bgpRoute to set.
+     */
+    public void setBgpRoute(BgpProtocolItem bgpRoute) {
+        this.bgpRoute = bgpRoute;
     }
 
     /**

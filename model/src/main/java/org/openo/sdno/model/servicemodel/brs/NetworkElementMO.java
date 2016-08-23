@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.openo.sdno.framework.container.util.JsonUtil;
 import org.openo.sdno.model.servicemodel.BaseMO;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
-import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
  * The data model class of Network Element.<br/>
@@ -43,13 +43,9 @@ public class NetworkElementMO extends BaseMO {
 
     private String phyNeID;
 
-    private List<String> managementDomainID;
-
     private List<String> controllerID;
 
     private List<String> siteID;
-
-    private List<String> networkControlDomainID;
 
     private String productName;
 
@@ -103,11 +99,9 @@ public class NetworkElementMO extends BaseMO {
             this.ipAddress = (String)paramMap.get("ipAddress");
             this.phyNeID = "";
             this.logicID = (String)paramMap.get("id");
-            this.managementDomainID = null;
             this.adminState = (String)paramMap.get("adminState");
             this.operState = (String)paramMap.get("operState");
             this.controllerID = (List<String>)paramMap.get("controllerID");
-            this.networkControlDomainID = (List<String>)paramMap.get("networkControlDomainID");
         }
     }
 
@@ -150,14 +144,6 @@ public class NetworkElementMO extends BaseMO {
         this.phyNeID = phyNeID;
     }
 
-    public List<String> getManagementDomainID() {
-        return managementDomainID;
-    }
-
-    public void setManagementDomainID(final List<String> managementDomainID) {
-        this.managementDomainID = managementDomainID;
-    }
-
     public List<String> getControllerID() {
         return controllerID;
     }
@@ -172,14 +158,6 @@ public class NetworkElementMO extends BaseMO {
 
     public void setSiteID(final List<String> siteID) {
         this.siteID = siteID;
-    }
-
-    public List<String> getNetworkControlDomainID() {
-        return networkControlDomainID;
-    }
-
-    public void setNetworkControlDomainID(final List<String> networkControlDomainID) {
-        this.networkControlDomainID = networkControlDomainID;
     }
 
     public String getProductName() {
@@ -275,9 +253,8 @@ public class NetworkElementMO extends BaseMO {
         return "NE [id=" + id + ", name=" + name + ", ipAddress=" + ipAddress + ", description=" + description
                 + ", version=" + version + ", adminState=" + adminState + ", operState=" + operState + ", longitude="
                 + location + ", latitude=" + location + ", source=" + source + ", productName=" + productName
-                + ", manufacturer=" + manufacturer + ",logicID=" + logicID + ",phyNeID=" + phyNeID
-                + ",managementDomainID=" + managementDomainID + ",controllerID=" + controllerID + ",siteID=" + siteID
-                + ",isVirtual=" + isVirtual + ",owner=" + owner + ",serialNumber=" + serialNumber + ",manufactureDate="
-                + manufactureDate + "]";
+                + ", manufacturer=" + manufacturer + ",logicID=" + logicID + ",phyNeID=" + phyNeID + ",controllerID="
+                + controllerID + ",siteID=" + siteID + ",isVirtual=" + isVirtual + ",owner=" + owner + ",serialNumber="
+                + serialNumber + ",manufactureDate=" + manufactureDate + "]";
     }
 }

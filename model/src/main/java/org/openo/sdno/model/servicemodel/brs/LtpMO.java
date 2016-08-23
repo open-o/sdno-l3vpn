@@ -30,7 +30,7 @@ import org.openo.sdno.framework.container.util.JsonUtil;
  */
 public class LtpMO extends BaseMO {
 
-    private static final String MOKEY = "logicalTernminationPoint";
+    private static final String MOKEY = "logicalTerminationPoint";
 
     private String description;
 

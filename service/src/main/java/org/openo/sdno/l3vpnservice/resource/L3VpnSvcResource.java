@@ -32,17 +32,6 @@ import javax.ws.rs.core.MediaType;
 import org.apache.commons.httpclient.HttpStatus;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.util.RestUtils;
-import org.openo.sdno.cbb.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
-import org.openo.sdno.cbb.wanvpn.inventory.sdk.common.ServiceTypeEnum;
-import org.openo.sdno.cbb.wanvpn.util.checker.ScopeChecker;
-import org.openo.sdno.cbb.wanvpn.util.error.ServiceExceptionUtil;
-import org.openo.sdno.cbb.wanvpn.util.executor.ExecutorUtils;
-import org.openo.sdno.cbb.wanvpn.util.executor.resource.svc.SvcResourceCreateExecutor;
-import org.openo.sdno.cbb.wanvpn.util.executor.resource.svc.SvcResourceDeleteUUIDExecutor;
-import org.openo.sdno.cbb.wanvpn.util.executor.resource.svc.SvcResourceQueryBatchExecutor;
-import org.openo.sdno.cbb.wanvpn.util.executor.resource.svc.SvcResourceQuerySingleExecutor;
-import org.openo.sdno.cbb.wanvpn.util.executor.resource.svc.SvcResourceUpdateExecutor;
-import org.openo.sdno.cbb.wanvpn.util.rest.ROAInputStreamParser;
 import org.openo.sdno.framework.container.service.IResource;
 import org.openo.sdno.framework.container.util.UuidUtils;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnSvcService;
@@ -54,6 +43,17 @@ import org.openo.sdno.model.servicemodel.tepath.TePathQueryKey;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnVo;
+import org.openo.sdno.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
+import org.openo.sdno.wanvpn.inventory.sdk.common.ServiceTypeEnum;
+import org.openo.sdno.wanvpn.util.checker.ScopeChecker;
+import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
+import org.openo.sdno.wanvpn.util.executor.ExecutorUtils;
+import org.openo.sdno.wanvpn.util.executor.resource.svc.SvcResourceCreateExecutor;
+import org.openo.sdno.wanvpn.util.executor.resource.svc.SvcResourceDeleteUUIDExecutor;
+import org.openo.sdno.wanvpn.util.executor.resource.svc.SvcResourceQueryBatchExecutor;
+import org.openo.sdno.wanvpn.util.executor.resource.svc.SvcResourceQuerySingleExecutor;
+import org.openo.sdno.wanvpn.util.executor.resource.svc.SvcResourceUpdateExecutor;
+import org.openo.sdno.wanvpn.util.rest.ROAInputStreamParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,14 +63,14 @@ import org.slf4j.LoggerFactory;
  * @author
  * @version SDNO 0.5 2016-5-30
  */
-@Path("/svc/l3vpn/v1/l3vpns")
+@Path("/sdnol3vpn/v1/l3vpns")
 public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(L3VpnSvcResource.class);
 
     @Override
     public String getResUri() {
-        return "/svc/l3vpn/v1/l3vpns";
+        return "/sdnol3vpn/v1/l3vpns";
     }
 
     /**

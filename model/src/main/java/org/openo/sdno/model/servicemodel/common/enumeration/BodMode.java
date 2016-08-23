@@ -29,6 +29,12 @@ public enum BodMode implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     BodMode(String commonName) {
         this.commonName = commonName;
     }

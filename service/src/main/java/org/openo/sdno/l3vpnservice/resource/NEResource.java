@@ -28,15 +28,15 @@ import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.cbb.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
-import org.openo.sdno.cbb.wanvpn.inventory.sdk.common.ServiceTypeEnum;
-import org.openo.sdno.cbb.wanvpn.util.constans.InvConstants;
-import org.openo.sdno.cbb.wanvpn.util.executor.resource.app.AppResourceQueryBatchExecutor;
 import org.openo.sdno.framework.container.service.IResource;
 import org.openo.sdno.l3vpnservice.service.inf.NEService;
 import org.openo.sdno.model.common.query.BatchQueryParams;
 import org.openo.sdno.model.common.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
+import org.openo.sdno.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
+import org.openo.sdno.wanvpn.inventory.sdk.common.ServiceTypeEnum;
+import org.openo.sdno.wanvpn.util.constans.InvConstants;
+import org.openo.sdno.wanvpn.util.executor.resource.app.AppResourceQueryBatchExecutor;
 
 /**
  * Restful interface class of NE resource.<br/>
@@ -44,12 +44,12 @@ import org.openo.sdno.model.servicemodel.brs.LtpMO;
  * @author
  * @version SDNO 0.5 2016-5-30
  */
-@Path("/svc/l3vpn/v1/ne")
+@Path("/sdnol3vpn/v1/ne")
 public class NEResource extends IResource<NEService> {
 
     @Override
     public String getResUri() {
-        return "/svc/l3vpn/v1/ne";
+        return "/sdnol3vpn/v1/ne";
     }
 
     /**

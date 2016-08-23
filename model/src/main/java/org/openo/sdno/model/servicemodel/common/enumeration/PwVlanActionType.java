@@ -29,6 +29,12 @@ public enum PwVlanActionType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     PwVlanActionType(String commonName) {
         this.commonName = commonName;
     }

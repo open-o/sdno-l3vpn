@@ -2,9 +2,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.openo.sdno</groupId>
-        <artifactId>l3vpnservice-root</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>org.openo.baseservice</groupId>
+        <artifactId>common-setting</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>org.openo.sdno</groupId>
@@ -15,7 +15,12 @@
     <dependencies>
         <dependency>
             <groupId>org.openo.sdno</groupId>
-            <artifactId>org.openo.sdno.cbb.wanvpn</artifactId>
+            <artifactId>org.openo.sdno.wanvpn.dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openo.sdno</groupId>
+            <artifactId>org.openo.sdno.wanvpn.translator</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -80,7 +85,7 @@
         </dependency>
         <dependency>
             <groupId>org.openo.sdno</groupId>
-            <artifactId>org.openo.sdno.model</artifactId>
+            <artifactId>org.openo.sdno.wanvpn.model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

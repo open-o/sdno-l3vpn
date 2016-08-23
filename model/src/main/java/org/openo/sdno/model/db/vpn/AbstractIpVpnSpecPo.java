@@ -40,28 +40,20 @@ public abstract class AbstractIpVpnSpecPo implements PoModel<IpVpnSpec> {
 
     private String vpnBasicInfoId;
 
-    public String getId() {
-        return id;
-    }
-
     public void setId(String id) {
         this.id = id;
     }
 
-    public String getLabelMode() {
-        return labelMode;
+    public String getId() {
+        return id;
     }
 
     public void setLabelMode(String labelMode) {
         this.labelMode = labelMode;
     }
 
-    public String getFrrEnable() {
-        return frrEnable;
-    }
-
-    public void setFrrEnable(String frrEnable) {
-        this.frrEnable = frrEnable;
+    public String getLabelMode() {
+        return labelMode;
     }
 
     public String getVpnBasicInfoId() {
@@ -70,6 +62,14 @@ public abstract class AbstractIpVpnSpecPo implements PoModel<IpVpnSpec> {
 
     public void setVpnBasicInfoId(String vpnBasicInfoId) {
         this.vpnBasicInfoId = vpnBasicInfoId;
+    }
+
+    public String getFrrEnable() {
+        return frrEnable;
+    }
+
+    public void setFrrEnable(String frrEnable) {
+        this.frrEnable = frrEnable;
     }
 
     @Override

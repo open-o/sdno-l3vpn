@@ -29,6 +29,12 @@ public enum AdminStatus implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     AdminStatus(String commonName) {
         this.commonName = commonName;
     }

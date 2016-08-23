@@ -29,6 +29,12 @@ public enum ShareModeType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     ShareModeType(String commonName) {
         this.commonName = commonName;
     }

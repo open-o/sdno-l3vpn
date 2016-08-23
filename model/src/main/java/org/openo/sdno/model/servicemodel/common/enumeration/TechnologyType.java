@@ -30,6 +30,12 @@ public enum TechnologyType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     TechnologyType(String commonName) {
         this.commonName = commonName;
     }

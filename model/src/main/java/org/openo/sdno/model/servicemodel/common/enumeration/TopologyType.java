@@ -31,6 +31,12 @@ public enum TopologyType implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     TopologyType(String commonName) {
         this.commonName = commonName;
     }

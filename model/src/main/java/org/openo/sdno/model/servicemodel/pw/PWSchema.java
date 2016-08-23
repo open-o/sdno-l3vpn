@@ -17,10 +17,7 @@
 package org.openo.sdno.model.servicemodel.pw;
 
 /**
- * PW Schema class
- * <br/>
- * <p>
- * </p>
+ * PW Schema class<br/>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

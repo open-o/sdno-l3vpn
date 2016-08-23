@@ -34,8 +34,6 @@ import org.openo.sdno.model.servicemodel.tp.CeTp;
  */
 public abstract class AbstractCeTpPo implements PoModel<CeTp> {
 
-    private static final long serialVersionUID = 1L;
-
     @MOUUIDField
     @MOInvField(invName = "id")
     private String uuid;

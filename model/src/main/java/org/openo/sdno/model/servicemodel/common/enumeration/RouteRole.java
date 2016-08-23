@@ -29,6 +29,12 @@ public enum RouteRole implements CommonName {
 
     private String commonName;
 
+    /**
+     * Constructor<br/>
+     * 
+     * @param commonName common name.
+     * @since SDNO 0.5
+     */
     RouteRole(String commonName) {
         this.commonName = commonName;
     }

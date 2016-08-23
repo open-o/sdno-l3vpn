@@ -74,12 +74,6 @@ public abstract class AbstractTpPo implements PoModel<Tp> {
 
     private String peerCeTpId;
 
-    private String qosProfileId;
-
-    private String inboundQosPolicyId;
-
-    private String outboundQosPolicyId;
-
     private String inboundQueueProfileId;
 
     private String outboundQueueProfileId;
@@ -243,30 +237,6 @@ public abstract class AbstractTpPo implements PoModel<Tp> {
 
     public void setHubSpoke(final String hubSpoke) {
         this.hubSpoke = hubSpoke;
-    }
-
-    public String getQosProfileId() {
-        return qosProfileId;
-    }
-
-    public void setQosProfileId(String qosProfileId) {
-        this.qosProfileId = qosProfileId;
-    }
-
-    public String getInboundQosPolicyId() {
-        return inboundQosPolicyId;
-    }
-
-    public void setInboundQosPolicyId(final String inboundQosPolicyId) {
-        this.inboundQosPolicyId = inboundQosPolicyId;
-    }
-
-    public String getOutboundQosPolicyId() {
-        return outboundQosPolicyId;
-    }
-
-    public void setOutboundQosPolicyId(final String outboundQosPolicyId) {
-        this.outboundQosPolicyId = outboundQosPolicyId;
     }
 
     public String getVpnId() {

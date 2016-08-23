@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:ctx="http://www.springframework.org/schema/context" xmlns:context="http://www.springframework.org/schema/context"
+
+    xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://cxf.apache.org/jaxrs 
+    http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <context:annotation-config />
+    <context:component-scan base-package="org.openo.sdno.wanvpn.dao" />
+    <context:component-scan base-package="org.openo.sdno.l3vpnservice.dao" />
+    <context:component-scan base-package="org.openo.sdno.l3vpnservice.service" />
+
+    <!-- these are included in the dependency jar -->
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+    <!-- jar rest server registration -->
+    <jaxrs:server id="sampleServer" address="/">
+        <!-- registering beans -->
+        <jaxrs:serviceBeans>
+            <ref bean="l3VpnServiceResource"></ref>
+            <ref bean="neResource"></ref>
+        </jaxrs:serviceBeans>
+        <!-- registering providers -->
+        <jaxrs:providers>
+            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+        </jaxrs:providers>
+    </jaxrs:server>
+
+    <bean id="l3VpnServiceResource" class="org.openo.sdno.l3vpnservice.resource.L3VpnSvcResource">
+        <property name="service" ref="l3VpnService"></property>
+    </bean>
+
+    <bean id="uniformL3VpnSvcServiceImpl" class="org.openo.sdno.l3vpnservice.service.impl.UniformL3VpnSvcServiceImpl">
+    </bean>
+
+    <bean id="neResource" class="org.openo.sdno.l3vpnservice.resource.NEResource">
+        <property name="service" ref="neService"></property>
+    </bean>
+
+    <bean id="l3VpnTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnTranslatorImpl"></bean>
+
+    <bean id="invDao" class="org.openo.sdno.wanvpn.inventory.sdk.impl.PuerInvDAOImpl">
+    </bean>
+    <bean id="puerInvServiceNbiBean" class="org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvServiceNbiBean">
+    </bean>
+    <bean id="puerInvComplexNbiBean" class="org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvComplexNbiBean">
+    </bean>
+    <bean id="translatorCtxFactory" class="org.openo.sdno.wanvpn.translator.impl.TranslatorCtxFactoryImpl">
+    </bean>
+    <bean id="invTpService" class="org.openo.sdno.wanvpn.inventory.sdk.impl.LtpInvDao">
+    </bean>
+    <bean id="l3VpnService" class="org.openo.sdno.l3vpnservice.service.impl.UniformL3VpnSvcServiceImpl">
+    </bean>
+    <bean id="neService" class="org.openo.sdno.l3vpnservice.service.impl.NEServiceImpl">
+    </bean>
+    <bean id="responsTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.ResponsTranslatorImpl">
+    </bean>
+
+    <bean id="l3VpnRouteTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnRouteTranslatorImpl">
+    </bean>
+    <bean id="l3AcTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3AcTranslatorImpl">
+    </bean>
+
+</beans>
