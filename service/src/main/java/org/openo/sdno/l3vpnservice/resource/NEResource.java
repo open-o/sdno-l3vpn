@@ -44,12 +44,12 @@ import org.openo.sdno.wanvpn.util.executor.resource.app.AppResourceQueryBatchExe
  * @author
  * @version SDNO 0.5 2016-5-30
  */
-@Path("/openoapi/sdnol3vpn/v1/ne")
+@Path("/sdnol3vpn/v1/ne")
 public class NEResource extends IResource<NEService> {
 
     @Override
     public String getResUri() {
-        return "/openoapi/sdnol3vpn/v1/ne";
+        return "/sdnol3vpn/v1/ne";
     }
 
     /**

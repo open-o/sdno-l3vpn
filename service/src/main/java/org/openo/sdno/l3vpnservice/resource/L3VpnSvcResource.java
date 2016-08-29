@@ -63,14 +63,14 @@ import org.slf4j.LoggerFactory;
  * @author
  * @version SDNO 0.5 2016-5-30
  */
-@Path("/openoapi/sdnol3vpn/v1/l3vpns")
+@Path("/sdnol3vpn/v1/l3vpns")
 public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(L3VpnSvcResource.class);
 
     @Override
     public String getResUri() {
-        return "/openoapi/sdnol3vpn/v1/l3vpns";
+        return "/sdnol3vpn/v1/l3vpns";
     }
 
     /**

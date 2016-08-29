@@ -54,7 +54,7 @@ public class InventoryProxy {
 
     private static final String GETCONTROLLER = "/openoapi/sdnobrs/v1/controller/";
 
-    private static final String GETCOMMPARAM = "/openoapi/sdnocommparammgmt/v1/access-objects/{0}/commparams";
+    private static final String GETCOMMPARAM = "/openoapi/sdnobrs/v1/commparammgmt/access-objects/{0}/commparams";
 
     private InventoryProxy() {
 
