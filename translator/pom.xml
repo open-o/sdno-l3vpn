@@ -7,24 +7,24 @@
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.openo.sdno</groupId>
+    <groupId>org.openo.sdno.l3vpn</groupId>
     <artifactId>org.openo.sdno.wanvpn.translator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>org.openo.sdno.wanvpn.translator</name>
 
     <dependencies>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.l3vpn</groupId>
             <artifactId>org.openo.sdno.wanvpn.util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.utils</groupId>
             <artifactId>org.openo.sdno.frame</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.l3vpn</groupId>
             <artifactId>org.openo.sdno.wanvpn.model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

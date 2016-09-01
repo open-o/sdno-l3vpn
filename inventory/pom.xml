@@ -7,7 +7,7 @@
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.openo.sdno</groupId>
+    <groupId>org.openo.sdno.l3vpn</groupId>
     <artifactId>org.openo.sdno.wanvpn.inventory</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -15,17 +15,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.l3vpn</groupId>
             <artifactId>org.openo.sdno.wanvpn.util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.utils</groupId>
             <artifactId>org.openo.sdno.frame</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.openo.sdno</groupId>
+            <groupId>org.openo.sdno.l3vpn</groupId>
             <artifactId>org.openo.sdno.wanvpn.model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
