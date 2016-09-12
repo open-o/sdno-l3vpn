@@ -1,0 +1,19 @@
+{
+	"request": {
+		"uri": "/openoapi/sdnol3vpn/v1/ne/{neid}/terminalpoint",
+		"method": "get",
+		"headers": {
+			"Content-Type": "application/json;charset=UTF-8"
+		},
+		"queries": {
+			"commonName": "Ltp1"
+		}
+	},
+	"response": {
+		"status": 200,
+		"json": {
+			"data": null,
+			"totalNum": 1
+		}
+	}
+}

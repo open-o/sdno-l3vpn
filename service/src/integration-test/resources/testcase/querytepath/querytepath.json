@@ -1,0 +1,19 @@
+{
+	"request": {
+		"uri": "/openoapi/sdnol3vpn/v1/l3vpns/{l3vpnid}/tepath",
+		"method": "get",
+		"headers": {
+			"Content-Type": "application/json;charset=UTF-8"
+		},
+		"queries": {
+			"srcNeId": "ne1id",
+			"destNeId": "ne2id",
+			"srcAcId": "srcacid",
+			"destAcId": "dstacid"
+		}
+	},
+	"response": {
+		"status": 200,
+		"json": null
+	}
+}

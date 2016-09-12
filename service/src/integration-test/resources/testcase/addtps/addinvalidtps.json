@@ -1,0 +1,73 @@
+{
+	"request": {
+		"uri": "/openoapi/sdnol3vpn/v1/l3vpns/{l3vpnid}/tps",
+		"method": "post",
+		"headers": {
+			"Content-Type": "application/json;charset=UTF-8"
+		},
+		"json": {
+			"name": "NEPort3",
+			"description": "",
+			"adminStatus": "inactive",
+			"operStatus": "down",
+			"neId": "2d9793c4-02dd-4b7d-975e-53dbc59c6d2b",
+			"edgePointRole": null,
+			"hubSpoke": null,
+			"type": "CTP",
+			"workingLayer": "LR_IP",
+			"typeSpecList": [
+				{
+					"layerRate": "LR_IP",
+					"ethernetTpSpec": {
+						"uuid": "3a9efe5c-d6c4-426d-ac8e-141ebfed934d",
+						"accessType": "dot1q",
+						"vlanAction": null,
+						"actionValue": null,
+						"qinqCvlanList": null,
+						"qinqSvlanList": null,
+						"dot1qVlanList": "23",
+						"addtionalInfo": null
+					},
+					"ipTpSpec": {
+						"uuid": "5864f7e2-12d7-4493-aa73-37399d3aaca5",
+						"masterIp": "10.10.10.1/24",
+						"addtionalInfo": null
+					}
+				}
+			],
+			"peerCeTp": {
+				"ceID": "d45d9df5-4a1c-4f6f-8be0-dce91394f1c3",
+				"ceDirectNeID": "2d9793c4-02dd-4b7d-975e-53dbc59c6d2b",
+				"ceDirectTPID": "3eb1a10d-5d43-468c-80cc-5f067d784b8a",
+				"siteName": "SiteA",
+				"ceName": "SiteA",
+				"ceIfmasterIp": "172.16.0.0/23",
+				"location": null,
+				"addtionalInfo": null
+			},
+			"inboundQosPolicyId": null,
+			"outboundQosPolicyId": null,
+			"inBoundTpCar": {
+				"enableCar": false,
+				"cir": 0,
+				"pir": 0,
+				"cbs": 0,
+				"pbs": 0
+			},
+			"outBoundTpCar": {
+				"enableCar": false,
+				"cir": 0,
+				"pir": 0,
+				"cbs": 0,
+				"pbs": 0
+			},
+			"routeProtocolSpecs": null,
+			"containedMainTP": "3eb1a10d-5d43-468c-80cc-5f067d784b8a",
+			"addtionalInfo": null
+		}
+	},
+	"response": {
+		"status": 200,
+		"json": null
+	}
+}

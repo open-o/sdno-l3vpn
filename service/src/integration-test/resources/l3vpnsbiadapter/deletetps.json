@@ -1,0 +1,18 @@
+{
+	"request": {
+		"uri": "/rest/plugin_adapter_alu_nsp/v1/controllers/[a-zA-Z0-9\\-\\_]{1,36}/united-sbi-service-l3vpn:service/l3vpns/l3vpn/[a-zA-Z0-9\\-\\_]{1,36}/acs/ac/[a-zA-Z0-9\\-\\_]{1,36}",
+		"method": "delete",
+		"headers": {
+			"Content-Type": "application/json;charset=UTF-8"
+		}
+	},
+	"response": {
+		"status": 200,
+		"json": {
+			"ret": 200,
+			"format": "json",
+			"msg": null,
+			"respHeaders": null
+		}
+	}
+}

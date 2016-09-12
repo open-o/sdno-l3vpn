@@ -1,0 +1,19 @@
+{
+	"uuid": null,
+	"type": "bgp",
+	"bgpRoutes": {
+		"bgpRoute": [
+			{
+				"remoteAs": "13",
+				"localAs": "12",
+				"peerIp": "10.1.1.1/24",
+				"localIp": "11.2.2.11/24",
+				"keepaliveTime": 12,
+				"holdTime": 10,
+				"password": "Huawei123",
+				"advertiseCommunity": true,
+				"advertiseExtCommunity": false
+			}
+		]
+	}
+}

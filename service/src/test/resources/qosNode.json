@@ -1,0 +1,10 @@
+{
+	"inBoundTpCar": {
+		"cir": 100,
+		"pir": 200
+	},
+	"outBoundTpCar": {
+		"cir": 1,
+		"pir": 2
+	}
+}

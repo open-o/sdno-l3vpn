@@ -1,0 +1,31 @@
+{
+	"logicalTernminationPoint": [
+		{
+			"id": "9b712abe-5ecc-4cb0-8817-12e485678ee2",
+			"description": null,
+			"createtime": 1461794968,
+			"updatetime": null,
+			"auditUserName": null,
+			"auditUserID": null,
+			"auditTerminal": null,
+			"auditDomianName": null,
+			"auditDomianID": null,
+			"name": "port",
+			"meID": "3e091d12-5817-481c-8b50-4a1d98d3d78b",
+			"logicalType": "ETH",
+			"layerRate": null,
+			"isEdgePoint": null,
+			"portIndex": null,
+			"source": "user",
+			"owner": null,
+			"ipAddress": null,
+			"adminState": null,
+			"operState": null,
+			"direction": null,
+			"phyBW": null,
+			"ipMask": null,
+			"nativeID": null,
+			"macAddress": null
+		}
+	]
+}

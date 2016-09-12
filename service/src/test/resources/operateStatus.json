@@ -1,0 +1,16 @@
+{
+	"id": "f5bb9634-35fd-4ff0-8387-5b20f1bc9ff1",
+	"oper-status": "operate-up",
+	"acs": [
+		{
+			"id": "c36dcb69-4124-421b-9997-115120fd88af",
+			"name": "Ethernet3/0/8",
+			"oper-status": "operate-up"
+		},
+		{
+			"id": "c36dcb69-4124-421b-9997-115120fd88af",
+			"name": "Ethernet3/0/8",
+			"oper-status": "operate-up"
+		}
+	]
+}
