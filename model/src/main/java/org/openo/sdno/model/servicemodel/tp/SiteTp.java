@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.tp;
 import org.openo.sdno.model.db.FieldConvertUtil;
 
 /**
- * The service model class of SiteTp.<br/>
+ * The service model class of SiteTp.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016
@@ -33,7 +33,7 @@ public class SiteTp extends Tp {
     private String serviceType;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -42,7 +42,7 @@ public class SiteTp extends Tp {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @param tp TP
      * @since SDNO 0.5

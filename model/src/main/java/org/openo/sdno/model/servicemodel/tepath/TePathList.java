@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.tepath;
 import java.util.List;
 
 /**
- * TE path list class.<br/>
+ * TE path list class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

@@ -24,7 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * The implement of L3 translator provider.<br/>
+ * The implement of L3 translator provider.<br>
  *
  * @author
  * @version SDNO 0.5 2016-6-2

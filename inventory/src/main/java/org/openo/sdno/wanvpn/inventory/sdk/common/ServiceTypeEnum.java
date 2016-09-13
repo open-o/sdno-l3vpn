@@ -18,7 +18,7 @@
 package org.openo.sdno.wanvpn.inventory.sdk.common;
 
 /**
- * Service type enumeration.<br/>
+ * Service type enumeration.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

@@ -26,7 +26,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * L2ac list container.<br/>
+ * L2ac list container.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016
@@ -41,7 +41,7 @@ public class L2Acs extends AbstractSvcModel {
     private List<L2Ac> acs;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */
@@ -50,7 +50,7 @@ public class L2Acs extends AbstractSvcModel {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param ac ac instance.
      * @since SDNO 0.5

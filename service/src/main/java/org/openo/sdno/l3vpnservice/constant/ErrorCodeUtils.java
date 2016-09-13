@@ -19,7 +19,7 @@ package org.openo.sdno.l3vpnservice.constant;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Error code util class.<br/>
+ * Error code util class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016
@@ -32,7 +32,7 @@ public class ErrorCodeUtils {
     }
 
     /**
-     * Get the error code with input info.<br/>
+     * Get the error code with input info.<br>
      * 
      * @param appName app name
      * @param source source string

@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
- * Isis route class.<br/>
+ * Isis route class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

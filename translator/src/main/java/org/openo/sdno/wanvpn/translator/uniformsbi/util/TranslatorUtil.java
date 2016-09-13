@@ -28,7 +28,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.TopologyType;
 import org.openo.sdno.wanvpn.util.EnumUtil;
 
 /**
- * Translator Util class.<br/>
+ * Translator Util class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016
@@ -39,7 +39,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate admin status from service model to standard model.<br/>
+     * Translate admin status from service model to standard model.<br>
      * 
      * @param status The string object of admin status
      * @return DOWN's common name when admin status is null or not active
@@ -56,7 +56,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate L2 access type.<br/>
+     * Translate L2 access type.<br>
      * 
      * @param accessType The string object of access type
      * @return translation result, default value is DOT1Q
@@ -74,7 +74,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate L2 access type.<br/>
+     * Translate L2 access type.<br>
      * 
      * @param accessType The string object of access type
      * @return translation result, default value is DOT1Q
@@ -93,7 +93,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate topology type.<br/>
+     * Translate topology type.<br>
      * 
      * @param topo The string object of topology type
      * @return translation result
@@ -124,7 +124,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate topology type.<br/>
+     * Translate topology type.<br>
      * 
      * @param topo The string object of topology type
      * @return translation result
@@ -154,7 +154,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate L3VPN operation status to service model.<br/>
+     * Translate L3VPN operation status to service model.<br>
      * 
      * @param nOperStatus The operation status
      * @return translation result
@@ -178,7 +178,7 @@ public class TranslatorUtil {
     }
 
     /**
-     * Translate L3VPN admin status to service model.<br/>
+     * Translate L3VPN admin status to service model.<br>
      * 
      * @param nAdminStatus The admin status
      * @return translation result

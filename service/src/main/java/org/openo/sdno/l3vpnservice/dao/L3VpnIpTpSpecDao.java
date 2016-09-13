@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractIpTpSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * IP TP data access object class.<br/>
+ * IP TP data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

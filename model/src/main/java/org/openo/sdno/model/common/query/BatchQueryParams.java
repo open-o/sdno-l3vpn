@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Batch query parameters class.<br/>
+ * Batch query parameters class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -55,7 +55,7 @@ public class BatchQueryParams {
     private String queryType;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param attr Attr to set
@@ -72,7 +72,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -81,7 +81,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param filterDesc filterDesc to set
@@ -98,7 +98,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param cond cond to set
@@ -113,7 +113,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Add new data to businessParams.<br/>
+     * Add new data to businessParams.<br>
      * 
      * @param key The key
      * @param value The value
@@ -132,7 +132,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the businessParam through the key.<br/>
+     * Get the businessParam through the key.<br>
      * 
      * @param key The key
      * @return The businessParam as string
@@ -143,7 +143,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the businessParam through the key.<br/>
+     * Get the businessParam through the key.<br>
      * 
      * @param key The key
      * @return The businessParam as integer
@@ -154,7 +154,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the businessParam through the key.<br/>
+     * Get the businessParam through the key.<br>
      * 
      * @param key The key
      * @return The businessParam as long
@@ -165,7 +165,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the list of businessParam through the key.<br/>
+     * Get the list of businessParam through the key.<br>
      * 
      * @param key The key
      * @return The list of businessParam as string
@@ -176,7 +176,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the list of businessParam through the key.<br/>
+     * Get the list of businessParam through the key.<br>
      * 
      * @param key The key
      * @return The list of businessParam as integer
@@ -187,7 +187,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the list of businessParam through the key.<br/>
+     * Get the list of businessParam through the key.<br>
      * 
      * @param key The key
      * @return The list of businessParam as long
@@ -254,7 +254,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the list of businessParam through the key.<br/>
+     * Get the list of businessParam through the key.<br>
      * 
      * @param key The key
      * @param clazz The class type
@@ -270,7 +270,7 @@ public class BatchQueryParams {
     }
 
     /**
-     * Get the businessParam through the key.<br/>
+     * Get the businessParam through the key.<br>
      * 
      * @param key The key
      * @param clazz The class type

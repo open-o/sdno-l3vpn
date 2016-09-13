@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.BaseMO;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
- * The data model class of Logical Termination Point.<br/>
+ * The data model class of Logical Termination Point.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -63,7 +63,7 @@ public class LtpMO extends BaseMO {
     public static final String NE_ID = "meID";
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -72,7 +72,7 @@ public class LtpMO extends BaseMO {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param paramMap The map of parameters to set

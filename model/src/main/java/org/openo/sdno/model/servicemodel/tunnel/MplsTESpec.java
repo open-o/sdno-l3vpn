@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.ShareModeType;
 
 /**
- * MPLS TE Specifications class<br/>
+ * MPLS TE Specifications class<br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

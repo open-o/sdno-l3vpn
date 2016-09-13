@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
 
 /**
- * Visitor class of vpn model.<br/>
+ * Visitor class of vpn model.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -38,7 +38,7 @@ public class VpnModelAccessor {
     }
 
     /**
-     * Get the map that contains TpTypeSpec and Id.<br/>
+     * Get the map that contains TpTypeSpec and Id.<br>
      * 
      * @param tpTypeSpecs The list of TpTypeSpec
      * @return The map that contains TpTypeSpec and Id
@@ -56,7 +56,7 @@ public class VpnModelAccessor {
     }
 
     /**
-     * Get the list of CeTp.<br/>
+     * Get the list of CeTp.<br>
      * 
      * @param tpMos The list of TP
      * @return The list of CeTp
@@ -73,7 +73,7 @@ public class VpnModelAccessor {
     }
 
     /**
-     * Get the list of TpTypeSpec.<br/>
+     * Get the list of TpTypeSpec.<br>
      * 
      * @param tpMos The list of TP
      * @return The list of TpTypeSpec
@@ -90,7 +90,7 @@ public class VpnModelAccessor {
     }
 
     /**
-     * Get the list of RouteProtocolSpec.<br/>
+     * Get the list of RouteProtocolSpec.<br>
      * 
      * @param tpMos The list of TP
      * @return The list of RouteProtocolSpec

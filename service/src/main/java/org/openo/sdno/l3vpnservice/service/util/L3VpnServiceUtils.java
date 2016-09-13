@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 
 /**
- * L3 VPN service util class.<br/>
+ * L3 VPN service util class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-30
@@ -36,7 +36,7 @@ public class L3VpnServiceUtils {
     }
 
     /**
-     * Query TP info by VPN info and TP ID.<br/>
+     * Query TP info by VPN info and TP ID.<br>
      * 
      * @param vpn VPN info
      * @param tpId TP ID
@@ -57,7 +57,7 @@ public class L3VpnServiceUtils {
     }
 
     /**
-     * Query route protocol info from TP info.<br/>
+     * Query route protocol info from TP info.<br>
      * 
      * @param tempTp TP info
      * @param routeId route ID

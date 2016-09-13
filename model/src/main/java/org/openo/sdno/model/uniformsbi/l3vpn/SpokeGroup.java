@@ -21,7 +21,7 @@ import java.util.List;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 /**
- * Spoke group class.<br/>
+ * Spoke group class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016
@@ -34,7 +34,7 @@ public class SpokeGroup {
     private List<SpokeAcs> spokeAcs;
 
     /**
-     * check the localBridge is true or false.<br/>
+     * check the localBridge is true or false.<br>
      * 
      * @return true when localBridge is true
      * @since SDNO 0.5

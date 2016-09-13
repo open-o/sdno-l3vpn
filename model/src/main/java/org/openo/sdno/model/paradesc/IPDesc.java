@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, IPDesc.<br/>
+ * User-defined JAVA annotation, IPDesc.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -34,7 +34,7 @@ import java.lang.annotation.Target;
 public @interface IPDesc {
 
     /**
-     * The IP address has mask or not.<br/>
+     * The IP address has mask or not.<br>
      * 
      * @return boolean
      * @since SDNO 0.5
@@ -42,7 +42,7 @@ public @interface IPDesc {
     boolean hasMask() default true;
 
     /**
-     * IP type.<br/>
+     * IP type.<br>
      * 
      * @return IP type
      * @since SDNO 0.5
@@ -50,7 +50,7 @@ public @interface IPDesc {
     IPType ipType() default IPType.IPV4;
 
     /**
-     * IP type enumeration.<br/>
+     * IP type enumeration.<br>
      * 
      * @author
      * @version SDNO 0.5 2016-6-6

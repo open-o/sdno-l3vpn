@@ -28,7 +28,7 @@ import org.openo.sdno.wanvpn.util.executor.ExecutorResultContainer;
 import org.openo.sdno.wanvpn.util.query.BatchQueryUtils;
 
 /**
- * APP resource batch query executor abstract class.<br/>
+ * APP resource batch query executor abstract class.<br>
  * 
  * @param <R> Generic paradigm
  * @author
@@ -39,7 +39,7 @@ public abstract class AppResourceQueryBatchExecutor<R> {
     private final BatchQueryParams batchQueryParams;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param request HttpServlet request
@@ -58,7 +58,7 @@ public abstract class AppResourceQueryBatchExecutor<R> {
     }
 
     /**
-     * Execute query.<br/>
+     * Execute query.<br>
      * 
      * @return Executor result
      * @throws ServiceException when execute failed

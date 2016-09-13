@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.mss.JoinAttrData;
 import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
 
 /**
- * Query page parameter class.<br/>
+ * Query page parameter class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -41,7 +41,7 @@ public class QueryPageParameter {
     private QueryComplexParams params;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param moType MO type
@@ -58,7 +58,7 @@ public class QueryPageParameter {
     }
 
     /**
-     * Convert parameters to restful GET parameters<br/>
+     * Convert parameters to restful GET parameters<br>
      * 
      * @return Restful Parameters
      * @throws ServiceException when convert failed

@@ -23,7 +23,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.wanvpn.util.executor.ExecutorResultContainer;
 
 /**
- * Service resource update executor abstract class.<br/>
+ * Service resource update executor abstract class.<br>
  * 
  * @param <P> Generic paradigm
  * @param <R> Generic paradigm
@@ -35,7 +35,7 @@ public abstract class SvcResourceUpdateExecutor<P, R> {
     private final P param;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param request HttpServlet request
@@ -46,7 +46,7 @@ public abstract class SvcResourceUpdateExecutor<P, R> {
     }
 
     /**
-     * Execute update.<br/>
+     * Execute update.<br>
      * 
      * @return Executor result
      * @throws ServiceException when execute failed

@@ -19,7 +19,7 @@ package org.openo.sdno.l3vpnservice.constant;
 import javax.ws.rs.core.MediaType;
 
 /**
- * The constants class of L3VPN.<br/>
+ * The constants class of L3VPN.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

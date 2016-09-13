@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
- * Bi-directional Forwarding Detection parameter class.<br/>
+ * Bi-directional Forwarding Detection parameter class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

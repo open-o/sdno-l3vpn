@@ -25,7 +25,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
 
 /**
- * AC service model class.<br/>
+ * AC service model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

@@ -24,7 +24,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * * MOLikeFilterField there two way to filter, like mode need json, in mode need json array.<br/>
+ * * MOLikeFilterField there two way to filter, like mode need json, in mode need json array.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016

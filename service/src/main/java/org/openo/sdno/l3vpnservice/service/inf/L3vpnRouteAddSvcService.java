@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.routeprotocol.RouteProtocolSpec;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 
 /**
- * L3VPN route add service interface.<br/>
+ * L3VPN route add service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -32,7 +32,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 public interface L3vpnRouteAddSvcService {
 
     /**
-     * Add route protocol.<br/>
+     * Add route protocol.<br>
      * 
      * @param vpn VPN info
      * @param tpUuid TP UUID

@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.util.executor.ExecutorResultContainer;
 import org.openo.sdno.wanvpn.util.executor.ExecutorUtils;
 
 /**
- * Service resource single query executor abstract class.<br/>
+ * Service resource single query executor abstract class.<br>
  * 
  * @param <R> Generic paradigm
  * @author
@@ -32,7 +32,7 @@ public abstract class SvcResourceQuerySingleExecutor<R> {
     private final String uuid;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param uuid UUID
@@ -45,7 +45,7 @@ public abstract class SvcResourceQuerySingleExecutor<R> {
     protected abstract R implementQuery(String uuid) throws ServiceException;
 
     /**
-     * Execute query.<br/>
+     * Execute query.<br>
      * 
      * @return Executor result
      * @throws ServiceException when execute failed

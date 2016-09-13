@@ -25,7 +25,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * Check whether the field is not null.<br/>
+ * Check whether the field is not null.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -36,7 +36,7 @@ public class NotNullChecker {
     }
 
     /**
-     * Check the field whether is not null.<br/>
+     * Check the field whether is not null.<br>
      * 
      * @param model The service model
      * @param field The field to be checked
@@ -53,7 +53,7 @@ public class NotNullChecker {
     }
 
     /**
-     * Check whether the object is not null.<br/>
+     * Check whether the object is not null.<br>
      * 
      * @param val The object to be checked
      * @param fieldName The field name

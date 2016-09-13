@@ -20,7 +20,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 
 /**
- * The interface class of the model translator.<br/>
+ * The interface class of the model translator.<br>
  * 
  * @param <N> Net model
  * @author
@@ -29,7 +29,7 @@ import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 public interface ModelTranslator<N> {
 
     /**
-     * The interface of translating.<br/>
+     * The interface of translating.<br>
      * 
      * @param ctx The TranslatorCtx object
      * @return translation result

@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.RouteType;
 
 /**
- * Route model class.<br/>
+ * Route model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -38,7 +38,7 @@ public class Route {
     private IsisRoute isisRoute;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param staticRoutes Static routes to be set
      * @since SDNO 0.5
@@ -49,7 +49,7 @@ public class Route {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param bgpRoutes BGP routes to be set
      * @since SDNO 0.5
@@ -60,7 +60,7 @@ public class Route {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */

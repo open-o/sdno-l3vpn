@@ -22,7 +22,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * Bgp routes class.<br/>
+ * Bgp routes class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

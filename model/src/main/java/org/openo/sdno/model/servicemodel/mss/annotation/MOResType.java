@@ -24,11 +24,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, MOResType.<br/>
+ * User-defined JAVA annotation, MOResType.<br>
  * <p>
- * Define MO resource name. <br/>
+ * Define MO resource name. <br>
  * Resource name defined in MO must be correspond in im_sdnpolicy_info_model.xml: infomodel
- * name="sdnpolicy".<br/>
+ * name="sdnpolicy".<br>
  * If not define MO resource name,framework will automatically consider that current MO class name
  * is resource name(include package name, '.' will be replaced as '_').
  * </p>
@@ -42,7 +42,7 @@ import java.lang.annotation.Target;
 public @interface MOResType {
 
     /**
-     * Info model name.<br/>
+     * Info model name.<br>
      * 
      * @return name
      * @since SDNO 0.5

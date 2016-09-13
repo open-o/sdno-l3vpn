@@ -19,7 +19,7 @@ package org.openo.sdno.model.uniformsbi.base;
 import java.util.List;
 
 /**
- * Particular constraint class.<br/>
+ * Particular constraint class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016

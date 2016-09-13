@@ -22,7 +22,7 @@ import java.util.Map;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
- * Abstract Service Model Class.<br/>
+ * Abstract Service Model Class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -38,7 +38,7 @@ public abstract class AbstractSvcModel implements SvcModel {
      * the value set in the object when fromSvcModel Po calls will be set to the po object
      * For publishers who want to call before fromSvcModel method to determine the value of po
      * If there svcmodel and pomodel same field, use this method to set the value of the object -
-     * is not assigned to pomodel recommended svcmodel original setting method<br/>
+     * is not assigned to pomodel recommended svcmodel original setting method<br>
      * 
      * @param poFieldName po object field name
      * @param val set the desired po object field values

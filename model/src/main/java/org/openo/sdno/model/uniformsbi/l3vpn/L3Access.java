@@ -20,7 +20,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * L3 Access class.<br/>
+ * L3 Access class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

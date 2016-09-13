@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.brs.SiteMO;
 
 /**
  * Class for VPN site details.
- * <br/>
+ * <br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -184,7 +184,7 @@ public class Site extends AbstractSvcModel {
     }
 
     /**
-     * convert from siteMo to site<br/>
+     * convert from siteMo to site<br>
      * 
      * @param siteMo sitemo object to initizlize the site
      * @return site object to return

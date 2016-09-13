@@ -27,7 +27,7 @@ import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.springframework.util.CollectionUtils;
 
 /**
- * IpVpnSpec table data access object abstract class.<br/>
+ * IpVpnSpec table data access object abstract class.<br>
  * 
  * @param <P> AbstractIpVpnSpecPo
  * @author
@@ -71,7 +71,7 @@ public abstract class AbstractIpVpnSpecDao<P extends AbstractIpVpnSpecPo> extend
     }
 
     /**
-     * Delete data by VPN basic info Ids.<br/>
+     * Delete data by VPN basic info Ids.<br>
      * 
      * @param vpnBasicInfoIds VPN basic info Ids
      * @throws ServiceException when delete failed

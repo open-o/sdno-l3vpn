@@ -41,7 +41,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The class of inventory proxy.<br/>
+ * The class of inventory proxy.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -61,7 +61,7 @@ public class InventoryProxy {
     }
 
     /**
-     * Get the controller device data through the controller uuid.<br/>
+     * Get the controller device data through the controller uuid.<br>
      * 
      * @param ctrId The controller uuid
      * @return The controller device data
@@ -101,7 +101,7 @@ public class InventoryProxy {
     }
 
     /**
-     * Query the controller object.<br/>
+     * Query the controller object.<br>
      * 
      * @param neId The NE uuid
      * @return The controller object
@@ -136,7 +136,7 @@ public class InventoryProxy {
     }
 
     /**
-     * Query the NE object through the uuid.<br/>
+     * Query the NE object through the uuid.<br>
      * 
      * @param id The uuid
      * @return The NE object

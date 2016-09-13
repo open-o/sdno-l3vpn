@@ -22,7 +22,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * Particular constraint class.<br/>
+ * Particular constraint class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016

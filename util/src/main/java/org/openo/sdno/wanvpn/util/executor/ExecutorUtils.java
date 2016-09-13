@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * Executor util class.<br/>
+ * Executor util class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -32,7 +32,7 @@ public class ExecutorUtils {
     }
 
     /**
-     * Check UUID.<br/>
+     * Check UUID.<br>
      * 
      * @param uuid UUID
      * @throws ServiceException when UUID is invalid

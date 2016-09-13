@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, CommentDesc.<br/>
+ * User-defined JAVA annotation, CommentDesc.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -34,7 +34,7 @@ import java.lang.annotation.Target;
 public @interface CommentDesc {
 
     /**
-     * Means.<br/>
+     * Means.<br>
      * 
      * @return Means
      * @since SDNO 0.5

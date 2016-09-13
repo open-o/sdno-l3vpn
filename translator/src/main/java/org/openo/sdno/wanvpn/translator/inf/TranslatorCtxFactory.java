@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.translator.inf;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 
 /**
- * The interface class of the translator Ctx factory.<br/>
+ * The interface class of the translator Ctx factory.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -27,7 +27,7 @@ import org.openo.sdno.wanvpn.translator.common.OperType;
 public interface TranslatorCtxFactory {
 
     /**
-     * Get the translator Ctx.<br/>
+     * Get the translator Ctx.<br>
      * 
      * @param operType The operation type
      * @return The translator Ctx need to get

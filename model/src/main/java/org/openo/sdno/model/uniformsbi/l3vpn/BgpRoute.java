@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.paradesc.NoPrintField;
 
 /**
- * Bgp route class.<br/>
+ * Bgp route class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

@@ -43,7 +43,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 /**
- * PUER inventory service NBI bean class.<br/>
+ * PUER inventory service NBI bean class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -58,7 +58,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     private static final String OBJECTKEY = "object";
 
     /**
-     * Add data.<br/>
+     * Add data.<br>
      * 
      * @param resType resource type
      * @param listMapValue list of data
@@ -95,7 +95,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Update data.<br/>
+     * Update data.<br>
      * 
      * @param resType resource type
      * @param listMapValue list of data
@@ -132,7 +132,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Query data.<br/>
+     * Query data.<br>
      * 
      * @param uuid UUID
      * @param resType resource type
@@ -170,7 +170,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Query all data by resource type.<br/>
+     * Query all data by resource type.<br>
      * 
      * @param resType resource type
      * @param queryParams query parameters
@@ -209,7 +209,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Delete single data.<br/>
+     * Delete single data.<br>
      * 
      * @param resType resource type
      * @param uuid UUID
@@ -232,7 +232,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Query total record number of specific table.<br/>
+     * Query total record number of specific table.<br>
      * 
      * @param resType resource type
      * @param filter filter
@@ -261,7 +261,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Batch delete data.<br/>
+     * Batch delete data.<br>
      * 
      * @param resType resource type
      * @param uuidList list of UUIDs
@@ -343,7 +343,7 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Query data of other page.<br/>
+     * Query data of other page.<br>
      * 
      * @param resType resource type
      * @param restParametes Restful Parameters

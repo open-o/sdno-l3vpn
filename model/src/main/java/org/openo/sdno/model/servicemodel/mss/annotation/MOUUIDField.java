@@ -21,10 +21,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, MOUUIDField.<br/>
+ * User-defined JAVA annotation, MOUUIDField.<br>
  * <p>
  * Indicate MO UUID field. If the MO class does not has UUID field, you can use this annotation to
- * indicate that an Integer field is UUID.<br/>
+ * indicate that an Integer field is UUID.<br>
  * </p>
  * 
  * @author

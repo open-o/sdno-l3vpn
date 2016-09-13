@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * ROA input stream parser class.<br/>
+ * ROA input stream parser class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -41,7 +41,7 @@ public class ROAInputStreamParser {
     }
 
     /**
-     * Covert input JSON stream to the specified object type.<br/>
+     * Covert input JSON stream to the specified object type.<br>
      * 
      * @param str input JSON stream
      * @param clazz object type

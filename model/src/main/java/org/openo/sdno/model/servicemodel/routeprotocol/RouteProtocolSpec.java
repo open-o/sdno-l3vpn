@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.RouteProtocolType;
 
 /**
  * Routing protocol specification class
- * <br/>
+ * <br>
  * <p>
  * </p>
  * 

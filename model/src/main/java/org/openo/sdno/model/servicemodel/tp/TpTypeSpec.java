@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.LayerRate;
 
 /**
- * The service model class of TpTypeSpec.<br/>
+ * The service model class of TpTypeSpec.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

@@ -18,7 +18,7 @@ package org.openo.sdno.model.servicemodel;
 
 /**
  * Implements this interface means the service belongs to tenant. This can be connected to a
- * tenant ID.<br/>
+ * tenant ID.<br>
  *
  * @author
  * @version SDNO 0.5 Aug 2, 2016
@@ -26,7 +26,7 @@ package org.openo.sdno.model.servicemodel;
 public interface TenantOwned {
 
     /**
-     * Get tenant ID.<br/>
+     * Get tenant ID.<br>
      * 
      * @return The tenant ID as string
      * @since SDNO 0.5

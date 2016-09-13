@@ -25,7 +25,7 @@ import org.openo.sdno.model.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * The service model class of CeTp.<br/>
+ * The service model class of CeTp.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

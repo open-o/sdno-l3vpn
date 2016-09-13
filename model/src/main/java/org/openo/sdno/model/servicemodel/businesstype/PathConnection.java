@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.common.ObjectIdentifier;
 import org.openo.sdno.model.servicemodel.common.enumeration.ConnectionDirection;
 
 /**
- * Path connection class.<br/>
+ * Path connection class.<br>
  * 
  * @param <P> 
  * @author

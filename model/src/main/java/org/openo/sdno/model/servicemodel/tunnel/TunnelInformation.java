@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.businesstype.PathConnection;
 import org.openo.sdno.model.servicemodel.common.enumeration.TunnelTechType;
 
 /**
- * tunnel information class.<br/>
+ * tunnel information class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016

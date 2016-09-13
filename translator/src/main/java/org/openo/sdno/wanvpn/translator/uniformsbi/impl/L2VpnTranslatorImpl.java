@@ -41,7 +41,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * The implement class of the L2VPN translator.<br/>
+ * The implement class of the L2VPN translator.<br>
  *
  * @author
  * @version SDNO 0.5 Aug 1, 2016

@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Query result data structure for batch query. <br/>
+ * Query result data structure for batch query. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -39,7 +39,7 @@ public class BatchQueryResponse {
     private List<Map<String, Object>> objects;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -48,7 +48,7 @@ public class BatchQueryResponse {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param datas The list of data to set

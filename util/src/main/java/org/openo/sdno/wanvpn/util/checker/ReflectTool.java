@@ -31,7 +31,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 
 /**
- * The tools class to reflect the fields.<br/>
+ * The tools class to reflect the fields.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -46,7 +46,7 @@ public class ReflectTool {
     }
 
     /**
-     * Get all the fields.<br/>
+     * Get all the fields.<br>
      * 
      * @param clazz The class object
      * @return The array of all the fields
@@ -64,7 +64,7 @@ public class ReflectTool {
     }
 
     /**
-     * Read object value.<br/>
+     * Read object value.<br>
      * 
      * @param target The target object
      * @param fieldName The field name
@@ -90,7 +90,7 @@ public class ReflectTool {
     }
 
     /**
-     * Write object value.<br/>
+     * Write object value.<br>
      * 
      * @param target The target object
      * @param fieldName The field name

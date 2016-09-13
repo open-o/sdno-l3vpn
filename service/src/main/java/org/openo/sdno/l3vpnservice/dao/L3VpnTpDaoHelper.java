@@ -20,7 +20,7 @@ import org.openo.sdno.wanvpn.dao.vpn.TpDaoHelper;
 import org.springframework.stereotype.Repository;
 
 /**
- * L3VPN TP data access object helper class.<br/>
+ * L3VPN TP data access object helper class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

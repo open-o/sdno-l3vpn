@@ -22,7 +22,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * Tunnel service class.<br/>
+ * Tunnel service class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016

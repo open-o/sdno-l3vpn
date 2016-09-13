@@ -27,7 +27,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.L3Ac;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Acs;
 
 /**
- * The tool class to operate the vpn status.<br/>
+ * The tool class to operate the vpn status.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -38,7 +38,7 @@ public class OperStatusUtils {
     }
 
     /**
-     * Set default status of Vpn.<br/>
+     * Set default status of Vpn.<br>
      * 
      * @param vpn The Vpn object
      * @since SDNO 0.5
@@ -55,7 +55,7 @@ public class OperStatusUtils {
     }
 
     /**
-     * Update the operation status and name of Tp.<br/>
+     * Update the operation status and name of Tp.<br>
      * 
      * @param vpn The Vpn object
      * @param l3Acs The L3Acs object

@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * TE Path Query Key class<br/>
+ * TE Path Query Key class<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -38,7 +38,7 @@ public class TePathQueryKey {
     private String destAcId;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param vpnId vpn uuid
      * @param srcNeId source Ne uuid
@@ -126,7 +126,7 @@ public class TePathQueryKey {
     }
 
     /**
-     * get the paramaters.<br/>
+     * get the paramaters.<br>
      * 
      * @return map of paramaters.
      * @since SDNO 0.5
@@ -143,7 +143,7 @@ public class TePathQueryKey {
     }
 
     /**
-     * get the object paramaters.<br/>
+     * get the object paramaters.<br>
      * 
      * @return map of paramaters.
      * @since SDNO 0.5

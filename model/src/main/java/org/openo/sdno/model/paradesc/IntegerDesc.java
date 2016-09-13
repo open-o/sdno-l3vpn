@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, EnumDesc.<br/>
+ * User-defined JAVA annotation, EnumDesc.<br>
  * <p>
  * Describe the value range of Integer,Long fields.
  * </p>
@@ -37,7 +37,7 @@ import java.lang.annotation.Target;
 public @interface IntegerDesc {
 
     /**
-     * Default value.<br/>
+     * Default value.<br>
      * 
      * @return default value
      * @since SDNO 0.5
@@ -45,7 +45,7 @@ public @interface IntegerDesc {
     long defaultVal() default 0L;
 
     /**
-     * Has default value or not.<br/>
+     * Has default value or not.<br>
      * 
      * @return boolean
      * @since SDNO 0.5
@@ -53,7 +53,7 @@ public @interface IntegerDesc {
     boolean hasDefault() default false;
 
     /**
-     * Maximum value.<br/>
+     * Maximum value.<br>
      * 
      * @return maximum value
      * @since SDNO 0.5
@@ -61,7 +61,7 @@ public @interface IntegerDesc {
     long maxVal() default Long.MAX_VALUE;
 
     /**
-     * Minimum value.<br/>
+     * Minimum value.<br>
      * 
      * @return minimum value
      * @since SDNO 0.5

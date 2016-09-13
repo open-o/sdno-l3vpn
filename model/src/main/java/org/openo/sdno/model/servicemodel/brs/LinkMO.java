@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.BaseMO;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
- * The data model class of link.<br/>
+ * The data model class of link.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -59,7 +59,7 @@ public class LinkMO extends BaseMO {
     private String operState;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -68,7 +68,7 @@ public class LinkMO extends BaseMO {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param paramMap The map of parameters to set

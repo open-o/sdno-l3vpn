@@ -29,7 +29,7 @@ import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.springframework.util.CollectionUtils;
 
 /**
- * PwSpec table data access object abstract class.<br/>
+ * PwSpec table data access object abstract class.<br>
  * 
  * @param <P> AbstractPWSpecPo
  * @author
@@ -70,7 +70,7 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     protected abstract Class<P> getPoClass();
 
     /**
-     * Delete data by tunnel schema Id.<br/>
+     * Delete data by tunnel schema Id.<br>
      * 
      * @param tunnelSchemaId tunnel schema Id
      * @throws ServiceException when delete failed
@@ -85,7 +85,7 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     }
 
     /**
-     * Batch delete data by tunnel schema Ids.<br/>
+     * Batch delete data by tunnel schema Ids.<br>
      * 
      * @param tunnelSchemaIds tunnel schema Ids
      * @throws ServiceException when delete failed
@@ -96,7 +96,7 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     }
 
     /**
-     * Batch query data by tunnel schema Ids<br/>
+     * Batch query data by tunnel schema Ids<br>
      * 
      * @param tunnelSchemaIds tunnel schema Ids
      * @return query result
@@ -108,7 +108,7 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     }
 
     /**
-     * Update PwSpec data.<br/>
+     * Update PwSpec data.<br>
      * 
      * @param tunnelSchema tunnel schema
      * @throws ServiceException when update failed
@@ -121,7 +121,7 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     }
 
     /**
-     * Build path routing constrain MO.<br/>
+     * Build path routing constrain MO.<br>
      * 
      * @param tunnelSchemas tunnel schemas
      * @param pwSpecPos PwSpec POs

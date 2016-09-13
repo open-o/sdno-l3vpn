@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 
 /**
- * Owner info thread local class.<br/>
+ * Owner info thread local class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -38,7 +38,7 @@ public class OwnerInfoThreadLocal {
     }
 
     /**
-     * Set owner info.<br/>
+     * Set owner info.<br>
      * 
      * @param request HttpServlet request
      * @param owner owner info

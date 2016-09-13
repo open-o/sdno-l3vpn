@@ -17,7 +17,7 @@
 package org.openo.sdno.model.common;
 
 /**
- * Interface for handling common name of the resources.<br/>
+ * Interface for handling common name of the resources.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -25,7 +25,7 @@ package org.openo.sdno.model.common;
 public interface CommonName {
 
     /**
-     * The interface function to get commonName.<br/>
+     * The interface function to get commonName.<br>
      * 
      * @return The commonName as string
      * @since SDNO 0.5

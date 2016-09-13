@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.util.error;
 
 /**
- * Common error code class.<br/>
+ * Common error code class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

@@ -23,7 +23,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.SelectMode;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.SignalType;
 
 /**
- * Tunnel policy service model class.<br/>
+ * Tunnel policy service model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

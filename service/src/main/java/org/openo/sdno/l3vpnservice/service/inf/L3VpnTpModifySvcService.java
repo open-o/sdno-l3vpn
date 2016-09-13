@@ -19,7 +19,7 @@ package org.openo.sdno.l3vpnservice.service.inf;
 import org.openo.sdno.framework.container.service.IService;
 
 /**
- * L3VPN TP modify service interface.<br/>
+ * L3VPN TP modify service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31

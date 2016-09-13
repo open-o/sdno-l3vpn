@@ -24,7 +24,7 @@ import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 
 /**
- * Base inventory data access object interface.<br/>
+ * Base inventory data access object interface.<br>
  * 
  * @param <T> BaseMO
  * @author
@@ -33,7 +33,7 @@ import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 public interface IBaseInvDao<T> {
 
     /**
-     * Query all MOs.<br/>
+     * Query all MOs.<br>
      * 
      * @return query result
      * @throws ServiceException when query failed
@@ -42,7 +42,7 @@ public interface IBaseInvDao<T> {
     Result<List<T>> queryAllMOs() throws ServiceException;
 
     /**
-     * Query MO info by ID.<br/>
+     * Query MO info by ID.<br>
      * 
      * @param uuid UUID
      * @return query result
@@ -52,7 +52,7 @@ public interface IBaseInvDao<T> {
     Result<T> queryMOById(String uuid) throws ServiceException;
 
     /**
-     * Query MO info.<br/>
+     * Query MO info.<br>
      * 
      * @param paramMap query parameter
      * @return query result
@@ -62,7 +62,7 @@ public interface IBaseInvDao<T> {
     Result<List<T>> queryMOByParam(Map<String, String> paramMap) throws ServiceException;
 
     /**
-     * Paged query MO.<br/>
+     * Paged query MO.<br>
      * 
      * @param paramMap query parameter
      * @return query result

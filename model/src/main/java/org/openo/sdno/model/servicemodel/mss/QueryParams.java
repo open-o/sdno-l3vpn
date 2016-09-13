@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.mss;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 
 /**
- * The simple query parameters.<br/>
+ * The simple query parameters.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -35,7 +35,7 @@ public class QueryParams {
     private final String sortType;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param filter The filter to set
@@ -67,7 +67,7 @@ public class QueryParams {
     }
 
     /**
-     * Convert the parameters to the restful parameters.<br/>
+     * Convert the parameters to the restful parameters.<br>
      * 
      * @param token The token as string
      * @return The restful parameters

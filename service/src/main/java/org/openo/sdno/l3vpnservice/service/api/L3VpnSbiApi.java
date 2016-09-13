@@ -47,7 +47,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * L3VPN SBI API class.<br/>
+ * L3VPN SBI API class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

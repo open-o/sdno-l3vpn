@@ -17,7 +17,7 @@
 package org.openo.sdno.model.servicemodel;
 
 /**
- * Model for Services.<br/>
+ * Model for Services.<br>
  *
  * @author
  * @version SDNO 0.5 Aug 2, 2016
@@ -25,7 +25,7 @@ package org.openo.sdno.model.servicemodel;
 public interface SvcModel {
 
     /**
-     * Get uuid.<br/>
+     * Get uuid.<br>
      * 
      * @return Uuid as string
      * @since SDNO 0.5
@@ -33,7 +33,7 @@ public interface SvcModel {
     String getUuid();
 
     /**
-     * Set uuid.<br/>
+     * Set uuid.<br>
      * 
      * @param uuid Uuid to set
      * @since SDNO 0.5
@@ -44,7 +44,7 @@ public interface SvcModel {
      * If the attribute of PO model is not definite in service model you can use this mothod to set
      * it. If the attibute of PO model is definite in service model , should use the svcmodel
      * setter.
-     * <br/>
+     * <br>
      *
      * @param poFieldName The attribute name in PO.
      * @param val The attribute will set to PO.

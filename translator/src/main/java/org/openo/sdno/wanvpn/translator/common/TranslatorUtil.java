@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus;
 import org.springframework.util.StringUtils;
 
 /**
- * The tool class of translator.<br/>
+ * The tool class of translator.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -36,7 +36,7 @@ public final class TranslatorUtil {
     }
 
     /**
-     * Get the ip except the mask.<br/>
+     * Get the ip except the mask.<br>
      * 
      * @param ipWithMask The ip with mask
      * @return The ip except the mask
@@ -52,7 +52,7 @@ public final class TranslatorUtil {
     }
 
     /**
-     * Translate the list of vlan from string to integer.<br/>
+     * Translate the list of vlan from string to integer.<br>
      * 
      * @param strVlan The list of string vlan
      * @return The list of integer vlan
@@ -100,7 +100,7 @@ public final class TranslatorUtil {
     }
 
     /**
-     * Get the admin status.<br/>
+     * Get the admin status.<br>
      * 
      * @param strAdminStatus The boolean object of admin status
      * @return ACTIVE's common name when strAdminStatus is true

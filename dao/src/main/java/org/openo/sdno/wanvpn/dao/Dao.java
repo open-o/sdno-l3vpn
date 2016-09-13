@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.PoModel;
 import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
- * Data access object interface.<br/>
+ * Data access object interface.<br>
  * 
  * @param <P> PoModel
  * @param <M> SvcModel

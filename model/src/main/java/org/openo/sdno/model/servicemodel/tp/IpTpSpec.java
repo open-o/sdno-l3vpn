@@ -25,7 +25,7 @@ import org.openo.sdno.model.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * The service model class of IpTpSpec.<br/>
+ * The service model class of IpTpSpec.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

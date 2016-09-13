@@ -27,7 +27,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.L3Vpn;
 import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoute;
 
 /**
- * L3Vpn SBI interface class.<br/>
+ * L3Vpn SBI interface class.<br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 2, 2016
@@ -36,7 +36,7 @@ public interface L3VpnSbiApiService {
 
     /**
      * 
-     * Create L3VPN.<br/>
+     * Create L3VPN.<br>
      * 
      * @param l3Vpn L3VPN info
      * @param controllerUuid Controller UUID
@@ -48,7 +48,7 @@ public interface L3VpnSbiApiService {
     L3Vpn createL3VPN(L3Vpn l3Vpn, String controllerUuid, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Deploy L3VPN status.<br/>
+     * Deploy L3VPN status.<br>
      * 
      * @param l3Vpn L3VPN info
      * @param controllerUuid Controller UUID
@@ -60,7 +60,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Deploy TP status.<br/>
+     * Deploy TP status.<br>
      * 
      * @param vpnId L3VPN id
      * @param l3ac L3Ac info
@@ -73,7 +73,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Delete L3VPN.<br/>
+     * Delete L3VPN.<br>
      * 
      * @param vpnId L3VPN id
      * @param controllerUuid Controller UUID
@@ -84,7 +84,7 @@ public interface L3VpnSbiApiService {
     void deleteVpn(String vpnId, String controllerUuid, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Modify L3VPN description.<br/>
+     * Modify L3VPN description.<br>
      * 
      * @param ctrlUuid Controller UUID
      * @param l3Vpn L3VPN
@@ -96,7 +96,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Get detail info of L3VPN.<br/>
+     * Get detail info of L3VPN.<br>
      * 
      * @param uuid L3VPN UUID
      * @param ctrluuid Controller UUID
@@ -109,7 +109,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Create TP.<br/>
+     * Create TP.<br>
      * 
      * @param ac L3Ac info
      * @param l3VpnId L3VPN id
@@ -123,7 +123,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Delete TP.<br/>
+     * Delete TP.<br>
      * 
      * @param l3vpnUuid L3VPN UUID
      * @param tpUuid TP UUID
@@ -136,7 +136,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Create static route.<br/>
+     * Create static route.<br>
      * 
      * @param staticRoute Static route info
      * @param l3vpnUuid L3VPN UUID
@@ -150,7 +150,7 @@ public interface L3VpnSbiApiService {
             @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Create BGP route.<br/>
+     * Create BGP route.<br>
      * 
      * @param bgpRoute BGP route info
      * @param l3vpnUuid L3VPN UUID
@@ -164,7 +164,7 @@ public interface L3VpnSbiApiService {
             @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Delete static route.<br/>
+     * Delete static route.<br>
      * 
      * @param tempVpn VPN info
      * @param tpUuid TP UUID
@@ -177,7 +177,7 @@ public interface L3VpnSbiApiService {
             throws ServiceException;
 
     /**
-     * Delete BGP route.<br/>
+     * Delete BGP route.<br>
      * 
      * @param tempVpn VPN info
      * @param tpUuid TP UUID

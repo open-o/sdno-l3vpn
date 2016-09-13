@@ -58,7 +58,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Restful interface class of L3 VPN service resource.<br/>
+ * Restful interface class of L3 VPN service resource.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-30
@@ -74,7 +74,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Create Single L3Vpn.<br/>
+     * Create Single L3Vpn.<br>
      *
      * @param request HttpServletRequest Object
      * @return L3Vpn object created
@@ -107,7 +107,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Delete Single L3Vpn by id.<br/>
+     * Delete Single L3Vpn by id.<br>
      *
      * @param uuid L3Vpn id
      * @param request HttpServletRequest object
@@ -156,7 +156,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Query One L3Vpn Object.<br/>
+     * Query One L3Vpn Object.<br>
      *
      * @param uuid L3Vpn id
      * @param request HttpServletRequest Object
@@ -181,7 +181,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Query L3vpn status info.<br/>
+     * Query L3vpn status info.<br>
      * 
      * @param uuid L3vpn id
      * @param request HttpServlet request
@@ -207,7 +207,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Update L3vpn Object.<br/>
+     * Update L3vpn Object.<br>
      *
      * @param uuid L3vpn id
      * @param request HttpServletRequest Object
@@ -250,7 +250,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Add TP.<br/>
+     * Add TP.<br>
      * 
      * @param l3vpnUuid L3Vpn UUID
      * @param request HttpServlet request
@@ -287,7 +287,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Delete single TP.<br/>
+     * Delete single TP.<br>
      * 
      * @param tpUuid TP UUID
      * @param vpnUuid L3vpn id
@@ -317,7 +317,7 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
     }
 
     /**
-     * Query Te path.<br/>
+     * Query Te path.<br>
      * 
      * @param uuid L3vpn id
      * @param srcNeId source NE Id

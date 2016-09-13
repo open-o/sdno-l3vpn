@@ -37,7 +37,7 @@ import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.springframework.stereotype.Service;
 
 /**
- * Uniform L3VPN query service implement class.<br/>
+ * Uniform L3VPN query service implement class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31

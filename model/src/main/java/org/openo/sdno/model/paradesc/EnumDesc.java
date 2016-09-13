@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, EnumDesc.<br/>
+ * User-defined JAVA annotation, EnumDesc.<br>
  * <p>
  * Describe the enumeration value of String，Collection<String>.
  * </p>
@@ -37,7 +37,7 @@ import java.lang.annotation.Target;
 public @interface EnumDesc {
 
     /**
-     * Enumeration value.<br/>
+     * Enumeration value.<br>
      * 
      * @return Enumeration value
      * @since SDNO 0.5

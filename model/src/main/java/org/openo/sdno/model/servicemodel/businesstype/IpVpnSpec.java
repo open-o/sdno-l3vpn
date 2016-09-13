@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.LabelModeType;
 
 /**
- * IpVpnSpec class.<br/>
+ * IpVpnSpec class.<br>
  * <p>
  * </p>
  * 

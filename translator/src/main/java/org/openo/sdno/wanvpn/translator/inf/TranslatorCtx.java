@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.translator.inf;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 
 /**
- * The interface class of the translator Ctx.<br/>
+ * The interface class of the translator Ctx.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -27,7 +27,7 @@ import org.openo.sdno.wanvpn.translator.common.OperType;
 public interface TranslatorCtx {
 
     /**
-     * Add the value.<br/>
+     * Add the value.<br>
      * 
      * @param key The key of the value
      * @param value The value to be added
@@ -36,7 +36,7 @@ public interface TranslatorCtx {
     void addVal(String key, Object value);
 
     /**
-     * Get the value.<br/>
+     * Get the value.<br>
      * 
      * @param key The key of the value
      * @return The value need to get
@@ -45,7 +45,7 @@ public interface TranslatorCtx {
     Object getVal(String key);
 
     /**
-     * Set the operation type.<br/>
+     * Set the operation type.<br>
      * 
      * @param operType The operation type to be set
      * @since SDNO 0.5
@@ -53,7 +53,7 @@ public interface TranslatorCtx {
     void setOperType(OperType operType);
 
     /**
-     * Get the operation type.<br/>
+     * Get the operation type.<br>
      * 
      * @return The operation type need to get
      * @since SDNO 0.5

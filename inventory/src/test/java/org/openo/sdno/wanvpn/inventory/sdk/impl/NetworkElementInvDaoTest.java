@@ -39,7 +39,7 @@ import mockit.Mock;
 import mockit.MockUp;
 
 /**
- * NetworkElementInvDaoTest class.<br/>
+ * NetworkElementInvDaoTest class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

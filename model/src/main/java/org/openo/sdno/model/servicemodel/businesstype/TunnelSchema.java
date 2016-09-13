@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.tunnel.PWSpec;
 import org.openo.sdno.model.servicemodel.tunnel.SelectTunnelPolicy;
 
 /**
- * Tunnel Schema Class.<br/>
+ * Tunnel Schema Class.<br>
  * 
  * @param <P> 
  * @author

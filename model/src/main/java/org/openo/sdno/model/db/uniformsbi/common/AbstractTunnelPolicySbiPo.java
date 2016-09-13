@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.NONInvField;
 import org.openo.sdno.model.uniformsbi.base.TunnelPolicy;
 
 /**
- * Tunnel policy SBI PO abstract class.<br/>
+ * Tunnel policy SBI PO abstract class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

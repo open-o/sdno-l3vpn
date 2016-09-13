@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, NotNullDesc.<br/>
+ * User-defined JAVA annotation, NotNullDesc.<br>
  * <p>
  * Describe the fields can't be null.
  * </p>

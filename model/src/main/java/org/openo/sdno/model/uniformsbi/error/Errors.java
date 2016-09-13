@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Class to store the Error info as a list.<br/>
+ * Class to store the Error info as a list.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

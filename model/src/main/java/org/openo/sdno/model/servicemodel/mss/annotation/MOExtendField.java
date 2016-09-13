@@ -21,7 +21,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, MOExtendField.<br/>
+ * User-defined JAVA annotation, MOExtendField.<br>
  * <p>
  * Indicates that the current field (Map<String, String>) is stored as an extend field.
  * </p>

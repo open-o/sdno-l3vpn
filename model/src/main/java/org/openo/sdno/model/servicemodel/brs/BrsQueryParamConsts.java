@@ -17,7 +17,7 @@
 package org.openo.sdno.model.servicemodel.brs;
 
 /**
- * The class of BRS query parameter constants.<br/>
+ * The class of BRS query parameter constants.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016

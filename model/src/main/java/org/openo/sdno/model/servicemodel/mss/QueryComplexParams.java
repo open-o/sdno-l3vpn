@@ -28,7 +28,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
- * Data structure for batch query. <br/>
+ * Data structure for batch query. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -86,7 +86,7 @@ public class QueryComplexParams implements Cloneable {
     private Map<String, Object> filterData;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -95,7 +95,7 @@ public class QueryComplexParams implements Cloneable {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param filterDsc Filter description.
@@ -108,7 +108,7 @@ public class QueryComplexParams implements Cloneable {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param sort The sort to set
@@ -213,7 +213,7 @@ public class QueryComplexParams implements Cloneable {
     }
 
     /**
-     * Reset page parameters.<br/>
+     * Reset page parameters.<br>
      * 
      * @since SDNO 0.5
      */
@@ -223,7 +223,7 @@ public class QueryComplexParams implements Cloneable {
     }
 
     /**
-     * Convert the parameters to the restful parameters.<br/>
+     * Convert the parameters to the restful parameters.<br>
      * 
      * @return The restful parameters
      * @since SDNO 0.5

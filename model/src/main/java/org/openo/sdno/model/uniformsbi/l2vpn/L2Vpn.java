@@ -25,7 +25,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.EncapsulationType;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.SignalType;
 
 /**
- * L2vpn model.<br/>
+ * L2vpn model.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

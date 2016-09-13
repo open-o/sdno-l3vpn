@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.util.constans;
 
 /**
- * The constants of tp type spec.<br/>
+ * The constants of tp type spec.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

@@ -34,7 +34,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOInvField;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
 
 /**
- * Vpn basic information model class.<br/>
+ * Vpn basic information model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

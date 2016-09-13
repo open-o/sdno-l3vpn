@@ -17,7 +17,7 @@
 package org.openo.sdno.model.servicemodel.mss;
 
 /**
- * Data structure for batch query filter entity. <br/>
+ * Data structure for batch query filter entity. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -29,7 +29,7 @@ public class BatchQueryFileterEntity {
     private String filterData;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */

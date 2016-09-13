@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.NONInvField;
 import org.openo.sdno.model.uniformsbi.base.Pw;
 
 /**
- * L2VPN PW SBI PO class.<br/>
+ * L2VPN PW SBI PO class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

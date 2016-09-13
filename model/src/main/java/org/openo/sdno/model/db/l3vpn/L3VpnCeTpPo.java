@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.tp.AbstractCeTpPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L3VpnCeTp.<br/>
+ * The class of L3VpnCeTp.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

@@ -23,7 +23,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.HubSpokeType;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.ProtectionRole;
 
 /**
- * PW model class.<br/>
+ * PW model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

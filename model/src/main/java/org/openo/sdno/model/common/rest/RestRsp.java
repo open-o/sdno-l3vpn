@@ -21,7 +21,7 @@ import java.io.Serializable;
 import org.openo.baseservice.remoteservice.exception.ExceptionArgs;
 
 /**
- * Response package of REST request, provide exception, data body analysis.<br/>
+ * Response package of REST request, provide exception, data body analysis.<br>
  * 
  * @param <T>Generic paradigm
  * @author
@@ -40,7 +40,7 @@ public class RestRsp<T> implements Serializable {
     protected ExceptionArgs exceptionArg;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */
@@ -49,7 +49,7 @@ public class RestRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param result Result to set
      * @since SDNO 0.5
@@ -60,7 +60,7 @@ public class RestRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param result Result to set
      * @param message Message to set
@@ -73,7 +73,7 @@ public class RestRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param result Result to set
      * @param message Message to set
@@ -88,7 +88,7 @@ public class RestRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param result Result to set
      * @param data Data to set

@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.translator.common;
 
 /**
- * The enum of operation type.<br/>
+ * The enum of operation type.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2

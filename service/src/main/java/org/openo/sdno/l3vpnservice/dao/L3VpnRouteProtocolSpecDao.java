@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractRouteProtocolSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * L3VPN route protocol data access object class.<br/>
+ * L3VPN route protocol data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

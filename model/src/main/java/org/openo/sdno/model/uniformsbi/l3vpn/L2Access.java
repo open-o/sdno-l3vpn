@@ -22,7 +22,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AccessAction;
 
 /**
- * L2 Access class.<br/>
+ * L2 Access class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

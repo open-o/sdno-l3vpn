@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.vpn.AbstractSelectTunnelPolicyPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L2vpn select tunnel policy PO.<br/>
+ * The class of L2vpn select tunnel policy PO.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

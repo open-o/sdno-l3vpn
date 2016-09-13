@@ -22,7 +22,7 @@ import javax.validation.constraints.NotNull;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The data model class of tenant.<br/>
+ * The data model class of tenant.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -41,7 +41,7 @@ public class TenantMO {
     private String id;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @param uuid UUID
      * @since SDNO 0.5
@@ -51,7 +51,7 @@ public class TenantMO {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */

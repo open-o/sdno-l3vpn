@@ -25,7 +25,7 @@ import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 
 /**
- * Static route table data access object abstract class.<br/>
+ * Static route table data access object abstract class.<br>
  * 
  * @param <P> AbstractStaticRouteTablePo
  * @author

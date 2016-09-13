@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.translator.uniformsbi.inf;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
 
 /**
- * The interface class of the L2 AC translator.<br/>
+ * The interface class of the L2 AC translator.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 1, 2016

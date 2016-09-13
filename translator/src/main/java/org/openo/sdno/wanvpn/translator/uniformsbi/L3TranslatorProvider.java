@@ -22,7 +22,7 @@ import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
 
 /**
- * The interface class of L3 translator provider.<br/>
+ * The interface class of L3 translator provider.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016
@@ -30,7 +30,7 @@ import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
 public interface L3TranslatorProvider {
 
     /**
-     * The interface of getting L3VpnTranslator.<br/>
+     * The interface of getting L3VpnTranslator.<br>
      *
      * @param controllerType The controller type
      * @return The L3VpnTranslator
@@ -39,7 +39,7 @@ public interface L3TranslatorProvider {
     L3VpnTranslator getL3VpnTranslator();
 
     /**
-     * The interface of getting L3AcTranslator.<br/>
+     * The interface of getting L3AcTranslator.<br>
      *
      * @param controllerType The controller type
      * @return The L3AcTranslator
@@ -48,7 +48,7 @@ public interface L3TranslatorProvider {
     L3AcTranslator getL3AcTranslator();
 
     /**
-     * The interface of getting L3VpnRouteTranslator.<br/>
+     * The interface of getting L3VpnRouteTranslator.<br>
      *
      * @return The L3VpnRouteTranslator
      * @since SDNO 0.5
@@ -56,7 +56,7 @@ public interface L3TranslatorProvider {
     L3VpnRouteTranslator getL3VpnRouteTranslator();
 
     /**
-     * The interface of getting ResponsTranslator.<br/>
+     * The interface of getting ResponsTranslator.<br>
      *
      * @return The ResponsTranslator
      * @since SDNO 0.5

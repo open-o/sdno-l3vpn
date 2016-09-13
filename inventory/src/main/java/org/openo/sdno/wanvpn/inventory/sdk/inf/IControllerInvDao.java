@@ -22,7 +22,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.brs.ControllerMO;
 
 /**
- * Controller inventory data access object interface.<br/>
+ * Controller inventory data access object interface.<br>
  * 
  * @param <T> BaseMO
  * @author
@@ -31,7 +31,7 @@ import org.openo.sdno.model.servicemodel.brs.ControllerMO;
 public interface IControllerInvDao<T> {
 
     /**
-     * Query all MOs.<br/>
+     * Query all MOs.<br>
      * 
      * @return query result
      * @throws ServiceException when query failed
@@ -40,7 +40,7 @@ public interface IControllerInvDao<T> {
     List<T> queryAllMOs() throws ServiceException;
 
     /**
-     * Query MO info by ID.<br/>
+     * Query MO info by ID.<br>
      * 
      * @param uuid UUID
      * @return query result
@@ -50,7 +50,7 @@ public interface IControllerInvDao<T> {
     T queryMOById(String uuid) throws ServiceException;
 
     /**
-     * Query controller info. <br/>
+     * Query controller info. <br>
      * 
      * @param neId NE ID
      * @return query result

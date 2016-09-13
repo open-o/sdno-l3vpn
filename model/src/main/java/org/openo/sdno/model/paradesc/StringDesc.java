@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, StringDesc.<br/>
+ * User-defined JAVA annotation, StringDesc.<br>
  * <p>
  * Describe the length and matched pattern of String type fields.
  * </p>
@@ -37,7 +37,7 @@ import java.lang.annotation.Target;
 public @interface StringDesc {
 
     /**
-     * String minimum length.<br/>
+     * String minimum length.<br>
      * 
      * @return minimum length
      * @since SDNO 0.5
@@ -45,7 +45,7 @@ public @interface StringDesc {
     int minLen() default 0;
 
     /**
-     * String maximum length.<br/>
+     * String maximum length.<br>
      * 
      * @return maximum length
      * @since SDNO 0.5
@@ -53,7 +53,7 @@ public @interface StringDesc {
     int maxLen() default 255;
 
     /**
-     * Can be empty or not.<br/>
+     * Can be empty or not.<br>
      * 
      * @return boolean
      * @since SDNO 0.5
@@ -61,7 +61,7 @@ public @interface StringDesc {
     boolean notEmpty() default false;
 
     /**
-     * Can be blank or not.<br/>
+     * Can be blank or not.<br>
      * 
      * @return boolean
      * @since SDNO 0.5
@@ -69,7 +69,7 @@ public @interface StringDesc {
     boolean notBlank() default false;
 
     /**
-     * Matched pattern.<br/>
+     * Matched pattern.<br>
      * 
      * @return pattern
      * @since SDNO 0.5

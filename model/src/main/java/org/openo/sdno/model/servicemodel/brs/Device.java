@@ -21,7 +21,7 @@ import org.openo.sdno.model.servicemodel.BaseMO;
 import org.openo.sdno.ssl.EncryptionUtil;
 
 /**
- * The device class extends BaseMO.<br/>
+ * The device class extends BaseMO.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -139,7 +139,7 @@ public class Device extends BaseMO {
     }
 
     /**
-     * Get authentication information.<br/>
+     * Get authentication information.<br>
      * 
      * @return The auth information
      * @since SDNO 0.5

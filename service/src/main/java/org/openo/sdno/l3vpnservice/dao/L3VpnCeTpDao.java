@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractCeTpDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * CE TP data access object class.<br/>
+ * CE TP data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

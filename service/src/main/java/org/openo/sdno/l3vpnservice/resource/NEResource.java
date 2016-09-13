@@ -39,7 +39,7 @@ import org.openo.sdno.wanvpn.util.constans.InvConstants;
 import org.openo.sdno.wanvpn.util.executor.resource.app.AppResourceQueryBatchExecutor;
 
 /**
- * Restful interface class of NE resource.<br/>
+ * Restful interface class of NE resource.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-30
@@ -53,7 +53,7 @@ public class NEResource extends IResource<NEService> {
     }
 
     /**
-     * Batch query ports info by NE ID and port name.<br/>
+     * Batch query ports info by NE ID and port name.<br>
      * 
      * @param neUuid NE UUID
      * @param portName port name

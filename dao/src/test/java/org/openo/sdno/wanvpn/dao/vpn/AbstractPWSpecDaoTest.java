@@ -31,7 +31,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractPWSpecDao;
 import junit.framework.Assert;
 
 /**
- * AbstractPWSpecDaoTest class.<br/>
+ * AbstractPWSpecDaoTest class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 11, 2016

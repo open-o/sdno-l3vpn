@@ -18,7 +18,7 @@ package org.openo.sdno.model.servicemodel.tepath;
 
 /**
  * Service TE Path class
- * <br/>
+ * <br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

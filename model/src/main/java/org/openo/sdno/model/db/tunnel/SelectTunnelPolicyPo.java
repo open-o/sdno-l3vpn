@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
 import org.openo.sdno.model.servicemodel.tunnel.SelectTunnelPolicy;
 
 /**
- * Select tunnel policy PO class.<br/>
+ * Select tunnel policy PO class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016
