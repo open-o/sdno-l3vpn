@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
  * 
- * Tunnel Policy Selection class<br/>
+ * Tunnel Policy Selection class<br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

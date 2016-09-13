@@ -28,7 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * adapter response information model class.<br/>
+ * adapter response information model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -54,7 +54,7 @@ public class AdapterResponseInfo {
     private Map<String, String> respHeaders;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */
@@ -63,7 +63,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param msg Msg to set
      * @since SDNO 0.5
@@ -73,7 +73,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param ret Ret to set
      * @param msg Msg to set
@@ -85,7 +85,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param ret Ret to set
      * @param format format to set
@@ -99,7 +99,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param ret Ret to set
      * @param format format to set
@@ -170,7 +170,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * check whether is success.<br/>
+     * check whether is success.<br>
      * 
      * @return True when success is true
      * @since SDNO 0.5
@@ -185,7 +185,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * Get ServiceExceotion.<br/>
+     * Get ServiceExceotion.<br>
      * 
      * @param controllerFailCode The controller failed code
      * @return The ServiceExceotion object
@@ -200,7 +200,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * check whether the controller httpStatus is success.<br/>
+     * check whether the controller httpStatus is success.<br>
      * 
      * @return true when ret is in [200,299]
      * @since SDNO 0.5
@@ -211,7 +211,7 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * check whether the controller httpStatus is 404.<br/>
+     * check whether the controller httpStatus is 404.<br>
      * 
      * @return true when ret is 404
      * @since SDNO 0.5

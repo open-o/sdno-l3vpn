@@ -36,7 +36,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The class used to deal with the annotations in MO objects.<br/>
+ * The class used to deal with the annotations in MO objects.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -50,7 +50,7 @@ public class MOModelProcessor {
     }
 
     /**
-     * Deal through the annotations in MO objects.<br/>
+     * Deal through the annotations in MO objects.<br>
      * 
      * @param value The map of object value
      * @param motype The MO type
@@ -96,7 +96,7 @@ public class MOModelProcessor {
     }
 
     /**
-     * Get field through the field name from MO object.<br/>
+     * Get field through the field name from MO object.<br>
      * 
      * @param fieldName The field name
      * @param motype The MO type
@@ -128,7 +128,7 @@ public class MOModelProcessor {
     }
 
     /**
-     * Get the uuid of the object.<br/>
+     * Get the uuid of the object.<br>
      * 
      * @param obj The object
      * @param motype The MO type
@@ -161,7 +161,7 @@ public class MOModelProcessor {
     }
 
     /**
-     * Get the rest type through the annotations.<br/>
+     * Get the rest type through the annotations.<br>
      * 
      * @param motype The MO type
      * @return the rest type

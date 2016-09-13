@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.common.AbstractObjectIdentifierPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L3vpn object identifier.<br/>
+ * The class of L3vpn object identifier.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

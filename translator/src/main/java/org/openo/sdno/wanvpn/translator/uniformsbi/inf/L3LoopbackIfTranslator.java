@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.translator.uniformsbi.inf;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3LoopbackIf;
 
 /**
- * The interface class of the L3 Loopback if translator.<br/>
+ * The interface class of the L3 Loopback if translator.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 1, 2016

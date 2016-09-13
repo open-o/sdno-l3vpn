@@ -22,7 +22,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * Qos If Car class.<br/>
+ * Qos If Car class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016
@@ -44,7 +44,7 @@ public class QosIfCar extends AbstractSvcModel {
     private long pbs;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */
@@ -53,7 +53,7 @@ public class QosIfCar extends AbstractSvcModel {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param cir cir to set
      * @param pir pir to set

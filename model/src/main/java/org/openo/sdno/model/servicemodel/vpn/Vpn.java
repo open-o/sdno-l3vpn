@@ -67,7 +67,7 @@ public class Vpn extends AbstractSvcModel {
     private List<NVString> addtionalInfo;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param composedVpn composeVpn to set
      * @since SDNO 0.5
@@ -81,7 +81,7 @@ public class Vpn extends AbstractSvcModel {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */

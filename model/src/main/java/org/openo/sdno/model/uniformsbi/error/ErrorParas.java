@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Class to store the error parameters.<br/>
+ * Class to store the error parameters.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

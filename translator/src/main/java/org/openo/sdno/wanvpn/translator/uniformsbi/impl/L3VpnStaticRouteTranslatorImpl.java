@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * The implement class of the L3VPN static route translator.<br/>
+ * The implement class of the L3VPN static route translator.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 1, 2016

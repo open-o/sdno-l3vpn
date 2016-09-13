@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, VlanScopeDesc.<br/>
+ * User-defined JAVA annotation, VlanScopeDesc.<br>
  * <p>
  * Describe the verification of VlanScope.
  * </p>

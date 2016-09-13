@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * DAO implement of resource manage system,mainly to do CRUD operation. <br/>
+ * DAO implement of resource manage system,mainly to do CRUD operation. <br>
  * 
  * @param <M>
  * @author

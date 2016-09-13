@@ -24,7 +24,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
 
 /**
- * VPN model class.<br/>
+ * VPN model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016

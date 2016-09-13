@@ -23,7 +23,7 @@ import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 
 /**
- * The implement class of the translator Ctx.<br/>
+ * The implement class of the translator Ctx.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -35,7 +35,7 @@ public class TranslatorCtxImpl implements TranslatorCtx {
     private final Map<String, Object> context;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */

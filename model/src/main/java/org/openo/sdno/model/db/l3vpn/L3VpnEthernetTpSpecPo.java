@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.tp.AbstractEthernetTpSpecPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L3Vpn Ethernet TP Specification.<br/>
+ * The class of L3Vpn Ethernet TP Specification.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

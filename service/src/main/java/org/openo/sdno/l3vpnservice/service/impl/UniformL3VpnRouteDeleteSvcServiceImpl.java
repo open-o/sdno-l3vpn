@@ -38,7 +38,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Uniform L3VPN route delete service implement class.<br/>
+ * Uniform L3VPN route delete service implement class.<br>
  *
  * @author
  * @version SDNO 0.5 2016-5-31

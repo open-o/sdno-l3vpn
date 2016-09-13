@@ -26,7 +26,7 @@ import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.springframework.util.CollectionUtils;
 
 /**
- * ObjectIdentifier table data access object abstract class.<br/>
+ * ObjectIdentifier table data access object abstract class.<br>
  *
  * @param <P> AbstractObjectIdentifierPo
  * @author

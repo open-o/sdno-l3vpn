@@ -25,7 +25,7 @@ import org.openo.sdno.result.ErrorCodeInfo;
 import org.openo.sdno.result.InvRsp;
 
 /**
- * PUER inventory super NBI bean.<br/>
+ * PUER inventory super NBI bean.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

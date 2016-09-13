@@ -34,7 +34,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 
 /**
- * VPN basic info data access object abstract class.<br/>
+ * VPN basic info data access object abstract class.<br>
  * 
  * @param <P> AbstractVpnBasicInfoPo
  * @author
@@ -124,7 +124,7 @@ public abstract class AbstractVpnBasicInfoDao<P extends AbstractVpnBasicInfoPo> 
     }
 
     /**
-     * Delete data by VPN policy IDs.<br/>
+     * Delete data by VPN policy IDs.<br>
      * 
      * @param vpnPolicyIds VPN policy IDs
      * @throws ServiceException when delete failed
@@ -136,7 +136,7 @@ public abstract class AbstractVpnBasicInfoDao<P extends AbstractVpnBasicInfoPo> 
     }
 
     /**
-     * Update VPN basic info.<br/>
+     * Update VPN basic info.<br>
      * 
      * @param vpnBasicInfo VPN basic info
      * @throws ServiceException when update failed
@@ -148,7 +148,7 @@ public abstract class AbstractVpnBasicInfoDao<P extends AbstractVpnBasicInfoPo> 
     }
 
     /**
-     * Query data by VPN policy IDs.<br/>
+     * Query data by VPN policy IDs.<br>
      * 
      * @param vpnPolicyIds VPN policy IDs
      * @return data queried out
@@ -160,7 +160,7 @@ public abstract class AbstractVpnBasicInfoDao<P extends AbstractVpnBasicInfoPo> 
     }
 
     /**
-     * Update admin status.<br/>
+     * Update admin status.<br>
      * 
      * @param vpnBasicInfos VPN basic info
      * @throws ServiceException when update failed

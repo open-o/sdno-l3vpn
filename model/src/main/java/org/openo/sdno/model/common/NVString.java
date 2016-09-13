@@ -19,7 +19,7 @@ package org.openo.sdno.model.common;
 import org.openo.sdno.model.paradesc.StringDesc;
 
 /**
- * Stores extended / additional parameters in key value pair.<br/>
+ * Stores extended / additional parameters in key value pair.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

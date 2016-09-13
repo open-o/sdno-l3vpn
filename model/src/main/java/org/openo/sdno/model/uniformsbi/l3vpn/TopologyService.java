@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
- * Topology service class.<br/>
+ * Topology service class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

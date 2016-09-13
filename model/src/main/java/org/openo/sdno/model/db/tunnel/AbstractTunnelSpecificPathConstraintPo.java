@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.tunnel.TunnelSpecificPathConstraint;
 import org.springframework.util.CollectionUtils;
 
 /**
- * TunnelSpecificPathConstraintPo abstract class.<br/>
+ * TunnelSpecificPathConstraintPo abstract class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

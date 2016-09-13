@@ -29,7 +29,7 @@ import java.net.URLEncoder;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 
 /**
- * The tools class of url encoder.<br/>
+ * The tools class of url encoder.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -42,7 +42,7 @@ public class URLEncoderUtil {
     }
 
     /**
-     * Encode the url with utf_8.<br/>
+     * Encode the url with utf_8.<br>
      * 
      * @param s The url
      * @return The the encoded url with utf_8

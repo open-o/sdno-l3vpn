@@ -28,7 +28,7 @@ import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 import org.openo.sdno.wanvpn.inventory.sdk.util.InventoryProxy;
 
 /**
- * Controller util class.<br/>
+ * Controller util class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-30
@@ -39,7 +39,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller type.<br/>
+     * Query controller type.<br>
      * 
      * @param vpnVo VPN info
      * @return controller's product name
@@ -54,7 +54,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller type.<br/>
+     * Query controller type.<br>
      * 
      * @param vpn VPN info
      * @return controller's product name
@@ -74,7 +74,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller type.<br/>
+     * Query controller type.<br>
      * 
      * @param tp TP info
      * @return controller's product name
@@ -94,7 +94,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Fill controller MO info.<br/>
+     * Fill controller MO info.<br>
      * 
      * @param vpnVo VPN info
      * @throws ServiceException when fill failed
@@ -137,7 +137,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller MO info by NE ID.<br/>
+     * Query controller MO info by NE ID.<br>
      * 
      * @param neId NE ID
      * @return controller MO info
@@ -149,7 +149,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller MO info.<br/>
+     * Query controller MO info.<br>
      * 
      * @param vpn VPN info
      * @return controller MO info
@@ -178,7 +178,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller MO info.<br/>
+     * Query controller MO info.<br>
      * 
      * @param tp TP info
      * @return controller MO info
@@ -198,7 +198,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller UUID.<br/>
+     * Query controller UUID.<br>
      * 
      * @param vpnVo VPN info
      * @return controller UUID
@@ -213,7 +213,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller UUID.<br/>
+     * Query controller UUID.<br>
      * 
      * @param vpn VPN info
      * @return controller UUID
@@ -229,7 +229,7 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller UUID.<br/>
+     * Query controller UUID.<br>
      * 
      * @param tp TP info
      * @return controller UUID

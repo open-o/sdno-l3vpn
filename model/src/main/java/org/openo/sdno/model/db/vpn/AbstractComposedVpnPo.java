@@ -63,7 +63,7 @@ public abstract class AbstractComposedVpnPo implements PoModel<ComposedVpn> {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @param uuid
      * @param operStatus

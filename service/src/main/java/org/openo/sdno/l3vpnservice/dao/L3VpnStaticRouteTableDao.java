@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractStaticRouteTableDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * Static route table data access object class.<br/>
+ * Static route table data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

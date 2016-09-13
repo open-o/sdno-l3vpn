@@ -24,7 +24,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, MORelationField.<br/>
+ * User-defined JAVA annotation, MORelationField.<br>
  * <p>
  * Indicates that the MO field is a relation field, need create relation.
  * </p>
@@ -38,7 +38,7 @@ import java.lang.annotation.Target;
 public @interface MORelationField {
 
     /**
-     * Relation type, aggregation,composition,association.<br/>
+     * Relation type, aggregation,composition,association.<br>
      * 
      * @return Relation type
      * @since SDNO 0.5
@@ -46,7 +46,7 @@ public @interface MORelationField {
     String type() default "composition";
 
     /**
-     * Service type.<br/>
+     * Service type.<br>
      * 
      * @return Service type
      * @since SDNO 0.5

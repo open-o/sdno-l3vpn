@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.error;
 
 /**
- * Class to store the Error tags.<br/>
+ * Class to store the Error tags.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -29,7 +29,7 @@ public enum ErrorTagEnum {
     private String tagValue = null;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param tagValue Tag value to set
      * @since SDNO 0.5

@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.tp.AbstractTpPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L3Vpn TP (Termination point).<br/>
+ * The class of L3Vpn TP (Termination point).<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

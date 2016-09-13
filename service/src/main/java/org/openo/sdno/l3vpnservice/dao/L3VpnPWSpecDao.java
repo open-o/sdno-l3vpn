@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractPWSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * PW spec data access object class.<br/>
+ * PW spec data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

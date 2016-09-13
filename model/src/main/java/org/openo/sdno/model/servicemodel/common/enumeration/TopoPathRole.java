@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of topologic path role.<br/>
+ * The enum class of topologic path role.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016
@@ -30,7 +30,7 @@ public enum TopoPathRole implements CommonName {
     private String commonName;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param commonName common name.
      * @since SDNO 0.5

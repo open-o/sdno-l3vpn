@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.inventory.sdk.common;
 
 /**
- * Error code class.<br/>
+ * Error code class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

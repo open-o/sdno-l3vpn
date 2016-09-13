@@ -28,7 +28,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * The enum class of VPN operation status.<br/>
+ * The enum class of VPN operation status.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

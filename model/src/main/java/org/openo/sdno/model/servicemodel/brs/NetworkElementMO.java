@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.BaseMO;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The data model class of Network Element.<br/>
+ * The data model class of Network Element.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -74,7 +74,7 @@ public class NetworkElementMO extends BaseMO {
     public static final String SITE_ID = "siteID";
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -83,7 +83,7 @@ public class NetworkElementMO extends BaseMO {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param paramMap The map of parameters to set

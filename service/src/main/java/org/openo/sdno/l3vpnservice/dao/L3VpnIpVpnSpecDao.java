@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractIpVpnSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * IP VPN data access object class.<br/>
+ * IP VPN data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

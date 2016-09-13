@@ -28,7 +28,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * Check the field of enum.<br/>
+ * Check the field of enum.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -39,7 +39,7 @@ public class EnumChecker {
     }
 
     /**
-     * Check the field of enum.<br/>
+     * Check the field of enum.<br>
      * 
      * @param model The service model
      * @param field The field to be checked

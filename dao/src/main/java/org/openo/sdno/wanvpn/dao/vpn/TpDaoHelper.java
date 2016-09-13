@@ -39,7 +39,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 /**
- * TP data access helper object abstract class.<br/>
+ * TP data access helper object abstract class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -69,7 +69,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Get the mapping of CETP and CETP ID.<br/>
+     * Get the mapping of CETP and CETP ID.<br>
      * 
      * @param ceTpIds list of CETP ID
      * @return the mapping
@@ -87,7 +87,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Get the mapping of route protocol and TP ID. <br/>
+     * Get the mapping of route protocol and TP ID. <br>
      * 
      * @param tpIds list of TP IDs
      * @return the mapping
@@ -130,7 +130,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Get the mapping of TP config and TP ID.<br/>
+     * Get the mapping of TP config and TP ID.<br>
      * 
      * @param tpIds list of TP IDs
      * @return the mapping
@@ -159,7 +159,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Prepare CE TP object for add operation.<br/>
+     * Prepare CE TP object for add operation.<br>
      * 
      * @param mos list of TP MOs
      * @return list of CETP
@@ -179,7 +179,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Prepare TP type object for add operation.<br/>
+     * Prepare TP type object for add operation.<br>
      * 
      * @param mos list of TP MOs
      * @return list of TpTypeSpec object
@@ -199,7 +199,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Prepare route protocol object for add operation.<br/>
+     * Prepare route protocol object for add operation.<br>
      * 
      * @param mos list of TP MOs
      * @return list of RouteProtocolSpec object

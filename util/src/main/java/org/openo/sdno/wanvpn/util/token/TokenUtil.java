@@ -24,7 +24,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 
 /**
- * The tools class of token.<br/>
+ * The tools class of token.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -44,7 +44,7 @@ public class TokenUtil {
     }
 
     /**
-     * Get token.<br/>
+     * Get token.<br>
      * 
      * @param request HttpServlet request
      * @return The token
@@ -63,7 +63,7 @@ public class TokenUtil {
     }
 
     /**
-     * Fill token.<br/>
+     * Fill token.<br>
      * 
      * @param input Restful parameters
      * @param request HttpServlet request
@@ -79,7 +79,7 @@ public class TokenUtil {
     }
 
     /**
-     * Get tenant id.<br/>
+     * Get tenant id.<br>
      * 
      * @param request HttpServlet request
      * @return The tenant id
@@ -100,7 +100,7 @@ public class TokenUtil {
     }
 
     /**
-     * Get tenant name.<br/>
+     * Get tenant name.<br>
      * 
      * @param request HttpServlet request
      * @return The tenant name
@@ -121,7 +121,7 @@ public class TokenUtil {
     }
 
     /**
-     * Check whether the tenant is ISP tenant.<br/>
+     * Check whether the tenant is ISP tenant.<br>
      * 
      * @param tenantId The tenant id
      * @return true when the tenant is ISP tenant

@@ -25,7 +25,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
 
 /**
- * Sbi model, AC model class.<br/>
+ * Sbi model, AC model class.<br>
  *
  * @author
  * @version SDNO 0.5 Aug 2, 2016

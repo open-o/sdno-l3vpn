@@ -23,7 +23,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * L3LoopbackIfs class.<br/>
+ * L3LoopbackIfs class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

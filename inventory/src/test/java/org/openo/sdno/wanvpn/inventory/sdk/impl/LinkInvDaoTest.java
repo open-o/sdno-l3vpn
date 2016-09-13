@@ -38,7 +38,7 @@ import mockit.Mock;
 import mockit.MockUp;
 
 /**
- * LinkInvDaoTest class.<br/>
+ * LinkInvDaoTest class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

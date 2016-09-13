@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.translator.common;
 
 /**
- * The key constants of Vpn.<br/>
+ * The key constants of Vpn.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2

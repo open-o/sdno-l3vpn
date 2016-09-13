@@ -28,7 +28,7 @@ import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * The checker of the vlan scope.<br/>
+ * The checker of the vlan scope.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 1, 2016
@@ -51,7 +51,7 @@ public class VlanScopeChecker {
     }
 
     /**
-     * Check the vlan scope.<br/>
+     * Check the vlan scope.<br>
      * 
      * @param model The service model
      * @param field The field to be checked

@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, ContainerSizeDesc.<br/>
+ * User-defined JAVA annotation, ContainerSizeDesc.<br>
  * <p>
  * Describe the size of collection, array, Map.
  * </p>
@@ -37,7 +37,7 @@ import java.lang.annotation.Target;
 public @interface ContainerSizeDesc {
 
     /**
-     * Minimum size of container.<br/>
+     * Minimum size of container.<br>
      * 
      * @return Minimum size
      * @since SDNO 0.5
@@ -45,7 +45,7 @@ public @interface ContainerSizeDesc {
     int minSize() default 0;
 
     /**
-     * Maximum size of container.<br/>
+     * Maximum size of container.<br>
      * 
      * @return Maximum size
      * @since SDNO 0.5

@@ -37,7 +37,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * PUER inventory complex NBI bean.<br/>
+ * PUER inventory complex NBI bean.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -51,7 +51,7 @@ public class PuerInvComplexNbiBean extends PuerInvSuperNbiBean {
     private static final Logger LOGGER = LoggerFactory.getLogger(PuerInvComplexNbiBean.class);
 
     /**
-     * Query data.<br/>
+     * Query data.<br>
      * 
      * @param resType resource type
      * @param uuid UUID
@@ -86,11 +86,11 @@ public class PuerInvComplexNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * General query interface.<br/>
+     * General query interface.<br>
      * <p>
      * Support query association table.According to the filter conditions,query resource data from a
-     * main resource and multiple associated slave resources.<br/>
-     * Support paging, maximum return number is QueryComplexParams.PAGE_CAPACITY_MAX.<br/>
+     * main resource and multiple associated slave resources.<br>
+     * Support paging, maximum return number is QueryComplexParams.PAGE_CAPACITY_MAX.<br>
      * </p>
      * 
      * @param resType resource type
@@ -119,7 +119,7 @@ public class PuerInvComplexNbiBean extends PuerInvSuperNbiBean {
     }
 
     /**
-     * Ignore page info in query parameter, query all data.<br/>
+     * Ignore page info in query parameter, query all data.<br>
      * 
      * @param resType resource type
      * @param complexParams query parameters

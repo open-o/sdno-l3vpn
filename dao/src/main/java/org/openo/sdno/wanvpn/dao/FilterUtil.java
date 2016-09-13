@@ -28,7 +28,7 @@ import org.openo.sdno.wanvpn.dao.FilterUtil;
 import org.springframework.util.CollectionUtils;
 
 /**
- * Filter util class. <br/>
+ * Filter util class. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -43,7 +43,7 @@ public class FilterUtil {
     }
 
     /**
-     * Get the single instance.<br/>
+     * Get the single instance.<br>
      * 
      * @return the single instance
      * @since SDNO 0.5
@@ -53,7 +53,7 @@ public class FilterUtil {
     }
 
     /**
-     * Get the needed filter by input original filter and attributes which require filtering.<br/>
+     * Get the needed filter by input original filter and attributes which require filtering.<br>
      * 
      * @param rawFilter original filter
      * @param attrs attributes which require filtering
@@ -115,7 +115,7 @@ public class FilterUtil {
     }
 
     /**
-     * Simple WHERE statement class.<br/>
+     * Simple WHERE statement class.<br>
      * <p>
      * Allows multiple conditions, conditions are connected with AND. Example: commonName like
      * '%:commonName%' will be analyze to: <br>
@@ -133,7 +133,7 @@ public class FilterUtil {
         private final String rawStatement;
 
         /**
-         * Constructor.<br/>
+         * Constructor.<br>
          * 
          * @since SDNO 0.5
          * @param attrName attribute name
@@ -145,7 +145,7 @@ public class FilterUtil {
         }
 
         /**
-         * Convert raw statement to SimpleWhereStatement object.<br/>
+         * Convert raw statement to SimpleWhereStatement object.<br>
          * 
          * @param rawStatement raw statement
          * @return SimpleWhereStatement object
@@ -160,7 +160,7 @@ public class FilterUtil {
         }
 
         /**
-         * Get rawStatement.<br/>
+         * Get rawStatement.<br>
          * 
          * @return rawStatement
          * @since SDNO 0.5
@@ -175,7 +175,7 @@ public class FilterUtil {
         }
 
         /**
-         * Check input is equal to attrName or not.<br/>
+         * Check input is equal to attrName or not.<br>
          * 
          * @param attr attribute name
          * @return boolean

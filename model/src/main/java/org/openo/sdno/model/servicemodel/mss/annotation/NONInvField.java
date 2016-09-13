@@ -24,10 +24,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, NONInvField.<br/>
+ * User-defined JAVA annotation, NONInvField.<br>
  * <p>
- * Indicate that a field isn't inventory store field.<br/>
- * Then inventory process class won't send this field to data source to store.<br/>
+ * Indicate that a field isn't inventory store field.<br>
+ * Then inventory process class won't send this field to data source to store.<br>
  * </p>
  * 
  * @author

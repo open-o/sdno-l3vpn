@@ -31,7 +31,7 @@ import org.openo.sdno.framework.container.resthelper.RestfulProxy;
 import org.openo.sdno.rest.ResponseUtils;
 
 /**
- * Inventory SDK restful util class.<br/>
+ * Inventory SDK restful util class.<br>
  *
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -50,7 +50,7 @@ public class InventorySDKRestUtil {
     }
 
     /**
-     * Send restful GET request.<br/>
+     * Send restful GET request.<br>
      *
      * @param url URL
      * @param restfulParametes restful Parameters
@@ -72,7 +72,7 @@ public class InventorySDKRestUtil {
     }
 
     /**
-     * Send restful POST request.<br/>
+     * Send restful POST request.<br>
      *
      * @param url URL
      * @param restfulParametes restful Parameters
@@ -102,7 +102,7 @@ public class InventorySDKRestUtil {
     }
 
     /**
-     * Send restful DELETE request.<br/>
+     * Send restful DELETE request.<br>
      *
      * @param url URL
      * @param restfulParametes restful Parameters
@@ -128,7 +128,7 @@ public class InventorySDKRestUtil {
     }
 
     /**
-     * Send restful PUT request.<br/>
+     * Send restful PUT request.<br>
      *
      * @param url URL
      * @param restfulParametes restful Parameters

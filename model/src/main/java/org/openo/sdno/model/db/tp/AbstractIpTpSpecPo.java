@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.NONInvField;
 import org.openo.sdno.model.servicemodel.tp.IpTpSpec;
 
 /**
- * Abstract class for IP TP specification.<br/>
+ * Abstract class for IP TP specification.<br>
  * <p>
  * </p>
  * 

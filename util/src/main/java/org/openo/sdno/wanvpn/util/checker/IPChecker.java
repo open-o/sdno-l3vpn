@@ -31,7 +31,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * Check the Ip field.<br/>
+ * Check the Ip field.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -42,7 +42,7 @@ public class IPChecker {
     }
 
     /**
-     * Check IP field.<br/>
+     * Check IP field.<br>
      * 
      * @param model The service model
      * @param field The field to be checked

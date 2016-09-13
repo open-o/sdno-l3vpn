@@ -26,7 +26,7 @@ import org.openo.sdno.model.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * Routing protocol parameter class.<br/>
+ * Routing protocol parameter class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

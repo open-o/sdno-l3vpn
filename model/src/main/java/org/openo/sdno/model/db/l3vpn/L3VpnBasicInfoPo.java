@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.vpn.AbstractVpnBasicInfoPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L3vpn basic information.<br/>
+ * The class of L3vpn basic information.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

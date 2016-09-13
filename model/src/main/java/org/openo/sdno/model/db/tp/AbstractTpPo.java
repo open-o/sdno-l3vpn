@@ -88,7 +88,7 @@ public abstract class AbstractTpPo implements PoModel<Tp> {
     private List<NVString> addtionalInfo;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */
@@ -97,7 +97,7 @@ public abstract class AbstractTpPo implements PoModel<Tp> {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param id Id to set
      * @param adminStatus adminStatus to set

@@ -34,7 +34,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Util class to convert fields.<br/>
+ * Util class to convert fields.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -51,7 +51,7 @@ public class FieldConvertUtil {
 
     /**
      * Initialize object B with object A, use java reflection to invoke getter/setter method of A
-     * and B.<br/>
+     * and B.<br>
      * 
      * @param objA source object to convert from.
      * @param objB destination object to convert to.
@@ -97,7 +97,7 @@ public class FieldConvertUtil {
     }
 
     /**
-     * get uuid of the object.<br/>
+     * get uuid of the object.<br>
      * 
      * @param obj object to handle.
      * @param motype type of the class.
@@ -121,7 +121,7 @@ public class FieldConvertUtil {
     }
 
     /**
-     * get resource type from annotation.<br/>
+     * get resource type from annotation.<br>
      * 
      * @param motype class type.
      * @return resource type of the given object.

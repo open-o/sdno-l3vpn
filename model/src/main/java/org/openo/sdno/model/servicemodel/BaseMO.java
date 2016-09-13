@@ -17,7 +17,7 @@
 package org.openo.sdno.model.servicemodel;
 
 /**
- * Basic information model.<br/>
+ * Basic information model.<br>
  *
  * @author
  * @version SDNO 0.5 Aug 2, 2016
@@ -45,7 +45,7 @@ public abstract class BaseMO {
     }
 
     /**
-     * Change parameters of body to json.<br/>
+     * Change parameters of body to json.<br>
      * 
      * @return The json body as string
      * @since SDNO 0.5

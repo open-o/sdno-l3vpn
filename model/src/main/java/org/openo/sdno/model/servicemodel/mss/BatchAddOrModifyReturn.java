@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.mss;
 import java.util.List;
 
 /**
- * Return object for batch add and batch update.<br/>
+ * Return object for batch add and batch update.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

@@ -22,7 +22,7 @@ import org.openo.baseservice.remoteservice.exception.ExceptionArgs;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 
 /**
- * Service exception util class.<br/>
+ * Service exception util class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -37,7 +37,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Create bad request service exception(HTTP Code 400) according to error code.<br/>
+     * Create bad request service exception(HTTP Code 400) according to error code.<br>
      * 
      * @param errCode error code
      * @return bad request service exception
@@ -49,7 +49,7 @@ public class ServiceExceptionUtil {
 
     /**
      * Create bad request service exception(HTTP Code 400) according to error code and
-     * ExceptionArgs.<br/>
+     * ExceptionArgs.<br>
      * 
      * @param errCode error code
      * @param exceptionArgs exception info parameters
@@ -63,7 +63,7 @@ public class ServiceExceptionUtil {
 
     /**
      * Create bad request service exception(HTTP Code 400) according to error code and
-     * commonArgs.<br/>
+     * commonArgs.<br>
      * 
      * @param errCode error code
      * @param commonArgs Uniform exception information parameter
@@ -77,7 +77,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Create service exception(HTTP Code 500) according to error code.<br/>
+     * Create service exception(HTTP Code 500) according to error code.<br>
      * 
      * @param errCode error code
      * @return service exception
@@ -88,7 +88,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Create service exception(HTTP Code 500) according to error code and exceptionArgs.<br/>
+     * Create service exception(HTTP Code 500) according to error code and exceptionArgs.<br>
      * 
      * @param errCode error code
      * @param exceptionArgs exception info parameters
@@ -100,7 +100,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Create service exception according to error code and HTTP status code.<br/>
+     * Create service exception according to error code and HTTP status code.<br>
      * 
      * @param errCode error code
      * @param httpCode HTTP status code
@@ -112,7 +112,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Create service exception according to error code, HTTP status code and ExceptionArgs.<br/>
+     * Create service exception according to error code, HTTP status code and ExceptionArgs.<br>
      * 
      * @param errCode error code
      * @param httpCode HTTP status code
@@ -128,7 +128,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Create service exception according to error code and commonArgs.<br/>
+     * Create service exception according to error code and commonArgs.<br>
      * 
      * @param errCode error code
      * @param commonArgs Uniform exception information parameter
@@ -155,7 +155,7 @@ public class ServiceExceptionUtil {
     }
 
     /**
-     * Throw a not found exception.<br/>
+     * Throw a not found exception.<br>
      * 
      * @throws ServiceException when called
      * @since SDNO 0.5

@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.PwVlanActionType;
 
 /**
  * 
- * PW Specification Class <br/>
+ * PW Specification Class <br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

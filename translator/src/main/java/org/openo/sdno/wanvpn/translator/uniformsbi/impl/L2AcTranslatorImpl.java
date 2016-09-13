@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
- * The implement class of the L2 AC translator.<br/>
+ * The implement class of the L2 AC translator.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 1, 2016

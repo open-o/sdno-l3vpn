@@ -34,7 +34,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * Restful util class.<br/>
+ * Restful util class.<br>
  *
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -51,7 +51,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful GET request.<br/>
+     * Send Restful GET request.<br>
      *
      * @param request HttpServlet request
      * @param url URL
@@ -64,7 +64,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful GET request.<br/>
+     * Send Restful GET request.<br>
      *
      * @param request HttpServlet request
      * @param url URL
@@ -84,7 +84,7 @@ public class RestUtil {
     }
 
     /**
-     * Get Restful parameters.<br/>
+     * Get Restful parameters.<br>
      *
      * @return Restful parameters
      * @since SDNO 0.5
@@ -94,7 +94,7 @@ public class RestUtil {
     }
 
     /**
-     * Get Restful parameters from input raw data.<br/>
+     * Get Restful parameters from input raw data.<br>
      *
      * @param rawData raw data
      * @return Restful parameters
@@ -146,7 +146,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful DELETE request. <br/>
+     * Send Restful DELETE request. <br>
      *
      * @param url URL
      * @param restfulParametes Restful parameters
@@ -161,7 +161,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful DELETE request.<br/>
+     * Send Restful DELETE request.<br>
      *
      * @param url URL
      * @param restfulParametes Restful parameters
@@ -185,7 +185,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful GET request.<br/>
+     * Send Restful GET request.<br>
      *
      * @param url URL
      * @param restfulParametes Restful parameters
@@ -209,7 +209,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful POST request.<br/>
+     * Send Restful POST request.<br>
      * 
      * @param url URL
      * @param restfulParametes Restful parameters
@@ -223,7 +223,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful POST request.<br/>
+     * Send Restful POST request.<br>
      * 
      * @param url URL
      * @param restfulParametes Restful parameters
@@ -238,7 +238,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful POST request.<br/>
+     * Send Restful POST request.<br>
      * 
      * @param url URL
      * @param restfulParametes Restful parameters
@@ -263,7 +263,7 @@ public class RestUtil {
     }
 
     /**
-     * Send Restful PUT request.<br/>
+     * Send Restful PUT request.<br>
      *
      * @param url URL
      * @param restfulParametes Restful parameters

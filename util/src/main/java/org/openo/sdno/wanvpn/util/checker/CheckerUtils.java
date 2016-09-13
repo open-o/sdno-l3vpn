@@ -22,7 +22,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * The tools of checker to get unsupported service exception.<br/>
+ * The tools of checker to get unsupported service exception.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -33,7 +33,7 @@ public class CheckerUtils {
     }
 
     /**
-     * Get unsupported field type service exception.<br/>
+     * Get unsupported field type service exception.<br>
      * 
      * @param checkerClass Checker class object
      * @param model Service model

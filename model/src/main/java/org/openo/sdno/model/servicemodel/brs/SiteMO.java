@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
- * The data model class of site.<br/>
+ * The data model class of site.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -56,7 +56,7 @@ public class SiteMO extends BaseMO {
     private List<String> tenantSiteIDs;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -65,7 +65,7 @@ public class SiteMO extends BaseMO {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param paramMap The map of parameters to set
@@ -81,7 +81,7 @@ public class SiteMO extends BaseMO {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param id Site id to set

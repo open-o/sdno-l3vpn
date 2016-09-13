@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
 /**
- * Batch query util class.<br/>
+ * Batch query util class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -59,7 +59,7 @@ public class BatchQueryUtils {
     }
 
     /**
-     * Get batch query parameters from HTTP context.<br/>
+     * Get batch query parameters from HTTP context.<br>
      * 
      * @param request HttpServlet request
      * @return batch query parameters
@@ -117,7 +117,7 @@ public class BatchQueryUtils {
     }
 
     /**
-     * When do fake paging, create result constructor according to all data queried out.<br/>
+     * When do fake paging, create result constructor according to all data queried out.<br>
      * 
      * @param datas data queried out
      * @param batchQueryParams batchQueryParams object
@@ -147,7 +147,7 @@ public class BatchQueryUtils {
     }
 
     /**
-     * Convert BatchQueryParams to QueryComplexParams.<br/>
+     * Convert BatchQueryParams to QueryComplexParams.<br>
      * 
      * @param batchQueryParams BatchQueryParams object
      * @return QueryComplexParams object

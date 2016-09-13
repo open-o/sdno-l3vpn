@@ -26,7 +26,7 @@ import org.openo.sdno.model.common.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 
 /**
- * Network element service interface.<br/>
+ * Network element service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -34,7 +34,7 @@ import org.openo.sdno.model.servicemodel.brs.LtpMO;
 public interface NEService extends IService {
 
     /**
-     * Batch query ports info.<br/>
+     * Batch query ports info.<br>
      * 
      * @param neUuid NE UUID
      * @param batchQueryParams Query parameters

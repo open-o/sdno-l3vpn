@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.VpnOperStatus;
 
 /**
- * L3VPN query service interface.<br/>
+ * L3VPN query service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -32,7 +32,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.VpnOperStatus;
 public interface L3VpnQuerySvcService {
 
     /**
-     * Query VPN status info from controller.<br/>
+     * Query VPN status info from controller.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -43,7 +43,7 @@ public interface L3VpnQuerySvcService {
     Vpn getStatus(final Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Query VPN detail info from database.<br/>
+     * Query VPN detail info from database.<br>
      * 
      * @param uuid UUID
      * @param request HttpServlet request
@@ -54,7 +54,7 @@ public interface L3VpnQuerySvcService {
     Vpn getDetail(final String uuid, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Query VPN's operation status.<br/>
+     * Query VPN's operation status.<br>
      * 
      * @param vpnId VPN ID
      * @param ctrluuid controller UUID
@@ -67,7 +67,7 @@ public interface L3VpnQuerySvcService {
             throws ServiceException;
 
     /**
-     * Query VPN's administrative status from controller.<br/>
+     * Query VPN's administrative status from controller.<br>
      * 
      * @param vpn VPN info
      * @param ctrluuid controller UUID

@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.brs;
 import org.openo.sdno.model.servicemodel.BaseMO;
 
 /**
- * The data model class of controller.<br/>
+ * The data model class of controller.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.uniformsbi.base.Pw;
 
 /**
- * pw model class.<br/>
+ * pw model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

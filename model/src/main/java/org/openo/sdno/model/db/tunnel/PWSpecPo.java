@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
 import org.openo.sdno.model.servicemodel.tunnel.PWSpec;
 
 /**
- * PW specification class.<br/>
+ * PW specification class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

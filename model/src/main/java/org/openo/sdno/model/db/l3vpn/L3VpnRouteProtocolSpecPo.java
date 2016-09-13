@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.routeprotocol.AbstractRouteProtocolSpecPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L3Vpn Route Protocol Specification.<br/>
+ * The class of L3Vpn Route Protocol Specification.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

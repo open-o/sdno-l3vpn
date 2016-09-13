@@ -28,7 +28,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.TunnelSelectMode;
 import org.openo.sdno.model.servicemodel.common.enumeration.TunnelTechType;
 
 /**
- * Tunnel Specific Path Constraint Class<br/>
+ * Tunnel Specific Path Constraint Class<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

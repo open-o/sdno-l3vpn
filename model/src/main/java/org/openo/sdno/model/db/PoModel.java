@@ -21,7 +21,7 @@ import java.io.Serializable;
 import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
- * Base profile class.<br/>
+ * Base profile class.<br>
  * 
  * @param <T>
  * @author
@@ -30,7 +30,7 @@ import org.openo.sdno.model.servicemodel.SvcModel;
 public interface PoModel<T extends SvcModel> extends Serializable {
 
     /**
-     * translate current class to service model.<br/>
+     * translate current class to service model.<br>
      * 
      * @return T the result service model
      * @since SDNO 0.5
@@ -38,7 +38,7 @@ public interface PoModel<T extends SvcModel> extends Serializable {
     T toSvcModel();
 
     /**
-     * converted from service model to T calss.<br/>
+     * converted from service model to T calss.<br>
      * 
      * @param svcModel svcModel to convert.
      * @since SDNO 0.5
@@ -46,7 +46,7 @@ public interface PoModel<T extends SvcModel> extends Serializable {
     void fromSvcModel(T svcModel);
 
     /**
-     * Get uuid.<br/>
+     * Get uuid.<br>
      * 
      * @return Uuid as string
      * @since SDNO 0.5
@@ -54,7 +54,7 @@ public interface PoModel<T extends SvcModel> extends Serializable {
     String getUuid();
 
     /**
-     * Set uuid.<br/>
+     * Set uuid.<br>
      * 
      * @param uuid Uuid to set
      * @since SDNO 0.5

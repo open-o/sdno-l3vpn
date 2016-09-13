@@ -21,7 +21,7 @@ import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L2VpnTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
 
 /**
- * The implement of L2 translator provider.<br/>
+ * The implement of L2 translator provider.<br>
  *
  * @author
  * @version SDNO 0.5 2016-6-2

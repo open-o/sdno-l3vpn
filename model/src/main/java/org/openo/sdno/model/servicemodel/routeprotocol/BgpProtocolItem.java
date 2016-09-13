@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.BooleanType;
 
 /**
- * Routing protocol item class.<br/>
+ * Routing protocol item class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -163,7 +163,7 @@ public class BgpProtocolItem extends AbstractSvcModel {
     }
 
     /**
-     * Set BGP protocol fields value.<br/>
+     * Set BGP protocol fields value.<br>
      * 
      * @param bgpProtocolItem bgpProtocolItem
      * @since SDNO 0.5

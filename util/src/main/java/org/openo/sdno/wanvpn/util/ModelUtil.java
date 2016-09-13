@@ -23,7 +23,7 @@ import java.util.Map;
 import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
- * Tools class of model.<br/>
+ * Tools class of model.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

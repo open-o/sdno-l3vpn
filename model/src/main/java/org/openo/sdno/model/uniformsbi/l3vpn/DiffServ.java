@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
- * SBI model for difference service.<br/>
+ * SBI model for difference service.<br>
  *
  * @author
  * @version SDNO 0.5 Aug 2, 2016

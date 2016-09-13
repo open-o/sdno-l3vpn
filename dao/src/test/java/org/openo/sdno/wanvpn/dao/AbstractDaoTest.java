@@ -38,7 +38,7 @@ import mockit.Mock;
 import mockit.MockUp;
 
 /**
- * AbstractDaoTest class.<br/>
+ * AbstractDaoTest class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 3, 2016

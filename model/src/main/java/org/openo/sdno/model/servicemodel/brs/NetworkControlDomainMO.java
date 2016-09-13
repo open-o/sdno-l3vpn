@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.BaseMO;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The data model class of network control domain.<br/>
+ * The data model class of network control domain.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016

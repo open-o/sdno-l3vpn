@@ -25,7 +25,7 @@ import org.openo.sdno.model.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * The Static Route Table is a list<routing item>.<br/>
+ * The Static Route Table is a list<routing item>.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 5, 2016

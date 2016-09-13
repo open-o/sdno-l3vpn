@@ -29,7 +29,7 @@ import org.openo.sdno.model.servicemodel.businesstype.IpVpnSpec;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractIpVpnSpecDao;
 
 /**
- * AbstractIpVpnSpecDaoTest class.<br/>
+ * AbstractIpVpnSpecDaoTest class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 11, 2016

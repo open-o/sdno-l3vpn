@@ -33,7 +33,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.SyncStatus;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 
 /**
- * Composed VPN model class.<br/>
+ * Composed VPN model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016
@@ -79,7 +79,7 @@ public class ComposedVpn extends AbstractSvcModel implements TenantOwned {
     private List<NVString> addtionalInfo;
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @since SDNO 0.5
      */
@@ -89,7 +89,7 @@ public class ComposedVpn extends AbstractSvcModel implements TenantOwned {
     }
 
     /**
-     * Constructor<br/>
+     * Constructor<br>
      * 
      * @param name Name to set
      * @param tenantId tenant ID to set

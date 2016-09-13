@@ -20,7 +20,7 @@ import java.util.List;
 
 /**
  * 
- * TE path class<br/>
+ * TE path class<br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

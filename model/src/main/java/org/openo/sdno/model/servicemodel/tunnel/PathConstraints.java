@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
  * 
- * Path Constraints class<br/>
+ * Path Constraints class<br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

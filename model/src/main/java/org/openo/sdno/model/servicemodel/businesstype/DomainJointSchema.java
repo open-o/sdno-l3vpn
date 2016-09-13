@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.ExterAsVpnConnectPol
 import org.openo.sdno.model.servicemodel.common.enumeration.MainDomainConstrain;
 
 /**
- * DomainJointSchema class.<br/>
+ * DomainJointSchema class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

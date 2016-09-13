@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 
 /**
- * L3VPN delete service interface.<br/>
+ * L3VPN delete service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -31,7 +31,7 @@ import javax.ws.rs.core.Context;
 public interface L3VpnDeleteSvcService {
 
     /**
-     * Delete L3VPN.<br/>
+     * Delete L3VPN.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request

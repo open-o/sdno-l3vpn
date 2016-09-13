@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Error information model class.<br/>
+ * Error information model class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

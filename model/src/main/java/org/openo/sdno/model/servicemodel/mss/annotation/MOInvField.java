@@ -24,9 +24,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, MOInvField.<br/>
+ * User-defined JAVA annotation, MOInvField.<br>
  * <p>
- * Use this annotation, when APP convert MO's field to inventory data, it will use this name.<br/>
+ * Use this annotation, when APP convert MO's field to inventory data, it will use this name.<br>
  * </p>
  * 
  * @author
@@ -38,7 +38,7 @@ import java.lang.annotation.Target;
 public @interface MOInvField {
 
     /**
-     * Field name used in inventory. <br/>
+     * Field name used in inventory. <br>
      * 
      * @return name
      * @since SDNO 0.5

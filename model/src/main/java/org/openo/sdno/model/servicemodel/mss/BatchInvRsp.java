@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Return object for batch operation.<br/>
+ * Return object for batch operation.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016

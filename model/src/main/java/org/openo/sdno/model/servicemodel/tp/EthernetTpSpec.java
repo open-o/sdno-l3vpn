@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.EncapType;
 import org.openo.sdno.model.servicemodel.common.enumeration.VlanActionType;
 
 /**
- * The service model class of EthernetTpSpec.<br/>
+ * The service model class of EthernetTpSpec.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

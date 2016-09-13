@@ -17,7 +17,7 @@
 package org.openo.sdno.model.servicemodel.brs;
 
 /**
- * The class of authentication information.<br/>
+ * The class of authentication information.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

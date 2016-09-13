@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.util;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The tool class to deal with enum.<br/>
+ * The tool class to deal with enum.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 1, 2016
@@ -30,7 +30,7 @@ public final class EnumUtil {
     }
 
     /**
-     * Get the value of enum.<br/>
+     * Get the value of enum.<br>
      * 
      * @param clazz The object class
      * @param commonName The common name of the field to get

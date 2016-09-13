@@ -21,7 +21,7 @@ import java.util.Map;
 import net.sf.json.JSONObject;
 
 /**
- * Relation attributes object of combine query. <br/>
+ * Relation attributes object of combine query. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
@@ -43,7 +43,7 @@ public class JoinAttrData {
     private String filterData;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -52,7 +52,7 @@ public class JoinAttrData {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param attr The attr to set

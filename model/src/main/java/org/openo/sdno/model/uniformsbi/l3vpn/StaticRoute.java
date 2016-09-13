@@ -20,7 +20,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * Static route class.<br/>
+ * Static route class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

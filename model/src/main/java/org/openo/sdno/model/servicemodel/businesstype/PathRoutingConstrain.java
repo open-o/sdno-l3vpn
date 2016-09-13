@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.RoutingSchemeType;
 
 /**
- * PathRoutingConstrain class.<br/>
+ * PathRoutingConstrain class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

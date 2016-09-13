@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 
 /**
- * L3VPN TP delete service interface.<br/>
+ * L3VPN TP delete service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -32,7 +32,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 public interface L3vpnTpDeleteSvcService {
 
     /**
-     * Delete TP.<br/>
+     * Delete TP.<br>
      * 
      * @param vpn VPN
      * @param tpuuid TP UUID

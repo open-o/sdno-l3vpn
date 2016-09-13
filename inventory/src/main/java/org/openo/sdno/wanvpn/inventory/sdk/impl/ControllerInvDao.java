@@ -37,7 +37,7 @@ import org.openo.sdno.framework.container.resthelper.RestfulProxy;
 import org.openo.sdno.framework.container.util.JsonUtil;
 
 /**
- * Controller inventory data access object class.<br/>
+ * Controller inventory data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

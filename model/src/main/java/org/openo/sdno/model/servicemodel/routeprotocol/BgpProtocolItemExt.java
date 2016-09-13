@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.routeprotocol;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
- * Routing protocol item Ext class.<br/>
+ * Routing protocol item Ext class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

@@ -34,7 +34,7 @@ import org.openo.sdno.model.servicemodel.SvcModel;
 import org.springframework.util.StringUtils;
 
 /**
- * Check the string field.<br/>
+ * Check the string field.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -45,7 +45,7 @@ public class StringChecker {
     }
 
     /**
-     * Check the length of the string value.<br/>
+     * Check the length of the string value.<br>
      * 
      * @param minLen The min length
      * @param maxLen The max length
@@ -65,7 +65,7 @@ public class StringChecker {
     }
 
     /**
-     * Check the string value is not blank.<br/>
+     * Check the string value is not blank.<br>
      * 
      * @param strVal The string value
      * @param fieldName The field name
@@ -78,7 +78,7 @@ public class StringChecker {
     }
 
     /**
-     * Check the string value is not empty.<br/>
+     * Check the string value is not empty.<br>
      * 
      * @param strVal The string value
      * @param fieldName The field name
@@ -91,7 +91,7 @@ public class StringChecker {
     }
 
     /**
-     * Check the pattern of string value.<br/>
+     * Check the pattern of string value.<br>
      * 
      * @param pattern The pattern
      * @param strVal The string value
@@ -115,7 +115,7 @@ public class StringChecker {
     }
 
     /**
-     * Check the string object.<br/>
+     * Check the string object.<br>
      * 
      * @param model The service model
      * @param field The field object

@@ -23,7 +23,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * User-defined JAVA annotation, NoPrintField.<br/>
+ * User-defined JAVA annotation, NoPrintField.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

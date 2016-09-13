@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.util.executor;
 
 /**
- * Executor result container class.<br/>
+ * Executor result container class.<br>
  * 
  * @param <R> Generic paradigm
  * @author
@@ -28,7 +28,7 @@ public class ExecutorResultContainer<R> {
     private final R result;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param result result

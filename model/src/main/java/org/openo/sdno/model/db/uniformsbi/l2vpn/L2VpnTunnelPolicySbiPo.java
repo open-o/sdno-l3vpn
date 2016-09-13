@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 import org.openo.sdno.model.uniformsbi.base.TunnelPolicy;
 
 /**
- * L2VPN tunnel policy SBI PO class.<br/>
+ * L2VPN tunnel policy SBI PO class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

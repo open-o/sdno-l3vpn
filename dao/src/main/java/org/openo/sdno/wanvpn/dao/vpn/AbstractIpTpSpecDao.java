@@ -25,7 +25,7 @@ import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 
 /**
- * IpTpSpec table data access object abstract class.<br/>
+ * IpTpSpec table data access object abstract class.<br>
  * 
  * @param <P> AbstractIpTpSpecPo
  * @author

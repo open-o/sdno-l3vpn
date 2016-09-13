@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.ObjectType;
 import org.openo.sdno.model.servicemodel.common.enumeration.RouteRole;
 
 /**
- * Object Identifier<br/>
+ * Object Identifier<br>
  * <p>
  * </p>
  * 

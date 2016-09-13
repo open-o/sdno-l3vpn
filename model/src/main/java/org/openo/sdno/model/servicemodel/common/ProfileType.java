@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.ProfileLevel;
 
 /**
- * profile type enumeration.<br/>
+ * profile type enumeration.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 9, 2016

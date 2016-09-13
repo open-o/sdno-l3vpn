@@ -20,7 +20,7 @@ import org.openo.sdno.model.db.tunnel.AbstractTunnelSpecificPathConstraintPo;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
 
 /**
- * The class of L2Vpn tunnel specific path constraint PO.<br/>
+ * The class of L2Vpn tunnel specific path constraint PO.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

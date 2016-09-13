@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.inventory.sdk.result;
 
 /**
- * The class of failed data and error code.<br/>
+ * The class of failed data and error code.<br>
  * 
  * @param <T> Generic paradigm
  * @author

@@ -38,7 +38,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Site inventory data access object class.<br/>
+ * Site inventory data access object class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

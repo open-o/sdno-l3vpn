@@ -17,7 +17,7 @@
 package org.openo.sdno.l3vpnservice.constant;
 
 /**
- * The constants of L3VPN service error code.<br/>
+ * The constants of L3VPN service error code.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 2, 2016

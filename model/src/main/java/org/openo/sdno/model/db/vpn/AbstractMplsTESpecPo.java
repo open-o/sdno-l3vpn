@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
 import org.openo.sdno.model.servicemodel.tunnel.MplsTESpec;
 
 /**
- * Abstract class for the MPLS TE specification.<br/>
+ * Abstract class for the MPLS TE specification.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 4, 2016

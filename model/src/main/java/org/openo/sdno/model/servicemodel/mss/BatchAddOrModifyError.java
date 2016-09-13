@@ -17,7 +17,7 @@
 package org.openo.sdno.model.servicemodel.mss;
 
 /**
- * Error data structure for batch add or update. <br/>
+ * Error data structure for batch add or update. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

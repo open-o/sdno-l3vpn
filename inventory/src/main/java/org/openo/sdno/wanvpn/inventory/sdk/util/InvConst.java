@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.inventory.sdk.util;
 
 /**
- * Inventory constants class.<br/>
+ * Inventory constants class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

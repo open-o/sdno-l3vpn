@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
  * 
- * Tunnel Path Constraint Class <br/>
+ * Tunnel Path Constraint Class <br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 4, 2016

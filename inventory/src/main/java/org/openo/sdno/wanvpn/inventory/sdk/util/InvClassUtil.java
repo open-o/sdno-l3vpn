@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.inventory.sdk.util;
 import java.util.Locale;
 
 /**
- * The tool class of inventory.<br/>
+ * The tool class of inventory.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3
@@ -31,7 +31,7 @@ public class InvClassUtil {
     }
 
     /**
-     * Build the rest type.<br/>
+     * Build the rest type.<br>
      * 
      * @param moType The MO type
      * @return The rest type as string to lower case

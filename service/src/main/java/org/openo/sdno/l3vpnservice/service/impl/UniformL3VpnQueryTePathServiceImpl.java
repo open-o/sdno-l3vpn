@@ -36,7 +36,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.PathStatus;
 import org.springframework.stereotype.Service;
 
 /**
- * Uniform L3VPN query TE path service implement class.<br/>
+ * Uniform L3VPN query TE path service implement class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31

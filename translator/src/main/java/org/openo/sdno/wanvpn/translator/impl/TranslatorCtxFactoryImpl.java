@@ -22,7 +22,7 @@ import org.openo.sdno.wanvpn.translator.inf.TranslatorCtxFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * The implement class of the translator Ctx factory.<br/>
+ * The implement class of the translator Ctx factory.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2

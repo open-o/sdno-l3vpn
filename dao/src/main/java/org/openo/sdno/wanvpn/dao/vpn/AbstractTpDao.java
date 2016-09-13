@@ -40,7 +40,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 
 /**
- * TP data access object abstract class.<br/>
+ * TP data access object abstract class.<br>
  * 
  * @param <P> AbstractTpPo
  * @author
@@ -104,7 +104,7 @@ public abstract class AbstractTpDao<P extends AbstractTpPo> extends DefaultDao<P
     }
 
     /**
-     * Query TP table info.<br/>
+     * Query TP table info.<br>
      * 
      * @param qosID QOS ID
      * @return TP info
@@ -178,7 +178,7 @@ public abstract class AbstractTpDao<P extends AbstractTpPo> extends DefaultDao<P
     }
 
     /**
-     * Assemble brief TP MO.<br/>
+     * Assemble brief TP MO.<br>
      * 
      * @param pos list of POs
      * @return list of TPs
@@ -232,7 +232,7 @@ public abstract class AbstractTpDao<P extends AbstractTpPo> extends DefaultDao<P
     }
 
     /**
-     * Update TP status.<br/>
+     * Update TP status.<br>
      * 
      * @param tps list of TPs
      * @throws ServiceException when update failed.

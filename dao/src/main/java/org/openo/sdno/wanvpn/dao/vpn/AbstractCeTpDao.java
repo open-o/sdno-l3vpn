@@ -26,7 +26,7 @@ import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 
 /**
- * CE TP data access object abstract class.<br/>
+ * CE TP data access object abstract class.<br>
  * 
  * @param <P> AbstractCeTpPo
  * @author
@@ -35,7 +35,7 @@ import org.openo.sdno.wanvpn.dao.DefaultDao;
 public abstract class AbstractCeTpDao<P extends AbstractCeTpPo> extends DefaultDao<P, CeTp> {
 
     /**
-     * Delete data by ID.<br/>
+     * Delete data by ID.<br>
      * 
      * @param uuid UUID
      * @return boolean, if success, return true

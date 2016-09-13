@@ -20,7 +20,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * Path constraint class.<br/>
+ * Path constraint class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016

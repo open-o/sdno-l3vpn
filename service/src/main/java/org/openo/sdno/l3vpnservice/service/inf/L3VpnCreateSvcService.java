@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 
 /**
- * L3VPN create service interface.<br/>
+ * L3VPN create service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -32,7 +32,7 @@ import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 public interface L3VpnCreateSvcService {
 
     /**
-     * Create L3VPN.<br/>
+     * Create L3VPN.<br>
      * 
      * @param vpnVo VPN info
      * @param request HttpServlet request

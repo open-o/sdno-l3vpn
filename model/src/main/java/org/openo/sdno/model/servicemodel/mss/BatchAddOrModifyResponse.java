@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOInvField;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
 
 /**
- * Response data structure for batch add and batch update. <br/>
+ * Response data structure for batch add and batch update. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

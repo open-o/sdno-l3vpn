@@ -22,7 +22,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
- * Batch query result class.<br/>
+ * Batch query result class.<br>
  * 
  * @param <T> Generic paradigm
  * @author
@@ -35,7 +35,7 @@ public class BatchQueryResult<T> {
     private long totalNum = 0;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param data Data to set
@@ -47,7 +47,7 @@ public class BatchQueryResult<T> {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -72,7 +72,7 @@ public class BatchQueryResult<T> {
     }
 
     /**
-     * Null-safe check if the specified collection is empty.<br/>
+     * Null-safe check if the specified collection is empty.<br>
      * 
      * @return true if empty or null
      * @since SDNO 0.5

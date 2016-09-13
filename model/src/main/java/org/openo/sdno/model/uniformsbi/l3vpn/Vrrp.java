@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
- * Vrrp class.<br/>
+ * Vrrp class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 22, 2016

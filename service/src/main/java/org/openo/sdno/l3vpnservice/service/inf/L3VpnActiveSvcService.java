@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 
 /**
- * L3Vpn activate service interface.<br/>
+ * L3Vpn activate service interface.<br>
  * 
  * @author
  * @version     SDNO 0.5  Aug 2, 2016
@@ -32,7 +32,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 public interface L3VpnActiveSvcService {
 
     /**
-     * Activate L3VPN.<br/>
+     * Activate L3VPN.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -43,7 +43,7 @@ public interface L3VpnActiveSvcService {
     Vpn active(Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Deactivate L3VPN.<br/>
+     * Deactivate L3VPN.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -54,7 +54,7 @@ public interface L3VpnActiveSvcService {
     Vpn deactive(Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Activate site.<br/>
+     * Activate site.<br>
      * 
      * @param vpn  VPN info
      * @param tpId TP id
@@ -66,7 +66,7 @@ public interface L3VpnActiveSvcService {
     Tp activeSite(Vpn vpn, String tpId, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Deactivate site.<br/>
+     * Deactivate site.<br>
      * 
      * @param vpn VPN info
      * @param tpId TP id

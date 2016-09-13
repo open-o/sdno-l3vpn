@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.base.Ac;
 
 /**
- * L2ac external qos policy class.<br/>
+ * L2ac external qos policy class.<br>
  * 
  * @author
  * @version SDNO 0.5 Aug 8, 2016

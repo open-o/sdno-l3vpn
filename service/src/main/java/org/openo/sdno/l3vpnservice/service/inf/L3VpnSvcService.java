@@ -30,7 +30,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 
 /**
- * L3VPN service interface.<br/>
+ * L3VPN service interface.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-31
@@ -38,7 +38,7 @@ import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 public interface L3VpnSvcService extends IService {
 
     /**
-     * Create L3VPN.<br/>
+     * Create L3VPN.<br>
      * 
      * @param vpnVo VPN info
      * @param request HttpServlet request
@@ -49,7 +49,7 @@ public interface L3VpnSvcService extends IService {
     Vpn create(final VpnVo vpnVo, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Delete L3VPN.<br/>
+     * Delete L3VPN.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -60,7 +60,7 @@ public interface L3VpnSvcService extends IService {
     Vpn delete(final Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Activate L3VPN.<br/>
+     * Activate L3VPN.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -71,7 +71,7 @@ public interface L3VpnSvcService extends IService {
     Vpn active(Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Deactivate L3VPN.<br/>
+     * Deactivate L3VPN.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -82,7 +82,7 @@ public interface L3VpnSvcService extends IService {
     Vpn deactive(Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Update VPN description info in database.<br/>
+     * Update VPN description info in database.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -93,7 +93,7 @@ public interface L3VpnSvcService extends IService {
     Vpn modifyDesc(final Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Query VPN detail info from database.<br/>
+     * Query VPN detail info from database.<br>
      * 
      * @param uuid UUID
      * @param request HttpServlet request
@@ -104,7 +104,7 @@ public interface L3VpnSvcService extends IService {
     Vpn getDetail(final String uuid, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Query VPN status info from controller.<br/>
+     * Query VPN status info from controller.<br>
      * 
      * @param vpn VPN info
      * @param request HttpServlet request
@@ -115,7 +115,7 @@ public interface L3VpnSvcService extends IService {
     Vpn getStatus(Vpn vpn, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Add TP.<br/>
+     * Add TP.<br>
      * 
      * @param vpn VPN info
      * @param tp TP info
@@ -127,7 +127,7 @@ public interface L3VpnSvcService extends IService {
     Tp addTp(Vpn vpn, Tp tp, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Delete TP.<br/>
+     * Delete TP.<br>
      * 
      * @param vpn VPN
      * @param tpId TP UUID
@@ -139,7 +139,7 @@ public interface L3VpnSvcService extends IService {
     Tp deleteTp(Vpn vpn, String tpId, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Add route protocol.<br/>
+     * Add route protocol.<br>
      * 
      * @param vpn VPN info
      * @param tpUuid TP UUID
@@ -153,7 +153,7 @@ public interface L3VpnSvcService extends IService {
             @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Delete route protocol.<br/>
+     * Delete route protocol.<br>
      * 
      * @param vpn VPN
      * @param tpUuid TP UUID
@@ -167,7 +167,7 @@ public interface L3VpnSvcService extends IService {
             throws ServiceException;
 
     /**
-     * Activate site.<br/>
+     * Activate site.<br>
      * 
      * @param vpn VPN info
      * @param tpId TP id
@@ -179,7 +179,7 @@ public interface L3VpnSvcService extends IService {
     Tp activeSite(Vpn vpn, String tpId, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Deactivate site.<br/>
+     * Deactivate site.<br>
      * 
      * @param vpn VPN info
      * @param tpId TP id
@@ -191,7 +191,7 @@ public interface L3VpnSvcService extends IService {
     Tp deactiveSite(Vpn vpn, String tpId, @Context HttpServletRequest request) throws ServiceException;
 
     /**
-     * Query TE path.<br/>
+     * Query TE path.<br>
      * 
      * @param vpn VPN info
      * @param queryKey query key

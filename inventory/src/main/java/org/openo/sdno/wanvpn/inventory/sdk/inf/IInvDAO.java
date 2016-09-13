@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 
 /**
- * Inventory data access object interface.<br/>
+ * Inventory data access object interface.<br>
  * <p>
  * The MO object to be stored must have a constructor with empty parameter list, and all fields to
  * be stored need get/set method.
@@ -36,7 +36,7 @@ import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 public interface IInvDAO<M> {
 
     /**
-     * Add object to database.<br/>
+     * Add object to database.<br>
      * 
      * @param moList MO list
      * @param moType MO type
@@ -47,7 +47,7 @@ public interface IInvDAO<M> {
     ResultRsp<List<String>> add(List<M> moList, Class<?> moType) throws ServiceException;
 
     /**
-     * Delete specific object.<br/>
+     * Delete specific object.<br>
      * 
      * @param uuid UUID
      * @param moType MO type
@@ -58,7 +58,7 @@ public interface IInvDAO<M> {
     ResultRsp<String> delete(String uuid, Class<?> moType) throws ServiceException;
 
     /**
-     * Batch delete object. <br/>
+     * Batch delete object. <br>
      * 
      * @param moList MO list
      * @param moType MO type
@@ -69,7 +69,7 @@ public interface IInvDAO<M> {
     ResultRsp<List<String>> delete(List<M> moList, Class<?> moType) throws ServiceException;
 
     /**
-     * Batch delete object.<br/>
+     * Batch delete object.<br>
      * 
      * @param uuidList UUID list
      * @param moType MO type
@@ -80,7 +80,7 @@ public interface IInvDAO<M> {
     ResultRsp batchDelete(List<String> uuidList, Class<?> moType) throws ServiceException;
 
     /**
-     * Update object.<br/>
+     * Update object.<br>
      * 
      * @param moList MO list
      * @param moType MO type
@@ -91,7 +91,7 @@ public interface IInvDAO<M> {
     ResultRsp update(List<M> moList, Class<?> moType) throws ServiceException;
 
     /**
-     * General query interface.<br/>
+     * General query interface.<br>
      * 
      * @param moType MO type
      * @param params query parameters
@@ -102,7 +102,7 @@ public interface IInvDAO<M> {
     ResultRsp<List<M>> queryComplex(Class<?> moType, QueryComplexParams params) throws ServiceException;
 
     /**
-     * Query all data.<br/>
+     * Query all data.<br>
      * 
      * @param moType MO type
      * @param params query parameters
@@ -114,7 +114,7 @@ public interface IInvDAO<M> {
             throws ServiceException, CloneNotSupportedException;
 
     /**
-     * Query single object by UUID.<br/>
+     * Query single object by UUID.<br>
      * 
      * @param uuid UUID
      * @param moType MO type

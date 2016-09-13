@@ -25,7 +25,7 @@ import org.openo.sdno.model.paradesc.IntegerDesc;
 import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
- * Check the integer field.<br/>
+ * Check the integer field.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -36,7 +36,7 @@ public class IntegerChecker {
     }
 
     /**
-     * Check the integer field.<br/>
+     * Check the integer field.<br>
      * 
      * @param model The service model
      * @param field The field object

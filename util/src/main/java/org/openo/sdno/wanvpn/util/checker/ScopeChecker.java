@@ -24,7 +24,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
- * Check the scope.<br/>
+ * Check the scope.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -35,7 +35,7 @@ public class ScopeChecker {
     }
 
     /**
-     * Check the scope<br/>
+     * Check the scope<br>
      * 
      * @param model The service model
      * @throws ServiceException when the field check failed

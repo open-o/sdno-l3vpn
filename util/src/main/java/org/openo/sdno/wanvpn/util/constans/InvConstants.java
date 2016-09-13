@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.util.constans;
 
 /**
- * General constants in database model.<br/>
+ * General constants in database model.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

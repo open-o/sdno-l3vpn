@@ -29,7 +29,7 @@ import org.openo.sdno.wanvpn.dao.DefaultDao;
 
 
 /**
- * EthernetTpSpec table data access object abstract class.<br/>
+ * EthernetTpSpec table data access object abstract class.<br>
  * 
  * @param <P> AbstractEthernetTpSpecPo
  * @author

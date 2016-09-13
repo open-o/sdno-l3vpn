@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.util.error;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Error code util class.<br/>
+ * Error code util class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -32,7 +32,7 @@ public class ErrorCodeUtils {
     }
 
     /**
-     * Get error code.<br/>
+     * Get error code.<br>
      * 
      * @param appName APP name
      * @param source source

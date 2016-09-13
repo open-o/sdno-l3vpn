@@ -25,7 +25,7 @@ import org.openo.sdno.result.ErrorCodeInfo;
 import org.openo.sdno.wanvpn.inventory.sdk.common.ErrorCode;
 
 /**
- * The class of result response.<br/>
+ * The class of result response.<br>
  * 
  * @param <T> Generic paradigm
  * @author
@@ -77,7 +77,7 @@ public class ResultRsp<T> implements Serializable {
     private List<FailData<T>> fail = null;
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      */
@@ -86,7 +86,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param errorCode error code to set
@@ -97,7 +97,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param result ResultRsp to set
@@ -114,7 +114,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Constructor.<br/>
+     * Constructor.<br>
      * 
      * @since SDNO 0.5
      * @param result ResultRsp to set
@@ -126,7 +126,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Build the success ResultRsp object.<br/>
+     * Build the success ResultRsp object.<br>
      * 
      * @return The success ResultRsp object
      * @since SDNO 0.5
@@ -136,7 +136,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Build the failed ResultRsp object.<br/>
+     * Build the failed ResultRsp object.<br>
      * 
      * @return The failed ResultRsp object
      * @since SDNO 0.5
@@ -242,7 +242,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Check whether is success.<br/>
+     * Check whether is success.<br>
      * 
      * @return True when is success
      *         false when is failed
@@ -266,7 +266,7 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
-     * Check whether is valid.<br/>
+     * Check whether is valid.<br>
      * 
      * @return true when is valid
      *         false when is in valid

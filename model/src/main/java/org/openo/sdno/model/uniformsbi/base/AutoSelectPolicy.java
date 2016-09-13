@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * Auto select policy class.<br/>
+ * Auto select policy class.<br>
  * 
  * @author
  * @version SDNO 0.5 Jul 21, 2016
