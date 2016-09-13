@@ -1,6 +1,0 @@
-{
-	"L3VPNService:l3vpn:delete": "@",
-	"L3VPNService:l3vpn:modify": "@",
-	"L3VPNService:l3vpn:get": "@",
-	"L3VPNService:l3vpn:create": "@"
-}
