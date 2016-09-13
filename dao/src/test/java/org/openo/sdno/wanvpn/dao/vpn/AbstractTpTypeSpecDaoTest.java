@@ -38,8 +38,6 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
 import org.openo.sdno.wanvpn.JsonFileUtil;
 import org.openo.sdno.wanvpn.dao.AbstractDao;
-import org.openo.sdno.wanvpn.dao.DaoUtil;
-import org.openo.sdno.wanvpn.dao.DefaultDao;
 
 import junit.framework.Assert;
 import mockit.Mock;
@@ -186,38 +184,6 @@ public class AbstractTpTypeSpecDaoTest {
         final List<TpTypeSpec> typeSpecList = tp.getTypeSpecList();
         try {
             dao.delMos(typeSpecList);
-        } catch(ServiceException e) {
-            // 如果抛出异常则认为失败
-            Assert.assertTrue(false);
-        }
-    }
-
-    @Test
-    public void updateMos() throws Exception {
-        new MockUp<AbstractDao>() {
-
-            @Mock
-            public boolean update(final List<L3VpnTpTypeSpecPo> pos) throws ServiceException {
-                return true;
-            };
-        };
-
-        new MockUp<DaoUtil>() {
-
-            @Mock
-            public boolean updateSlaveMo(SvcModel mastMo, SvcModel slaveMo,
-                    DefaultDao<PoModel<SvcModel>, SvcModel> mastDao, DefaultDao<PoModel<SvcModel>, SvcModel> slaveDao,
-                    String slaveIdName) throws ServiceException {
-                return true;
-            }
-        };
-
-        mock();
-
-        final Tp tp = getTp();
-        final List<TpTypeSpec> typeSpecList = tp.getTypeSpecList();
-        try {
-            dao.updateMos(typeSpecList);
         } catch(ServiceException e) {
             // 如果抛出异常则认为失败
             Assert.assertTrue(false);

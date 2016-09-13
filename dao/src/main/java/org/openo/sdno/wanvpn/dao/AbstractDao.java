@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,7 +32,6 @@ import org.openo.sdno.model.servicemodel.mss.JoinAttrData;
 import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.dao.AbstractDao;
 import org.openo.sdno.wanvpn.dao.Dao;
-import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.openo.sdno.wanvpn.dao.FilterUtil;
 import org.openo.sdno.wanvpn.inventory.sdk.inf.IInvDAO;
@@ -45,7 +44,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 
 /**
- * Data access object abstract class.<br/>
+ * Data access object abstract class.<br>
  *
  * @param <P> PoModel
  * @param <M> SvcModel
@@ -64,7 +63,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     }
 
     /**
-     * Add MOs.<br/>
+     * Add MOs.<br>
      *
      * @param mos list of MOs to be added
      * @throws ServiceException when add failed
@@ -73,7 +72,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     public abstract void addMos(List<M> mos) throws ServiceException;
 
     /**
-     * Delete MOs.<br/>
+     * Delete MOs.<br>
      *
      * @param mos list of MOs to be deleted
      * @return boolean, if success, return true
@@ -83,7 +82,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     public abstract boolean delMos(List<M> mos) throws ServiceException;
 
     /**
-     * Update MO info.<br/>
+     * Update MO info.<br>
      *
      * @param mos list of MOs
      * @return boolean, if success, return true
@@ -104,7 +103,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     }
 
     /**
-     * Query data by UUID.<br/>
+     * Query data by UUID.<br>
      *
      * @param uuid UUID
      * @return data queried out
@@ -195,7 +194,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     }
 
     /**
-     * Update data.<br/>
+     * Update data.<br>
      *
      * @param pos POs info
      * @return boolean
@@ -244,9 +243,9 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     /**
      * <P>
      * Paged query, need input table name(without tbl_inv) and WHERE statement to define character
-     * string.<br/>
+     * string.<br>
      * First do paged query in the the corresponding PO table of MO. Then, call assemble function to
-     * query sub-object data.<br/>
+     * query sub-object data.<br>
      * </P>
      *
      * @param batchQueryParams batch query parameters
@@ -265,7 +264,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     }
 
     /**
-     * Paged query.<br/>
+     * Paged query.<br>
      *
      * @param rawFilterDesc raw filter in descending order
      * @param batchQueryParams batch query parameters
@@ -284,7 +283,7 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     }
 
     /**
-     * Get PO's object type.<br/>
+     * Get PO's object type.<br>
      *
      * @return object type
      * @since SDNO 0.5

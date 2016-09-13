@@ -13,76 +13,68 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.openo.sdno.wanvpn.dao;
 
 import org.junit.Test;
 
-public class TestMo
-{
+public class TestMo {
+
     private String uuid;
+
     private String name;
+
     private int intVal;
+
     private boolean bool;
 
-    public String getUuid()
-    {
+    public String getUuid() {
         return uuid;
     }
 
-    public void setUuid(int uuid)
-    {
+    public void setUuid(int uuid) {
         this.uuid = String.valueOf(uuid);
     }
 
-    public int getName()
-    {
+    public int getName() {
         return intVal;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getIntVal()
-    {
+    public int getIntVal() {
         return intVal;
     }
 
-    public void setIntVal(int intVal)
-    {
+    public void setIntVal(int intVal) {
         this.intVal = intVal;
     }
 
-    public boolean isBool()
-    {
+    public boolean isBool() {
         return bool;
     }
 
-    public void setBool(boolean bool)
-    {
+    public void setBool(boolean bool) {
         this.bool = bool;
     }
 
-    public void setBool2()
-    {
+    public void setBool2() {
         bool = true;
     }
 
-    public int getInt2(int val)
-    {
+    public int getInt2(int val) {
         name = "name";
         return intVal + val;
     }
 
-    public String setInt2(int val)
-    {
+    public String setInt2(int val) {
         return name;
     }
 
     @Test
-    public void test()
-    {
+    public void test() {
 
     }
 }

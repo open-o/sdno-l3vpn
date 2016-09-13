@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,6 +32,7 @@ import org.openo.sdno.model.db.vpn.AbstractVpnPo;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnBasicInfo;
+import org.openo.sdno.wanvpn.dao.DaoCommonUtil;
 import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractTpDao;
@@ -44,7 +45,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 /**
- * VPN data access object abstract class.<br/>
+ * VPN data access object abstract class.<br>
  *
  * @param <P> AbstractVpnPo project
  * @author
@@ -61,7 +62,7 @@ public abstract class AbstractVpnDao<P extends AbstractVpnPo> extends DefaultDao
     protected AbstractTpDao tpDao;
 
     /**
-     * Check the input VPN name is exist or not in database.<br/>
+     * Check the input VPN name is exist or not in database.<br>
      *
      * @param name VPN name
      * @return boolean, if it exist, return true
@@ -75,7 +76,7 @@ public abstract class AbstractVpnDao<P extends AbstractVpnPo> extends DefaultDao
     }
 
     /**
-     * Assemble VPN basic info, not include TP info.<br/>
+     * Assemble VPN basic info, not include TP info.<br>
      *
      * @param vpnPos VPN POs
      * @return list of VPN object
@@ -104,7 +105,7 @@ public abstract class AbstractVpnDao<P extends AbstractVpnPo> extends DefaultDao
     }
 
     /**
-     * Update VPN info. Use for modify TP info in VPN.<br/>
+     * Update VPN info. Use for modify TP info in VPN.<br>
      *
      * @param oldVpn VPN info
      * @throws ServiceException when update failed
@@ -191,7 +192,7 @@ public abstract class AbstractVpnDao<P extends AbstractVpnPo> extends DefaultDao
             throws ServiceException {
         final Map<String, Tp> tpidMap = new HashMap<String, Tp>();
         for(final Vpn mo : mos) {
-            final List<Tp> newTps = DaoUtil.safeList(mo.getAccessPointList());
+            final List<Tp> newTps = DaoCommonUtil.safeList(mo.getAccessPointList());
             for(final Tp tp : newTps) {
                 if(StringUtils.hasLength(tp.getId())) {
                     tpidMap.put(tp.getId(), tp);
@@ -203,7 +204,7 @@ public abstract class AbstractVpnDao<P extends AbstractVpnPo> extends DefaultDao
             }
         }
         final List<String> ids = new ArrayList<String>(tpidMap.keySet());
-        final List<AbstractTpPo> olTppos = DaoUtil.safeList(tpDao.selectByIds(ids));
+        final List<AbstractTpPo> olTppos = DaoCommonUtil.safeList(tpDao.selectByIds(ids));
         for(final AbstractTpPo tppo : olTppos) {
             final Tp tp = tpidMap.remove(tppo.getUuid());
             existTps.add(tp);
@@ -280,7 +281,7 @@ public abstract class AbstractVpnDao<P extends AbstractVpnPo> extends DefaultDao
     }
 
     /**
-     * Update VPN description.<br/>
+     * Update VPN description.<br>
      *
      * @param uuid UUID
      * @param description description

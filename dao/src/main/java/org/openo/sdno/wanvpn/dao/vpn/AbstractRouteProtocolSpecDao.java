@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,6 +25,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.db.routeprotocol.AbstractRouteProtocolSpecPo;
 import org.openo.sdno.model.servicemodel.routeprotocol.RouteProtocolSpec;
 import org.openo.sdno.model.servicemodel.routeprotocol.StaticRouteTable;
+import org.openo.sdno.wanvpn.dao.DaoCommonUtil;
 import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractStaticRouteTableDao;
@@ -32,7 +33,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 
 /**
- * RouteProtocolSpec table data access object abstract class.<br/>
+ * RouteProtocolSpec table data access object abstract class.<br>
  *
  * @param <P> AbstractRouteProtocolSpecPo
  * @author
@@ -144,7 +145,7 @@ public abstract class AbstractRouteProtocolSpecDao<P extends AbstractRouteProtoc
             final RouteProtocolSpec mastMo = mos.get(i);
             final P po = pos.get(i);
 
-            rst &= DaoUtil.updateSlaveMo(mastMo, mastMo.getStaticRoute(), this, staticRouteTableDao, "staticRouteId");
+            rst &= DaoCommonUtil.updateSlaveMo(mastMo, mastMo.getStaticRoute(), this, staticRouteTableDao, "staticRouteId");
             if(mastMo.getStaticRoute() != null) {
                 po.setStaticRouteId(mastMo.getStaticRoute().getUuid());
             }

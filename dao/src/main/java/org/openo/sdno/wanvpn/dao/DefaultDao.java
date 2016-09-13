@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +35,7 @@ import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 import org.springframework.util.CollectionUtils;
 
 /**
- * Default data access object class.<br/>
+ * Default data access object class.<br>
  * 
  * @param <P> PoModel
  * @param <M> SvcModel
@@ -45,7 +45,7 @@ import org.springframework.util.CollectionUtils;
 public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> extends AbstractDao<P, M> {
 
     /**
-     * Assemble MOs.<br/>
+     * Assemble MOs.<br>
      * 
      * @param pos POs
      * @return list of MOs
@@ -55,7 +55,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     public abstract List<M> assembleMo(List<P> pos) throws ServiceException;
 
     /**
-     * Query all MOs in database.<br/>
+     * Query all MOs in database.<br>
      * 
      * @return MOs
      * @throws ServiceException when operate failed
@@ -70,7 +70,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Query MO info by condition.<br/>
+     * Query MO info by condition.<br>
      * 
      * @param fieldName field name
      * @param fieldVal field value
@@ -86,7 +86,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Query MO info by condition, condition must be IN.<br/>
+     * Query MO info by condition, condition must be IN.<br>
      * 
      * @param fieldName field name
      * @param fieldVals field value
@@ -100,7 +100,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Query MO by UUID.<br/>
+     * Query MO by UUID.<br>
      * 
      * @param uuid UUID
      * @return MO info
@@ -120,7 +120,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Batch query MOs by UUIDs.<br/>
+     * Batch query MOs by UUIDs.<br>
      * 
      * @param uuids UUIDs
      * @return MOs info
@@ -133,7 +133,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Check whether the UUID corresponding data exists. <br/>
+     * Check whether the UUID corresponding data exists. <br>
      * 
      * @param uuid UUID
      * @return boolean, if it exist, return true
@@ -145,12 +145,12 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Paged query.<br/>
+     * Paged query.<br>
      * <P>
      * Paged query, need input table name(without tbl_inv) and WHERE statement to define character
-     * string.<br/>
+     * string.<br>
      * First do paged query in the the corresponding PO table of MO. Then, call assemble function to
-     * query sub-object data.<br/>
+     * query sub-object data.<br>
      * </P>
      * 
      * @param batchQueryParams batch query parameters
@@ -165,12 +165,12 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Paged query.<br/>
+     * Paged query.<br>
      * <P>
      * Paged query, need input table name(without tbl_inv) and WHERE statement to define character
-     * string.<br/>
+     * string.<br>
      * First do paged query in the the corresponding PO table of MO. Then, call assemble function to
-     * query sub-object data.<br/>
+     * query sub-object data.<br>
      * </P>
      * 
      * @param rawFilterDesc raw filter in descending order
@@ -224,7 +224,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Query data by conditions.<br/>
+     * Query data by conditions.<br>
      * 
      * @param fieldName field name
      * @param fieldVals field value
@@ -238,7 +238,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
         }
         final List<P> rst = new ArrayList<P>(fieldVals.size());
 
-        final List<?> groupedIds = DaoUtil.splitList(fieldVals);
+        final List<?> groupedIds = DaoCommonUtil.splitList(fieldVals);
         for(final Object elementUuids : groupedIds) {
             rst.addAll(selectByFiniteConditions(fieldName, (List<?>)elementUuids));
         }
@@ -246,7 +246,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
     }
 
     /**
-     * Batch query data by UUIDs.<br/>
+     * Batch query data by UUIDs.<br>
      * 
      * @param uuids UUIDs
      * @return query result
@@ -259,7 +259,7 @@ public abstract class DefaultDao<P extends PoModel<M>, M extends SvcModel> exten
         }
         final List<P> rst = new ArrayList<P>(uuids.size());
 
-        final List<List<String>> groupedIds = DaoUtil.splitList(uuids);
+        final List<List<String>> groupedIds = DaoCommonUtil.splitList(uuids);
         for(final List<String> elementUuids : groupedIds) {
             rst.addAll(selectByFiniteIds(elementUuids));
         }

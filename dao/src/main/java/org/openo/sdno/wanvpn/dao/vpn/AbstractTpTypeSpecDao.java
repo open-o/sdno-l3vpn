@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,6 +27,7 @@ import org.openo.sdno.model.db.tp.AbstractTpTypeSpecPo;
 import org.openo.sdno.model.servicemodel.tp.EthernetTpSpec;
 import org.openo.sdno.model.servicemodel.tp.IpTpSpec;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
+import org.openo.sdno.wanvpn.dao.DaoCommonUtil;
 import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractEthernetTpSpecDao;
@@ -35,7 +36,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 
 /**
- * TpTypeSpec table data access object abstract class.<br/>
+ * TpTypeSpec table data access object abstract class.<br>
  * 
  * @param <P> AbstractTpTypeSpecPo
  * @author
@@ -171,10 +172,10 @@ public abstract class AbstractTpTypeSpecDao<P extends AbstractTpTypeSpecPo> exte
         boolean result = false;
         for(int i = 0; i < mos.size(); i++) {
             final TpTypeSpec tpTypeSpec = mos.get(i);
-            DaoUtil.updateSlaveMo(tpTypeSpec, tpTypeSpec.getEthernetTpSpec(), this, ethernetTpSpecDao,
+            DaoCommonUtil.updateSlaveMo(tpTypeSpec, tpTypeSpec.getEthernetTpSpec(), this, ethernetTpSpecDao,
                     "ethernetTpSpecId");
 
-            DaoUtil.updateSlaveMo(tpTypeSpec, tpTypeSpec.getIpTpSpec(), this, ipTpSpecDao, "ipTpSpecId");
+            DaoCommonUtil.updateSlaveMo(tpTypeSpec, tpTypeSpec.getIpTpSpec(), this, ipTpSpecDao, "ipTpSpecId");
 
             final List<P> pos = DaoUtil.batchMoConvert(mos, getPoClass());
             final P newTpTypeSpecPo = pos.get(i);
