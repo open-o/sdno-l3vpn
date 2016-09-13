@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,56 +16,41 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+
 /**
- * The enum class of operation class.<br/>
+ * The enum class of operation class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
  */
 public enum OperStatus {
-    OPERATE_UP(0, "operateUp"), OPERATE_DOWN(1, "operateDown");
-
-    private int value;
+    OPERATE_UP("operateUp"), OPERATE_DOWN("operateDown");
 
     private String name;
 
-    private OperStatus(int value, String name) {
-        this.value = value;
+    private OperStatus(String name) {
         this.name = name;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     /**
-     * Get enum integer value by name.<br/>
+     * Create OperStatus by name.<br>
      * 
-     * @param nameStr enum name
-     * @return enum integer value
+     * @param name status name
+     * @return OperStatus Object
      * @since SDNO 0.5
      */
-    public static int getIntValueByName(String nameStr) {
-        if(OperStatus.OPERATE_UP.getName().equals(nameStr)) {
-            return OperStatus.OPERATE_UP.getValue();
+    @JsonCreator
+    public static OperStatus fromName(String name) {
+        if(OPERATE_UP.getName().equals(name)) {
+            return OPERATE_UP;
+        } else if(OPERATE_DOWN.getName().equals(name)) {
+            return OPERATE_DOWN;
         }
-
-        if(OperStatus.OPERATE_DOWN.getName().equals(nameStr)) {
-            return OperStatus.OPERATE_DOWN.getValue();
-        }
-
-        return -1;
+        return OPERATE_DOWN;
     }
 }

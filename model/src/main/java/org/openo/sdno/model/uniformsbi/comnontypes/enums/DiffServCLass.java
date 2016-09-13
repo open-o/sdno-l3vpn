@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2016, Huawei Technologies Co., Ltd.
+ * Copyright 2016 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,37 +17,21 @@
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
 /**
- * The enum class of different service.<br/>
+ * The enum class of different service.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6
  */
 public enum DiffServCLass {
-    BE(0, "BE"), AF1(1, "AF1"), AF2(2, "AF2"), AF3(3, "AF3"), AF4(4, "AF4"), EF(5, "EF"), CS6(6, "CS6"), CS7(7, "CS7");
-
-    private int value;
+    BE("BE"), AF1("AF1"), AF2("AF2"), AF3("AF3"), AF4("AF4"), EF("EF"), CS6("CS6"), CS7("CS7");
 
     private String name;
 
-    private DiffServCLass(int value, String name) {
-        this.value = value;
+    private DiffServCLass(String name) {
         this.name = name;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
     }
 
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 }
