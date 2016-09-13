@@ -49,7 +49,7 @@ public class UniformL3VpnQuerySvcServiceImplTest {
 
     @Mocked
     private @Context HttpServletRequest httpServletRequest;
-    
+
     @Injectable
     private final L3VpnTpDao tpDao = new L3VpnTpDao() {
 

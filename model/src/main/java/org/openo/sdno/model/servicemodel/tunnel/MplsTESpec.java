@@ -46,14 +46,6 @@ public class MplsTESpec extends AbstractSvcModel {
 
     private TunnelPathConstraint pathConstraint;
 
-    public String getBestEffort() {
-        return bestEffort;
-    }
-
-    public void setBestEffort(String bestEffort) {
-        this.bestEffort = bestEffort;
-    }
-
     public String getCoRoute() {
         return coRoute;
     }
@@ -61,13 +53,13 @@ public class MplsTESpec extends AbstractSvcModel {
     public String getBfdEnable() {
         return bfdEnable;
     }
-
-    public String getShareMode() {
-        return shareMode;
+    
+    public String getBestEffort() {
+        return bestEffort;
     }
 
-    public void setShareMode(String shareMode) {
-        this.shareMode = shareMode;
+    public void setBestEffort(String bestEffort) {
+        this.bestEffort = bestEffort;
     }
 
     public void setCoRoute(String coRoute) {
@@ -78,12 +70,12 @@ public class MplsTESpec extends AbstractSvcModel {
         this.bfdEnable = bfdEnable;
     }
 
-    public TunnelPathConstraint getPathConstraint() {
-        return pathConstraint;
+    public String getShareMode() {
+        return shareMode;
     }
 
-    public void setPathConstraint(TunnelPathConstraint pathConstraint) {
-        this.pathConstraint = pathConstraint;
+    public void setShareMode(String shareMode) {
+        this.shareMode = shareMode;
     }
 
     @Override
@@ -94,5 +86,13 @@ public class MplsTESpec extends AbstractSvcModel {
     @Override
     public void setUuid(final String uuid) {
         this.uuid = uuid;
+    }
+    
+    public TunnelPathConstraint getPathConstraint() {
+        return pathConstraint;
+    }
+
+    public void setPathConstraint(TunnelPathConstraint pathConstraint) {
+        this.pathConstraint = pathConstraint;
     }
 }

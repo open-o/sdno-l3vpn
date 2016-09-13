@@ -31,6 +31,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulOptions;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.framework.container.resthelper.RestfulProxy;
+import org.openo.sdno.wanvpn.util.rest.RestUtil;
 
 import mockit.Mock;
 import mockit.MockUp;

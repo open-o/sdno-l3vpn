@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.openo.sdno.l3vpnservice.dao;
 
 import junit.framework.Assert;
@@ -20,18 +21,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openo.sdno.model.db.l3vpn.L3VpnTpPo;
 
-public class L3VpnTpDaoTest
-{
+public class L3VpnTpDaoTest {
+
     private final L3VpnTpDao dao = new L3VpnTpDao();
 
     @Before
-    public void setUp() throws Exception
-    {
+    public void setUp() throws Exception {
     }
 
     @Test
-    public void testGetPoClass()
-    {
+    public void testGetPoClass() {
         Assert.assertEquals(dao.getPoClass(), L3VpnTpPo.class);
     }
 }

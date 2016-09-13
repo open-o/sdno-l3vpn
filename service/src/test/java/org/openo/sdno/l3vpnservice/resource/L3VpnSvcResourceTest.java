@@ -13,13 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*
- * Title:        NetMatrix V1R3C00<br>
- * Description:  [描述模块的功能、作用、使用方法和注意事项]<br>
- * Company:      Huawei Tech. Co., Ltd<br>
- * @author       h00313442
- * @version      1.0  2016-3-31
- */
 
 package org.openo.sdno.l3vpnservice.resource;
 

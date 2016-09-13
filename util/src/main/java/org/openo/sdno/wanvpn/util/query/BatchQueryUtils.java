@@ -190,32 +190,35 @@ public class BatchQueryUtils {
         complexParams.setPageSize(batchQueryParams.getPageSize());
     }
 
-    private static void validatePageQueryParams(final String pageNumberStr, final String pageCapacityStr)
+    private static void validateParamsNumeric(final String pageNumberStr, final String pageCapacityStr)
             throws ServiceException {
         final String[] zeroArgs = new String[] {"pageNumber is invalid, it must be an integer more or equals to zero"};
         final ExceptionArgs args = new ExceptionArgs();
 
+        if(!hasLength(pageNumberStr) || !StringUtils.isNumeric(pageNumberStr)) {
+            args.setDetailArgs(zeroArgs);
+            throw ServiceExceptionUtil.getBadRequestServiceException(CommonErrorCode.CHECKER_PAGENUMBER_IS_INVALID,
+                    args);
+        }
+
+        if(!hasLength(pageCapacityStr) || !StringUtils.isNumeric(pageCapacityStr)) {
+            throw ServiceExceptionUtil.getBadRequestServiceException(CommonErrorCode.CHECKER_PAGECAPACITY_IS_INVALID);
+        }
+    }
+
+    private static void validatePageQueryParams(final String pageNumberStr, final String pageCapacityStr)
+            throws ServiceException {
+        final ExceptionArgs args = new ExceptionArgs();
         final String[] sizeArgs =
                 new String[] {"pageSize is invalid, it must be an integer less than  or equals to 1000"};
 
         if(pageNumberStr == null && pageCapacityStr == null) {
             return;
         }
-        if(!hasLength(pageNumberStr) || !StringUtils.isNumeric(pageNumberStr)) {
 
-            args.setDetailArgs(zeroArgs);
-            throw ServiceExceptionUtil.getBadRequestServiceException(CommonErrorCode.CHECKER_PAGENUMBER_IS_INVALID,
-                    args);
-
-        }
-
-        if(!hasLength(pageCapacityStr) || !StringUtils.isNumeric(pageCapacityStr)) {
-            throw ServiceExceptionUtil.getBadRequestServiceException(CommonErrorCode.CHECKER_PAGECAPACITY_IS_INVALID);
-
-        }
+        validateParamsNumeric(pageNumberStr, pageCapacityStr);
 
         BigInteger pageNumberInteger = new BigInteger(pageNumberStr);
-
         if(pageNumberInteger.compareTo(BigInteger.ZERO) < 0
                 || pageNumberInteger.compareTo(BigInteger.valueOf(Integer.MAX_VALUE)) > 0) {
             throw ServiceExceptionUtil.getBadRequestServiceException(CommonErrorCode.CHECKER_PAGENUMBER_IS_INVALID,

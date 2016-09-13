@@ -214,6 +214,18 @@ public class ResultRsp<T> implements Serializable {
     }
 
     /**
+     * Check whether is valid.<br>
+     * 
+     * @return true when is valid
+     *         false when is in valid
+     * @since SDNO 0.5
+     */
+    @JsonIgnore
+    public boolean isValid() {
+        return isSuccess() && this.getData() != null;
+    }
+
+    /**
      * @return Returns the.
      */
     public int getHttpCode() {
@@ -251,30 +263,6 @@ public class ResultRsp<T> implements Serializable {
     @JsonIgnore
     public boolean isSuccess() {
         return ErrorCode.UNDERLAYVPN_SUCCESS.equals(errorCode);
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder(512);
-        sb.append("errorcode = [").append(errorCode);
-        sb.append("], descArg = [").append(descArg);
-        sb.append("], reasonArg = [").append(reasonArg);
-        sb.append("], detailArg = [").append(detailArg);
-        sb.append("], adviceArg = [").append(adviceArg);
-        sb.append("], message = [").append(message).append(']');
-        return sb.toString();
-    }
-
-    /**
-     * Check whether is valid.<br>
-     * 
-     * @return true when is valid
-     *         false when is in valid
-     * @since SDNO 0.5
-     */
-    @JsonIgnore
-    public boolean isValid() {
-        return isSuccess() && this.getData() != null;
     }
 
     /**
@@ -317,5 +305,17 @@ public class ResultRsp<T> implements Serializable {
      */
     public void setFail(final List<FailData<T>> fail) {
         this.fail = fail;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(512);
+        sb.append("errorcode = [").append(errorCode);
+        sb.append("], descArg = [").append(descArg);
+        sb.append("], reasonArg = [").append(reasonArg);
+        sb.append("], detailArg = [").append(detailArg);
+        sb.append("], adviceArg = [").append(adviceArg);
+        sb.append("], message = [").append(message).append(']');
+        return sb.toString();
     }
 }

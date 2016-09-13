@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package org.openo.sdno.model.common.query;
 
 import static org.junit.Assert.assertEquals;

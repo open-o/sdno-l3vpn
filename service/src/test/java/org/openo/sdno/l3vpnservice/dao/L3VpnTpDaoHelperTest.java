@@ -13,22 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.openo.sdno.l3vpnservice.dao;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class L3VpnTpDaoHelperTest
-{
+public class L3VpnTpDaoHelperTest {
 
     @Before
-    public void setUp() throws Exception
-    {
+    public void setUp() throws Exception {
     }
 
     @Test
-    public void test()
-    {
+    public void test() {
         final L3VpnTpDaoHelper dao = new L3VpnTpDaoHelper();
         return;
     }

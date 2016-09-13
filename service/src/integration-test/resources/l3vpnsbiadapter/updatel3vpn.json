@@ -1,9 +1,10 @@
 {
 	"request": {
-		"uri": "/rest/plugin_adapter_alu_nsp/v1/controllers/[a-zA-Z0-9\\-\\_]{1,36}/united-sbi-service-l3vpn:service/l3vpns/l3vpn/[a-zA-Z0-9\\-\\_]{1,36}",
+		"uri": "/openoapi/sbi-l3vpn/v1/l3vpns/[a-zA-Z0-9\\-\\_]{1,36}",
 		"method": "put",
 		"headers": {
-			"Content-Type": "application/json;charset=UTF-8"
+			"Content-Type": "application/json;charset=UTF-8",
+			"X-Driver-Parameter":"extSysID=[a-zA-Z0-9\\-\\_]{1,36}"
 		},
 		"json": null
 	},

@@ -8,10 +8,8 @@
     </parent>
 
     <groupId>org.openo.sdno.l3vpn</groupId>
-    <artifactId>wanvpn</artifactId>
+    <artifactId>l3vpnservice-root</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <name>Wanvpn</name>
     <packaging>pom</packaging>
 
     <properties>

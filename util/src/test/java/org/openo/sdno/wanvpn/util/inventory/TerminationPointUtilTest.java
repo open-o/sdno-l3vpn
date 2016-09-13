@@ -24,6 +24,7 @@ import java.util.Map;
 
 import org.junit.Test;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
+import org.openo.sdno.wanvpn.util.inventory.TerminationPointUtil;
 
 public class TerminationPointUtilTest {
 

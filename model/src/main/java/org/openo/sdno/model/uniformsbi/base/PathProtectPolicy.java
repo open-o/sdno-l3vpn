@@ -46,8 +46,8 @@ public class PathProtectPolicy {
         this.type = type;
     }
 
-    public Boolean getRevertive() {
-        return revertive;
+    public void setBandwidthMode(String bandwidthMode) {
+        this.bandwidthMode = bandwidthMode;
     }
 
     public void setRevertive(Boolean revertive) {
@@ -58,20 +58,20 @@ public class PathProtectPolicy {
         return bandwidthMode;
     }
 
-    public void setBandwidthMode(String bandwidthMode) {
-        this.bandwidthMode = bandwidthMode;
-    }
-
     public Integer getWtr() {
         return wtr;
+    }
+
+    public Boolean getHotStandbyEnable() {
+        return hotStandbyEnable;
     }
 
     public void setWtr(Integer wtr) {
         this.wtr = wtr;
     }
 
-    public Boolean getHotStandbyEnable() {
-        return hotStandbyEnable;
+    public Boolean getRevertive() {
+        return revertive;
     }
 
     public void setHotStandbyEnable(Boolean hotStandbyEnable) {

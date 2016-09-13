@@ -20,6 +20,7 @@ import java.util.Map;
 
 import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
+import org.openo.sdno.wanvpn.util.rest.ROAInputStreamParser;
 
 public class ROAInputStreamParserTest {
 

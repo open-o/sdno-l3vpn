@@ -48,8 +48,7 @@ public class IntegerChecker {
             return;
         }
         final String fieldName = field.getName();
-        final Class<?> type = field.getType();
-        if(type == Integer.class || type == Long.class || type == int.class || type == long.class) {
+        if(checkFieldType(field)) {
             final Object val = ReflectTool.readVal(model, fieldName);
             doCheckInteger(integerDesc, val, fieldName);
         } else if(Collection.class.isAssignableFrom(field.getType())) {
@@ -73,15 +72,22 @@ public class IntegerChecker {
         }
     }
 
+    private static boolean checkFieldType(Field field) {
+        final Class<?> type = field.getType();
+        if(type == Integer.class || type == Long.class || type == int.class || type == long.class) {
+            return true;
+        }
+        return false;
+    }
+
     private static void doCheckInteger(final IntegerDesc integerDesc, final Object val, final String fieldName)
             throws ServiceException {
         final long minVal = integerDesc.minVal();
         final long maxVal = integerDesc.maxVal();
-        final boolean hasDefault = integerDesc.hasDefault();
 
         if(val instanceof Long) {
             final Long longVal = (Long)val;
-            if(hasDefault && integerDesc.defaultVal() == longVal.longValue()) {
+            if(checkValValue(integerDesc, longVal.longValue())) {
                 return;
             }
             if(longVal.longValue() < minVal || longVal.longValue() > maxVal) {
@@ -90,7 +96,7 @@ public class IntegerChecker {
         }
         if(val instanceof Integer) {
             final Integer intVal = (Integer)val;
-            if(hasDefault && integerDesc.defaultVal() == intVal.longValue()) {
+            if(checkValValue(integerDesc, intVal.longValue())) {
                 return;
             }
             if(intVal.longValue() < minVal || intVal.longValue() > maxVal) {
@@ -99,4 +105,12 @@ public class IntegerChecker {
         }
     }
 
+    private static boolean checkValValue(final IntegerDesc integerDesc, long value) {
+        final boolean hasDefault = integerDesc.hasDefault();
+        
+        if(hasDefault && integerDesc.defaultVal() == value) {
+            return true;
+        }
+        return false;
+    }
 }
