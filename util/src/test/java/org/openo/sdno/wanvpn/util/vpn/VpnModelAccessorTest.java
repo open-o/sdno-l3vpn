@@ -26,6 +26,7 @@ import org.openo.sdno.model.servicemodel.routeprotocol.RouteProtocolSpec;
 import org.openo.sdno.model.servicemodel.tp.CeTp;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
+import org.openo.sdno.wanvpn.util.vpn.VpnModelAccessor;
 
 public class VpnModelAccessorTest {
 

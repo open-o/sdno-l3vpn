@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package org.openo.sdno.model.servicemodel.brs;
 
 import static org.junit.Assert.assertFalse;

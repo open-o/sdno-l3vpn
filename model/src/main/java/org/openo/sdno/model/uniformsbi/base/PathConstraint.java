@@ -28,14 +28,14 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class PathConstraint {
 
+    private Integer latency;
+
     private Integer setupPriority;
 
     private Integer holdupPriority;
 
-    private Integer latency;
-
-    public Integer getSetupPriority() {
-        return setupPriority;
+    public Integer getLatency() {
+        return latency;
     }
 
     public void setSetupPriority(Integer setupPriority) {
@@ -46,16 +46,15 @@ public class PathConstraint {
         return holdupPriority;
     }
 
-    public void setHoldupPriority(Integer holdupPriority) {
-        this.holdupPriority = holdupPriority;
-    }
-
-    public Integer getLatency() {
-        return latency;
-    }
-
     public void setLatency(Integer latency) {
         this.latency = latency;
     }
 
+    public void setHoldupPriority(Integer holdupPriority) {
+        this.holdupPriority = holdupPriority;
+    }
+
+    public Integer getSetupPriority() {
+        return setupPriority;
+    }
 }

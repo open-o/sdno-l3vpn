@@ -62,7 +62,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
     private L3LoopbackIfTranslator l3LoopbackIfTranslator;
 
     /**
-     * @see org.openo.sdno.wanvpn.translator.uniformsbi.inf.ModelTranslator#translate(org.openo.sdno.cbb.wanvpn.translator.common.TranslatorCtx)
+     * @see org.openo.sdno.wanvpn.translator.uniformsbi.inf.ModelTranslator#translate(org.openo.sdno.wanvpn.translator.common.TranslatorCtx)
      */
     @Override
     public L3Vpn translate(TranslatorCtx ctx) throws ServiceException {

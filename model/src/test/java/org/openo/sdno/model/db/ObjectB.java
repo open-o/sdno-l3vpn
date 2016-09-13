@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package org.openo.sdno.model.db;
 
 import org.openo.sdno.model.paradesc.EnumDesc;
@@ -74,14 +73,6 @@ public class ObjectB extends AbstractSvcModel {
         this.aNotHave = aNotHave;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getLabelMode() {
         return labelMode;
     }
@@ -90,12 +81,12 @@ public class ObjectB extends AbstractSvcModel {
         this.labelMode = labelMode;
     }
 
-    public String getFrrEnable() {
-        return frrEnable;
+    public String getId() {
+        return id;
     }
 
-    public void setFrrEnable(String frrEnable) {
-        this.frrEnable = frrEnable;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
@@ -108,4 +99,11 @@ public class ObjectB extends AbstractSvcModel {
         id = uuid;
     }
 
+    public String getFrrEnable() {
+        return frrEnable;
+    }
+
+    public void setFrrEnable(String frrEnable) {
+        this.frrEnable = frrEnable;
+    }
 }

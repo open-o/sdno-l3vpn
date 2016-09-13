@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package org.openo.sdno.model.uniformsbi.base;
 
 import static org.junit.Assert.assertFalse;

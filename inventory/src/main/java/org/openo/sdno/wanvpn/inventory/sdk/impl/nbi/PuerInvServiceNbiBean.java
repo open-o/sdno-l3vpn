@@ -293,43 +293,43 @@ public class PuerInvServiceNbiBean extends PuerInvSuperNbiBean {
 
             filterMap = JsonUtil.fromJson(queryParams.getFilter(), Map.class);
 
-            final StringBuilder filterDsc = new StringBuilder();
+            final StringBuilder filtDescription = new StringBuilder();
 
-            final Iterator iter = filterMap.keySet().iterator();
+            final Iterator iterator = filterMap.keySet().iterator();
 
             final Map<String, Object> entriyFilter = new HashMap<String, Object>();
 
-            while(iter.hasNext()) {
-                final String key = iter.next().toString();
-                final List values = filterMap.get(key);
+            while(iterator.hasNext()) {
+                final String filterKey = iterator.next().toString();
+                final List filterValues = filterMap.get(filterKey);
 
-                if(null == values) {
+                if(null == filterValues) {
                     continue;
                 }
 
-                int num = 1;
-                final int size = values.size();
+                int number = 1;
+                final int size = filterValues.size();
 
-                filterDsc.append('(');
-                for(final Object obj : values) {
-                    if(size == num) {
-                        filterDsc.append(key).append("=':").append(key).append(num).append('\'');
+                filtDescription.append('(');
+                for(final Object obj : filterValues) {
+                    if(size == number) {
+                        filtDescription.append(filterKey).append("=':").append(filterKey).append(number).append('\'');
                     } else {
-                        filterDsc.append(key).append("=':").append(key).append(num).append("' or ");
+                        filtDescription.append(filterKey).append("=':").append(filterKey).append(number).append("' or ");
                     }
 
-                    entriyFilter.put(key + num, obj);
+                    entriyFilter.put(filterKey + number, obj);
 
-                    num++;
+                    number++;
                 }
-                filterDsc.append(')');
+                filtDescription.append(')');
 
-                if(iter.hasNext()) {
-                    filterDsc.append(" and ");
+                if(iterator.hasNext()) {
+                    filtDescription.append(" and ");
                 }
             }
 
-            batchQueryFileterEntity.setFilterDsc(filterDsc.toString());
+            batchQueryFileterEntity.setFilterDsc(filtDescription.toString());
             batchQueryFileterEntity.setFilterData(JsonUtil.toJson(entriyFilter));
 
         } else {

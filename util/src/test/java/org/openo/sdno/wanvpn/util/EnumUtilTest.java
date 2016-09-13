@@ -19,6 +19,7 @@ package org.openo.sdno.wanvpn.util;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.openo.sdno.wanvpn.util.EnumUtil;
 
 public class EnumUtilTest {
 

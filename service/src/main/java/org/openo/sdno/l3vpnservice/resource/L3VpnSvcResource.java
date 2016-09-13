@@ -200,51 +200,8 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
             @Override
             protected Vpn implementQuery(String uuid) throws ServiceException {
                 OwnerInfoThreadLocal.setOwnerInfo(request, ServiceTypeEnum.L3VPN);
-                final Vpn vpn = service.getDetail(uuid, request);
-                return service.getStatus(vpn, request);
-            }
-        }.execute().getResult();
-    }
-
-    /**
-     * Update L3vpn Object.<br>
-     *
-     * @param uuid L3vpn id
-     * @param request HttpServletRequest Object
-     * @return L3Vpn updated
-     * @throws ServiceException when update failed
-     * @since SDNO 0.5
-     */
-    @PUT
-    @Path("/{uuid}")
-    @Consumes({"application/json"})
-    @Produces({"application/json"})
-    public Vpn updateDesc(@PathParam("uuid") final String uuid, @Context final HttpServletRequest request)
-            throws ServiceException {
-        return new SvcResourceUpdateExecutor<Vpn, Vpn>(request) {
-
-            @Override
-            protected Vpn extractParam(@Context final HttpServletRequest request) throws ServiceException {
-                return ROAInputStreamParser.fromJson(RestUtils.getRequestBody(request), Vpn.class);
-            }
-
-            @Override
-            protected void assertParam(final Vpn param) throws ServiceException {
-                ExecutorUtils.assertUUID(uuid);
-            }
-
-            @Override
-            protected Vpn implementUpdate(final Vpn param) throws ServiceException {
-                OwnerInfoThreadLocal.setOwnerInfo(request, ServiceTypeEnum.L3VPN);
-                param.setUuid(uuid);
                 Vpn vpn = service.getDetail(uuid, request);
-                if(null == vpn) {
-                    ServiceExceptionUtil.throwNotFoundException();
-                }
-                if(null != vpn) {
-                    vpn.setDescription(param.getDescription());
-                }
-                return service.modifyDesc(vpn, request);
+                return service.getStatus(vpn, request);
             }
         }.execute().getResult();
     }
@@ -313,6 +270,49 @@ public class L3VpnSvcResource extends IResource<L3VpnSvcService> {
                 return service.deleteTp(vpn, tpUuid, request);
             }
 
+        }.execute().getResult();
+    }
+
+    /**
+     * Update L3vpn by uuid.<br>
+     *
+     * @param uuid uuid of a l3vpn you want to update
+     * @param request HttpServletRequest request object to put some data
+     * @return L3Vpn the new updated l3vpn model
+     * @throws ServiceException if something wrong happens when update
+     * @since SDNO 0.5
+     */
+    @PUT
+    @Path("/{uuid}")
+    @Consumes({"application/json"})
+    @Produces({"application/json"})
+    public Vpn updateDesc(@PathParam("uuid") final String uuid, @Context final HttpServletRequest request)
+            throws ServiceException {
+        return new SvcResourceUpdateExecutor<Vpn, Vpn>(request) {
+
+            @Override
+            protected Vpn extractParam(@Context final HttpServletRequest request) throws ServiceException {
+                return ROAInputStreamParser.fromJson(RestUtils.getRequestBody(request), Vpn.class);
+            }
+
+            @Override
+            protected void assertParam(final Vpn param) throws ServiceException {
+                ExecutorUtils.assertUUID(uuid);
+            }
+
+            @Override
+            protected Vpn implementUpdate(final Vpn param) throws ServiceException {
+                OwnerInfoThreadLocal.setOwnerInfo(request, ServiceTypeEnum.L3VPN);
+                param.setUuid(uuid);
+                Vpn vpn = service.getDetail(uuid, request);
+                if(null == vpn) {
+                    ServiceExceptionUtil.throwNotFoundException();
+                }
+                if(null != vpn) {
+                    vpn.setDescription(param.getDescription());
+                }
+                return service.modifyDesc(vpn, request);
+            }
         }.execute().getResult();
     }
 

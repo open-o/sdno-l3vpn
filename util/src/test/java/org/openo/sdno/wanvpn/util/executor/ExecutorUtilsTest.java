@@ -20,6 +20,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
+import org.openo.sdno.wanvpn.util.executor.ExecutorUtils;
 
 public class ExecutorUtilsTest {
 

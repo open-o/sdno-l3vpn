@@ -19,7 +19,6 @@ package org.openo.sdno.l3vpnservice.service.util;
 import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
-
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.brs.ControllerMO;
 import org.openo.sdno.model.servicemodel.tp.Tp;
@@ -74,26 +73,6 @@ public class ControllerUtils {
     }
 
     /**
-     * Query controller type.<br>
-     * 
-     * @param tp TP info
-     * @return controller's product name
-     * @throws ServiceException when query failed
-     * @since SDNO 0.5
-     */
-    public static String getControllerType(final Tp tp) throws ServiceException {
-        if(null == tp) {
-            return null;
-        }
-
-        final ControllerMO controllerMO = ControllerUtils.getControllerMO(tp);
-        if(null == controllerMO) {
-            return null;
-        }
-        return controllerMO.getProductName();
-    }
-
-    /**
      * Fill controller MO info.<br>
      * 
      * @param vpnVo VPN info
@@ -125,6 +104,26 @@ public class ControllerUtils {
         }
 
         tp.setContollerMO(ControllerUtils.mGetControllerMo(tp));
+    }
+
+    /**
+     * Query controller type.<br>
+     * 
+     * @param tp TP info
+     * @return controller's product name
+     * @throws ServiceException when query failed
+     * @since SDNO 0.5
+     */
+    public static String getControllerType(final Tp tp) throws ServiceException {
+        if(null == tp) {
+            return null;
+        }
+
+        final ControllerMO controllerMO = ControllerUtils.getControllerMO(tp);
+        if(null == controllerMO) {
+            return null;
+        }
+        return controllerMO.getProductName();
     }
 
     private static ControllerMO mGetControllerMo(final Tp tp) throws ServiceException {
@@ -178,6 +177,22 @@ public class ControllerUtils {
     }
 
     /**
+     * Query controller UUID.<br>
+     * 
+     * @param vpn VPN info
+     * @return controller UUID
+     * @throws ServiceException when query failed
+     * @since SDNO 0.5
+     */
+    public static String getControllerUUID(final Vpn vpn) throws ServiceException {
+        final ControllerMO controllerMO = ControllerUtils.getControllerMO(vpn);
+        if(null == controllerMO) {
+            return null;
+        }
+        return controllerMO.getObjectId();
+    }
+
+    /**
      * Query controller MO info.<br>
      * 
      * @param tp TP info
@@ -210,22 +225,6 @@ public class ControllerUtils {
             return null;
         }
         return ControllerUtils.getControllerUUID(vpnVo.getVpn());
-    }
-
-    /**
-     * Query controller UUID.<br>
-     * 
-     * @param vpn VPN info
-     * @return controller UUID
-     * @throws ServiceException when query failed
-     * @since SDNO 0.5
-     */
-    public static String getControllerUUID(final Vpn vpn) throws ServiceException {
-        final ControllerMO controllerMO = ControllerUtils.getControllerMO(vpn);
-        if(null == controllerMO) {
-            return null;
-        }
-        return controllerMO.getObjectId();
     }
 
     /**

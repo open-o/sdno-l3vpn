@@ -66,10 +66,11 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         final Map<String, Object> paras = new HashMap<String, Object>();
         paras.put("l3vpn", l3Vpn);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(JsonUtil.toJson(paras));
-        final String url = MessageFormat.format(L3VpnConstants.CREATE_VPN, URLEncoderUtil.encode(controllerUuid));
-        LOGGER.info(url);
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter",
+                "extSysID=" + URLEncoderUtil.encode(controllerUuid));
         LOGGER.info(restfulParametes.getRawData());
-        final RestfulResponse rsp = RestUtil.sendPostRequest(url, restfulParametes, request, L3VpnConstants.TIMEOUT);
+        final RestfulResponse rsp =
+                RestUtil.sendPostRequest(L3VpnConstants.CREATE_VPN, restfulParametes, request, L3VpnConstants.TIMEOUT);
         final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(rsp);
         this.handleResponse(adapterResponseInfo, L3VpnSvcErrorCode.L3VPN_CREATE_CONTROLLER_FAIL);
         return l3Vpn;
@@ -82,8 +83,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         paras.put("l3vpn", l3Vpn);
         final String strJsonReq = JsonUtil.toJson(paras);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
-        final String url = MessageFormat.format(L3VpnConstants.VPN_ACTIVE, URLEncoderUtil.encode(controllerUuid),
-                URLEncoderUtil.encode(l3Vpn.getUuid()));
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter",
+                "extSysID=" + URLEncoderUtil.encode(controllerUuid));
+        final String url = MessageFormat.format(L3VpnConstants.VPN_ACTIVE, URLEncoderUtil.encode(l3Vpn.getUuid()));
         LOGGER.info(url);
         LOGGER.info(strJsonReq);
         final RestfulResponse rsp = RestUtil.sendPutRequest(url, restfulParametes, request);
@@ -98,8 +100,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         paras.put("ac", l3ac);
         final String strJsonReq = JsonUtil.toJson(paras);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
-        final String url = MessageFormat.format(L3VpnConstants.SBI_URL_SITE_ACTION, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(vpnId), URLEncoderUtil.encode(l3ac.getUuid()));
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        final String url = MessageFormat.format(L3VpnConstants.SBI_URL_SITE_ACTION, URLEncoderUtil.encode(vpnId),
+                URLEncoderUtil.encode(l3ac.getUuid()));
         LOGGER.info("deployTpStatus, jsonReq:" + url);
         LOGGER.info("deployTpStatus, jsonReq:" + strJsonReq);
         final RestfulResponse rsp = RestUtil.sendPutRequest(url, restfulParametes, request);
@@ -112,12 +115,12 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
             throws ServiceException {
         final RestfulParametes restParametes = new RestfulParametes();
         restParametes.putHttpContextHeader("Content-Type", "application/json");
+        restParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(controllerUuid));
         restParametes.put("resource", L3VpnConstants.MODULE_L3VPN);
         restParametes.put("isDryrun", "");
         restParametes.put("uuid", vpnId);
 
-        final String url = MessageFormat.format(L3VpnConstants.VPN_DELETE, URLEncoderUtil.encode(controllerUuid),
-                URLEncoderUtil.encode(vpnId));
+        final String url = MessageFormat.format(L3VpnConstants.VPN_DELETE, URLEncoderUtil.encode(vpnId));
         LOGGER.info("delete vpn, jsonReq:" + url);
 
         final RestfulResponse rsp = RestUtil.sendDeleteRequest(url, restParametes, request);
@@ -133,8 +136,8 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         paras.put("l3vpn", l3Vpn);
         final String strJsonReq = JsonUtil.toJson(paras);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
-        final String url = MessageFormat.format(L3VpnConstants.VPN_MODIFY, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3Vpn.getUuid()));
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        final String url = MessageFormat.format(L3VpnConstants.VPN_MODIFY, URLEncoderUtil.encode(l3Vpn.getUuid()));
         LOGGER.info("L3VPN update description url:" + url);
         LOGGER.info(strJsonReq);
 
@@ -148,8 +151,8 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
             throws ServiceException {
         final RestfulParametes restfulParamL3 = new RestfulParametes();
         restfulParamL3.put("uuid", uuid);
-        final String urlL3vpn = MessageFormat.format(L3VpnConstants.VPN_QUERY, URLEncoderUtil.encode(ctrluuid),
-                URLEncoderUtil.encode(uuid));
+        restfulParamL3.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrluuid));
+        final String urlL3vpn = MessageFormat.format(L3VpnConstants.VPN_QUERY, URLEncoderUtil.encode(uuid));
         LOGGER.info("L3VPN query url:" + urlL3vpn);
         final RestfulResponse responseL3vpn = RestUtil.sendGetRequest(urlL3vpn, restfulParamL3, request);
         final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(responseL3vpn);
@@ -163,9 +166,8 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         paras.put("ac", ac);
         final String strJsonReq = JsonUtil.toJson(paras);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
-
-        final String url = MessageFormat.format(L3VpnConstants.ADD_TP, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3VpnId));
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        final String url = MessageFormat.format(L3VpnConstants.ADD_TP, URLEncoderUtil.encode(l3VpnId));
         LOGGER.info(url);
         LOGGER.info("Create tp:" + strJsonReq);
 
@@ -179,9 +181,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
     public void deleteTp(String l3vpnUuid, String tpUuid, String ctrlUuid, @Context HttpServletRequest request)
             throws ServiceException {
         final RestfulParametes restParametes = new RestfulParametes();
-
-        final String url = MessageFormat.format(L3VpnConstants.DELETE_TP, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3vpnUuid), URLEncoderUtil.encode(tpUuid));
+        restParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        final String url = MessageFormat.format(L3VpnConstants.DELETE_TP, URLEncoderUtil.encode(l3vpnUuid),
+                URLEncoderUtil.encode(tpUuid));
         LOGGER.info("Delete tp:" + url);
 
         final RestfulResponse rsp = RestUtil.sendDeleteRequest(url, restParametes, request);
@@ -197,8 +199,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         String strJsonReq = JsonUtil.toJson(paras);
         LOGGER.info(strJsonReq);
         RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
-        String url = MessageFormat.format(L3VpnConstants.ADD_ROUTE_STATIC, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3vpnUuid), URLEncoderUtil.encode(tpUuid));
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        String url = MessageFormat.format(L3VpnConstants.ADD_ROUTE_STATIC, URLEncoderUtil.encode(l3vpnUuid),
+                URLEncoderUtil.encode(tpUuid));
         final RestfulResponse rsp = RestUtil.sendPostRequest(url, restfulParametes, request, L3VpnConstants.TIMEOUT);
         final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(rsp);
         this.handleResponse(adapterResponseInfo, L3VpnSvcErrorCode.L3VPN_CREATE_STATICROUTE_CONTROLLER_FAIL);
@@ -212,8 +215,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         String strJsonReq = JsonUtil.toJson(paras);
         LOGGER.info(strJsonReq);
         RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
-        String url = MessageFormat.format(L3VpnConstants.ADD_ROUTE_BGP, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3vpnUuid), URLEncoderUtil.encode(tpUuid));
+        restfulParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        String url = MessageFormat.format(L3VpnConstants.ADD_ROUTE_BGP, URLEncoderUtil.encode(l3vpnUuid),
+                URLEncoderUtil.encode(tpUuid));
         final RestfulResponse rsp = RestUtil.sendPostRequest(url, restfulParametes, request, L3VpnConstants.TIMEOUT);
         final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(rsp);
         this.handleResponse(adapterResponseInfo, L3VpnSvcErrorCode.L3VPN_CREATE_BGPROUTE_CONTROLLER_FAIL);
@@ -225,8 +229,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         String ctrlUuid = ControllerUtils.getControllerUUID(tempVpn);
         String l3vpnUuid = tempVpn.getId();
         final RestfulParametes restParametes = new RestfulParametes();
-        String url = MessageFormat.format(L3VpnConstants.DELETE_STATIC_ROUTE, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3vpnUuid), URLEncoderUtil.encode(tpUuid));
+        restParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        String url = MessageFormat.format(L3VpnConstants.DELETE_STATIC_ROUTE, URLEncoderUtil.encode(l3vpnUuid),
+                URLEncoderUtil.encode(tpUuid));
         url = url + urlBody;
         final RestfulResponse rsp = RestUtil.sendDeleteRequest(url, restParametes, request);
         final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(rsp);
@@ -239,8 +244,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         String ctrlUuid = ControllerUtils.getControllerUUID(tempVpn);
         String l3vpnUuid = tempVpn.getId();
         final RestfulParametes restParametes = new RestfulParametes();
-        String url = MessageFormat.format(L3VpnConstants.DELETE_BGP_ROUTE, URLEncoderUtil.encode(ctrlUuid),
-                URLEncoderUtil.encode(l3vpnUuid), URLEncoderUtil.encode(tpUuid));
+        restParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
+        String url = MessageFormat.format(L3VpnConstants.DELETE_BGP_ROUTE, URLEncoderUtil.encode(l3vpnUuid),
+                URLEncoderUtil.encode(tpUuid));
         url = url + urlBody;
         final RestfulResponse rsp = RestUtil.sendDeleteRequest(url, restParametes, request);
         final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(rsp);
@@ -249,14 +255,15 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
 
     private void handleResponse(AdapterResponseInfo adapterResponseInfo, String controllerFailCode)
             throws ServiceException {
-        if(adapterResponseInfo.getRet() / 200 != 1) {
+        if(adapterResponseInfo.getRet() / 100 != 2) {
+
             throw adapterResponseInfo.getServiceException(controllerFailCode);
         }
     }
 
     private <T> T handleResponse(AdapterResponseInfo adapterResponseInfo, String controllerFailCode, Class<T> object)
             throws ServiceException {
-        if(adapterResponseInfo.getRet() / 200 != 1) {
+        if(adapterResponseInfo.getRet() / 100 != 2) {
             throw adapterResponseInfo.getServiceException(controllerFailCode);
         } else {
             return JsonUtil.fromJson(adapterResponseInfo.getMsg(), object);
