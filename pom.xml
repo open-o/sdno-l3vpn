@@ -10,8 +10,13 @@
     <groupId>org.openo.sdno.l3vpn</groupId>
     <artifactId>wanvpn</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>Wanvpn</name>
     <packaging>pom</packaging>
+
+    <properties>
+        <package.name>l3vpnservice</package.name>
+    </properties>
 
     <modules>
         <module>util</module>

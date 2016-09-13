@@ -10,6 +10,7 @@
     <artifactId>org.openo.sdno.l3vpnservice</artifactId>
     <packaging>war</packaging>
     <name>L3vpnService</name>
+
     <dependencies>
         <dependency>
             <groupId>org.openo.sdno.l3vpn</groupId>
@@ -145,4 +146,9 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>${package.name}</finalName>
+    </build>
+
 </project>
