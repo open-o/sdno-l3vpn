@@ -17,13 +17,13 @@
 package org.openo.sdno.wanvpn.inventory.sdk.util;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.codehaus.jackson.type.TypeReference;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
@@ -79,11 +79,8 @@ public class InventoryProxy {
             final Result<List<Device>> moResult = new Result<List<Device>>();
             moResult.setResultObj(new ArrayList<Device>());
 
-            @SuppressWarnings("unchecked")
-            final Map<String, Object> contentMap = JsonUtil.fromJson(response.getResponseContent(), Map.class);
-            final String deviceData = JsonUtil.toJson(contentMap.get("commParamsList"));
-            final Device[] devices = JsonUtil.fromJson(deviceData, Device[].class);
-            final List<Device> deviceList = Arrays.asList(devices);
+            final String deviceData = response.getResponseContent();
+            List<Device> deviceList = JsonUtil.fromJson(deviceData, new TypeReference<List<Device>>() {});
             if(null == deviceList || deviceList.isEmpty()) {
                 LOGGER.error("paramList is null or empty!!");
                 throw new ServiceException("paramList is null or empty!!");
