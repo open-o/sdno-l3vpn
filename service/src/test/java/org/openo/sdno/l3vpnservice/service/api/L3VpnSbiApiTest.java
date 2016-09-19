@@ -41,6 +41,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.L3Ac;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Acs;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Vpn;
 import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoute;
+import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.translator.uniformsbi.L3TranslatorProviderImpl;
 import org.openo.sdno.wanvpn.translator.uniformsbi.impl.ResponsTranslatorImpl;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
@@ -97,7 +98,10 @@ public class L3VpnSbiApiTest {
                 acs.setL3Ac(l3AcList);
                 l3Vpn.setAcs(acs);
                 adapterResp.setMsg(JsonUtil.toJson(l3Vpn));
-                response.setResponseJson(JsonUtil.toJson(adapterResp));
+
+                Result<String> result = new Result<String>();
+                result.setResultObj(JsonUtil.toJson(adapterResp));
+                response.setResponseJson(JsonUtil.toJson(result));
                 response.setStatus(HttpStatus.SC_OK);
                 return response;
             }

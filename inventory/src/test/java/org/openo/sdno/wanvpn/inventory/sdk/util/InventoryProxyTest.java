@@ -37,7 +37,6 @@ import org.openo.sdno.model.servicemodel.brs.ControllerMO;
 import org.openo.sdno.model.servicemodel.brs.Device;
 import org.openo.sdno.model.servicemodel.brs.NetworkElementMO;
 import org.openo.sdno.result.Result;
-import org.openo.sdno.wanvpn.inventory.sdk.util.InventoryProxy;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;
 
 import mockit.Mock;
@@ -260,10 +259,8 @@ public class InventoryProxyTest {
             public RestfulResponse get(String uri, RestfulParametes restParametes) throws ServiceException {
                 RestfulResponse response = new RestfulResponse();
                 response.setStatus(200);
-                Map<String, Object> contrl = new HashMap<String, Object>();
                 List<Device> list = new ArrayList<Device>();
-                contrl.put("commParamsList", list);
-                String responseString = JsonUtil.toJson(contrl);
+                String responseString = JsonUtil.toJson(list);
                 response.setResponseJson(responseString);
                 return response;
             }
@@ -281,14 +278,21 @@ public class InventoryProxyTest {
             public RestfulResponse get(String uri, RestfulParametes restParametes) throws ServiceException {
                 RestfulResponse response = new RestfulResponse();
                 response.setStatus(200);
-                Map<String, Object> contrl = new HashMap<String, Object>();
-                List<Device> list = new ArrayList<Device>();
-                Device demo = new Device();
-                demo.setId("123456");
-                list.add(demo);
-                contrl.put("commParamsList", list);
-                String responseString = JsonUtil.toJson(contrl);
-                response.setResponseJson(responseString);
+
+                if("/openoapi/sdnobrs/v1/commparammgmt/access-objects/test/commparams".equals(uri)) {
+                    List<Device> list = new ArrayList<Device>();
+                    Device demo = new Device();
+                    demo.setId("123456");
+                    list.add(demo);
+                    String responseString = JsonUtil.toJson(list);
+                    response.setResponseJson(responseString);
+                } else {
+                    ControllerMO controllerMO = new ControllerMO();
+                    controllerMO.setHostName("localhost");
+                    String responseString = JsonUtil.toJson(controllerMO);
+                    response.setResponseJson(responseString);
+                }
+
                 return response;
             }
 

@@ -16,10 +16,12 @@
 
 package org.openo.sdno.wanvpn.translator.uniformsbi.impl;
 
+import org.codehaus.jackson.type.TypeReference;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.framework.container.util.JsonUtil;
 import org.openo.sdno.model.uniformsbi.base.AdapterResponseInfo;
+import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.slf4j.Logger;
@@ -42,10 +44,11 @@ public class ResponsTranslatorImpl implements ResponsTranslator {
         if(null == response) {
             return null;
         }
-        final String content = response.getResponseContent();
+        Result<String> result =
+                JsonUtil.fromJson(response.getResponseContent(), new TypeReference<Result<String>>() {});
         if(this.isSuccess(response.getStatus())) {
-            LOGGER.info("Response from adapter: " + content);
-            return JsonUtil.fromJson(content, AdapterResponseInfo.class);
+            LOGGER.info("Response from adapter: " + result);
+            return new AdapterResponseInfo(response.getStatus(), result.getResultObj());
         } else {
             throw ServiceExceptionUtil.getServiceException(null, response.getStatus());
         }
