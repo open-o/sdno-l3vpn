@@ -22,15 +22,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.l3vpnservice.constant.L3VpnSvcErrorCode;
 import org.openo.sdno.l3vpnservice.dao.L3VpnDao;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnDeleteSvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnQuerySvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnSbiApiService;
 import org.openo.sdno.l3vpnservice.service.util.ControllerUtils;
-import org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
-import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -58,17 +55,6 @@ public class UniformL3VpnDeleteSvcServiceImpl implements L3VpnDeleteSvcService {
     public Vpn delete(Vpn vpn, @Context HttpServletRequest request) throws ServiceException {
         if(null == vpn || null == vpn.getVpnBasicInfo()) {
             return null;
-        }
-        if(AdminStatus.ACTIVE.getCommonName().equals(vpn.getVpnBasicInfo().getAdminStatus())) {
-            throw ServiceExceptionUtil.getServiceException(L3VpnSvcErrorCode.L3VPN_DELETE_ACTIVEVPN);
-        }
-
-        final Vpn l3Vpn =
-                l3VpnQuerySvcService.getL3vpnAdminStatus(vpn, ControllerUtils.getControllerUUID(vpn), request);
-
-        if(l3Vpn != null && null != l3Vpn.getVpnBasicInfo()
-                && AdminStatus.ACTIVE.getCommonName().equals(l3Vpn.getVpnBasicInfo().getAdminStatus())) {
-            throw ServiceExceptionUtil.getServiceException(L3VpnSvcErrorCode.L3VPN_DELETE_ACTIVEVPN);
         }
 
         l3VpnSbiApiService.deleteVpn(vpn.getId(), ControllerUtils.getControllerUUID(vpn), request);
