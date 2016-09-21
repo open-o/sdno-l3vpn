@@ -30,7 +30,6 @@ import org.openo.sdno.l3vpnservice.service.inf.L3VpnCreateSvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnQuerySvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnSbiApiService;
 import org.openo.sdno.l3vpnservice.service.util.ControllerUtils;
-import org.openo.sdno.model.servicemodel.common.enumeration.OperStatus;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnVo;
@@ -91,13 +90,6 @@ public class UniformL3VpnCreateSvcServiceImpl implements L3VpnCreateSvcService {
         l3VpnSbiApiService.createL3VPN(l3Vpn, controllerUuid, request);
 
         this.vpnDao.addMos(Collections.singletonList(vpn));
-
-        try {
-            l3VpnQuerySvcService.getStatus(vpn, request);
-        } catch(ServiceException e) {
-            LOGGER.error("Query vpn failed after sucessfully creating vpn. Set Vpn Operstatus to Nop. Err:", e);
-            vpn.setOperStatus(OperStatus.NOP.getCommonName());
-        }
 
         return vpn;
     }
