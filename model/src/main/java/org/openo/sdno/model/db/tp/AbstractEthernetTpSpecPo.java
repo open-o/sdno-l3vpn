@@ -49,7 +49,7 @@ public abstract class AbstractEthernetTpSpecPo implements PoModel<EthernetTpSpec
     private String vlanAction;
 
     /**
-     * EthernetActionType.NOP.getName();//“nop” | “cvlan 1:1 maping” | “1:2 mapping”| “2:1
+     * EthernetActionType.NOP.getName();//"nop" | "cvlan 1:1 maping" | "1:2 mapping" | "2:1"
      */
     private String actionValue;
 

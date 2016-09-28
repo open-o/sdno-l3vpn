@@ -165,7 +165,7 @@ public class AbstractTpTypeSpecDaoTest {
             typeSpecList = new ArrayList();
             dao.addMos(typeSpecList);
         } catch(ServiceException e) {
-            // 如果抛出异常则认为失败
+            //Failed is exception is thrown
             Assert.assertTrue(false);
         }
     }
@@ -185,7 +185,7 @@ public class AbstractTpTypeSpecDaoTest {
         try {
             dao.delMos(typeSpecList);
         } catch(ServiceException e) {
-            // 如果抛出异常则认为失败
+            //Failed is exception is thrown
             Assert.assertTrue(false);
         }
     }

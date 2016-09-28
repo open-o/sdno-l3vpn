@@ -22,14 +22,14 @@ package org.openo.sdno.model.servicemodel;
 public interface ResourceStatusModel {
 
     /**
-     * 资源有四种状态，分别是已入库，已部署，已同步，无效资源
+     * Resource has four potential states: Stored, Deployed, Synchronized, Invalid
      * 
      * @return
      */
     String getResourceStatus();
 
     /**
-     * 资源有四种状态，分别是已入库，已部署，已同步，无效资源
+     * Resource has four potential states: Stored, Deployed, Synchronized, Invalid
      * 
      * @param status
      */

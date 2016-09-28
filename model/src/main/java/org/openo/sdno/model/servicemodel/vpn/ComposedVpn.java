@@ -41,7 +41,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 public class ComposedVpn extends AbstractSvcModel implements TenantOwned {
 
     @StringDesc(maxLen = 36)
-    @CommentDesc(means = "序号")
+    @CommentDesc(means = "Serial Number")
     private String uuid;
 
     @StringDesc(maxLen = 32)

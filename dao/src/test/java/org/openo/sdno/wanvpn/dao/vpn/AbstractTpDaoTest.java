@@ -156,7 +156,7 @@ public class AbstractTpDaoTest {
         try {
             tpDao.addMos(Collections.singletonList(tp));
         } catch(ServiceException e) {
-            // 如果抛出异常则认为失败
+            //Failed is exception is thrown
             Assert.assertTrue(false);
         }
     }
@@ -320,7 +320,7 @@ public class AbstractTpDaoTest {
         try {
             tpDao.updateMos(Collections.singletonList(tp));
         } catch(ServiceException e) {
-            // 如果抛出异常则认为失败
+            //Failed is exception is thrown
             Assert.assertTrue(false);
         }
     }

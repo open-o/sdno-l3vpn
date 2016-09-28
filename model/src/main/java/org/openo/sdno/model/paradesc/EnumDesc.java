@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 /**
  * User-defined JAVA annotation, EnumDesc.<br>
  * <p>
- * Describe the enumeration value of String，Collection<String>.
+ * Describe the enumeration value of String, Collection<String>.
  * </p>
  * 
  * @author
