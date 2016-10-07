@@ -68,7 +68,7 @@
     </bean>
     <bean id="translatorCtxFactory" class="org.openo.sdno.wanvpn.translator.impl.TranslatorCtxFactoryImpl">
     </bean>
-    <bean id="invTpService" class="org.openo.sdno.wanvpn.inventory.sdk.impl.LtpInvDao">
+    <bean id="invTpService" class="org.openo.sdno.wanvpn.inventory.sdk.impl.LtpInvDaoImpl">
     </bean>
     <bean id="l3VpnService" class="org.openo.sdno.l3vpnservice.service.impl.UniformL3VpnSvcServiceImpl">
     </bean>
