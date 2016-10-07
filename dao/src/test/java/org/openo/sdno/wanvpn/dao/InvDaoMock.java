@@ -22,10 +22,10 @@ import java.util.List;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.db.PoModel;
 import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
-import org.openo.sdno.wanvpn.inventory.sdk.inf.IInvDAO;
+import org.openo.sdno.wanvpn.inventory.sdk.inf.InvDAO;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 
-public class InvDaoMock<MO extends PoModel> implements IInvDAO<MO> {
+public class InvDaoMock<MO extends PoModel> implements InvDAO<MO> {
 
     @Override
     public ResultRsp<List<String>> add(final List<MO> moList, final Class<?> moType) throws ServiceException {

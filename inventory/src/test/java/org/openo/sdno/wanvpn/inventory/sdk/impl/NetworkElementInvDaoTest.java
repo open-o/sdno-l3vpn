@@ -31,7 +31,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.exception.HttpCode;
 import org.openo.sdno.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
-import org.openo.sdno.wanvpn.inventory.sdk.impl.NetworkElementInvDao;
+import org.openo.sdno.wanvpn.inventory.sdk.impl.NetworkElementInvDaoImpl;
 import org.openo.sdno.wanvpn.util.rest.InventorySDKRestUtil;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;
 
@@ -52,13 +52,13 @@ public class NetworkElementInvDaoTest {
 
     @Test
     public void testQueryMOByIdWithNullInput() throws ServiceException {
-        NetworkElementInvDao dao = new NetworkElementInvDao();
+        NetworkElementInvDaoImpl dao = new NetworkElementInvDaoImpl();
         assertNull(dao.queryMOById(null));
     }
 
     @Test
     public void testQueryMOByIdWithEmptyInput() throws ServiceException {
-        NetworkElementInvDao dao = new NetworkElementInvDao();
+        NetworkElementInvDaoImpl dao = new NetworkElementInvDaoImpl();
         assertNull(dao.queryMOById(""));
     }
 
@@ -83,7 +83,7 @@ public class NetworkElementInvDaoTest {
             }
         };
 
-        NetworkElementInvDao dao = new NetworkElementInvDao();
+        NetworkElementInvDaoImpl dao = new NetworkElementInvDaoImpl();
         assertNull(dao.queryMOById("123"));
         mock.tearDown();
         mock2.tearDown();
@@ -111,7 +111,7 @@ public class NetworkElementInvDaoTest {
             }
         };
 
-        NetworkElementInvDao dao = new NetworkElementInvDao();
+        NetworkElementInvDaoImpl dao = new NetworkElementInvDaoImpl();
         assertNull(dao.queryMOByParam(null));
         mock.tearDown();
         mock2.tearDown();
@@ -139,7 +139,7 @@ public class NetworkElementInvDaoTest {
             }
         };
 
-        NetworkElementInvDao dao = new NetworkElementInvDao();
+        NetworkElementInvDaoImpl dao = new NetworkElementInvDaoImpl();
         Map<String, String> paramMap = new HashMap<>();
         paramMap.put("1", "v1");
         assertNull(dao.queryMOByParam(paramMap));

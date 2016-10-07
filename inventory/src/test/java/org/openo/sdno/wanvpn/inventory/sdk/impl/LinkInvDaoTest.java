@@ -31,7 +31,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.exception.HttpCode;
 import org.openo.sdno.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
-import org.openo.sdno.wanvpn.inventory.sdk.impl.LinkInvDao;
+import org.openo.sdno.wanvpn.inventory.sdk.impl.LinkInvDaoImpl;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;
 
 import mockit.Mock;
@@ -51,13 +51,13 @@ public class LinkInvDaoTest {
 
     @Test
     public void testQueryMOByIdWithNullInput() throws ServiceException {
-        LinkInvDao dao = new LinkInvDao();
+        LinkInvDaoImpl dao = new LinkInvDaoImpl();
         assertNull(dao.queryMOById(null));
     }
 
     @Test
     public void testQueryMOByIdWithEmptyInput() throws ServiceException {
-        LinkInvDao dao = new LinkInvDao();
+        LinkInvDaoImpl dao = new LinkInvDaoImpl();
         assertNull(dao.queryMOById(""));
     }
 
@@ -82,7 +82,7 @@ public class LinkInvDaoTest {
             }
         };
 
-        LinkInvDao dao = new LinkInvDao();
+        LinkInvDaoImpl dao = new LinkInvDaoImpl();
         assertNull(dao.queryMOById("123"));
         mock.tearDown();
         mock2.tearDown();
@@ -110,7 +110,7 @@ public class LinkInvDaoTest {
             }
         };
 
-        LinkInvDao dao = new LinkInvDao();
+        LinkInvDaoImpl dao = new LinkInvDaoImpl();
         assertNull(dao.queryMOByParam(null));
         mock.tearDown();
         mock2.tearDown();
@@ -138,7 +138,7 @@ public class LinkInvDaoTest {
             }
         };
 
-        LinkInvDao dao = new LinkInvDao();
+        LinkInvDaoImpl dao = new LinkInvDaoImpl();
         Map<String, String> paramMap = new HashMap<>();
         paramMap.put("1", "v1");
         assertNull(dao.queryMOByParam(paramMap));

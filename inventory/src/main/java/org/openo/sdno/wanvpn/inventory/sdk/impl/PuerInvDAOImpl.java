@@ -29,7 +29,7 @@ import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.inventory.sdk.common.ErrorCode;
 import org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvComplexNbiBean;
 import org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvServiceNbiBean;
-import org.openo.sdno.wanvpn.inventory.sdk.inf.IInvDAO;
+import org.openo.sdno.wanvpn.inventory.sdk.inf.InvDAO;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 import org.openo.sdno.wanvpn.inventory.sdk.util.MOModelProcessor;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
@@ -44,7 +44,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author
  * @version SDNO 0.5 Aug 4, 2016
  */
-public class PuerInvDAOImpl<M> implements IInvDAO<M> {
+public class PuerInvDAOImpl<M> implements InvDAO<M> {
 
     /**
      * maximum number of each package.
@@ -87,7 +87,7 @@ public class PuerInvDAOImpl<M> implements IInvDAO<M> {
         for(int i = 0; i < count; i++) {
             final int toIndex = (i + 1) * MAX_NUM_PER_PKG_CU;
             final List<M> subList = moList.subList(i * MAX_NUM_PER_PKG_CU, toIndex > num ? num : toIndex);
-            final List<Object> listMapValue = PuerInvDAOUtil.buildMoMap(subList, moType);
+            final List<Object> listMapValue = PuerInvDAOUtilImpl.buildMoMap(subList, moType);
             final List<Map<String, Object>> addRsp =
                     puerObjInvService.add(MOModelProcessor.getRestType(moType), listMapValue);
             getUUIDFromRsp(addRsp, uuidList);
@@ -152,7 +152,7 @@ public class PuerInvDAOImpl<M> implements IInvDAO<M> {
         for(int i = 0; i < count; i++) {
             final int toIndex = (i + 1) * MAX_NUM_PER_PKG_CU;
             final List<M> subList = moList.subList(i * MAX_NUM_PER_PKG_CU, toIndex > num ? num : toIndex);
-            final List<Object> listMapValue = PuerInvDAOUtil.buildMoMap(subList, moType);
+            final List<Object> listMapValue = PuerInvDAOUtilImpl.buildMoMap(subList, moType);
             puerObjInvService.update(MOModelProcessor.getRestType(moType), listMapValue);
         }
         LOGGER.debug("Finish update  to puer inv " + result.toString());
@@ -166,7 +166,7 @@ public class PuerInvDAOImpl<M> implements IInvDAO<M> {
 
         final BatchQueryResponse rsp = puerComplexService.queryComplex(MOModelProcessor.getRestType(moType), params);
 
-        final ResultRsp result = PuerInvDAOUtil.buildQueryResult(moType, rsp.getObjects());
+        final ResultRsp result = PuerInvDAOUtilImpl.buildQueryResult(moType, rsp.getObjects());
         result.setTotal(rsp.getTotal());
         LOGGER.debug("Finish update  to puer inv " + result.toString());
         return result;
@@ -179,7 +179,7 @@ public class PuerInvDAOImpl<M> implements IInvDAO<M> {
         LOGGER.debug("Start query " + restType + " to puer inv.");
         final BatchQueryResponse queryRespone = puerComplexService.queryAll(restType, params);
 
-        final ResultRsp result = PuerInvDAOUtil.buildQueryResult(moType, queryRespone.getObjects());
+        final ResultRsp result = PuerInvDAOUtilImpl.buildQueryResult(moType, queryRespone.getObjects());
         result.setTotal(queryRespone.getTotal());
         LOGGER.debug("Finish update  to puer inv " + result.toString());
         return result;
@@ -198,7 +198,7 @@ public class PuerInvDAOImpl<M> implements IInvDAO<M> {
         final List<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
         dataList.add(rsp);
 
-        final ResultRsp<List<M>> getResult = PuerInvDAOUtil.buildQueryResult(moType, dataList);
+        final ResultRsp<List<M>> getResult = PuerInvDAOUtilImpl.buildQueryResult(moType, dataList);
         LOGGER.debug("Finish update  to puer inv ");
         final ResultRsp<M> result = new ResultRsp<M>(ErrorCode.UNDERLAYVPN_SUCCESS);
 

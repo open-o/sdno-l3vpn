@@ -34,7 +34,7 @@ import org.openo.sdno.wanvpn.dao.AbstractDao;
 import org.openo.sdno.wanvpn.dao.Dao;
 import org.openo.sdno.wanvpn.dao.DefaultDao;
 import org.openo.sdno.wanvpn.dao.FilterUtil;
-import org.openo.sdno.wanvpn.inventory.sdk.inf.IInvDAO;
+import org.openo.sdno.wanvpn.inventory.sdk.inf.InvDAO;
 import org.openo.sdno.wanvpn.inventory.sdk.inf.QueryPageParameter;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 import org.openo.sdno.wanvpn.util.query.BatchQueryUtils;
@@ -56,9 +56,9 @@ public abstract class AbstractDao<P extends PoModel<M>, M extends SvcModel> impl
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultDao.class);
 
     @Autowired
-    protected IInvDAO<P> invDao;
+    protected InvDAO<P> invDao;
 
-    public void setInvDao(final IInvDAO<P> invDao) {
+    public void setInvDao(final InvDAO<P> invDao) {
         this.invDao = invDao;
     }
 

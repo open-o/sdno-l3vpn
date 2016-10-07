@@ -29,7 +29,7 @@ import org.springframework.stereotype.Service;
  * @version SDNO 0.5 2016-5-31
  */
 @Service("uniformL3VpnTpModifySvcService")
-public class UniformL3VpnTpModifySvcService implements L3VpnTpModifySvcService {
+public class UniformL3VpnTpModifySvcServiceImpl implements L3VpnTpModifySvcService {
 
     @Resource
     private L3VpnTpDao tpDao;

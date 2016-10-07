@@ -58,7 +58,7 @@ import mockit.Tested;
 public class UniformL3VpnTpModifySvcServiceImplTest {
 
     @Tested
-    final UniformL3VpnTpModifySvcService tpModifySvcService = new UniformL3VpnTpModifySvcService();
+    final UniformL3VpnTpModifySvcServiceImpl tpModifySvcService = new UniformL3VpnTpModifySvcServiceImpl();
 
     @Injectable
     private final L3VpnTpDao tpDao = new L3VpnTpDao() {

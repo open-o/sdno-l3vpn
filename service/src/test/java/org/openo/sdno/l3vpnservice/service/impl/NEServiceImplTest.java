@@ -30,7 +30,7 @@ import org.openo.sdno.model.common.query.BatchQueryParams;
 import org.openo.sdno.model.common.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 import org.openo.sdno.result.Result;
-import org.openo.sdno.wanvpn.inventory.sdk.inf.IBaseInvDao;
+import org.openo.sdno.wanvpn.inventory.sdk.inf.BaseInvDao;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 
 import mockit.Mocked;
@@ -43,7 +43,7 @@ public class NEServiceImplTest {
     @Test
     public void queryPortsByNeIdTest() throws Exception {
         final NEServiceImpl service = new NEServiceImpl();
-        service.setInvTpService(new IBaseInvDao<LtpMO>() {
+        service.setInvTpService(new BaseInvDao<LtpMO>() {
 
             @Override
             public Result<List<LtpMO>> queryAllMOs() throws ServiceException {

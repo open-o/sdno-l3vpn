@@ -33,7 +33,7 @@ import org.openo.sdno.model.common.query.BatchQueryParams;
 import org.openo.sdno.model.common.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 import org.openo.sdno.result.Result;
-import org.openo.sdno.wanvpn.inventory.sdk.inf.IBaseInvDao;
+import org.openo.sdno.wanvpn.inventory.sdk.inf.BaseInvDao;
 import org.openo.sdno.wanvpn.util.constans.InvConstants;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
@@ -58,7 +58,7 @@ public class NEServiceImpl implements NEService {
 
     @Autowired
     @Qualifier("invTpService")
-    private IBaseInvDao<LtpMO> invTpService;
+    private BaseInvDao<LtpMO> invTpService;
 
     @Override
     public BatchQueryResult<LtpMO> getNePorts(final String neUuid, final BatchQueryParams batchQueryParams,
@@ -118,7 +118,7 @@ public class NEServiceImpl implements NEService {
         return masterPorts;
     }
 
-    public void setInvTpService(IBaseInvDao<LtpMO> invTpService) {
+    public void setInvTpService(BaseInvDao<LtpMO> invTpService) {
         this.invTpService = invTpService;
     }
 }

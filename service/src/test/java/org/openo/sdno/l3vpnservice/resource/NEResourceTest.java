@@ -33,7 +33,7 @@ import org.openo.sdno.l3vpnservice.JsonFileUtil;
 import org.openo.sdno.l3vpnservice.service.impl.NEServiceImpl;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 import org.openo.sdno.result.Result;
-import org.openo.sdno.wanvpn.inventory.sdk.impl.LtpInvDao;
+import org.openo.sdno.wanvpn.inventory.sdk.impl.LtpInvDaoImpl;
 
 import junit.framework.Assert;
 import mockit.Mock;
@@ -49,7 +49,7 @@ public class NEResourceTest {
 
     @Before
     public void setUp() throws Exception {
-        new MockUp<LtpInvDao>() {
+        new MockUp<LtpInvDaoImpl>() {
 
             @Mock
             public Result<List<LtpMO>> queryMOByParam(final Map<String, String> paramMap)
@@ -79,7 +79,7 @@ public class NEResourceTest {
     @Test
     public void testGetNePorts() throws ServiceException {
         NEServiceImpl neService = new NEServiceImpl();
-        neService.setInvTpService(new LtpInvDao());
+        neService.setInvTpService(new LtpInvDaoImpl());
         neResource.setService(neService);
         try {
             neResource.getNePorts(UuidUtils.createUuid(), "name", httpServletRequest);
