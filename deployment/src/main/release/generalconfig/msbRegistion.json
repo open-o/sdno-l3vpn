@@ -1,0 +1,14 @@
+{
+  "serviceName": "sdnol3vpn",
+  "version": "v1",
+  "url": "/openoapi/sdnol3vpn/v1",
+  "protocol": "REST",
+  "visualRange": "1",
+  "nodes": [
+    {
+      "ip": "",
+      "port": "8506",
+      "ttl": 0
+    }
+  ]
+}
