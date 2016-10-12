@@ -28,7 +28,7 @@ import org.openo.sdno.model.servicemodel.brs.SiteMO;
  * <br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class Site extends AbstractSvcModel {
 
@@ -186,7 +186,7 @@ public class Site extends AbstractSvcModel {
     /**
      * convert from siteMo to site<br>
      * 
-     * @param siteMo sitemo object to initizlize the site
+     * @param siteMo sitemo object to initialize the site
      * @return site object to return
      * @since SDNO 0.5
      */

@@ -20,7 +20,7 @@ package org.openo.sdno.model.uniformsbi.error;
  * Class to store the Error tags.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public enum ErrorTagEnum {
     UNKONW_ERROR("UnkonwError"), PARAM_ERROR("ParamError"), OPERATE_FORBIDDEN("OperateForbidden"),

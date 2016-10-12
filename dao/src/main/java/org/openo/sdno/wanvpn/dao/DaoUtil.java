@@ -28,7 +28,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 /**
- * Data access object util class.<br>
+ * Data access object utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2

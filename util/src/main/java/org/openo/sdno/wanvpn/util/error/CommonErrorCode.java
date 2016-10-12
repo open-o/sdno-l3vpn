@@ -20,7 +20,7 @@ package org.openo.sdno.wanvpn.util.error;
  * Common error code class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public class CommonErrorCode {
 
@@ -37,7 +37,7 @@ public class CommonErrorCode {
     public static final String APP_NAME = "singlevpnsvc";
 
     /**
-     * the value of Enum is out of range.
+     * the value of Enumeration is out of range.
      */
     public static final String CHECKER_ENUM_OUT_OF_RANGE = ErrorCodeUtils.getErrorCode(APP, SRC_ENUM, "out_of_range");
 
@@ -47,12 +47,12 @@ public class CommonErrorCode {
     public static final String CHECKER_FILED_IS_NULL = ErrorCodeUtils.getErrorCode(APP, SRC_FIELD, "field_is_null");
 
     /**
-     * The value of IP is not a valid ip address without mask.
+     * The value of IP is not a valid IP address without mask.
      */
     public static final String CHECKER_IP_INVALID = ErrorCodeUtils.getErrorCode(APP, SRC_IP, "ip_invalid");
 
     /**
-     * The value of CIDR is not a valid ip address with mask.
+     * The value of CIDR is not a valid IP address with mask.
      */
     public static final String CHECKER_CIDR_INVALID = ErrorCodeUtils.getErrorCode(APP, SRC_IP, "cidr_invalid");
 

@@ -21,10 +21,10 @@ import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.model.uniformsbi.base.AdapterResponseInfo;
 
 /**
- * The interface of the uniformsbi response translator.<br>
+ * The interface of the uniform SBI response translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 public interface ResponsTranslator {
 

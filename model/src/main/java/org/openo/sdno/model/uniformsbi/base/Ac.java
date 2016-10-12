@@ -28,7 +28,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
  * AC service model class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class Ac extends AbstractSvcModel {

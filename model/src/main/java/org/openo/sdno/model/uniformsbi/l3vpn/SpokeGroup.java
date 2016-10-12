@@ -24,7 +24,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * Spoke group class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 22, 2016
+ * @version SDNO 0.5 July 22, 2016
  */
 public class SpokeGroup {
 

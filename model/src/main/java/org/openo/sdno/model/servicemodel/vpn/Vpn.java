@@ -34,7 +34,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
  * Virtual Private Network class<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class Vpn extends AbstractSvcModel {
 

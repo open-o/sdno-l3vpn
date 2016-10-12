@@ -39,7 +39,7 @@ public class QueryParams {
      * 
      * @since SDNO 0.5
      * @param filter The filter to set
-     * @param attr The attr to set
+     * @param attr The attribute to set
      * @param sort The sort to set
      * @param sortType The sortType to set
      */

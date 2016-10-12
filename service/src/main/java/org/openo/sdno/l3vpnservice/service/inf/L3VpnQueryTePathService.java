@@ -28,7 +28,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
  * L3Vpn query TE path service interface.<br>
  * 
  * @author
- * @version     SDNO 0.5  Aug 2, 2016
+ * @version     SDNO 0.5  August 2, 2016
  */
 public interface L3VpnQueryTePathService {
 

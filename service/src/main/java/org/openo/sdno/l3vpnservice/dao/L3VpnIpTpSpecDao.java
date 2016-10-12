@@ -24,7 +24,7 @@ import org.springframework.stereotype.Repository;
  * IP TP data access object class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnIpTpSpecDao")
 public class L3VpnIpTpSpecDao extends AbstractIpTpSpecDao<L3VpnIpTpSpecPo> {

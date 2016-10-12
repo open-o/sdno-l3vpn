@@ -28,7 +28,7 @@ import org.openo.sdno.wanvpn.dao.FilterUtil;
 import org.springframework.util.CollectionUtils;
 
 /**
- * Filter util class. <br>
+ * Filter utility class. <br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2

@@ -24,7 +24,7 @@ import org.springframework.stereotype.Repository;
  * Static route table data access object class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnStaticRouteTableDao")
 public class L3VpnStaticRouteTableDao extends AbstractStaticRouteTableDao<L3VpnStaticRouteTablePo> {

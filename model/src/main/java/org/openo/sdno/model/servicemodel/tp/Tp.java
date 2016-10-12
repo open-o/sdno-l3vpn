@@ -36,7 +36,7 @@ import org.openo.sdno.model.servicemodel.common.enumeration.TpType;
 import org.openo.sdno.model.servicemodel.routeprotocol.RouteProtocolSpec;
 
 /**
- * The service model class of Tp.<br>
+ * The service model class of TP.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

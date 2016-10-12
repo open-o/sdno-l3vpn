@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.util.inventory;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 
 /**
- * Termination point util class.<br>
+ * Termination point utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
@@ -48,7 +48,7 @@ public class TerminationPointUtil {
      * Check input LTP object is loop back interface or not.<br>
      * 
      * @param ltpMO LTP module object
-     * @return true when ltpMO's logical type equals Loopback,otherwise is false
+     * @return true when ltpMO's logical type equals Loop back,otherwise is false
      * @since SDNO 0.5
      */
     public static boolean isLoopbackInterface(final LtpMO ltpMO) {

@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
 /**
- * The enum class of different service.<br>
+ * The enumeration class of different service.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

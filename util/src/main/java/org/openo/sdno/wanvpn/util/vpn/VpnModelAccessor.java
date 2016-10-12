@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
 
 /**
- * Visitor class of vpn model.<br>
+ * Visitor class of VPN model.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

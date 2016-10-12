@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.translator.common;
 
 /**
- * The key constants of Vpn.<br>
+ * The key constants of VPN.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-2
@@ -25,12 +25,12 @@ package org.openo.sdno.wanvpn.translator.common;
 public final class VpnContextKeys {
 
     /**
-     * The Vpn constants key.
+     * The VPN constants key.
      */
     public static final String VPN = "vpn";
 
     /**
-     * The Tp constants key.
+     * The TP constants key.
      */
     public static final String TP = "tp";
 
@@ -70,22 +70,22 @@ public final class VpnContextKeys {
     public static final String STARICROUTES = "staticRoutes";
 
     /**
-     * The Bgp routes constants key.
+     * The BGP routes constants key.
      */
     public static final String BGPROUTES = "bgpRoutes";
 
     /**
-     * The Bgp route constants key.
+     * The BGP route constants key.
      */
     public static final String BGPROUTE = "bgpRoute";
 
     /**
-     * The Ip Tp spec constants key.
+     * The IP TP specification constants key.
      */
     public static final String IPTPSPEC = "ipTpspec";
 
     /**
-     * The qos policy constants key.
+     * The QOS policy constants key.
      */
     public static final String QOS_POLICY = "qosPolicy";
 

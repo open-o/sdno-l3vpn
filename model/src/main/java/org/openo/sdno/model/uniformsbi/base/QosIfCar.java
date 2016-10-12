@@ -22,10 +22,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * Qos If Car class.<br>
+ * QOS If Car class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 22, 2016
+ * @version SDNO 0.5 July 22, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class QosIfCar extends AbstractSvcModel {
@@ -55,10 +55,10 @@ public class QosIfCar extends AbstractSvcModel {
     /**
      * Constructor<br>
      * 
-     * @param cir cir to set
-     * @param pir pir to set
-     * @param cbs cbs to set
-     * @param pbs pbs to set
+     * @param cir CIR to set
+     * @param pir PIR to set
+     * @param cbs CBS to set
+     * @param pbs PBS to set
      * @since SDNO 0.5
      */
     public QosIfCar(long cir, long pir, long cbs, long pbs) {

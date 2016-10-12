@@ -30,7 +30,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoute;
  * L3Vpn SBI interface class.<br>
  * 
  * @author
- * @version     SDNO 0.5  Aug 2, 2016
+ * @version     SDNO 0.5  August 2, 2016
  */
 public interface L3VpnSbiApiService {
 

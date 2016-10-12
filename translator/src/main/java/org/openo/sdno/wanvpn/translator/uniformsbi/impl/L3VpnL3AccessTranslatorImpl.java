@@ -44,7 +44,7 @@ import org.springframework.util.CollectionUtils;
  * The implement class of the L3 access translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 @Component("uniformL3VpnL3AccessTranslatorImpl")
 public class L3VpnL3AccessTranslatorImpl implements L3VpnL3AccessTranslator {

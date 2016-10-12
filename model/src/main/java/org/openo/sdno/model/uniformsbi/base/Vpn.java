@@ -27,7 +27,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
  * VPN model class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 21, 2016
+ * @version SDNO 0.5 July 21, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class Vpn extends AbstractSvcModel {

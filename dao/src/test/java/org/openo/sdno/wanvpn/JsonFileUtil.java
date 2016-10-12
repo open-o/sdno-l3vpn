@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
  * </p>
  *
  * @author
- * @version SDNO 0.5 Jul 29, 2016
+ * @version SDNO 0.5 July 29, 2016
  */
 public class JsonFileUtil {
 

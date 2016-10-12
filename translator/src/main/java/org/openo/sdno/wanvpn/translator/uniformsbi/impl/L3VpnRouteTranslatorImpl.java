@@ -40,7 +40,7 @@ import org.springframework.stereotype.Component;
  * The implement class of the L3VPN route translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 @Component("uniformL3VpnRouteTranslatorImpl")
 public class L3VpnRouteTranslatorImpl implements L3VpnRouteTranslator {

@@ -30,7 +30,7 @@ import org.openo.sdno.model.uniformsbi.l2vpn.L2Vpn;
  * L2VPN SBI PO class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @MOResType(infoModelName = "wan_l2vpn_sbi_vpn")
 public class L2VpnSbiPo implements PoModel<L2Vpn> {

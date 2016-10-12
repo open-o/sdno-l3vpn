@@ -34,12 +34,12 @@ public class JoinAttrData {
 
     private String refKey;
 
-    // Should be a Json string convert from map.
+    // Should be a JSON string convert from map.
     private String refAttr;
 
     private String filterDsc;
 
-    // Json form map.
+    // JSON form map.
     private String filterData;
 
     /**
@@ -55,7 +55,7 @@ public class JoinAttrData {
      * Constructor.<br>
      * 
      * @since SDNO 0.5
-     * @param attr The attr to set
+     * @param attr The attribute to set
      * @param refRes The refRes to set
      * @param refKey The refKey to set
      */

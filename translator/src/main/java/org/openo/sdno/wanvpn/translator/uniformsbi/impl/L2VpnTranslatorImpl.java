@@ -44,7 +44,7 @@ import org.springframework.stereotype.Service;
  * The implement class of the L2VPN translator.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 @Service("uniformL2VpnTranslatorImpl")
 public class L2VpnTranslatorImpl implements L2VpnTranslator {

@@ -24,7 +24,7 @@ import org.springframework.stereotype.Repository;
  * L3VPN route protocol data access object class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnRouteProtocolSpecDao")
 public class L3VpnRouteProtocolSpecDao extends AbstractRouteProtocolSpecDao<L3VpnRouteProtocolSpecPo> {

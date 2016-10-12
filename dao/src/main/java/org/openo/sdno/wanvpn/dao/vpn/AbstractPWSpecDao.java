@@ -85,9 +85,9 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     }
 
     /**
-     * Batch delete data by tunnel schema Ids.<br>
+     * Batch delete data by tunnel schema Id's.<br>
      * 
-     * @param tunnelSchemaIds tunnel schema Ids
+     * @param tunnelSchemaIds tunnel schema Id's
      * @throws ServiceException when delete failed
      * @since SDNO 0.5
      */
@@ -96,9 +96,9 @@ public abstract class AbstractPWSpecDao<P extends AbstractPWSpecPo> extends Defa
     }
 
     /**
-     * Batch query data by tunnel schema Ids<br>
+     * Batch query data by tunnel schema Id's<br>
      * 
-     * @param tunnelSchemaIds tunnel schema Ids
+     * @param tunnelSchemaIds tunnel schema Id's
      * @return query result
      * @throws ServiceException when query failed
      * @since SDNO 0.5

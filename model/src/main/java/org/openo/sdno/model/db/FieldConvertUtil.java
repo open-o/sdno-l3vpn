@@ -34,10 +34,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Util class to convert fields.<br>
+ * Utility class to convert fields.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class FieldConvertUtil {
 
@@ -101,7 +101,7 @@ public class FieldConvertUtil {
      * 
      * @param obj object to handle.
      * @param motype type of the class.
-     * @return uuis of the object.
+     * @return uuid's of the object.
      * @throws InnerErrorServiceException if get field name failed.
      * @since SDNO 0.5
      */

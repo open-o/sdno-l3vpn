@@ -23,10 +23,10 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOInvField;
 import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
 
 /**
- * Abstract profile type Po class.
+ * Abstract profile type PO class.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class ProfileTypePo implements PoModel<ProfileType> {
 

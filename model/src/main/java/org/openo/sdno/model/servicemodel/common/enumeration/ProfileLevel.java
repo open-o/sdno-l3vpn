@@ -19,10 +19,10 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of profile level.<br>
+ * The enumeration class of profile level.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum ProfileLevel implements CommonName {
     NOP("nop"), DOMAIN_BUSINESS("domainBusiness"), BUSINESS("business");

@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
  * adapter response information model class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class AdapterResponseInfo {
 
@@ -65,7 +65,7 @@ public class AdapterResponseInfo {
     /**
      * Constructor<br>
      * 
-     * @param msg Msg to set
+     * @param msg Message to set
      * @since SDNO 0.5
      */
     public AdapterResponseInfo(String msg) {
@@ -76,7 +76,7 @@ public class AdapterResponseInfo {
      * Constructor<br>
      * 
      * @param ret Ret to set
-     * @param msg Msg to set
+     * @param msg Message to set
      * @since SDNO 0.5
      */
     public AdapterResponseInfo(int ret, String msg) {
@@ -89,7 +89,7 @@ public class AdapterResponseInfo {
      * 
      * @param ret Ret to set
      * @param format format to set
-     * @param msg Msg to set
+     * @param msg Message to set
      * @since SDNO 0.5
      */
     public AdapterResponseInfo(int ret, String format, String msg) {
@@ -103,7 +103,7 @@ public class AdapterResponseInfo {
      * 
      * @param ret Ret to set
      * @param format format to set
-     * @param msg Msg to set
+     * @param msg Message to set
      * @param respHeaders respHeaders to set
      * @since SDNO 0.5
      */
@@ -128,18 +128,18 @@ public class AdapterResponseInfo {
     }
 
     /**
-     * get Msg
+     * get Message
      * 
-     * @return Returns the msg.
+     * @return Returns the Message.
      */
     public String getMsg() {
         return msg;
     }
 
     /**
-     * set Msg
+     * set Message
      * 
-     * @param msg The msg to set.
+     * @param msg The Message to set.
      */
     public void setMsg(String msg) {
         this.msg = msg;

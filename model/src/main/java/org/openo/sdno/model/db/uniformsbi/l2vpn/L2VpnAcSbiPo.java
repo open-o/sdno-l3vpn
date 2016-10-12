@@ -30,7 +30,7 @@ import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
  * L2VPN AC SBI PO class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @MOResType(infoModelName = "wan_l2vpn_sbi_ac")
 public class L2VpnAcSbiPo implements PoModel<L2Ac> {

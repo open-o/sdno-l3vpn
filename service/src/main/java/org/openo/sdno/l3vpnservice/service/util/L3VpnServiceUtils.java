@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 
 /**
- * L3 VPN service util class.<br>
+ * L3 VPN service utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-30

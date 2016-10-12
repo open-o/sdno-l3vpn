@@ -19,10 +19,10 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of extras vpn connect policy type.<br>
+ * The enumeration class of extras VPN connect policy type.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum ExterAsVpnConnectPolicyType implements CommonName {
     OPTION_A("OptionA"), OPTION_B("OptionB"), OPTION_C("OptionC"), NOP("nop");

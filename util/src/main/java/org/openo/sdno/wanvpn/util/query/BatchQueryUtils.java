@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
 /**
- * Batch query util class.<br>
+ * Batch query utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

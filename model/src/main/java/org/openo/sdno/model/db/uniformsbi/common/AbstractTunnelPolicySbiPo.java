@@ -28,7 +28,7 @@ import org.openo.sdno.model.uniformsbi.base.TunnelPolicy;
  * Tunnel policy SBI PO abstract class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 public abstract class AbstractTunnelPolicySbiPo implements PoModel<TunnelPolicy> {
 

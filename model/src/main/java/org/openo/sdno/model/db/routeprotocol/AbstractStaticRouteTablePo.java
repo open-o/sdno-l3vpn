@@ -30,7 +30,7 @@ import org.openo.sdno.model.servicemodel.routeprotocol.StaticRouteTable;
  * Abstract class for Static Route Table
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractStaticRouteTablePo implements PoModel<StaticRouteTable> {
 
@@ -49,12 +49,12 @@ public abstract class AbstractStaticRouteTablePo implements PoModel<StaticRouteT
     private String routePreference;
 
     /**
-     * next hop ip address. Same with ce interface ip address
+     * next hop IP address. Same with CE interface IP address
      */
     private String nextHopIp;
 
     /**
-     * next hop ip address. Same with ce interface ip address
+     * next hop IP address. Same with CE interface IP address
      */
     private String type;
 

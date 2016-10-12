@@ -27,10 +27,10 @@ import org.openo.sdno.model.servicemodel.mss.annotation.NONInvField;
 import org.openo.sdno.model.servicemodel.tp.EthernetTpSpec;
 
 /**
- * Abstract class for ethernet tp specification.<br>
+ * Abstract class for Ethernet TP specification.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public abstract class AbstractEthernetTpSpecPo implements PoModel<EthernetTpSpec> {
 

@@ -29,10 +29,10 @@ import org.openo.sdno.model.servicemodel.SvcModel;
 import org.springframework.util.StringUtils;
 
 /**
- * Data access object util class for list operation.<br>
+ * Data access object utility class for list operation.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 23, 2016
+ * @version SDNO 0.5 August 23, 2016
  */
 public class DaoCommonUtil {
 

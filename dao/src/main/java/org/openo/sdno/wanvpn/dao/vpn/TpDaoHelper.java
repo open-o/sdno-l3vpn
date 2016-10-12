@@ -130,7 +130,7 @@ public class TpDaoHelper {
     }
 
     /**
-     * Get the mapping of TP config and TP ID.<br>
+     * Get the mapping of TP configuration and TP ID.<br>
      * 
      * @param tpIds list of TP IDs
      * @return the mapping

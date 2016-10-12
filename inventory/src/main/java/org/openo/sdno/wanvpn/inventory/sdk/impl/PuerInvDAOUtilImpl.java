@@ -34,7 +34,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * PUER inventory data access object util class.<br>
+ * PUER inventory data access object utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-3

@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
 /**
- * The enum class of QOS flow direction type.<br>
+ * The enumeration class of QOS flow direction type.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

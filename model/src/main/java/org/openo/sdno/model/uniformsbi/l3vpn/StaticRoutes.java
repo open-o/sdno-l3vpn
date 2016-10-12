@@ -25,7 +25,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
  * Static routes class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 22, 2016
+ * @version SDNO 0.5 July 22, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class StaticRoutes {

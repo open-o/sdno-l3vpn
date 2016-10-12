@@ -39,7 +39,7 @@ public class EnumChecker {
     }
 
     /**
-     * Check the field of enum.<br>
+     * Check the field of enumeration.<br>
      * 
      * @param model The service model
      * @param field The field to be checked

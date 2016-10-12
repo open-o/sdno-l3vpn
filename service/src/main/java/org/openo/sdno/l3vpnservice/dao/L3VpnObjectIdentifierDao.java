@@ -24,7 +24,7 @@ import org.springframework.stereotype.Repository;
  * L3VPN object identifier data access object class.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnObjectIdentifierDao")
 public class L3VpnObjectIdentifierDao extends AbstractObjectIdentifierDao<L3VpnObjectIdentifierPo> {

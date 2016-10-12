@@ -26,7 +26,7 @@ import org.openo.sdno.model.servicemodel.tunnel.SelectTunnelPolicy;
  * Abstract class for the select tunnel policy PO.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractSelectTunnelPolicyPo implements PoModel<SelectTunnelPolicy> {
 

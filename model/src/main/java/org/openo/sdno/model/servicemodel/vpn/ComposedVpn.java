@@ -36,7 +36,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
  * Composed VPN model class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class ComposedVpn extends AbstractSvcModel implements TenantOwned {
 
@@ -94,7 +94,7 @@ public class ComposedVpn extends AbstractSvcModel implements TenantOwned {
      * @param name Name to set
      * @param tenantId tenant ID to set
      * @param businessTypeId business Type Id to set
-     * @param vpnBasicInfo vpn Basic Information to set
+     * @param vpnBasicInfo VPN Basic Information to set
      * @since SDNO 0.5
      */
     public ComposedVpn(final String name, final String tenantId, final String businessTypeId,

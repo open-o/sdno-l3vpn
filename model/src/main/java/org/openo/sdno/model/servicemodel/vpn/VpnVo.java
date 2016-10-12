@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.tunnel.PathConstraints;
  * VpnVo model class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class VpnVo {
 
@@ -48,7 +48,7 @@ public class VpnVo {
     /**
      * Constructor<br>
      * 
-     * @param vpn Vpn to set
+     * @param vpn VPN to set
      * @since SDNO 0.5
      */
     public VpnVo(final Vpn vpn) {

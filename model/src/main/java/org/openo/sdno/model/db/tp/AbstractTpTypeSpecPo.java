@@ -26,7 +26,7 @@ import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
  * Abstract class for TP type specification.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractTpTypeSpecPo implements PoModel<TpTypeSpec> {
 

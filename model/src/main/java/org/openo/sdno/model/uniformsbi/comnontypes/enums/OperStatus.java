@@ -19,7 +19,7 @@ package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 import org.codehaus.jackson.annotate.JsonCreator;
 
 /**
- * The enum class of operation class.<br>
+ * The enumeration class of operation class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

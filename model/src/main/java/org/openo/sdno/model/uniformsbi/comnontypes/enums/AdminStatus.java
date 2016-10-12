@@ -19,7 +19,7 @@ package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 import org.codehaus.jackson.annotate.JsonCreator;
 
 /**
- * The enum class of admin status.<br>
+ * The enumeration class of admin status.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

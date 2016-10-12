@@ -29,7 +29,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
  * L2ac list container.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L2Acs extends AbstractSvcModel {
@@ -52,7 +52,7 @@ public class L2Acs extends AbstractSvcModel {
     /**
      * Constructor<br>
      * 
-     * @param ac ac instance.
+     * @param ac AC instance.
      * @since SDNO 0.5
      */
     public L2Acs(final L2Ac ac) {

@@ -25,7 +25,7 @@ import org.openo.sdno.model.uniformsbi.base.TunnelPolicy;
  * L2VPN tunnel policy SBI PO class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @MOResType(infoModelName = "wan_l2vpn_sbi_tunnelpolicy")
 public class L2VpnTunnelPolicySbiPo extends AbstractTunnelPolicySbiPo {

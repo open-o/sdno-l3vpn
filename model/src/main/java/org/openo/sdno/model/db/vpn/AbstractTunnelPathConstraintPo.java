@@ -26,7 +26,7 @@ import org.openo.sdno.model.servicemodel.tunnel.TunnelPathConstraint;
  * Abstract class for the tunnel path constraint PO.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractTunnelPathConstraintPo implements PoModel<TunnelPathConstraint> {
 

@@ -22,10 +22,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.base.Vpn;
 
 /**
- * Sbi model for L3VPN.<br>
+ * SBI model for L3VPN.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L3Vpn extends Vpn {

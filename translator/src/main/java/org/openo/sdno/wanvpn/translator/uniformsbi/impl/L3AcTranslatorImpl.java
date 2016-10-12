@@ -36,7 +36,7 @@ import org.springframework.stereotype.Service;
  * The implement class of the L3 AC translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 @Service("uniformL3AcTranslatorImpl")
 public class L3AcTranslatorImpl implements L3AcTranslator {

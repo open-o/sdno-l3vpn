@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
  * The data model class of network control domain.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 21, 2016
+ * @version SDNO 0.5 July 21, 2016
  */
 @MOResType(infoModelName = "networkcontroldomain")
 public class NetworkControlDomainMO extends BaseMO {

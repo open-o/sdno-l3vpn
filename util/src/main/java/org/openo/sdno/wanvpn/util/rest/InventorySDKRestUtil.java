@@ -31,7 +31,7 @@ import org.openo.sdno.framework.container.resthelper.RestfulProxy;
 import org.openo.sdno.rest.ResponseUtils;
 
 /**
- * Inventory SDK restful util class.<br>
+ * Inventory SDK restful utility class.<br>
  *
  * @author
  * @version SDNO 0.5 2016-6-1

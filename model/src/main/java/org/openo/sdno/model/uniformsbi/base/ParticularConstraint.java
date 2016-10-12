@@ -22,7 +22,7 @@ import java.util.List;
  * Particular constraint class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 21, 2016
+ * @version SDNO 0.5 July 21, 2016
  */
 public class ParticularConstraint {
 
@@ -31,7 +31,7 @@ public class ParticularConstraint {
     private String egressNe;
 
     /**
-     * TunnelConstraintType enums.
+     * TunnelConstraintType enumerations.
      */
     private String type;
 

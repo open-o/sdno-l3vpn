@@ -23,7 +23,7 @@ import java.util.Map;
  * TE Path Query Key class<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class TePathQueryKey {
 
@@ -40,10 +40,10 @@ public class TePathQueryKey {
     /**
      * Constructor<br>
      * 
-     * @param vpnId vpn uuid
-     * @param srcNeId source Ne uuid
-     * @param destNeId destination Ne uuid
-     * @param srcAcId source Ac uuid
+     * @param vpnId VPN uuid
+     * @param srcNeId source NE uuid
+     * @param destNeId destination NE uuid
+     * @param srcAcId source AC uuid
      * @param destAcId destination uuid
      * @since SDNO 0.5
      */
@@ -126,9 +126,9 @@ public class TePathQueryKey {
     }
 
     /**
-     * get the paramaters.<br>
+     * get the parameters.<br>
      * 
-     * @return map of paramaters.
+     * @return map of parameters.
      * @since SDNO 0.5
      */
     public Map<String, String> getParams() {
@@ -143,9 +143,9 @@ public class TePathQueryKey {
     }
 
     /**
-     * get the object paramaters.<br>
+     * get the object parameters.<br>
      * 
-     * @return map of paramaters.
+     * @return map of parameters.
      * @since SDNO 0.5
      */
     public Map<String, Object> getObjectParams() {

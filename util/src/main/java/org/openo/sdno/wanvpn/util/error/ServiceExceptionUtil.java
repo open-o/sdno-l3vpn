@@ -22,7 +22,7 @@ import org.openo.baseservice.remoteservice.exception.ExceptionArgs;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 
 /**
- * Service exception util class.<br>
+ * Service exception utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

@@ -32,7 +32,7 @@ import org.openo.sdno.model.servicemodel.tp.IpTpSpec;
  * </p>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public abstract class AbstractIpTpSpecPo implements PoModel<IpTpSpec> {
 

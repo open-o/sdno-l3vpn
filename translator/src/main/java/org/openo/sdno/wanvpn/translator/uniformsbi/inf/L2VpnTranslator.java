@@ -22,7 +22,7 @@ import org.openo.sdno.model.uniformsbi.l2vpn.L2Vpn;
  * The interface class of the L2Vpn translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 public interface L2VpnTranslator extends ModelTranslator<L2Vpn> {
 

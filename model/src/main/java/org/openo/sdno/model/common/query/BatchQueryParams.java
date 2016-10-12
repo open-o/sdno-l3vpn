@@ -40,7 +40,7 @@ public class BatchQueryParams {
     private String filterDesc;
 
     /**
-     * The attr of resource.
+     * The attributes of resource.
      */
     private String attr;
 
@@ -58,7 +58,7 @@ public class BatchQueryParams {
      * Constructor.<br>
      * 
      * @since SDNO 0.5
-     * @param attr Attr to set
+     * @param attr Attribute to set
      * @param sort sort to set
      * @param queryType queryType to set
      * @param sortType sortType to set
@@ -101,7 +101,7 @@ public class BatchQueryParams {
      * Constructor.<br>
      * 
      * @since SDNO 0.5
-     * @param cond cond to set
+     * @param cond condition to set
      * @param value value to set
      */
     public BatchQueryParams(final String cond, final Object value) {

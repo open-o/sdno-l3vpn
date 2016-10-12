@@ -141,7 +141,7 @@ public class Device extends BaseMO {
     /**
      * Get authentication information.<br>
      * 
-     * @return The auth information
+     * @return The authentication information
      * @since SDNO 0.5
      */
     public AuthInfo getAuthInfo() {

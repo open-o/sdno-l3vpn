@@ -17,7 +17,7 @@
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
 /**
- * The enum class of access action.<br>
+ * The enumeration class of access action.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

@@ -71,9 +71,9 @@ public abstract class AbstractIpVpnSpecDao<P extends AbstractIpVpnSpecPo> extend
     }
 
     /**
-     * Delete data by VPN basic info Ids.<br>
+     * Delete data by VPN basic info Id's.<br>
      * 
-     * @param vpnBasicInfoIds VPN basic info Ids
+     * @param vpnBasicInfoIds VPN basic info Id's
      * @throws ServiceException when delete failed
      * @since SDNO 0.5
      */

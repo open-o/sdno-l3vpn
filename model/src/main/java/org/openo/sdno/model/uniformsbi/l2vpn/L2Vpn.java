@@ -28,7 +28,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.SignalType;
  * L2vpn model.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L2Vpn extends Vpn {

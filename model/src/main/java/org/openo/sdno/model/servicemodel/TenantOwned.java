@@ -21,7 +21,7 @@ package org.openo.sdno.model.servicemodel;
  * tenant ID.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public interface TenantOwned {
 

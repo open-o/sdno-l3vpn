@@ -22,7 +22,7 @@ import org.openo.sdno.model.common.CommonName;
  * active state enumeration.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum ActiveState implements CommonName {
     ACTIVE_TRUE("true"), ACTIVE_FALSE("false"), ACTIVE_NOP("nop");

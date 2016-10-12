@@ -29,10 +29,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
- * The implement class of the uniformsbi response translator.<br>
+ * The implement class of the uniform SBI response translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 @Service("uniformResponsTranslatorImpl")
 public class ResponsTranslatorImpl implements ResponsTranslator {

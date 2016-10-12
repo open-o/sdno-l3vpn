@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of PW VLAN action type.<br>
+ * The enumeration class of PW VLAN action type.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

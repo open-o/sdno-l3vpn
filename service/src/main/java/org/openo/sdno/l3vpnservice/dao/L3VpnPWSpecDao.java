@@ -21,10 +21,10 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractPWSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * PW spec data access object class.<br>
+ * PW specification data access object class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnPWSpecDao")
 public class L3VpnPWSpecDao extends AbstractPWSpecDao<L3VpnPWSpecPo> {

@@ -26,7 +26,7 @@ import org.openo.sdno.model.servicemodel.mss.annotation.MOUUIDField;
  * Abstract class for the VPN specifications.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractIpVpnSpecPo implements PoModel<IpVpnSpec> {
 

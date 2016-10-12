@@ -28,10 +28,10 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.TopologyType;
 import org.openo.sdno.wanvpn.util.EnumUtil;
 
 /**
- * Translator Util class.<br>
+ * Translator Utility class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public class TranslatorUtil {
 

@@ -19,7 +19,7 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of Topo node role.<br>
+ * The enumeration class of Topology node role.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

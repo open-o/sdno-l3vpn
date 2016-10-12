@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Class to store the error parameters.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 @XmlRootElement(name = "error-paras")
 @XmlAccessorType(XmlAccessType.FIELD)

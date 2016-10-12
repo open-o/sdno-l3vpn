@@ -50,7 +50,7 @@ import org.springframework.stereotype.Service;
  * L3VPN SBI API class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Service
 public class L3VpnSbiApi implements L3VpnSbiApiService {

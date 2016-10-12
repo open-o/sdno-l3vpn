@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.tunnel.PWSpec;
  * PW specification class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @MOResType(infoModelName = "wan_pwspec")
 public class PWSpecPo implements PoModel<PWSpec> {

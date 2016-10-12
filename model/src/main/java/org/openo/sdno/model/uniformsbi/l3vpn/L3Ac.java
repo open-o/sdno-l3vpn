@@ -25,10 +25,10 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
 
 /**
- * Sbi model, AC model class.<br>
+ * SBI model, AC model class.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L3Ac extends AbstractSvcModel {

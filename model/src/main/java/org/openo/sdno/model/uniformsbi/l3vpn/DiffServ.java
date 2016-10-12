@@ -20,22 +20,22 @@ package org.openo.sdno.model.uniformsbi.l3vpn;
  * SBI model for difference service.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public class DiffServ {
 
     /**
-     * DiffServMode enums
+     * DiffServMode enumerations
      */
     private String mode;
 
     /**
-     * DiffServClass enums
+     * DiffServClass enumerations
      */
     private String serviceClass;
 
     /**
-     * DiffServColor enums
+     * DiffServColor enumerations
      */
     private String color;
 

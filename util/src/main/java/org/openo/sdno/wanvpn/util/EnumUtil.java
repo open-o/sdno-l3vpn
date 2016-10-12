@@ -19,10 +19,10 @@ package org.openo.sdno.wanvpn.util;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The tool class to deal with enum.<br>
+ * The tool class to deal with enumeration.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 public final class EnumUtil {
 
@@ -30,11 +30,11 @@ public final class EnumUtil {
     }
 
     /**
-     * Get the value of enum.<br>
+     * Get the value of enumeration.<br>
      * 
      * @param clazz The object class
      * @param commonName The common name of the field to get
-     * @return The value of the enum
+     * @return The value of the enumeration
      * @since SDNO 0.5
      */
     public static <T extends Enum<T>> T valueOf(Class<T> clazz, String commonName) {

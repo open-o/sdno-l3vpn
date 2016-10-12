@@ -25,7 +25,7 @@ import org.openo.baseservice.remoteservice.exception.ExceptionArgs;
  * 
  * @param <T>Generic paradigm
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class RestRsp<T> implements Serializable {
 

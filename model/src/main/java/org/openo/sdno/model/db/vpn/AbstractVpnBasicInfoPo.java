@@ -26,7 +26,7 @@ import org.openo.sdno.model.servicemodel.vpn.VpnBasicInfo;
  * Abstract class with the basic VPN info.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public class AbstractVpnBasicInfoPo implements PoModel<VpnBasicInfo> {
 

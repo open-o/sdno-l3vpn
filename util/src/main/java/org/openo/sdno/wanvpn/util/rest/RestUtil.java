@@ -34,7 +34,7 @@ import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
- * Restful util class.<br>
+ * Restful utility class.<br>
  *
  * @author
  * @version SDNO 0.5 2016-6-1

@@ -22,7 +22,7 @@ import org.openo.sdno.model.servicemodel.routeprotocol.BgpProtocolItem;
  * RoutingConstrainGroup class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public class RoutingConstrainGroup {
 
@@ -61,7 +61,7 @@ public class RoutingConstrainGroup {
     /**
      * Fetch instance number.<br>
      * 
-     * @return vpn instance number
+     * @return VPN instance number
      * @since SDNO 0.5
      */
     public String fetchInstanceNumber() {

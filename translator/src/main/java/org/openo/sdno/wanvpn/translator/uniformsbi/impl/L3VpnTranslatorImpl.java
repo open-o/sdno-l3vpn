@@ -45,10 +45,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * The implement class of the uniformsbi L3Vpn translator.<br>
+ * The implement class of the uniform SBI L3Vpn translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 @Service("uniformL3VpnTranslatorImpl")
 public class L3VpnTranslatorImpl implements L3VpnTranslator {

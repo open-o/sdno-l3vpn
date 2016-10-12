@@ -47,7 +47,7 @@ public class StringChecker {
     /**
      * Check the length of the string value.<br>
      * 
-     * @param minLen The min length
+     * @param minLen The minimum length
      * @param maxLen The max length
      * @param strVal The string value
      * @param fieldName The field name

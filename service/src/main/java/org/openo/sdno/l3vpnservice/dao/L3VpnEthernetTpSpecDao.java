@@ -21,10 +21,10 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractEthernetTpSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * Ethernet TP spec data access object class.<br>
+ * Ethernet TP specification data access object class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnEthernetTpSpecDao")
 public class L3VpnEthernetTpSpecDao extends AbstractEthernetTpSpecDao<L3VpnEthernetTpSpecPo> {

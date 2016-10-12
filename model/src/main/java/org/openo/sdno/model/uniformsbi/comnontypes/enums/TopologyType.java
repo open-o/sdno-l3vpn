@@ -19,7 +19,7 @@ package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of topology type.<br>
+ * The enumeration class of topology type.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-6

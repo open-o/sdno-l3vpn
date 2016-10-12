@@ -19,10 +19,10 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of reversion mode.<br>
+ * The enumerationF class of reversion mode.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum ReversionMode implements CommonName {
     UNKNOWN("RM_UNKNOWN"), NON_REVERTIVE("RM_NON_REVERTIVE"), REVERTIVE("RM_REVERTIVE");

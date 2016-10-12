@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 import org.openo.sdno.wanvpn.inventory.sdk.util.InventoryProxy;
 
 /**
- * Controller util class.<br>
+ * Controller utility class.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-5-30

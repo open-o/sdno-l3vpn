@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.util.constans;
 
 /**
- * The constants of vpn basic information.<br>
+ * The constants of VPN basic information.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

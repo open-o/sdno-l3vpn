@@ -19,10 +19,10 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of protect type.<br>
+ * The enumeration class of protect type.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum ProtectType implements CommonName {
     NOP("nop"), M_1V1V1("1:1"), M_2V1P1("1+1"), HOT_STANDBY("hot-standby");

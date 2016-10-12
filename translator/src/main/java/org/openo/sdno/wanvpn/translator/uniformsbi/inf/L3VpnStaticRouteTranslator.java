@@ -22,7 +22,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoute;
  * The interface class of the L3vpn static route translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 public interface L3VpnStaticRouteTranslator extends ModelTranslator<StaticRoute> {
 }

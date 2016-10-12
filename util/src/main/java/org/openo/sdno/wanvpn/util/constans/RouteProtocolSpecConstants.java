@@ -17,7 +17,7 @@
 package org.openo.sdno.wanvpn.util.constans;
 
 /**
- * The constants of route protocol spec.<br>
+ * The constants of route protocol specification.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1

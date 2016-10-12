@@ -27,7 +27,7 @@ import org.openo.sdno.model.servicemodel.tunnel.TunnelPathConstraint;
  * Tunnel path constraint class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @MOResType(infoModelName = "wan_tunnelpathconstraint")
 public class TunnelPathConstraintPo implements PoModel<TunnelPathConstraint> {

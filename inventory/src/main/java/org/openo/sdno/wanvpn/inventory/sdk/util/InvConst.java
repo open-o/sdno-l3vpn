@@ -45,12 +45,12 @@ public class InvConst {
     public static final String RELATION_ASSOCIATION = "association";
 
     /**
-     * source uuids.
+     * source uuid's.
      */
     public static final String RELATION_SRCUUIDS = "src_uuids";
 
     /**
-     * destination uuids.
+     * destination uuid's.
      */
     public static final String RELATION_DSTUUIDS = "dst_uuids";
 

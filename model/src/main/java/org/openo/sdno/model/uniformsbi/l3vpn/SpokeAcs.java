@@ -17,10 +17,10 @@
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
- * Spoke Acs class.<br>
+ * Spoke ACS class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 22, 2016
+ * @version SDNO 0.5 July 22, 2016
  */
 public class SpokeAcs {
 

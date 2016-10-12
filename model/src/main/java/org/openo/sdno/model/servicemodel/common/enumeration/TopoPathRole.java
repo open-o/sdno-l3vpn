@@ -19,10 +19,10 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of topologic path role.<br>
+ * The enumeration class of topology path role.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum TopoPathRole implements CommonName {
     WORK("master"), BACKUP("backup"), HSB("hsb");

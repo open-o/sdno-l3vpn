@@ -22,7 +22,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.L3Access;
  * The interface class of the L3 access translator.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 public interface L3VpnL3AccessTranslator extends ModelTranslator<L3Access> {
 

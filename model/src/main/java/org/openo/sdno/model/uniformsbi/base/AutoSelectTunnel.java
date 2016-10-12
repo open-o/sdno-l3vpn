@@ -23,13 +23,13 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
  * Auto select tunnel class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 21, 2016
+ * @version SDNO 0.5 July 21, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class AutoSelectTunnel {
 
     /**
-     * TunnelAutoSelectType enums.
+     * TunnelAutoSelectType enumerations.
      */
     private String type;
 

@@ -25,7 +25,7 @@ import org.openo.sdno.model.servicemodel.SvcModel;
  * 
  * @param <T>
  * @author
- * @version SDNO 0.5 Aug 4, 2016
+ * @version SDNO 0.5 August 4, 2016
  */
 public interface PoModel<T extends SvcModel> extends Serializable {
 
@@ -38,7 +38,7 @@ public interface PoModel<T extends SvcModel> extends Serializable {
     T toSvcModel();
 
     /**
-     * converted from service model to T calss.<br>
+     * converted from service model to T class.<br>
      * 
      * @param svcModel svcModel to convert.
      * @since SDNO 0.5

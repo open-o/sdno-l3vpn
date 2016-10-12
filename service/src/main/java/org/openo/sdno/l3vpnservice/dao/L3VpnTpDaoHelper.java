@@ -23,7 +23,7 @@ import org.springframework.stereotype.Repository;
  * L3VPN TP data access object helper class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnTpDaoHelper")
 public class L3VpnTpDaoHelper extends TpDaoHelper {

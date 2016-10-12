@@ -21,10 +21,10 @@ import org.openo.sdno.wanvpn.dao.vpn.AbstractTpTypeSpecDao;
 import org.springframework.stereotype.Repository;
 
 /**
- * L3VPN TP type spec data access object class.<br>
+ * L3VPN TP type specification data access object class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @Repository("l3VpnTpTypeSpecDao")
 public class L3VpnTpTypeSpecDao extends AbstractTpTypeSpecDao<L3VpnTpTypeSpecPo> {

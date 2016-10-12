@@ -34,7 +34,7 @@ import junit.framework.Assert;
  * AbstractPWSpecDaoTest class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 11, 2016
+ * @version SDNO 0.5 August 11, 2016
  */
 public class AbstractPWSpecDaoTest {
 

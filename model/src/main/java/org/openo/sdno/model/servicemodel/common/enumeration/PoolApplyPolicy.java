@@ -19,10 +19,10 @@ package org.openo.sdno.model.servicemodel.common.enumeration;
 import org.openo.sdno.model.common.CommonName;
 
 /**
- * The enum class of pool apply policy.<br>
+ * The enumeration class of pool apply policy.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public enum PoolApplyPolicy implements CommonName {
     INTER_AS("InterAS"), NOP("Nop");

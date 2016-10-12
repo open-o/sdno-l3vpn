@@ -22,10 +22,10 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
- * SBI model for L3VPN loopback interface.<br>
+ * SBI model for L3VPN loop back interface.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L3LoopbackIf extends AbstractSvcModel {

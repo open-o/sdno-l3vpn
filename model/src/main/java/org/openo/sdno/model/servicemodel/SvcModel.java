@@ -20,7 +20,7 @@ package org.openo.sdno.model.servicemodel;
  * Model for Services.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public interface SvcModel {
 
@@ -41,8 +41,8 @@ public interface SvcModel {
     void setUuid(String uuid);
 
     /**
-     * If the attribute of PO model is not definite in service model you can use this mothod to set
-     * it. If the attibute of PO model is definite in service model , should use the svcmodel
+     * If the attribute of PO model is not definite in service model you can use this method to set
+     * it. If the attribute of PO model is definite in service model , should use the SVC model
      * setter.
      * <br>
      *

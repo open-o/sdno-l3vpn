@@ -29,7 +29,7 @@ import org.openo.sdno.model.servicemodel.tp.Tp;
  * can be physical ports, trunk ports, and sub interfaces.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractTpPo implements PoModel<Tp> {
 

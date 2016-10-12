@@ -25,7 +25,7 @@ import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
  * The interface class of L3 translator provider.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public interface L3TranslatorProvider {
 

@@ -36,10 +36,10 @@ public final class TranslatorUtil {
     }
 
     /**
-     * Get the ip except the mask.<br>
+     * Get the IP except the mask.<br>
      * 
-     * @param ipWithMask The ip with mask
-     * @return The ip except the mask
+     * @param ipWithMask The IP with mask
+     * @return The IP except the mask
      * @since SDNO 0.5
      */
     public static String dropIPMask(String ipWithMask) {
@@ -52,10 +52,10 @@ public final class TranslatorUtil {
     }
 
     /**
-     * Translate the list of vlan from string to integer.<br>
+     * Translate the list of VLAN from string to integer.<br>
      * 
-     * @param strVlan The list of string vlan
-     * @return The list of integer vlan
+     * @param strVlan The list of string VLAN
+     * @return The list of integer VLAN
      * @since SDNO 0.5
      */
     public static List<Integer> stringVlan2IntVlanlst(String strVlan) {

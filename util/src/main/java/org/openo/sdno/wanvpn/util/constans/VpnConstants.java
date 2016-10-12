@@ -17,10 +17,10 @@
 package org.openo.sdno.wanvpn.util.constans;
 
 /**
- * The constants of Vpn.<br>
+ * The constants of VPN.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 1, 2016
+ * @version SDNO 0.5 August 1, 2016
  */
 public class VpnConstants {
 

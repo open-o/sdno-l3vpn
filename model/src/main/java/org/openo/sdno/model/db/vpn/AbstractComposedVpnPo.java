@@ -30,7 +30,7 @@ import org.openo.sdno.model.servicemodel.vpn.ComposedVpn;
  * Abstract class for the composed VPN.
  * 
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 public abstract class AbstractComposedVpnPo implements PoModel<ComposedVpn> {
 

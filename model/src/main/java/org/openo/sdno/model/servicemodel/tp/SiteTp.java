@@ -22,7 +22,7 @@ import org.openo.sdno.model.db.FieldConvertUtil;
  * The service model class of SiteTp.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 9, 2016
+ * @version SDNO 0.5 August 9, 2016
  */
 public class SiteTp extends Tp {
 

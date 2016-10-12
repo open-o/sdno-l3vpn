@@ -20,21 +20,21 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
- * Mpls Te Policy class.<br>
+ * MPLS TE Policy class.<br>
  * 
  * @author
- * @version SDNO 0.5 Jul 21, 2016
+ * @version SDNO 0.5 July 21, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class MplsTePolicy {
 
     /**
-     * TunnelManualSelectType enums.
+     * TunnelManualSelectType enumerations.
      */
     private String signalType;
 
     /**
-     * ManageProtocolType enums.
+     * ManageProtocolType enumerations.
      */
     private String manageProtocol;
 
