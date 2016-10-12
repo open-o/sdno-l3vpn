@@ -35,7 +35,7 @@
     </listener>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/classes/spring/*.xml,classpath*:spring/applicationContext.xml,classpath*:spring/service.xml</param-value>
+        <param-value>WEB-INF/classes/spring/*.xml,classpath*:spring/applicationContext.xml,classpath*:spring/service.xml,classpath*:META-INF/spring/*.xml</param-value>
     </context-param>
 
 
