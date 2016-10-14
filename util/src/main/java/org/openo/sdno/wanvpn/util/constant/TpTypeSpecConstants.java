@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.constans;
+package org.openo.sdno.wanvpn.util.constant;
 
 /**
- * The constants of route protocol specification.<br>
+ * The constants of TP type specification.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
  */
-public class RouteProtocolSpecConstants {
+public class TpTypeSpecConstants {
 
     public static final String TP_ID = "tpId";
 
-    private RouteProtocolSpecConstants() {
+    private TpTypeSpecConstants() {
 
     }
 }

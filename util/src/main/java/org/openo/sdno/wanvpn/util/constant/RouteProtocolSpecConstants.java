@@ -14,25 +14,19 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.constans;
+package org.openo.sdno.wanvpn.util.constant;
 
 /**
- * General constants in database model.<br>
+ * The constants of route protocol specification.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
  */
+public class RouteProtocolSpecConstants {
 
-public class InvConstants {
+    public static final String TP_ID = "tpId";
 
-    public static final String COMMONNAME = "commonName";
-
-    public static final String NAME = "name";
-
-    public static final String UUID = "uuid";
-
-    private InvConstants() {
+    private RouteProtocolSpecConstants() {
 
     }
-
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.constans;
+package org.openo.sdno.wanvpn.util.constant;
 
 /**
  * The constants for page query.<br>

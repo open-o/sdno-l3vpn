@@ -14,19 +14,24 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.constans;
+package org.openo.sdno.wanvpn.util.constant;
 
 /**
- * The constants of TP type specification.<br>
+ * The constants of TP.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
  */
-public class TpTypeSpecConstants {
+
+public class TpConstants {
+
+    public static final String VPN_ID = "vpnId";
+
+    public static final String PEERCETP_ID = "peerCeTpId";
 
     public static final String TP_ID = "tpId";
 
-    private TpTypeSpecConstants() {
+    private TpConstants() {
 
     }
 }

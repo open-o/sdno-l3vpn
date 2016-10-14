@@ -34,7 +34,7 @@ import org.openo.sdno.model.common.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.inventory.sdk.inf.BaseInvDao;
-import org.openo.sdno.wanvpn.util.constans.InvConstants;
+import org.openo.sdno.wanvpn.util.constant.InvConstants;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.openo.sdno.wanvpn.util.inventory.TerminationPointUtil;

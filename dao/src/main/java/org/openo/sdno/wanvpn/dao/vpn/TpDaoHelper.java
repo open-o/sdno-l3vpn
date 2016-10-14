@@ -32,7 +32,7 @@ import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractCeTpDao;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractRouteProtocolSpecDao;
 import org.openo.sdno.wanvpn.dao.vpn.AbstractTpTypeSpecDao;
-import org.openo.sdno.wanvpn.util.constans.TpConstants;
+import org.openo.sdno.wanvpn.util.constant.TpConstants;
 import org.openo.sdno.wanvpn.util.vpn.VpnModelAccessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

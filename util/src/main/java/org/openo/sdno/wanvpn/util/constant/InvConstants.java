@@ -14,24 +14,25 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.constans;
+package org.openo.sdno.wanvpn.util.constant;
 
 /**
- * The constants of TP.<br>
+ * General constants in database model.<br>
  * 
  * @author
  * @version SDNO 0.5 2016-6-1
  */
 
-public class TpConstants {
+public class InvConstants {
 
-    public static final String VPN_ID = "vpnId";
+    public static final String COMMONNAME = "commonName";
 
-    public static final String PEERCETP_ID = "peerCeTpId";
+    public static final String NAME = "name";
 
-    public static final String TP_ID = "tpId";
+    public static final String UUID = "uuid";
 
-    private TpConstants() {
+    private InvConstants() {
 
     }
+
 }

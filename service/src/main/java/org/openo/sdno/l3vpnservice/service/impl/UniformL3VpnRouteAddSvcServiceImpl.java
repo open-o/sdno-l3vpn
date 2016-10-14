@@ -36,7 +36,7 @@ import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtxFactory;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnRouteTranslator;
 import org.openo.sdno.wanvpn.util.EnumUtil;
-import org.openo.sdno.wanvpn.util.constans.TpConstants;
+import org.openo.sdno.wanvpn.util.constant.TpConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

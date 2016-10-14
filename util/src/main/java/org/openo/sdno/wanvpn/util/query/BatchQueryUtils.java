@@ -32,7 +32,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.common.query.BatchQueryParams;
 import org.openo.sdno.model.common.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
-import org.openo.sdno.wanvpn.util.constans.PageQueryConstants;
+import org.openo.sdno.wanvpn.util.constant.PageQueryConstants;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.slf4j.Logger;
