@@ -107,7 +107,7 @@ public class Tp extends AbstractSvcModel {
     private String domainId;
 
     @JsonIgnore
-    private ControllerMO contollerMO;
+    private ControllerMO controllerMO;
 
     @EnumDesc(ObjectDirection.class)
     private String direction;
@@ -135,8 +135,8 @@ public class Tp extends AbstractSvcModel {
         return containedMainTP;
     }
 
-    public ControllerMO getContollerMO() {
-        return contollerMO;
+    public ControllerMO getControllerMO() {
+        return controllerMO;
     }
 
     public String getDescription() {
@@ -237,8 +237,8 @@ public class Tp extends AbstractSvcModel {
         this.containedMainTP = containedMainTP;
     }
 
-    public void setContollerMO(final ControllerMO contollerMO) {
-        this.contollerMO = contollerMO;
+    public void setControllerMO(final ControllerMO controllerMO) {
+        this.controllerMO = controllerMO;
     }
 
     public void setDescription(final String description) {
