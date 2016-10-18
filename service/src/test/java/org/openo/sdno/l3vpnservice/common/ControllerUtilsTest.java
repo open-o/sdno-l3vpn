@@ -75,7 +75,7 @@ public class ControllerUtilsTest {
         final Vpn vpn = JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath), Vpn.class);
         ControllerUtils.getControllerType(vpn);
 
-        vpn.getAccessPointList().get(0).setContollerMO(null);
+        vpn.getAccessPointList().get(0).setControllerMO(null);
         ControllerUtils.getControllerType(vpn);
     }
 
@@ -86,7 +86,7 @@ public class ControllerUtilsTest {
         Tp tp = vpn.getAccessPointList().get(0);
         ControllerUtils.getControllerType(tp);
 
-        tp.setContollerMO(null);
+        tp.setControllerMO(null);
         ControllerUtils.getControllerType(tp);
         tp = null;
         ControllerUtils.getControllerType(tp);
@@ -106,7 +106,7 @@ public class ControllerUtilsTest {
         vpnVo.setVpn(vpn);
         ControllerUtils.getControllerType(vpnVo);
 
-        vpn.getAccessPointList().get(0).setContollerMO(null);
+        vpn.getAccessPointList().get(0).setControllerMO(null);
         ControllerUtils.getControllerType(vpnVo);
     }
 
