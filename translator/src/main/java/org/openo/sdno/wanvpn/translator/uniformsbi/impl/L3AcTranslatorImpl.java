@@ -22,6 +22,7 @@ import org.openo.sdno.framework.container.util.UuidUtils;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Ac;
+import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3AcTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnL2AccessTranslator;
@@ -52,9 +53,9 @@ public class L3AcTranslatorImpl implements L3AcTranslator {
     @Override
     public L3Ac translate(TranslatorCtx ctx) throws ServiceException {
 
-        final Object srcVal = ctx.getVal("srcTp");
-        if(srcVal instanceof Tp) {
-            return translateL3Ac(ctx, (Tp)srcVal);
+        final Object tp = ctx.getVal(VpnContextKeys.TP);
+        if(tp instanceof Tp) {
+            return translateL3Ac(ctx, (Tp)tp);
         }
         LOGGER.error("invalid data type of key \"TpPara\"");
         return null;
@@ -111,5 +112,33 @@ public class L3AcTranslatorImpl implements L3AcTranslator {
         String outboundQosPolicyId = tp.getOutboundQosPolicyId();
         l3Ac.setInboundQosPolicyId(inboundQosPolicyId);
         l3Ac.setOutboundQosPolicyId(outboundQosPolicyId);
+    }
+
+    /**
+     * @return Returns the l3VpnL3AccessTranslator.
+     */
+    public L3VpnL3AccessTranslator getL3VpnL3AccessTranslator() {
+        return l3VpnL3AccessTranslator;
+    }
+
+    /**
+     * @param l3VpnL3AccessTranslator The l3VpnL3AccessTranslator to set.
+     */
+    public void setL3VpnL3AccessTranslator(L3VpnL3AccessTranslator l3VpnL3AccessTranslator) {
+        this.l3VpnL3AccessTranslator = l3VpnL3AccessTranslator;
+    }
+
+    /**
+     * @return Returns the l3VpnL2AccessTranslator.
+     */
+    public L3VpnL2AccessTranslator getL3VpnL2AccessTranslator() {
+        return l3VpnL2AccessTranslator;
+    }
+
+    /**
+     * @param l3VpnL2AccessTranslator The l3VpnL2AccessTranslator to set.
+     */
+    public void setL3VpnL2AccessTranslator(L3VpnL2AccessTranslator l3VpnL2AccessTranslator) {
+        this.l3VpnL2AccessTranslator = l3VpnL2AccessTranslator;
     }
 }
