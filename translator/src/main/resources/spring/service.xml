@@ -40,6 +40,9 @@
 
     <bean id="l3VpnStaticRouteTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnStaticRouteTranslatorImpl">
     </bean>
+    
+    <bean id="l3VpnBgpRouteTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnBgpRouteTranslatorImpl">
+    </bean>
 
     <bean id="uniformResponsTranslatorImpl" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.ResponsTranslatorImpl">
     </bean>
