@@ -106,7 +106,6 @@ public class Tp extends AbstractSvcModel {
     @JsonIgnore
     private String domainId;
 
-    @JsonIgnore
     private ControllerMO controllerMO;
 
     @EnumDesc(ObjectDirection.class)
