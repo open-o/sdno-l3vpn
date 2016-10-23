@@ -32,7 +32,6 @@ import org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvServiceNbiBean;
 import org.openo.sdno.wanvpn.inventory.sdk.inf.InvDAO;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 import org.openo.sdno.wanvpn.inventory.sdk.util.MOModelProcessor;
-import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -187,19 +186,19 @@ public class PuerInvDAOImpl<M> implements InvDAO<M> {
 
     @Override
     public ResultRsp<M> query(final String uuid, final Class<?> moType) throws ServiceException {
-        LOGGER.debug("Start query " + uuid + " to puer inv.");
+        LOGGER.debug("Start to query " + uuid + " in puer inv.");
         final Map<String, Object> rsp = puerObjInvService.get(uuid, moType, "all");
 
         if(MapUtils.isEmpty(rsp)) {
-            LOGGER.error("don't find " + uuid + " to puer inv.");
-            ServiceExceptionUtil.throwNotFoundException();
+            LOGGER.error("Can't find " + uuid + " in puer inv.");
+            return new ResultRsp<M>(ErrorCode.UNDERLAYVPN_FAILED);
         }
 
         final List<Map<String, Object>> dataList = new ArrayList<Map<String, Object>>();
         dataList.add(rsp);
 
         final ResultRsp<List<M>> getResult = PuerInvDAOUtilImpl.buildQueryResult(moType, dataList);
-        LOGGER.debug("Finish update  to puer inv ");
+        LOGGER.debug("Finish query in puer inv ");
         final ResultRsp<M> result = new ResultRsp<M>(ErrorCode.UNDERLAYVPN_SUCCESS);
 
         if(getResult.getData() != null && !getResult.getData().isEmpty()) {
