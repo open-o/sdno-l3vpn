@@ -28,6 +28,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.common.enumeration.TpType;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
+import org.openo.sdno.model.uniformsbi.base.TunnelService;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Ac;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Acs;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3LoopbackIf;
@@ -38,6 +39,7 @@ import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3AcTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3LoopbackIfTranslator;
+import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3TunnelServiceTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnTranslator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -57,6 +59,9 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
 
     @Autowired
     private L3AcTranslator l3AcTranslator;
+
+    @Autowired
+    private L3TunnelServiceTranslator l3TunnelServiceTranslator;
 
     @Autowired
     private L3LoopbackIfTranslator l3LoopbackIfTranslator;
@@ -85,6 +90,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
         translateAdminStatus(vpn, l3Vpn);
         translateMtu(vpn, l3Vpn);
         translateTopology(vpn, l3Vpn);
+        translateTunnelService(ctx, vpn, l3Vpn);
         translateAcs(ctx, vpn, l3Vpn);
         translateLoopbackifs(ctx, vpn, l3Vpn);
         return l3Vpn;
@@ -118,6 +124,11 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
         if(existLoopbackIf) {
             l3Vpn.setL3Loopbackifs(l3Loopbackifs);
         }
+    }
+
+    private void translateTunnelService(TranslatorCtx ctx, Vpn vpn, L3Vpn l3Vpn) throws ServiceException {
+        TunnelService tunnelService = l3TunnelServiceTranslator.translate(ctx);
+        l3Vpn.setTunnelService(tunnelService);
     }
 
     private void translateAcs(TranslatorCtx ctx, Vpn vpn, L3Vpn l3Vpn) throws ServiceException {
@@ -175,5 +186,12 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
 
     public void setL3AcTranslator(L3AcTranslator l3AcTranslator) {
         this.l3AcTranslator = l3AcTranslator;
+    }
+
+    /**
+     * @param l3TunnelServiceTranslator The l3TunnelServiceTranslator to set.
+     */
+    public void setL3TunnelServiceTranslator(L3TunnelServiceTranslator l3TunnelServiceTranslator) {
+        this.l3TunnelServiceTranslator = l3TunnelServiceTranslator;
     }
 }
