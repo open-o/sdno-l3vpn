@@ -22,12 +22,15 @@ import java.util.List;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.common.enumeration.RouteProtocolType;
 import org.openo.sdno.model.servicemodel.routeprotocol.RouteProtocolSpec;
+import org.openo.sdno.model.uniformsbi.l3vpn.BgpRoute;
+import org.openo.sdno.model.uniformsbi.l3vpn.BgpRoutes;
 import org.openo.sdno.model.uniformsbi.l3vpn.Route;
 import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoute;
 import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoutes;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxImpl;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
+import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnBgpRouteTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnRouteTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnStaticRouteTranslator;
 import org.openo.sdno.wanvpn.util.EnumUtil;
@@ -50,6 +53,9 @@ public class L3VpnRouteTranslatorImpl implements L3VpnRouteTranslator {
     @Autowired
     private L3VpnStaticRouteTranslator l3VpnStaticRouteTranslator;
 
+    @Autowired
+    private L3VpnBgpRouteTranslator l3VpnBgpRouteTranslator;
+
     @Override
     public Route translate(TranslatorCtx ctx) throws ServiceException {
         List<RouteProtocolSpec> routeProtocolSpecs = (List<RouteProtocolSpec>)ctx.getVal(VpnContextKeys.PROTOCOL);
@@ -68,10 +74,25 @@ public class L3VpnRouteTranslatorImpl implements L3VpnRouteTranslator {
             case STATIC_ROUTING: {
                 return new Route(translateStaticRoutes(routeProtocolSpecs));
             }
+            case BGP: {
+                return new Route(translateBgpRoutes(routeProtocolSpecs));
+            }
             default:
 
         }
         return new Route();
+    }
+
+    private BgpRoutes translateBgpRoutes(List<RouteProtocolSpec> routeProtocolSpecs) throws ServiceException {
+        BgpRoutes bgpRoutes = new BgpRoutes();
+        List<BgpRoute> bgpRouteLst = new ArrayList<BgpRoute>();
+        bgpRoutes.setBgpRoute(bgpRouteLst);
+        for(RouteProtocolSpec routeProtocolSpec : routeProtocolSpecs) {
+            TranslatorCtx ctx = new TranslatorCtxImpl();
+            ctx.addVal(VpnContextKeys.BGPROUTE, routeProtocolSpec.getBgpRoute());
+            bgpRouteLst.add(l3VpnBgpRouteTranslator.translate(ctx));
+        }
+        return bgpRoutes;
     }
 
     private StaticRoutes translateStaticRoutes(List<RouteProtocolSpec> routeProtocolSpecs) throws ServiceException {
@@ -88,5 +109,12 @@ public class L3VpnRouteTranslatorImpl implements L3VpnRouteTranslator {
 
     public void setL3VpnStaticRouteTranslator(L3VpnStaticRouteTranslator l3VpnStaticRouteTranslator) {
         this.l3VpnStaticRouteTranslator = l3VpnStaticRouteTranslator;
+    }
+
+    /**
+     * @param l3VpnBgpRouteTranslator The l3VpnBgpRouteTranslator to set.
+     */
+    public void setL3VpnBgpRouteTranslator(L3VpnBgpRouteTranslator l3VpnBgpRouteTranslator) {
+        this.l3VpnBgpRouteTranslator = l3VpnBgpRouteTranslator;
     }
 }

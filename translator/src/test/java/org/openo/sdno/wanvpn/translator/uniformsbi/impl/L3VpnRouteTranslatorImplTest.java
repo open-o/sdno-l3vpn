@@ -34,8 +34,6 @@ import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxImpl;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
-import org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnRouteTranslatorImpl;
-import org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnStaticRouteTranslatorImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import junit.framework.Assert;
@@ -70,6 +68,7 @@ public class L3VpnRouteTranslatorImplTest {
         routeSpecLst.add(routeSpec);
         ctx.addVal(VpnContextKeys.PROTOCOL, routeSpecLst);
         service.setL3VpnStaticRouteTranslator(new L3VpnStaticRouteTranslatorImpl());
+        service.setL3VpnBgpRouteTranslator(new L3VpnBgpRouteTranslatorImpl());
         Route route = service.translate(ctx);
         Assert.assertNotNull(route);
 
