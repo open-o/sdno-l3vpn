@@ -19,11 +19,13 @@
     xmlns:ctx="http://www.springframework.org/schema/context" xmlns:context="http://www.springframework.org/schema/context"
 
     xsi:schemaLocation="
-	http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans.xsd
-	http://www.springframework.org/schema/context
-	http://www.springframework.org/schema/context/spring-context.xsd">
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="l3AcTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3AcTranslatorImpl">
+    </bean>
+    <bean id="l3TunnelServiceTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3TunnelServiceTranslatorImpl">
     </bean>
 
     <bean id="l3LoopbackIfTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3LoopbackIfTranslatorImpl">
@@ -40,7 +42,7 @@
 
     <bean id="l3VpnStaticRouteTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnStaticRouteTranslatorImpl">
     </bean>
-    
+
     <bean id="l3VpnBgpRouteTranslator" class="org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnBgpRouteTranslatorImpl">
     </bean>
 

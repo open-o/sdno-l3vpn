@@ -30,8 +30,6 @@ import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxImpl;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
-import org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3AcTranslatorImpl;
-import org.openo.sdno.wanvpn.translator.uniformsbi.impl.L3VpnTranslatorImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import junit.framework.Assert;
@@ -64,6 +62,7 @@ public class L3VpnTranslatorImplTest {
         Vpn vpn = JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath), Vpn.class);
         ctx.addVal(VpnContextKeys.VPN, vpn);
         service.setL3AcTranslator(new L3AcTranslatorImpl());
+        service.setL3TunnelServiceTranslator(new L3TunnelServiceTranslatorImpl());
         service.translate(ctx);
 
         ctx.setOperType(OperType.DELETE);
