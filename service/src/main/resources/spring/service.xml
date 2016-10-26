@@ -40,6 +40,7 @@
         <jaxrs:serviceBeans>
             <ref bean="l3VpnServiceResource"></ref>
             <ref bean="neResource"></ref>
+            <ref bean="SwaggerRoa"></ref>
         </jaxrs:serviceBeans>
         <!-- registering providers -->
         <jaxrs:providers>
@@ -47,6 +48,8 @@
         </jaxrs:providers>
     </jaxrs:server>
 
+    <bean id="SwaggerRoa" class="org.openo.sdno.l3vpnservice.resource.SwaggerRoa">
+    </bean>
     <bean id="l3VpnServiceResource" class="org.openo.sdno.l3vpnservice.resource.L3VpnSvcResource">
         <property name="service" ref="l3VpnService"></property>
     </bean>
