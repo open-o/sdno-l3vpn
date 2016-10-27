@@ -20,20 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.ws.rs.core.MediaType;
-
 import org.apache.commons.collections.CollectionUtils;
-import org.codehaus.jackson.type.TypeReference;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.exception.HttpCode;
-import org.openo.sdno.framework.container.resthelper.RestfulProxy;
 import org.openo.sdno.framework.container.util.JsonUtil;
 import org.openo.sdno.model.servicemodel.brs.ControllerMO;
-import org.openo.sdno.model.servicemodel.brs.Device;
 import org.openo.sdno.model.servicemodel.brs.NetworkElementMO;
-import org.openo.sdno.rest.ResponseUtils;
 import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;
@@ -52,49 +45,8 @@ public class InventoryProxy {
 
     private static final String NEURI = "/openoapi/sdnobrs/v1/managed-elements";
 
-    private static final String GETCONTROLLER = "/openoapi/sdnobrs/v1/controller/";
-
-    private static final String GETCOMMPARAM = "/openoapi/sdnobrs/v1/commparammgmt/access-objects/{0}/commparams";
-
     private InventoryProxy() {
 
-    }
-
-    /**
-     * Get the controller device data through the controller uuid.<br>
-     * 
-     * @param ctrId The controller uuid
-     * @return The controller device data
-     * @since SDNO 0.5
-     */
-    public static Device getControllerDevice(final String ctrId) throws ServiceException {
-        Device device = new Device();
-        try {
-
-            final RestfulParametes restfulParametes = new RestfulParametes();
-            final String url = GETCOMMPARAM.replace("{0}", ctrId);
-            final RestfulResponse response = RestfulProxy.get(url, restfulParametes);
-            ResponseUtils.checkResonseAndThrowException(response);
-
-            final Result<List<Device>> moResult = new Result<List<Device>>();
-            moResult.setResultObj(new ArrayList<Device>());
-
-            final String deviceData = response.getResponseContent();
-            List<Device> deviceList = JsonUtil.fromJson(deviceData, new TypeReference<List<Device>>() {});
-            if(null == deviceList || deviceList.isEmpty()) {
-                LOGGER.error("paramList is null or empty!!");
-                throw new ServiceException("paramList is null or empty!!");
-            }
-            device = deviceList.get(0);
-            device.setIp(queryControllerByID(ctrId).getHostName());
-            device.setUser(device.getAuthInfo().getUserName());
-            device.setPwd(device.getAuthInfo().getPassword());
-        } catch(final ServiceException e) {
-            LOGGER.warn("getCltrByCltrId failed:{}", e);
-            return null;
-        }
-        LOGGER.warn("getCltrByCltrId success.");
-        return device;
     }
 
     /**
@@ -117,19 +69,15 @@ public class InventoryProxy {
             LOGGER.error("getController from ne is null.");
             return null;
         }
-        return queryControllerByID(contrlIds.get(0));
-
-    }
-
-    private static ControllerMO queryControllerByID(final String ctrID) throws ServiceException {
-        final RestfulParametes restfulParametes = new RestfulParametes();
-        restfulParametes.putHttpContextHeader("Content-Type", MediaType.APPLICATION_JSON);
-        final RestfulResponse response = RestfulProxy.get(GETCONTROLLER + ctrID, restfulParametes);
-        if(!HttpCode.isSucess(response.getStatus())) {
-            LOGGER.error("getController get controller failed.");
-            return null;
+        List<ControllerMO> controllerMolist = new ArrayList<ControllerMO>();
+        for(String controllerId : contrlIds) {
+            ControllerMO controller = new ControllerMO();
+            controller.setId(controllerId);
+            controller.setObjectId(controllerId);
+            controllerMolist.add(controller);
         }
-        return JsonUtil.fromJson(response.getResponseContent(), ControllerMO.class);
+        return controllerMolist.get(0);
+
     }
 
     /**

@@ -33,8 +33,6 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.framework.container.resthelper.RestfulProxy;
 import org.openo.sdno.framework.container.util.JsonUtil;
-import org.openo.sdno.model.servicemodel.brs.ControllerMO;
-import org.openo.sdno.model.servicemodel.brs.Device;
 import org.openo.sdno.model.servicemodel.brs.NetworkElementMO;
 import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;
@@ -189,16 +187,6 @@ public class InventoryProxyTest {
 
     @Test
     public void testQueryControllerByIDNormal() throws ServiceException {
-        new MockUp<RestfulProxy>() {
-
-            @Mock
-            public RestfulResponse get(String uri, RestfulParametes restParametes) throws ServiceException {
-                RestfulResponse response = new RestfulResponse();
-                response.setStatus(404);
-                return response;
-            }
-
-        };
         new MockUp<InventoryProxy>() {
 
             @Mock
@@ -214,91 +202,6 @@ public class InventoryProxyTest {
             }
 
         };
-        assertNull(InventoryProxy.queryController("test"));
+        assertTrue(InventoryProxy.queryController("test").getId().equals("controller"));
     }
-
-    @Test
-    public void testQueryControllerByIDNormal1() throws ServiceException {
-        new MockUp<RestfulProxy>() {
-
-            @Mock
-            public RestfulResponse get(String uri, RestfulParametes restParametes) throws ServiceException {
-                RestfulResponse response = new RestfulResponse();
-                response.setStatus(200);
-                ControllerMO contrl = new ControllerMO();
-                contrl.setId("123456");
-                String responseString = JsonUtil.toJson(contrl);
-                response.setResponseJson(responseString);
-                return response;
-            }
-
-        };
-        new MockUp<InventoryProxy>() {
-
-            @Mock
-            public Result<NetworkElementMO> queryNeById(final String id) throws ServiceException {
-                Result<NetworkElementMO> moResult = new Result<NetworkElementMO>();
-                NetworkElementMO MO = new NetworkElementMO();
-                List<String> idlist = new ArrayList<String>();
-                idlist.add("controller");
-                MO.setControllerID(idlist);
-                moResult.setResultObj(MO);
-                moResult.setErrcode(0);
-                return moResult;
-            }
-
-        };
-        assertTrue(InventoryProxy.queryController("test").getId().equals("123456"));
-    }
-
-    @Test
-    public void testGetControllerDeviceNull() throws ServiceException {
-        new MockUp<RestfulProxy>() {
-
-            @Mock
-            public RestfulResponse get(String uri, RestfulParametes restParametes) throws ServiceException {
-                RestfulResponse response = new RestfulResponse();
-                response.setStatus(200);
-                List<Device> list = new ArrayList<Device>();
-                String responseString = JsonUtil.toJson(list);
-                response.setResponseJson(responseString);
-                return response;
-            }
-
-        };
-
-        assertNull(InventoryProxy.getControllerDevice("test"));
-    }
-
-    @Test
-    public void testGetControllerDeviceNormal() throws ServiceException {
-        new MockUp<RestfulProxy>() {
-
-            @Mock
-            public RestfulResponse get(String uri, RestfulParametes restParametes) throws ServiceException {
-                RestfulResponse response = new RestfulResponse();
-                response.setStatus(200);
-
-                if("/openoapi/sdnobrs/v1/commparammgmt/access-objects/test/commparams".equals(uri)) {
-                    List<Device> list = new ArrayList<Device>();
-                    Device demo = new Device();
-                    demo.setId("123456");
-                    list.add(demo);
-                    String responseString = JsonUtil.toJson(list);
-                    response.setResponseJson(responseString);
-                } else {
-                    ControllerMO controllerMO = new ControllerMO();
-                    controllerMO.setHostName("localhost");
-                    String responseString = JsonUtil.toJson(controllerMO);
-                    response.setResponseJson(responseString);
-                }
-
-                return response;
-            }
-
-        };
-
-        assertTrue(InventoryProxy.getControllerDevice("test").getId().equals("123456"));
-    }
-
 }
