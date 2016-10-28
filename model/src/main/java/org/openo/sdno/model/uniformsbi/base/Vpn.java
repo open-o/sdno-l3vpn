@@ -107,6 +107,18 @@ public class Vpn extends AbstractSvcModel {
         this.adminStatus = adminStatus;
     }
 
+    public void setAdminStatusFromString(String adminStatus) {
+        if(adminStatus == null || adminStatus.isEmpty()) {
+            return;
+        }
+        String status = adminStatus.toLowerCase();
+        if(status.contains("up")) {
+            this.adminStatus = AdminStatus.ADMIN_UP;
+        } else if(status.contains("down")) {
+            this.adminStatus = AdminStatus.ADMIN_DOWN;
+        }
+    }
+
     public TunnelService getTunnelService() {
         return tunnelService;
     }
