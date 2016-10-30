@@ -39,6 +39,7 @@ import org.openo.sdno.model.uniformsbi.l3vpn.L3Ac;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Vpn;
 import org.openo.sdno.model.uniformsbi.l3vpn.StaticRoute;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.ResponsTranslator;
+import org.openo.sdno.wanvpn.util.TranslateChecker;
 import org.openo.sdno.wanvpn.util.URLEncoderUtil;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;
 import org.slf4j.Logger;
@@ -65,7 +66,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
             throws ServiceException {
         final Map<String, Object> paras = new HashMap<String, Object>();
         paras.put("l3vpn", l3Vpn);
-        final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(JsonUtil.toJson(paras));
+        String reqJson = JsonUtil.toJson(paras);
+        reqJson = TranslateChecker.check(reqJson);
+        final RestfulParametes restfulParametes = RestUtil.getRestfulParametes();
         restfulParametes.putHttpContextHeader("X-Driver-Parameter",
                 "extSysID=" + URLEncoderUtil.encode(controllerUuid));
         LOGGER.info(restfulParametes.getRawData());
@@ -81,7 +84,9 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
             throws ServiceException {
         final Map<String, Object> paras = new HashMap<String, Object>();
         paras.put("l3vpn", l3Vpn);
-        final String strJsonReq = JsonUtil.toJson(paras);
+        String strJsonReq = JsonUtil.toJson(paras);
+
+        strJsonReq = TranslateChecker.check(strJsonReq);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
         restfulParametes.putHttpContextHeader("X-Driver-Parameter",
                 "extSysID=" + URLEncoderUtil.encode(controllerUuid));
@@ -134,7 +139,8 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
             throws ServiceException {
         final Map<String, Object> paras = new HashMap<String, Object>();
         paras.put("l3vpn", l3Vpn);
-        final String strJsonReq = JsonUtil.toJson(paras);
+        String strJsonReq = JsonUtil.toJson(paras);
+        strJsonReq = TranslateChecker.check(strJsonReq);
         final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(strJsonReq);
         restfulParametes.putHttpContextHeader("X-Driver-Parameter", "extSysID=" + URLEncoderUtil.encode(ctrlUuid));
         final String url = MessageFormat.format(L3VpnConstants.VPN_MODIFY, URLEncoderUtil.encode(l3Vpn.getUuid()));
