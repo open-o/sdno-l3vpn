@@ -68,7 +68,7 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         paras.put("l3vpn", l3Vpn);
         String reqJson = JsonUtil.toJson(paras);
         reqJson = TranslateChecker.check(reqJson);
-        final RestfulParametes restfulParametes = RestUtil.getRestfulParametes();
+        final RestfulParametes restfulParametes = RestUtil.getRestfulParametes(reqJson);
         restfulParametes.putHttpContextHeader("X-Driver-Parameter",
                 "extSysID=" + URLEncoderUtil.encode(controllerUuid));
         LOGGER.info(restfulParametes.getRawData());
