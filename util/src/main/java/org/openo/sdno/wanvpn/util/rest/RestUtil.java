@@ -124,7 +124,7 @@ public class RestUtil {
 
                 dest.put(String.valueOf(key), String.valueOf(value));
             } else if(value instanceof String[]) {
-                final String[] values = (String[])value;
+                final String[] values = (String[]) value;
                 if(ArrayUtils.isEmpty(values)) {
                     return;
                 }
@@ -258,7 +258,7 @@ public class RestUtil {
         restfulOptions.setRestTimeout(timeout);
 
         final RestfulResponse restfulResponse = RestfulProxy.post(url, restfulParametes, restfulOptions);
-        ResponseUtils.checkResonseAndThrowException(restfulResponse);
+        // ResponseUtils.checkResonseAndThrowException(restfulResponse);
         return restfulResponse;
     }
 
