@@ -27,6 +27,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
+import org.openo.sdno.model.uniformsbi.base.TunnelService;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Acs;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Vpn;
@@ -35,6 +36,7 @@ import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L2AcTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L2VpnTranslator;
+import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3TunnelServiceTranslator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,12 +56,15 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
     @Autowired
     private L2AcTranslator l2AcTranslator;
 
+    @Autowired
+    private L3TunnelServiceTranslator l3TunnelServiceTranslator;
+
     @Override
     public L2Vpn translate(final TranslatorCtx ctx) throws ServiceException {
         if(Objects.equals(OperType.CREATE, ctx.getOperType())) {
             final Object val = ctx.getVal(VpnContextKeys.VPN);
             if(val instanceof Vpn) {
-                return translateForCreate(ctx, (Vpn)val);
+                return translateForCreate(ctx, (Vpn) val);
             }
             LOGGER.error("invalid data type of key \"VPN\"");
         }
@@ -75,7 +80,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         translateMtu(vpn, l2Vpn);
         translateTopologyType(vpn, l2Vpn);
         translateAdminStatus(vpn, l2Vpn);
-
+        translateTunnelService(ctx, vpn, l2Vpn);
         translateAcs(ctx, vpn, l2Vpn);
 
         return l2Vpn;
@@ -83,6 +88,11 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
 
     private void translateMtu(final Vpn vpn, final L2Vpn l2Vpn) {
         l2Vpn.setMtu(vpn.getVpnBasicInfo().getIpMtu());
+    }
+
+    private void translateTunnelService(TranslatorCtx ctx, Vpn vpn, L2Vpn l2Vpn) throws ServiceException {
+        TunnelService tunnelService = l3TunnelServiceTranslator.translate(ctx);
+        l2Vpn.setTunnelService(tunnelService);
     }
 
     private void translateTopologyType(final Vpn vpn, final L2Vpn object) {
