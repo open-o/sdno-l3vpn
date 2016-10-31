@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
+import org.openo.sdno.framework.container.util.UuidUtils;
 import org.openo.sdno.l3vpnservice.constant.L3VpnSvcErrorCode;
 import org.openo.sdno.l3vpnservice.dao.L3VpnDao;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnCreateSvcService;
@@ -77,6 +78,12 @@ public class UniformL3VpnCreateSvcServiceImpl implements L3VpnCreateSvcService {
     @Override
     public Vpn create(VpnVo vpnVo, @Context HttpServletRequest request) throws ServiceException {
         final TranslatorCtx translatorCtx = translatorCtxFactory.getTranslatorCtx(OperType.CREATE);
+
+        vpnVo.getVpn().setUuid(UuidUtils.createUuid());
+        for(Tp tp : vpnVo.getVpn().getAccessPointList()) {
+            tp.setUuid(UuidUtils.createUuid());
+        }
+
         setTunnelSchemaToCtx(vpnVo, translatorCtx);
         setVPNParamToCtx(vpnVo, translatorCtx);
         final Vpn vpn = vpnVo.getVpn();
