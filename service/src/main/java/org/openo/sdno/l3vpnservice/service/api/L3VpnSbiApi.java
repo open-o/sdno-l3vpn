@@ -72,10 +72,15 @@ public class L3VpnSbiApi implements L3VpnSbiApiService {
         restfulParametes.putHttpContextHeader("X-Driver-Parameter",
                 "extSysID=" + URLEncoderUtil.encode(controllerUuid));
         LOGGER.info(restfulParametes.getRawData());
-        final RestfulResponse rsp =
-                RestUtil.sendPostRequest(L3VpnConstants.CREATE_VPN, restfulParametes, request, L3VpnConstants.TIMEOUT);
-        final AdapterResponseInfo adapterResponseInfo = responsTranslator.tranlate(rsp);
-        this.handleResponse(adapterResponseInfo, L3VpnSvcErrorCode.L3VPN_CREATE_CONTROLLER_FAIL);
+        final RestfulResponse rsp = RestUtil.sendPostRequest(L3VpnConstants.CREATE_VPN, restfulParametes, request,
+                L3VpnConstants.TIMEOUT);
+        if(rsp.getStatus() / 100 != 2) {
+            throw new ServiceException("Create L3VPN error with status : " + rsp.getStatus());
+        }
+        // final AdapterResponseInfo adapterResponseInfo =
+        // responsTranslator.tranlate(rsp);
+        // this.handleResponse(adapterResponseInfo,
+        // L3VpnSvcErrorCode.L3VPN_CREATE_CONTROLLER_FAIL);
         return l3Vpn;
     }
 
