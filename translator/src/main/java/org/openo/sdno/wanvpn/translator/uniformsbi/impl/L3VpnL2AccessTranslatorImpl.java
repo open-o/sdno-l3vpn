@@ -23,7 +23,6 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.tp.EthernetTpSpec;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
-import org.openo.sdno.model.uniformsbi.comnontypes.enums.AccessAction;
 import org.openo.sdno.model.uniformsbi.l3vpn.L2Access;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
@@ -51,7 +50,7 @@ public class L3VpnL2AccessTranslatorImpl implements L3VpnL2AccessTranslator {
     public L2Access translate(TranslatorCtx ctx) throws ServiceException {
         final Object tp = ctx.getVal(VpnContextKeys.TP);
         if(tp instanceof Tp) {
-            return translateL2Access(ctx, (Tp)tp);
+            return translateL2Access(ctx, (Tp) tp);
         }
         LOGGER.error("invalid data type of key \"Tp\"");
         return null;
@@ -67,7 +66,6 @@ public class L3VpnL2AccessTranslatorImpl implements L3VpnL2AccessTranslator {
                 l2Access.setDot1qVlanBitmap(Integer.parseInt(ethernetTpSpec.getDot1qVlanList()));
                 l2Access.setQinqCvlanBitmap(ethernetTpSpec.getQinqCvlanList());
                 l2Access.setQinqSvlanBitmap(ethernetTpSpec.getQinqSvlanList());
-                l2Access.setAccessAction(AccessAction.KEEP);
                 l2Access.setL2AccessType(TranslatorUtil.s2nL2AccessType(ethernetTpSpec.getAccessType()).getName());
             }
         }
