@@ -42,8 +42,8 @@ public class TranslatorUtil {
      * Translate admin status from service model to standard model.<br>
      * 
      * @param status The string object of admin status
-     * @return DOWN's common name when admin status is null or not active
-     *         UP's common name when admin status is active
+     * @return DOWN's common name when admin status is null or not active UP's
+     *         common name when admin status is active
      * @since SDNO 0.5
      */
     public static AdminStatus s2nAdminStatus(final String status) {
@@ -100,26 +100,26 @@ public class TranslatorUtil {
      * @since SDNO 0.5
      */
     public static TopologyType s2nTopologyType(final String topo) {
-        final org.openo.sdno.model.servicemodel.common.enumeration.TopologyType topologyType =
-                EnumUtil.valueOf(org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.class, topo);
+        final org.openo.sdno.model.servicemodel.common.enumeration.TopologyType topologyType = EnumUtil
+                .valueOf(org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.class, topo);
 
         switch(topologyType) {
-            case FULL_MESH: {
-                return TopologyType.FULL_MESH;
-            }
-            case POINT_TO_MULTIPOINT: {
-                return TopologyType.POINT_TO_MULTIPOINT;
-            }
-            case POINT_TO_POINT: {
-                return TopologyType.POINT_TO_POINT;
-            }
-            case SINGLEPOINT: {
-                return TopologyType.SINGLEPOINT;
-            }
-            default: {
-                // throw new
-                return TopologyType.POINT_TO_POINT;
-            }
+        case FULL_MESH: {
+            return TopologyType.FULL_MESH;
+        }
+        case POINT_TO_MULTIPOINT: {
+            return TopologyType.POINT_TO_MULTIPOINT;
+        }
+        case POINT_TO_POINT: {
+            return TopologyType.POINT_TO_POINT;
+        }
+        case SINGLEPOINT: {
+            return TopologyType.SINGLEPOINT;
+        }
+        default: {
+            // throw new
+            return TopologyType.POINT_TO_POINT;
+        }
         }
     }
 
@@ -134,22 +134,22 @@ public class TranslatorUtil {
         final TopologyType topologyType = EnumUtil.valueOf(TopologyType.class, topo);
 
         switch(topologyType) {
-            case FULL_MESH: {
-                return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.FULL_MESH;
-            }
-            case POINT_TO_MULTIPOINT: {
-                return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.POINT_TO_MULTIPOINT;
-            }
-            case POINT_TO_POINT: {
-                return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.POINT_TO_POINT;
-            }
-            case SINGLEPOINT: {
-                return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.SINGLEPOINT;
-            }
-            default: {
-                // throw new
-                return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.POINT_TO_POINT;
-            }
+        case FULL_MESH: {
+            return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.FULL_MESH;
+        }
+        case POINT_TO_MULTIPOINT: {
+            return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.POINT_TO_MULTIPOINT;
+        }
+        case POINT_TO_POINT: {
+            return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.POINT_TO_POINT;
+        }
+        case SINGLEPOINT: {
+            return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.SINGLEPOINT;
+        }
+        default: {
+            // throw new
+            return org.openo.sdno.model.servicemodel.common.enumeration.TopologyType.POINT_TO_POINT;
+        }
         }
     }
 
@@ -166,15 +166,30 @@ public class TranslatorUtil {
         }
 
         switch(nOperStatus) {
-            case OPERATE_UP:
-                return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.UP.getCommonName();
+        case OPERATE_UP:
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.UP.getCommonName();
 
-            case OPERATE_DOWN:
-                return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.DOWN.getCommonName();
+        case OPERATE_DOWN:
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.DOWN.getCommonName();
 
-            default:
-                return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.PARTIAL.getCommonName();
+        default:
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.PARTIAL.getCommonName();
         }
+    }
+
+    public static OperStatus getOperStatus(String operStatus) {
+
+        if(operStatus == null || operStatus.isEmpty()) {
+            return null;
+        }
+        String status = operStatus.toLowerCase();
+        if(status.contains("up")) {
+            return OperStatus.OPERATE_UP;
+        } else if(status.contains("down")) {
+            return OperStatus.OPERATE_DOWN;
+        }
+        return null;
+
     }
 
     /**
@@ -190,14 +205,14 @@ public class TranslatorUtil {
         }
 
         switch(nAdminStatus) {
-            case ADMIN_UP:
-                return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.ACTIVE.getCommonName();
+        case ADMIN_UP:
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.ACTIVE.getCommonName();
 
-            case ADMIN_DOWN:
-                return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.INACTIVE.getCommonName();
+        case ADMIN_DOWN:
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.INACTIVE.getCommonName();
 
-            default:
-                return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.PARTIAL.getCommonName();
+        default:
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.PARTIAL.getCommonName();
         }
     }
 }
