@@ -27,10 +27,12 @@ import org.apache.commons.collections.CollectionUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
+import org.openo.sdno.model.uniformsbi.base.Pw;
 import org.openo.sdno.model.uniformsbi.base.TunnelService;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Acs;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Vpn;
+import org.openo.sdno.model.uniformsbi.l2vpn.Pws;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
@@ -83,7 +85,25 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         translateTunnelService(ctx, vpn, l2Vpn);
         translateAcs(ctx, vpn, l2Vpn);
 
+        translatePws(ctx, l2Vpn);
+
         return l2Vpn;
+    }
+
+    private void translatePws(final TranslatorCtx ctx, final L2Vpn object) throws ServiceException {
+
+        Pws pws = new Pws();
+        ArrayList<Pw> pwArray = new ArrayList<Pw>();
+        L2Acs l2Acs = object.getL2Acs();
+        for(L2Ac l2Ac : l2Acs.getAcs()) {
+            Pw pw = new Pw();
+            pw.setNeId(l2Ac.getNeId());
+            pw.setPeerAddress(l2Ac.getPwPeerIp());
+            pwArray.add(pw);
+
+        }
+
+        pws.setPws(pwArray);
     }
 
     private void translateMtu(final Vpn vpn, final L2Vpn l2Vpn) {
