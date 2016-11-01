@@ -21,14 +21,15 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.uniformsbi.base.QosIfCar;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.AcDirection;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
 
 /**
- * Sbi model, AC model class.<br>
+ * SBI model, AC model class.<br>
  *
  * @author
- * @version SDNO 0.5 Aug 2, 2016
+ * @version SDNO 0.5 August 2, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L3Ac extends AbstractSvcModel {
@@ -69,6 +70,8 @@ public class L3Ac extends AbstractSvcModel {
     private String outboundQueuePolicyId;
 
     private String externalQosPolicyId;
+
+    private AcDirection acDirection;
 
     @Override
     public String getUuid() {
@@ -214,6 +217,20 @@ public class L3Ac extends AbstractSvcModel {
 
     public void setTenantId(String tenantId) {
         this.tenantId = tenantId;
+    }
+
+    /**
+     * @return Returns the acDirection.
+     */
+    public AcDirection getAcDirection() {
+        return acDirection;
+    }
+
+    /**
+     * @param acDirection The acDirection to set.
+     */
+    public void setAcDirection(AcDirection acDirection) {
+        this.acDirection = acDirection;
     }
 
 }

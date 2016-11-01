@@ -25,6 +25,7 @@ import org.openo.sdno.model.uniformsbi.base.MplsTePolicy;
 import org.openo.sdno.model.uniformsbi.base.PathConstraint;
 import org.openo.sdno.model.uniformsbi.base.TunnelService;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.SignalType;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.TunnelSelectType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3TunnelServiceTranslator;
@@ -44,7 +45,7 @@ public class L3TunnelServiceTranslatorImpl implements L3TunnelServiceTranslator 
         Object tunnelSchemaObject = ctx.getVal(VpnContextKeys.TUNNEL_SCHEMA);
         if(tunnelSchemaObject != null) {
             TunnelSchema tunnelSchema = (TunnelSchema)tunnelSchemaObject;
-
+            tunnelService.setType(TunnelSelectType.MPLS_TE.getName());
             tunnelService.setMplsTe(this.getMplsTe(tunnelSchema));
         }
 

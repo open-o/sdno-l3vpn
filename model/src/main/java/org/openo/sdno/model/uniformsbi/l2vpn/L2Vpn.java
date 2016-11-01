@@ -28,7 +28,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.SignalType;
  * L2vpn model.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L2Vpn extends Vpn {
@@ -38,7 +38,7 @@ public class L2Vpn extends Vpn {
     @JsonProperty("acs")
     private L2Acs l2Acs;
 
-    private CtrlWordType ctrlWord;
+    private CtrlWordType ctrlWordType;
 
     private Pws pws;
 
@@ -62,12 +62,12 @@ public class L2Vpn extends Vpn {
         this.l2Acs = l2Acs;
     }
 
-    public CtrlWordType getCtrlWord() {
-        return ctrlWord;
+    public CtrlWordType getCtrlWordType() {
+        return ctrlWordType;
     }
 
-    public void setCtrlWord(final CtrlWordType ctrlWord) {
-        this.ctrlWord = ctrlWord;
+    public void setCtrlWordType(final CtrlWordType ctrlWordType) {
+        this.ctrlWordType = ctrlWordType;
     }
 
     public SignalType getSignal() {

@@ -14,18 +14,36 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.model.db.l2vpn;
-
-import org.openo.sdno.model.db.tp.AbstractTpTypeSpecPo;
-import org.openo.sdno.model.servicemodel.mss.annotation.MOResType;
+package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
 /**
- * The class of L2Vpn TP Type Specification.<br>
+ * Enumeration of topology role of hubSpoke topology.
  * 
  * @author
- * @version SDNO 0.5 2016-6-3
+ * @version SDNO 0.5 Oct 18, 2016
  */
-@MOResType(infoModelName = "wan_l2vpn_tptypespec")
-public class L2VpnTpTypeSpecPo extends AbstractTpTypeSpecPo {
+public enum AcDirection {
+
+    NONE("none"), IN("in"), OUT("out");
+
+    private String name;
+
+    AcDirection(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return Returns the name.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name The name to set.
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

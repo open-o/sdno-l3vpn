@@ -67,7 +67,7 @@ public class L2AcTranslatorImpl implements L2AcTranslator {
     public L2Ac translate(final TranslatorCtx ctx) throws ServiceException {
         final Object val = ctx.getVal(VpnContextKeys.TP);
         if(val instanceof Tp) {
-            return translateForCreate(ctx, (Tp) val);
+            return translateForCreate(ctx, (Tp)val);
         }
         LOGGER.error("invalid data type of key \"TP\"");
         return null;
@@ -84,6 +84,8 @@ public class L2AcTranslatorImpl implements L2AcTranslator {
         translateL2Access(tp, l2Ac);
 
         translateAdminStatus(tp, l2Ac);
+
+        l2Ac.setOperStatus(TranslatorUtil.getOperStatus(tp.getOperStatus()));
 
         return l2Ac;
     }
