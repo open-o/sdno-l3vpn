@@ -17,7 +17,9 @@
 package org.openo.sdno.l3vpnservice.service.impl;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -31,10 +33,13 @@ import org.openo.sdno.l3vpnservice.service.inf.L3VpnCreateSvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnQuerySvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnSbiApiService;
 import org.openo.sdno.l3vpnservice.service.util.ControllerUtils;
+import org.openo.sdno.model.servicemodel.brs.NetworkElementMO;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Vpn;
+import org.openo.sdno.result.Result;
+import org.openo.sdno.wanvpn.inventory.sdk.util.InventoryProxy;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
@@ -78,6 +83,7 @@ public class UniformL3VpnCreateSvcServiceImpl implements L3VpnCreateSvcService {
 
     @Override
     public Vpn create(VpnVo vpnVo, @Context HttpServletRequest request) throws ServiceException {
+        Map<String, String> neMap = new HashMap<String, String>();
         final TranslatorCtx translatorCtx = translatorCtxFactory.getTranslatorCtx(OperType.CREATE);
         if(!StringUtils.hasLength(vpnVo.getVpn().getUuid())) {
             vpnVo.getVpn().setUuid(UuidUtils.createUuid());
@@ -85,16 +91,29 @@ public class UniformL3VpnCreateSvcServiceImpl implements L3VpnCreateSvcService {
 
         for(Tp tp : vpnVo.getVpn().getAccessPointList()) {
             tp.setUuid(UuidUtils.createUuid());
+            neMap.put(tp.getUuid(), tp.getNeId());
+
+            final Result<NetworkElementMO> rsp = InventoryProxy.queryNeById(tp.getNeId());
+            if(null == rsp || rsp.isFailed() || null == rsp.getResultObj()) {
+                LOGGER.error("Create l3vpn failure as queryNEById is null.");
+                throw new ServiceException("Create l3vpn failure as queryNEById is null");
+            }
+            tp.setNeId(rsp.getResultObj().getNativeID());
         }
 
         setTunnelSchemaToCtx(vpnVo, translatorCtx);
         setVPNParamToCtx(vpnVo, translatorCtx);
+        final L3Vpn l3Vpn = l3VpnTranslator.translate(translatorCtx);
+
+        for(Tp tp : vpnVo.getVpn().getAccessPointList()) {
+            tp.setNeId(neMap.get(tp.getUuid()));
+        }
+
         final Vpn vpn = vpnVo.getVpn();
         // Check whether name is unique
         this.checkVpnNameUnique(vpn);
         this.setTpAdminStatus(vpn);
 
-        final L3Vpn l3Vpn = l3VpnTranslator.translate(translatorCtx);
         final String controllerUuid = ControllerUtils.getControllerUUID(vpnVo);
 
         l3VpnSbiApiService.createL3VPN(l3Vpn, controllerUuid, request);
