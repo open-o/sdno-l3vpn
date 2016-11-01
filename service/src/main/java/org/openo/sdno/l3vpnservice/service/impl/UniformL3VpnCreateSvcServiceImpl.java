@@ -47,6 +47,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 /**
  * Uniform L3VPN create service implement class.<br>
@@ -78,8 +79,10 @@ public class UniformL3VpnCreateSvcServiceImpl implements L3VpnCreateSvcService {
     @Override
     public Vpn create(VpnVo vpnVo, @Context HttpServletRequest request) throws ServiceException {
         final TranslatorCtx translatorCtx = translatorCtxFactory.getTranslatorCtx(OperType.CREATE);
+        if(!StringUtils.hasLength(vpnVo.getVpn().getUuid())) {
+            vpnVo.getVpn().setUuid(UuidUtils.createUuid());
+        }
 
-        vpnVo.getVpn().setUuid(UuidUtils.createUuid());
         for(Tp tp : vpnVo.getVpn().getAccessPointList()) {
             tp.setUuid(UuidUtils.createUuid());
         }
