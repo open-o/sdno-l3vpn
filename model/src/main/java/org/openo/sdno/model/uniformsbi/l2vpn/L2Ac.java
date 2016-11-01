@@ -16,22 +16,24 @@
 
 package org.openo.sdno.model.uniformsbi.l2vpn;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.base.Ac;
 import org.openo.sdno.model.uniformsbi.l3vpn.L2Access;
 
 /**
- * L2ac external qos policy class.<br>
+ * L2ac external QOS policy class.<br>
  * 
  * @author
- * @version SDNO 0.5 Aug 8, 2016
+ * @version SDNO 0.5 August 8, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L2Ac extends Ac {
 
     private L2Access l2Access;
 
+    @JsonIgnore
     private String pwPeerIp;
 
     public String getPwPeerIp() {
