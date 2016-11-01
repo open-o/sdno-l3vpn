@@ -38,7 +38,7 @@ public class L2Vpn extends Vpn {
     @JsonProperty("acs")
     private L2Acs l2Acs;
 
-    private CtrlWordType ctrlWord;
+    private CtrlWordType ctrlWordType;
 
     private Pws pws;
 
@@ -62,12 +62,12 @@ public class L2Vpn extends Vpn {
         this.l2Acs = l2Acs;
     }
 
-    public CtrlWordType getCtrlWord() {
-        return ctrlWord;
+    public CtrlWordType getCtrlWordType() {
+        return ctrlWordType;
     }
 
-    public void setCtrlWord(final CtrlWordType ctrlWord) {
-        this.ctrlWord = ctrlWord;
+    public void setCtrlWordType(final CtrlWordType ctrlWordType) {
+        this.ctrlWordType = ctrlWordType;
     }
 
     public SignalType getSignal() {

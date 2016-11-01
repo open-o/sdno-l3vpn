@@ -62,6 +62,10 @@ public class TranslateChecker {
         result = result.replace("SINGLEPOINT", "singlePoint");
         result = result.replace("HUB_SPOKE", "hubSpoke");
 
+        // EncapsulationType
+        result = result.replace("ETH", "eth");
+        result = result.replace("VLAN", "vlan");
+
         return result;
     }
 
