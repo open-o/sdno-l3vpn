@@ -69,6 +69,8 @@ public class NetworkElementMO extends BaseMO {
 
     private String operState;
 
+    private String nativeID;
+
     public static final String MANAGEMENTDOMAIN_ID = "managementDomainID";
 
     public static final String SITE_ID = "siteID";
@@ -238,6 +240,14 @@ public class NetworkElementMO extends BaseMO {
 
     public void setOperState(final String operState) {
         this.operState = operState;
+    }
+
+    public String getNativeID() {
+        return nativeID;
+    }
+
+    public void setNativeID(String nativeID) {
+        this.nativeID = nativeID;
     }
 
     public String getAdminState() {
