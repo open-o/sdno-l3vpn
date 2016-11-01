@@ -25,9 +25,12 @@ import java.util.Objects;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
+import org.openo.sdno.model.servicemodel.businesstype.TunnelSchema;
 import org.openo.sdno.model.servicemodel.tp.Tp;
+import org.openo.sdno.model.servicemodel.tunnel.PWSpec;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.uniformsbi.base.TunnelService;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.CtrlWordType;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Acs;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Vpn;
@@ -81,6 +84,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         translateTopologyType(vpn, l2Vpn);
         translateAdminStatus(vpn, l2Vpn);
         translateTunnelService(ctx, vpn, l2Vpn);
+        transtaleCtrlWordType(ctx, l2Vpn);
         translateAcs(ctx, vpn, l2Vpn);
 
         return l2Vpn;
@@ -93,6 +97,19 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
     private void translateTunnelService(TranslatorCtx ctx, Vpn vpn, L2Vpn l2Vpn) throws ServiceException {
         TunnelService tunnelService = l3TunnelServiceTranslator.translate(ctx);
         l2Vpn.setTunnelService(tunnelService);
+    }
+
+    private void transtaleCtrlWordType(TranslatorCtx ctx, L2Vpn l2Vpn) {
+        l2Vpn.setCtrlWord(CtrlWordType.DISABLE);
+        Object tunnelSchemaObject = ctx.getVal(VpnContextKeys.TUNNEL_SCHEMA);
+        if(tunnelSchemaObject != null) {
+            TunnelSchema tunnelSchema = (TunnelSchema)tunnelSchemaObject;
+            PWSpec pwSpec = tunnelSchema.getPwTech();
+            if((pwSpec != null) && (pwSpec.getControlWord() != null) && pwSpec.getControlWord().length() > 0) {
+                l2Vpn.setCtrlWord(CtrlWordType.ENABLE);
+            }
+
+        }
     }
 
     private void translateTopologyType(final Vpn vpn, final L2Vpn object) {
