@@ -37,11 +37,14 @@ import org.openo.sdno.l3vpnservice.dao.L3VpnDao;
 import org.openo.sdno.l3vpnservice.service.api.L3VpnSbiApi;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnQuerySvcService;
 import org.openo.sdno.l3vpnservice.service.util.ControllerUtils;
+import org.openo.sdno.model.servicemodel.brs.NetworkElementMO;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.servicemodel.vpn.VpnVo;
 import org.openo.sdno.model.uniformsbi.base.AdapterResponseInfo;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Vpn;
 import org.openo.sdno.rest.ResponseUtils;
+import org.openo.sdno.result.Result;
+import org.openo.sdno.wanvpn.inventory.sdk.util.InventoryProxy;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxFactoryImpl;
 import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxImpl;
@@ -159,6 +162,17 @@ public class UniformL3VpnCreateSvcServiceImplTest {
 
         };
 
+        new MockUp<InventoryProxy>() {
+
+            @Mock
+            public Result<NetworkElementMO> queryNeById(final String id) throws ServiceException {
+                final Result<NetworkElementMO> moResult = new Result<NetworkElementMO>();
+                NetworkElementMO networkElementMO = new NetworkElementMO();
+                moResult.setResultObj(networkElementMO);
+                return moResult;
+            }
+
+        };
     }
 
     @Test
