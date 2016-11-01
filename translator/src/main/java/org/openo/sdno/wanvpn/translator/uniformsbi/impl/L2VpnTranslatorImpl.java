@@ -16,9 +16,6 @@
 
 package org.openo.sdno.wanvpn.translator.uniformsbi.impl;
 
-import static org.openo.sdno.wanvpn.translator.uniformsbi.util.TranslatorUtil.s2nAdminStatus;
-import static org.openo.sdno.wanvpn.translator.uniformsbi.util.TranslatorUtil.s2nTopologyType;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -39,6 +36,7 @@ import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L2AcTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L2VpnTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3TunnelServiceTranslator;
+import org.openo.sdno.wanvpn.translator.uniformsbi.util.TranslatorUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +64,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         if(Objects.equals(OperType.CREATE, ctx.getOperType())) {
             final Object val = ctx.getVal(VpnContextKeys.VPN);
             if(val instanceof Vpn) {
-                return translateForCreate(ctx, (Vpn) val);
+                return translateForCreate(ctx, (Vpn)val);
             }
             LOGGER.error("invalid data type of key \"VPN\"");
         }
@@ -82,6 +80,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         translateMtu(vpn, l2Vpn);
         translateTopologyType(vpn, l2Vpn);
         translateAdminStatus(vpn, l2Vpn);
+        l2Vpn.setOperStatus(TranslatorUtil.getOperStatus(vpn.getOperStatus()));
         translateTunnelService(ctx, vpn, l2Vpn);
         translateAcs(ctx, vpn, l2Vpn);
 
@@ -117,11 +116,11 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
     }
 
     private void translateTopologyType(final Vpn vpn, final L2Vpn object) {
-        object.setTopology(s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getCommonName());
+        object.setTopology(TranslatorUtil.s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getCommonName());
     }
 
     private void translateAdminStatus(final Vpn vpn, final L2Vpn object) {
-        object.setAdminStatus(s2nAdminStatus(vpn.getVpnBasicInfo().getAdminStatus()));
+        object.setAdminStatus(TranslatorUtil.s2nAdminStatus(vpn.getVpnBasicInfo().getAdminStatus()));
     }
 
     private void translateAcs(final TranslatorCtx ctx, final Vpn svcModel, final L2Vpn object) throws ServiceException {
