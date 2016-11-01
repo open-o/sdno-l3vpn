@@ -22,6 +22,7 @@ import java.util.Objects;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
+import org.openo.sdno.model.common.NVString;
 import org.openo.sdno.model.servicemodel.businesstype.TunnelSchema;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tunnel.PWSpec;
@@ -29,6 +30,7 @@ import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.uniformsbi.base.Pw;
 import org.openo.sdno.model.uniformsbi.base.TunnelService;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.CtrlWordType;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.EncapsulationType;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Acs;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Vpn;
@@ -86,11 +88,28 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         l2Vpn.setOperStatus(TranslatorUtil.getOperStatus(vpn.getOperStatus()));
         translateTunnelService(ctx, vpn, l2Vpn);
         transtaleCtrlWordType(ctx, l2Vpn);
+        translateEncapsulation(vpn, l2Vpn);
         translateAcs(ctx, vpn, l2Vpn);
 
         translatePws(ctx, l2Vpn);
 
         return l2Vpn;
+    }
+
+    private void translateEncapsulation(final Vpn vpn, L2Vpn l2Vpn) {
+        List<NVString> additionalInfos = vpn.getAddtionalInfo();
+
+        for(NVString nvString : additionalInfos) {
+            if(nvString.getName().equals("encapsulation")) {
+                if(nvString.getValue().equals("eth")) {
+                    l2Vpn.setEncapsulation(EncapsulationType.ETH);
+                } else if(nvString.getValue().equals("vlan")) {
+                    l2Vpn.setEncapsulation(EncapsulationType.VLAN);
+                }
+            }
+
+        }
+
     }
 
     private void translatePws(final TranslatorCtx ctx, final L2Vpn object) throws ServiceException {
