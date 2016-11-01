@@ -104,6 +104,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         }
 
         pws.setPws(pwArray);
+        object.setPws(pws);
     }
 
     private void translateMtu(final Vpn vpn, final L2Vpn l2Vpn) {

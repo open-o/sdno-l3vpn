@@ -16,6 +16,7 @@
 
 package org.openo.sdno.model.uniformsbi.l2vpn;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.base.Ac;
@@ -32,6 +33,7 @@ public class L2Ac extends Ac {
 
     private L2Access l2Access;
 
+    @JsonIgnore
     private String pwPeerIp;
 
     public String getPwPeerIp() {
