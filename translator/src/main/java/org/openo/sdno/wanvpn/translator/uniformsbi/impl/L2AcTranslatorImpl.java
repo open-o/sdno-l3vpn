@@ -23,6 +23,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.framework.container.util.UuidUtils;
+import org.openo.sdno.model.common.NVString;
 import org.openo.sdno.model.servicemodel.tp.EthernetTpSpec;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
@@ -117,6 +118,15 @@ public class L2AcTranslatorImpl implements L2AcTranslator {
         final EthernetTpSpec ethernetTpSpec = getEthernetTpSpec(tp);
         if(ethernetTpSpec == null) {
             return;
+        }
+
+        if(tp.getAddtionalInfo() != null) {
+            List<NVString> nvStrings = tp.getAddtionalInfo();
+            for(NVString nvString : nvStrings) {
+                if(nvString.getName().equals("pwPeerIp")) {
+                    l2Ac.setPwPeerIp(nvString.getValue());
+                }
+            }
         }
 
         final String accessType = ethernetTpSpec.getAccessType();

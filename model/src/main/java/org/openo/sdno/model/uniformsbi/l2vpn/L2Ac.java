@@ -32,6 +32,16 @@ public class L2Ac extends Ac {
 
     private L2Access l2Access;
 
+    private String pwPeerIp;
+
+    public String getPwPeerIp() {
+        return pwPeerIp;
+    }
+
+    public void setPwPeerIp(String pwPeerIp) {
+        this.pwPeerIp = pwPeerIp;
+    }
+
     public L2Access getL2Access() {
         return l2Access;
     }
