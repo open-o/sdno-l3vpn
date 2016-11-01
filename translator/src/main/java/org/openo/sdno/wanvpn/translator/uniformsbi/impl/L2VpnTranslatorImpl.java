@@ -139,13 +139,13 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
     }
 
     private void transtaleCtrlWordType(TranslatorCtx ctx, L2Vpn l2Vpn) {
-        l2Vpn.setCtrlWord(CtrlWordType.DISABLE);
+        l2Vpn.setCtrlWordType(CtrlWordType.DISABLE);
         Object tunnelSchemaObject = ctx.getVal(VpnContextKeys.TUNNEL_SCHEMA);
         if(tunnelSchemaObject != null) {
             TunnelSchema tunnelSchema = (TunnelSchema)tunnelSchemaObject;
             PWSpec pwSpec = tunnelSchema.getPwTech();
             if((pwSpec != null) && (pwSpec.getControlWord() != null) && pwSpec.getControlWord().length() > 0) {
-                l2Vpn.setCtrlWord(CtrlWordType.ENABLE);
+                l2Vpn.setCtrlWordType(CtrlWordType.ENABLE);
             }
 
         }
