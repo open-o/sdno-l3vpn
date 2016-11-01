@@ -16,9 +16,6 @@
 
 package org.openo.sdno.wanvpn.translator.uniformsbi.impl;
 
-import static org.openo.sdno.wanvpn.translator.uniformsbi.util.TranslatorUtil.s2nAdminStatus;
-import static org.openo.sdno.wanvpn.translator.uniformsbi.util.TranslatorUtil.s2nTopologyType;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -41,6 +38,7 @@ import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3AcTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3LoopbackIfTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3TunnelServiceTranslator;
 import org.openo.sdno.wanvpn.translator.uniformsbi.inf.L3VpnTranslator;
+import org.openo.sdno.wanvpn.translator.uniformsbi.util.TranslatorUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,7 +72,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
         if(Objects.equals(OperType.CREATE, ctx.getOperType())) {
             final Object val = ctx.getVal(VpnContextKeys.VPN);
             if(val instanceof Vpn) {
-                return translateVpn(ctx, (Vpn)val);
+                return translateVpn(ctx, (Vpn) val);
             }
             LOGGER.error("invalid data type of key \"VPN\"");
         }
@@ -88,12 +86,17 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
         translateTenantId(vpn, l3Vpn);
         translateDesc(vpn, l3Vpn);
         translateAdminStatus(vpn, l3Vpn);
+        translateOperStatus(vpn, l3Vpn);
         translateMtu(vpn, l3Vpn);
         translateTopology(vpn, l3Vpn);
         translateTunnelService(ctx, vpn, l3Vpn);
         translateAcs(ctx, vpn, l3Vpn);
         translateLoopbackifs(ctx, vpn, l3Vpn);
         return l3Vpn;
+    }
+
+    private void translateOperStatus(Vpn vpn, L3Vpn l3Vpn) {
+        l3Vpn.setOperStatus(TranslatorUtil.getOperStatus(vpn.getOperStatus()));
     }
 
     private void translateLoopbackifs(TranslatorCtx ctx, Vpn vpn, L3Vpn l3Vpn) throws ServiceException {
@@ -157,7 +160,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
     }
 
     private void translateTopology(Vpn vpn, L3Vpn l3Vpn) {
-        l3Vpn.setTopology(s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getCommonName());
+        l3Vpn.setTopology(TranslatorUtil.s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getCommonName());
     }
 
     private void translateMtu(final Vpn vpn, final L3Vpn l3Vpn) {
@@ -169,7 +172,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
     }
 
     private void translateAdminStatus(Vpn vpn, L3Vpn l3Vpn) {
-        l3Vpn.setAdminStatus(s2nAdminStatus(vpn.getVpnBasicInfo().getAdminStatus()));
+        l3Vpn.setAdminStatus(TranslatorUtil.s2nAdminStatus(vpn.getVpnBasicInfo().getAdminStatus()));
     }
 
     private void translateDesc(Vpn vpn, L3Vpn l3Vpn) {

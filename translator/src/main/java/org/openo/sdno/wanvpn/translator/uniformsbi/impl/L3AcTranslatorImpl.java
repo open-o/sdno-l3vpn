@@ -55,7 +55,7 @@ public class L3AcTranslatorImpl implements L3AcTranslator {
 
         final Object tp = ctx.getVal(VpnContextKeys.TP);
         if(tp instanceof Tp) {
-            return translateL3Ac(ctx, (Tp)tp);
+            return translateL3Ac(ctx, (Tp) tp);
         }
         LOGGER.error("invalid data type of key \"TpPara\"");
         return null;
@@ -66,6 +66,7 @@ public class L3AcTranslatorImpl implements L3AcTranslator {
         L3Ac l3Ac = new L3Ac();
         this.translateId(tp, l3Ac);
         this.translateAdminStatus(tp, l3Ac);
+        l3Ac.setOperStatus(TranslatorUtil.getOperStatus(tp.getOperStatus()));
         this.translateDesc(tp, l3Ac);
         this.translateName(tp, l3Ac);
         this.translateNeId(tp, l3Ac);
