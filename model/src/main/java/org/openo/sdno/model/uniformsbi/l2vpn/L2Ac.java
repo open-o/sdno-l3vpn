@@ -19,6 +19,7 @@ package org.openo.sdno.model.uniformsbi.l2vpn;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.uniformsbi.base.Ac;
+import org.openo.sdno.model.uniformsbi.l3vpn.L2Access;
 
 /**
  * L2ac external QOS policy class.<br>
@@ -28,6 +29,16 @@ import org.openo.sdno.model.uniformsbi.base.Ac;
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L2Ac extends Ac {
+
+    private L2Access l2Access;
+
+    public L2Access getL2Access() {
+        return l2Access;
+    }
+
+    public void setL2Access(L2Access l2Access) {
+        this.l2Access = l2Access;
+    }
 
     private String externalQosPolicyId;
 
