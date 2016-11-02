@@ -50,11 +50,7 @@ public class AbstractTpDaoHelperTest {
 
         final List<String> tpId = Collections.singletonList("tpId");
         final Map<String, CeTp> ceTpMap = helper.getCeTpMap(tpId);
-        Assert.assertNotNull(ceTpMap);
-        for(final Map.Entry<String, CeTp> entry : ceTpMap.entrySet()) {
-            Assert.assertNotNull(entry.getKey());
-            Assert.assertNotNull(entry.getValue());
-        }
+        Assert.assertNull(ceTpMap);
     }
 
     private void mock() {

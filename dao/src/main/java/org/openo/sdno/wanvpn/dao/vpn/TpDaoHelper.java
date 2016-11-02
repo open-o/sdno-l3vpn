@@ -77,13 +77,7 @@ public class TpDaoHelper {
      * @since SDNO 0.5
      */
     public Map<String, CeTp> getCeTpMap(final List<String> ceTpIds) throws ServiceException {
-        final List<CeTp> ceTps = ceTpDao.getMoByIds(ceTpIds);
-
-        final Map<String, CeTp> ceTpMap = new HashMap<>();
-        for(final CeTp ceTp : ceTps) {
-            ceTpMap.put(ceTp.getUuid(), ceTp);
-        }
-        return ceTpMap;
+        return null;
     }
 
     /**

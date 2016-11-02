@@ -124,7 +124,7 @@ public class RestUtil {
 
                 dest.put(String.valueOf(key), String.valueOf(value));
             } else if(value instanceof String[]) {
-                final String[] values = (String[]) value;
+                final String[] values = (String[])value;
                 if(ArrayUtils.isEmpty(values)) {
                     return;
                 }
