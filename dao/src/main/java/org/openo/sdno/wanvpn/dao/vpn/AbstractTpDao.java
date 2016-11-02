@@ -156,8 +156,10 @@ public abstract class AbstractTpDao<P extends AbstractTpPo> extends DefaultDao<P
         final List<String> ceTpIds = getCeTpIds(pos);
 
         final List<String> tpIds = DaoUtil.getPoModelUuids(pos);
-
-        final Map<String, CeTp> ceTpMap = tpDaoHelper.getCeTpMap(ceTpIds);
+        Map<String, CeTp> ceTpMap = null;
+        if(ceTpIds != null && (!ceTpIds.isEmpty())) {
+            ceTpMap = tpDaoHelper.getCeTpMap(ceTpIds);
+        }
         final Map<String, List<TpTypeSpec>> tpTypeSpecMap = tpDaoHelper.getTpTypeSpecMap(tpIds);
         final Map<String, List<RouteProtocolSpec>> routeProtocolSpecMap = tpDaoHelper.getRouteProtocolSpecMap(tpIds);
 
@@ -166,7 +168,9 @@ public abstract class AbstractTpDao<P extends AbstractTpPo> extends DefaultDao<P
             final Tp tp = tpPo.toSvcModel();
             tps.add(tp);
 
-            setPeerCeTp(tp, ceTpMap.get(tpPo.getPeerCeTpId()));
+            if(ceTpMap != null) {
+                setPeerCeTp(tp, ceTpMap.get(tpPo.getPeerCeTpId()));
+            }
             if(tpTypeSpecMap != null) {
                 setTypeSpecList(tp, tpTypeSpecMap.get(tp.getUuid()));
             }
@@ -187,13 +191,18 @@ public abstract class AbstractTpDao<P extends AbstractTpPo> extends DefaultDao<P
      */
     public List<Tp> assembleBriefMo(final List<P> pos) throws ServiceException {
         final List<String> ceTpIds = getCeTpIds(pos);
+        Map<String, CeTp> ceTpMap = null;
+        if(ceTpIds != null && (!ceTpIds.isEmpty())) {
+            ceTpMap = tpDaoHelper.getCeTpMap(ceTpIds);
+        }
 
-        final Map<String, CeTp> ceTpMap = tpDaoHelper.getCeTpMap(ceTpIds);
         final List<Tp> tps = new ArrayList<>(pos.size());
         for(final P tpPo : pos) {
             final Tp tp = tpPo.toSvcModel();
             tps.add(tp);
-            setPeerCeTp(tp, ceTpMap.get(tpPo.getPeerCeTpId()));
+            if(ceTpMap != null) {
+                setPeerCeTp(tp, ceTpMap.get(tpPo.getPeerCeTpId()));
+            }
         }
         return tps;
     }
