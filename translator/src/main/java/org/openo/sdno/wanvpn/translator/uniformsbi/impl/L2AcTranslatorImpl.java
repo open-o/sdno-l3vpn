@@ -132,11 +132,9 @@ public class L2AcTranslatorImpl implements L2AcTranslator {
         }
 
         final String accessType = ethernetTpSpec.getAccessType();
-        l2Ac.setAccessType(TranslatorUtil.s2nL2AccessType(accessType).getName());
-        l2Access.setL2AccessType(l2Ac.getAccessType());
+        l2Access.setL2AccessType(TranslatorUtil.s2nL2AccessType(accessType).getName());
 
-        if(Objects.equals(l2Ac.getAccessType(), L2AccessType.DOT1Q.getName())) {
-            l2Ac.setDot1qVlanBitmap(ethernetTpSpec.getDot1qVlanList());
+        if(Objects.equals(l2Access.getL2AccessType(), L2AccessType.DOT1Q.getName())) {
             l2Access.setDot1qVlanBitmap(new Integer(ethernetTpSpec.getDot1qVlanList()));
         }
 
