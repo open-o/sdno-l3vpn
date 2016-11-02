@@ -27,6 +27,7 @@ import org.openo.sdno.model.common.NVString;
 import org.openo.sdno.model.servicemodel.tp.EthernetTpSpec;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.AccessAction;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.L2AccessType;
 import org.openo.sdno.model.uniformsbi.l2vpn.L2Ac;
@@ -133,6 +134,8 @@ public class L2AcTranslatorImpl implements L2AcTranslator {
 
         final String accessType = ethernetTpSpec.getAccessType();
         l2Access.setL2AccessType(TranslatorUtil.s2nL2AccessType(accessType).getName());
+
+        l2Access.setAccessAction(Enum.valueOf(AccessAction.class, ethernetTpSpec.getActionValue()));
 
         if(Objects.equals(l2Access.getL2AccessType(), L2AccessType.DOT1Q.getName())) {
             l2Access.setDot1qVlanBitmap(new Integer(ethernetTpSpec.getDot1qVlanList()));
