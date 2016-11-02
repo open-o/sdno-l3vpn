@@ -20,7 +20,6 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
-import org.openo.sdno.model.uniformsbi.comnontypes.enums.AccessAction;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
 
@@ -46,21 +45,7 @@ public class Ac extends AbstractSvcModel {
 
     private String neId;
 
-    private String accessType;
-
     private String ltpId;
-
-    private String dot1qVlanBitmap;
-
-    private String qinqSvlanBitmap;
-
-    private String qinqCvlanBitmap;
-
-    private AccessAction accessAction;
-
-    private String pushVlanId;
-
-    private String swapVlanId;
 
     private String inboundQosPolicyId;
 
@@ -148,68 +133,12 @@ public class Ac extends AbstractSvcModel {
         this.neId = neId;
     }
 
-    public String getAccessType() {
-        return accessType;
-    }
-
-    public void setAccessType(String accessType) {
-        this.accessType = accessType;
-    }
-
     public String getLtpId() {
         return ltpId;
     }
 
     public void setLtpId(String ltpId) {
         this.ltpId = ltpId;
-    }
-
-    public String getDot1qVlanBitmap() {
-        return dot1qVlanBitmap;
-    }
-
-    public void setDot1qVlanBitmap(String dot1qVlanBitmap) {
-        this.dot1qVlanBitmap = dot1qVlanBitmap;
-    }
-
-    public String getQinqCvlanBitmap() {
-        return qinqCvlanBitmap;
-    }
-
-    public void setQinqCvlanBitmap(String qinqCvlanBitmap) {
-        this.qinqCvlanBitmap = qinqCvlanBitmap;
-    }
-
-    public String getQinqSvlanBitmap() {
-        return qinqSvlanBitmap;
-    }
-
-    public void setQinqSvlanBitmap(String qinqSvlanBitmap) {
-        this.qinqSvlanBitmap = qinqSvlanBitmap;
-    }
-
-    public AccessAction getAccessAction() {
-        return accessAction;
-    }
-
-    public void setAccessAction(final AccessAction accessAction) {
-        this.accessAction = accessAction;
-    }
-
-    public String getPushVlanId() {
-        return pushVlanId;
-    }
-
-    public void setPushVlanId(final String pushVlanId) {
-        this.pushVlanId = pushVlanId;
-    }
-
-    public String getSwapVlanId() {
-        return swapVlanId;
-    }
-
-    public void setSwapVlanId(final String swapVlanId) {
-        this.swapVlanId = swapVlanId;
     }
 
     public AdminStatus getAdminStatus() {
