@@ -100,7 +100,7 @@ public class Tp extends AbstractSvcModel {
     @ContainerSizeDesc(maxSize = 1000)
     private List<RouteProtocolSpec> routeProtocolSpecs;
 
-    @StringDesc(pattern = "[a-zA-Z0-9\\-\\_]{1,36}")
+    @StringDesc(pattern = "[a-zA-Z0-9:\\-\\_]{1,36}")
     private String containedMainTP;
 
     @JsonIgnore
