@@ -57,6 +57,7 @@ public class TranslateChecker {
 
         // TopologyType
         result = result.replace("FULL_MESH", "full-mesh");
+        result = result.replace("fullMesh", "full-mesh");
         result = result.replace("POINT_TO_MULTIPOINT", "point_to_multipoint");
         result = result.replace("POINT_TO_POINT", "point-to-point");
         result = result.replace("SINGLEPOINT", "singlePoint");
