@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
  * Path protect policy class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 21, 2016
  */
@@ -34,8 +34,14 @@ public class PathProtectPolicy {
 
     private Boolean revertive;
 
+    /**
+     * BandwidthMode.class
+     */
     private String bandwidthMode;
 
+    /**
+     * Unit: us
+     */
     private Integer wtr;
 
     public String getType() {

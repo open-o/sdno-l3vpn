@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
  * MPLS TE Policy class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 21, 2016
  */
@@ -42,6 +42,9 @@ public class MplsTePolicy {
 
     private boolean besteffort;
 
+    /**
+     * Unit: kbps
+     */
     private Integer bandwidth;
 
     private boolean coRoute;

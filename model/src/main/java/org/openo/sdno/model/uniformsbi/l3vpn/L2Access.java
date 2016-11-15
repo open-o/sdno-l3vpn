@@ -23,13 +23,16 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.AccessAction;
 
 /**
  * L2 Access class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 22, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L2Access {
 
+    /**
+     * enum L2AccessType
+     */
     @JsonProperty("accessType")
     private String l2AccessType;
 

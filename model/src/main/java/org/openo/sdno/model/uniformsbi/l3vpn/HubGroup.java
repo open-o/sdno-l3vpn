@@ -18,7 +18,7 @@ package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
  * Hub groups class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 22, 2016
  */
@@ -26,6 +26,9 @@ public class HubGroup {
 
     private String acId;
 
+    /**
+     * enum AcDirection
+     */
     private String hubDirection;
 
     public String getAcId() {

@@ -23,7 +23,7 @@ import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**
  * QOS If Car class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 22, 2016
  */
@@ -35,17 +35,29 @@ public class QosIfCar extends AbstractSvcModel {
 
     private boolean enable;
 
+    /**
+     * Committed information rate, Unit: kbps.
+     */
     private long cir;
 
+    /**
+     * Peak information rate, Unit: kbps.
+     */
     private long pir;
 
+    /**
+     * Committed burst size, Unit: byte.
+     */
     private long cbs;
 
+    /**
+     * Peak burst size, Unit: byte.
+     */
     private long pbs;
 
     /**
      * Constructor<br>
-     * 
+     *
      * @since SDNO 0.5
      */
     public QosIfCar() {
@@ -54,7 +66,7 @@ public class QosIfCar extends AbstractSvcModel {
 
     /**
      * Constructor<br>
-     * 
+     *
      * @param cir CIR to set
      * @param pir PIR to set
      * @param cbs CBS to set

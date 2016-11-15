@@ -21,13 +21,16 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
  * Path constraint class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 21, 2016
  */
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class PathConstraint {
 
+    /**
+     * Unit: us
+     */
     private Integer latency;
 
     private Integer setupPriority;

@@ -30,9 +30,15 @@ import org.openo.sdno.model.uniformsbi.base.Vpn;
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class L3Vpn extends Vpn {
 
+    /**
+     * Range: 46-9600, Unit: Byte.
+     */
     @JsonProperty("mtu")
     private Integer ipMtu;
 
+    /**
+     * Fast Reroute
+     */
     private Boolean frr;
 
     private L3Acs acs;

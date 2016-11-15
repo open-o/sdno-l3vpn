@@ -238,7 +238,7 @@ definitions:
         format: int32
         minimum: 0
         maximum: 60000000
-        description: Latency priority of tunnel route constraints
+        description: Latency priority of tunnel route constraints, Unit - us.
         
   PathProtectPolicy:
     description: Tunnel protection policy
@@ -263,7 +263,7 @@ definitions:
         format: int32
         minimum: 0
         maximum: 60000000
-        description: Wtr time of tunnel protection revertive in micro-second
+        description: Wtr time of tunnel protection revertive in microsecond, Unit - us.
         
   MplsTePolicy:
     description: Tunnel policy of Mple-te
@@ -382,19 +382,19 @@ definitions:
       cir:
         type: integer
         format: int64
-        description: Committed speed in kbps
+        description: Committed information rate, Unit - kbps.
       pir: 
         type: integer
         format: int64
-        description: Peak speed in kbps
+        description: Peak information rate, Unit - kbps.
       cbs:
         type: integer
         format: int64
-        description: Committed burst Size in bytes
+        description: Committed burst size, Unit - byte.
       pbs:
         type: integer
         format: int64
-        description: Peak burst Size in bytes
+        description: Peak burst size, Unit - byte.
 
   L2Access:
     description: Layer2 Access Configuration
@@ -923,10 +923,17 @@ definitions:
         description: This identify the connection mode of vpns, including none, hub-spoke and full-mesh.      
       adminStatus:
         type: string
-        description: L3VPN Connection management status(active, inactive). Active - activate the L3VPN Connection. Inactive - inactivate the L3VPN Connection. adminUp(0, "adminUp"), adminDown(1, "adminDown");
+        enum:
+          - adminUp
+          - adminDown
+        description: L3VPN connection management status(adminUp, adminDown). adminUp - Controller will activate all the sub-interfaces in this VPN, operStatus may not up when adminStatus is up. adminDown - Controller will shut down all the sub-interfaces of all acs in this VPN, and operStatus will be down also.
       operStatus:
         type: string
-        description: The running status of connection in controller, the adapter need fill this parameter (up,down,partially down). operateUp(0, "operateUp"), operateDown(1, "operateDown");
+        enum:
+          - operateUp
+          - operateDown
+        description: The running status of connection in controller
+        
       tunnelService:
         $ref: "#/definitions/TunnelService"
       mtu:
@@ -934,10 +941,10 @@ definitions:
         format: int32
         minimum: 46
         maximum: 9600
-        description: MTU
+        description: Maximum transmission unit, Unit - byte.
       frr:
         type: boolean
-        description: Whether the vpn should be in vpn frr protection (true, false).
+        description: Whether the vpn should be in vpn fast reroute protection (true, false).
       acs:
         $ref: "#/definitions/L3Acs"
       loopbackifs:
