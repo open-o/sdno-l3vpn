@@ -18,7 +18,7 @@ package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
  * VRRP class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 22, 2016
  */
@@ -28,7 +28,7 @@ public class Vrrp {
 
     private String vrrpTrackBfd;
 
-    private BfdParamter bfdParamter;
+    private BfdParameter bfdParameter;
 
     public String getVirtualIp() {
         return virtualIp;
@@ -46,12 +46,12 @@ public class Vrrp {
         this.vrrpTrackBfd = vrrpTrackBfd;
     }
 
-    public BfdParamter getBfdParamter() {
-        return bfdParamter;
+    public BfdParameter getBfdParameter() {
+        return bfdParameter;
     }
 
-    public void setBfdParamter(BfdParamter bfdParamter) {
-        this.bfdParamter = bfdParamter;
+    public void setBfdParameter(BfdParameter bfdParameter) {
+        this.bfdParameter = bfdParameter;
     }
 
 }

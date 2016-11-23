@@ -30,7 +30,7 @@ public class ErrorCode {
 
     public static final String UNDERLAYVPN_FAILED = "underlayvpn.operation.failed";
 
-    public static final String UNDERLAYVPN_PARAMETER_INVALID = "underlayvpn.operation.paramter_invalid";
+    public static final String UNDERLAYVPN_PARAMETER_INVALID = "underlayvpn.operation.parameter_invalid";
 
     public static final String DB_RETURN_ERROR = "underlayvpn.db.return.error";
 

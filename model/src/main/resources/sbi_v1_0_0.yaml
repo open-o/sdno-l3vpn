@@ -845,7 +845,7 @@ definitions:
       vrrpTrackBfd:
         type: string
         description: Track Bidirectional Forwarding Detection (true, false)
-      bfdParamter:
+      bfdParameter:
         $ref: "#/definitions/BfdParameter"
     
   ProtectGroup:

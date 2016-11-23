@@ -18,11 +18,11 @@ package org.openo.sdno.model.uniformsbi.l3vpn;
 
 /**
  * Bi-directional Forwarding Detection parameter class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 22, 2016
  */
-public class BfdParamter {
+public class BfdParameter {
 
     private Integer minTxInterval;
 
