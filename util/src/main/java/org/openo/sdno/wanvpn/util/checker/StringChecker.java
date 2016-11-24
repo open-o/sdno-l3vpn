@@ -31,22 +31,26 @@ import java.util.regex.Pattern;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.SvcModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 /**
  * Check the string field.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
 public class StringChecker {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(StringChecker.class);
 
     private StringChecker() {
     }
 
     /**
      * Check the length of the string value.<br>
-     * 
+     *
      * @param minLen The minimum length
      * @param maxLen The max length
      * @param strVal The string value
@@ -66,7 +70,7 @@ public class StringChecker {
 
     /**
      * Check the string value is not blank.<br>
-     * 
+     *
      * @param strVal The string value
      * @param fieldName The field name
      * @since SDNO 0.5
@@ -79,7 +83,7 @@ public class StringChecker {
 
     /**
      * Check the string value is not empty.<br>
-     * 
+     *
      * @param strVal The string value
      * @param fieldName The field name
      * @since SDNO 0.5
@@ -92,7 +96,7 @@ public class StringChecker {
 
     /**
      * Check the pattern of string value.<br>
-     * 
+     *
      * @param pattern The pattern
      * @param strVal The string value
      * @param fieldName The field name
@@ -109,6 +113,9 @@ public class StringChecker {
         final Pattern pt = Pattern.compile(pattern);
         final Matcher matcher = pt.matcher(strVal);
         if(!matcher.matches()) {
+
+            LOGGER.error("String patten failed: Match string " + strVal + "use patten " + pattern);
+
             throw getBadRequestServiceExceptionWithCommonArgs(CHECKER_STRING_IS_INVALID,
                     new String[] {fieldName, strVal});
         }
@@ -116,7 +123,7 @@ public class StringChecker {
 
     /**
      * Check the string object.<br>
-     * 
+     *
      * @param model The service model
      * @param field The field object
      * @since SDNO 0.5
