@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  version: '0.1.0'
+  version: '1.0.0'
   title: L3VpnService Sbi Adapter Interface
-  description: Orchestrator SDN-O SBI Reference V1.0-L3VPN
+  description: Orchestrator SDN-O L3VPN SBI Reference
 host: sdno.openo.org
 basePath: /openoapi/sbi-l3vpn/v1
 schemes:
