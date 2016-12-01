@@ -23,9 +23,9 @@ import java.lang.reflect.Field;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.paradesc.VlanScopeDesc;
 import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
+import org.openo.sdno.wanvpn.util.paradesc.VlanScopeDesc;
 
 /**
  * The checker of the VLAN scope.<br>

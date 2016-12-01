@@ -19,10 +19,10 @@ package org.openo.sdno.wanvpn.util.checker;
 import java.lang.reflect.Field;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.paradesc.NotNullDesc;
 import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
+import org.openo.sdno.wanvpn.util.paradesc.NotNullDesc;
 
 /**
  * Check whether the field is not null.<br>

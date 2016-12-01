@@ -21,8 +21,8 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.paradesc.IntegerDesc;
 import org.openo.sdno.model.servicemodel.SvcModel;
+import org.openo.sdno.wanvpn.util.paradesc.IntegerDesc;
 
 /**
  * Check the integer field.<br>

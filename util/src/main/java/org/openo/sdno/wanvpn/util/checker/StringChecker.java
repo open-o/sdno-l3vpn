@@ -29,8 +29,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.SvcModel;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;

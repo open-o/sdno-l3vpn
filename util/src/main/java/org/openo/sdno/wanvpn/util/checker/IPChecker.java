@@ -23,12 +23,12 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.paradesc.IPDesc;
-import org.openo.sdno.model.paradesc.IPDesc.IPType;
 import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.util.ip.IpUtils;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
+import org.openo.sdno.wanvpn.util.paradesc.IPDesc;
+import org.openo.sdno.wanvpn.util.paradesc.IPDesc.IPType;
 
 /**
  * Check the IP field.<br>
