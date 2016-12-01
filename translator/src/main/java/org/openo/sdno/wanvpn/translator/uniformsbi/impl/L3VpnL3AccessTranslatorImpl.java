@@ -74,7 +74,7 @@ public class L3VpnL3AccessTranslatorImpl implements L3VpnL3AccessTranslator {
 
         List<TpTypeSpec> typeSpecLst = tp.getTypeSpecList();
         for(TpTypeSpec typeSpec : typeSpecLst) {
-            if(null != typeSpec.getLayerRate() && typeSpec.getLayerRate().equals(LayerRate.LR_IP.getCommonName())
+            if(null != typeSpec.getLayerRate() && typeSpec.getLayerRate().equals(LayerRate.LR_IP.getAlias())
                     && null != typeSpec.getIpTpSpec()) {
                 l3Access.setIpv4Address(typeSpec.getIpTpSpec().getMasterIp());
             }

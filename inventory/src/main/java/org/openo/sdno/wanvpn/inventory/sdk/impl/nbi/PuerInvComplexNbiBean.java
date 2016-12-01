@@ -29,7 +29,7 @@ import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.framework.container.util.JsonUtil;
 import org.openo.sdno.model.servicemodel.mss.BatchQueryResponse;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.inventory.sdk.common.OwnerInfoThreadLocal;
 import org.openo.sdno.wanvpn.util.rest.InventorySDKRestUtil;
 import org.openo.sdno.wanvpn.util.rest.RestUtil;

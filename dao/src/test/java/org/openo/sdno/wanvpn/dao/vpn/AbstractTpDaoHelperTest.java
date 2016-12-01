@@ -25,6 +25,7 @@ import java.util.Map;
 import org.apache.commons.collections.CollectionUtils;
 import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
+import org.openo.sdno.model.common.VpnModelAccessor;
 import org.openo.sdno.model.db.l3vpn.L3VpnCeTpPo;
 import org.openo.sdno.model.db.l3vpn.L3VpnRouteProtocolSpecPo;
 import org.openo.sdno.model.db.l3vpn.L3VpnTpTypeSpecPo;
@@ -34,7 +35,6 @@ import org.openo.sdno.model.servicemodel.tp.CeTp;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.tp.TpTypeSpec;
 import org.openo.sdno.wanvpn.util.constant.TpConstants;
-import org.openo.sdno.wanvpn.util.vpn.VpnModelAccessor;
 
 import junit.framework.Assert;
 import mockit.Mock;

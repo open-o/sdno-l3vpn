@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.vpn;
+package org.openo.sdno.model.common;
 
 import java.util.ArrayList;
 import java.util.HashMap;

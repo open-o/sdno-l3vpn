@@ -85,7 +85,7 @@ public class UniformL3VpnActiveSvcServiceImpl implements L3VpnActiveSvcService {
 
         l3VpnSbiApiService.deployVpnStatus(l3Vpn, ctrlUuid, request);
 
-        vpn.getVpnBasicInfo().setAdminStatus(adminStatus.getCommonName());
+        vpn.getVpnBasicInfo().setAdminStatus(adminStatus.getAlias());
 
         l3VpnBasicInfoDao.updateStatus(Collections.singletonList(vpn.getVpnBasicInfo()));
 
@@ -129,7 +129,7 @@ public class UniformL3VpnActiveSvcServiceImpl implements L3VpnActiveSvcService {
         final String ctrlUuid = ControllerUtils.getControllerUUID(vpn);
 
         l3VpnSbiApiService.deployTpStatus(vpn.getUuid(), l3ac, ctrlUuid, request);
-        tempTp.setAdminStatus(adminStatus.getCommonName());
+        tempTp.setAdminStatus(adminStatus.getAlias());
 
         tpDao.updateStatus(Collections.singletonList(tempTp));
         return tempTp;

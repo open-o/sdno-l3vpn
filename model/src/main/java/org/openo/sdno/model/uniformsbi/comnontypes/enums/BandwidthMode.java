@@ -14,30 +14,19 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.model.paradesc;
+package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+public enum BandwidthMode {
+    ORIGINAL("original-bandwidth"), DYNAMIC("dynamic-bandwidth");
 
-/**
- * User-defined JAVA annotation, CommentDesc.<br>
- * 
- * @author
- * @version SDNO 0.5 2016-6-6
- */
-@Target(ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-public @interface CommentDesc {
+    String name;
 
-    /**
-     * Means.<br>
-     * 
-     * @return Means
-     * @since SDNO 0.5
-     */
-    String means();
+    private BandwidthMode(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
 }

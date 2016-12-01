@@ -23,7 +23,6 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.util.ip.IpUtils;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
@@ -32,7 +31,7 @@ import org.openo.sdno.wanvpn.util.paradesc.IPDesc.IPType;
 
 /**
  * Check the IP field.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -43,14 +42,14 @@ public class IPChecker {
 
     /**
      * Check IP field.<br>
-     * 
+     *
      * @param model The service model
      * @param field The field to be checked
      * @throws ServiceException when the field class is not matched or the IP item is not string
      *             type or instance of string type
      * @since SDNO 0.5
      */
-    public static void checkIP(final SvcModel model, final Field field) throws ServiceException {
+    public static void checkIP(Object model, final Field field) throws ServiceException {
         final IPDesc ipDesc = field.getAnnotation(IPDesc.class);
         if(ipDesc == null) {
             return;

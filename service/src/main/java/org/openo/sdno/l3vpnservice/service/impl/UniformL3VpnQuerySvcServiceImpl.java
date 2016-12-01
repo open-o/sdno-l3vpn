@@ -112,7 +112,7 @@ public class UniformL3VpnQuerySvcServiceImpl implements L3VpnQuerySvcService {
     public Vpn getL3vpnAdminStatus(Vpn vpn, String ctrluuid, @Context HttpServletRequest request)
             throws ServiceException {
 
-        vpn.getVpnBasicInfo().setAdminStatus(AdminStatus.NOP.getCommonName());
+        vpn.getVpnBasicInfo().setAdminStatus(AdminStatus.NOP.getAlias());
 
         final L3Vpn l3vpnSbi = l3VpnSbiApiService.getL3vpnDetail(vpn.getId(), ctrluuid, request);
 

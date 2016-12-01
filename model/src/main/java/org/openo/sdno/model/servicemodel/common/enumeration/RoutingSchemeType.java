@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of routing scheme type.<br>
@@ -24,23 +24,23 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum RoutingSchemeType implements CommonName {
+public enum RoutingSchemeType implements ModelEnum {
     SPF("SPF"), LOAD_BALANCE("LoadBalance"), LEAST_HOP("LeastHop"), LEAST_DELAY("LeastDelay"), NOP("nop");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    RoutingSchemeType(String commonName) {
-        this.commonName = commonName;
+    RoutingSchemeType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

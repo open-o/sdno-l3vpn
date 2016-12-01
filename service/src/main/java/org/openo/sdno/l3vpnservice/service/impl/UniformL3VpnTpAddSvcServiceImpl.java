@@ -109,8 +109,8 @@ public class UniformL3VpnTpAddSvcServiceImpl implements L3vpnTpAddSvcService {
             tp.setId(UuidUtils.createUuid());
         }
 
-        tp.setAdminStatus(AdminStatus.NOP.getCommonName());
-        tp.setOperStatus(OperStatus.NOP.getCommonName());
+        tp.setAdminStatus(AdminStatus.NOP.getAlias());
+        tp.setOperStatus(OperStatus.NOP.getAlias());
         tp.setValue4Po("vpnId", vpnId);
         tpDao.addMos(Collections.singletonList(tp));
         return tp;

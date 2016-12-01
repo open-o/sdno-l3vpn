@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of protect type.<br>
@@ -24,23 +24,23 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 August 9, 2016
  */
-public enum ProtectType implements CommonName {
+public enum ProtectType implements ModelEnum {
     NOP("nop"), M_1V1V1("1:1"), M_2V1P1("1+1"), HOT_STANDBY("hot-standby");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    ProtectType(String commonName) {
-        this.commonName = commonName;
+    ProtectType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

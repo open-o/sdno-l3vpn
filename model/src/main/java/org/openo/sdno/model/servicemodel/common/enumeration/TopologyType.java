@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of topology type.<br>
@@ -24,25 +24,25 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum TopologyType implements CommonName {
+public enum TopologyType implements ModelEnum {
     FULL_MESH("full-mesh"), POINT_TO_MULTIPOINT("point_to_multipoint"), POINT_TO_POINT("point_to_point"),
     SINGLEPOINT("singlePoint"), HUBSPOKE("hubspoke"), HUBSPOKE_VIA_HUBCE("hubspoke_via_hubce"),
     HUBSPOKE_DISJOINT("hubspoke_disjoint");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    TopologyType(String commonName) {
-        this.commonName = commonName;
+    TopologyType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

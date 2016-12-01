@@ -21,8 +21,8 @@ import javax.ws.rs.core.Context;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.framework.container.service.IService;
-import org.openo.sdno.model.common.query.BatchQueryParams;
-import org.openo.sdno.model.common.query.BatchQueryResult;
+import org.openo.sdno.wanvpn.util.query.BatchQueryParams;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 
 /**

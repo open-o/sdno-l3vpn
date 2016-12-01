@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.common;
 
-import org.openo.sdno.model.paradesc.StringDesc;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 
 /**
  * Stores extended / additional parameters in key value pair.<br>

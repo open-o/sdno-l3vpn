@@ -23,13 +23,12 @@ import java.lang.reflect.Field;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 import org.openo.sdno.wanvpn.util.paradesc.VlanScopeDesc;
 
 /**
  * The checker of the VLAN scope.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 1, 2016
  */
@@ -52,17 +51,17 @@ public class VlanScopeChecker {
 
     /**
      * Check the VLAN scope.<br>
-     * 
+     *
      * @param model The service model
      * @param field The field to be checked
      * @throws ServiceException when checking the field failed
      * @since SDNO 0.5
      */
-    public static void checkVlanScope(final SvcModel model, final Field field) throws ServiceException {
+    public static void checkVlanScope(Object model, final Field field) throws ServiceException {
         new VlanScopeChecker().doCheckVlanScope(model, field);
     }
 
-    private void doCheckVlanScope(final SvcModel model, final Field field) throws ServiceException {
+    private void doCheckVlanScope(Object model, final Field field) throws ServiceException {
         final VlanScopeDesc vlanScopeDesc = field.getAnnotation(VlanScopeDesc.class);
         if(null == vlanScopeDesc) {
             return;

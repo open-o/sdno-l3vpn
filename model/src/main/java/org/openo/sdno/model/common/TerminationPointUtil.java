@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util.inventory;
+package org.openo.sdno.model.common;
 
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 

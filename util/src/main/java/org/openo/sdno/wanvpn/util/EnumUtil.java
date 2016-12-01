@@ -16,11 +16,9 @@
 
 package org.openo.sdno.wanvpn.util;
 
-import org.openo.sdno.model.common.CommonName;
-
 /**
  * The tool class to deal with enumeration.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 1, 2016
  */
@@ -31,31 +29,31 @@ public final class EnumUtil {
 
     /**
      * Get the value of enumeration.<br>
-     * 
+     *
      * @param clazz The object class
-     * @param commonName The common name of the field to get
+     * @param alias The alias of the field to get
      * @return The value of the enumeration
      * @since SDNO 0.5
      */
-    public static <T extends Enum<T>> T valueOf(Class<T> clazz, String commonName) {
-        if(commonName == null) {
+    public static <T extends Enum<T>> T valueOf(Class<T> clazz, String alias) {
+        if(alias == null) {
             return null;
         }
-        if(CommonName.class.isAssignableFrom(clazz)) {
-            return valueOf(clazz.getEnumConstants(), commonName);
+        if(ModelEnum.class.isAssignableFrom(clazz)) {
+            return valueOf(clazz.getEnumConstants(), alias);
         } else {
-            return Enum.valueOf(clazz, commonName);
+            return Enum.valueOf(clazz, alias);
         }
 
     }
 
-    private static <T extends Enum<T>> T valueOf(T[] ts, String commonName) {
+    private static <T extends Enum<T>> T valueOf(T[] ts, String alias) {
         if(null == ts || ts.length == 0) {
             return null;
         }
 
         for(T t : ts) {
-            if(commonName.equals(((CommonName)t).getCommonName())) {
+            if(alias.equals(((ModelEnum)t).getAlias())) {
                 return t;
             }
         }

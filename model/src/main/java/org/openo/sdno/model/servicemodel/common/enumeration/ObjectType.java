@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of object type.<br>
@@ -24,24 +24,24 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum ObjectType implements CommonName {
+public enum ObjectType implements ModelEnum {
     NOP("Nop"), VPN("SEG-VPN"), TP("TP"), TPL("TPL"), NE("NE"), COMPOSEDVPN("COMPOSED-VPN"),
     RESOURCEPOOL("RESOURCE-POOL");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    ObjectType(String commonName) {
-        this.commonName = commonName;
+    ObjectType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

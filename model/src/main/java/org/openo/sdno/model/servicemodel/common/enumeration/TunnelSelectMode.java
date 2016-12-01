@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of tunnel select mode.<br>
@@ -24,17 +24,17 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum TunnelSelectMode implements CommonName {
+public enum TunnelSelectMode implements ModelEnum {
     AUTO_CREATE("AutoCreate"), AUTO_SELECT("AutoSelect"), MANUAL_BINDING("MannualSelect");
 
-    private String commonName;
+    private String alias;
 
-    TunnelSelectMode(String commonName) {
-        this.commonName = commonName;
+    TunnelSelectMode(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

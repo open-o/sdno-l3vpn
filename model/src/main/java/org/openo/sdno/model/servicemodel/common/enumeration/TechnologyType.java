@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of technology type.<br>
@@ -24,24 +24,24 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum TechnologyType implements CommonName {
+public enum TechnologyType implements ModelEnum {
     MPLS("mpls"), ROSEN_MULTIVPN("rosen multivpn"), NG_MULTIVPN("ng multivpn"),
     VXLAN_OVERLAY_L3VPN("vxlan overlay l3vpn"), ETH_OVER_SDH("eth over sdh");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    TechnologyType(String commonName) {
-        this.commonName = commonName;
+    TechnologyType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

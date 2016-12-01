@@ -14,26 +14,21 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.model.paradesc;
-
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+package org.openo.sdno.wanvpn.util;
 
 /**
- * User-defined JAVA annotation, NotNullDesc.<br>
+ * Enumeration in data model should have an "alias", a name used in serialization. <br>
  * <p>
- * Describe the fields can't be null.
+ * All data model enumeration should override toString() method to return alias. Alias could be a
+ * more user-friendly name. This is designed primarily for use in specialized situations where
+ * correctness depends on getting the exact name, which will not vary from release to release.
  * </p>
- * 
- * @author
- * @version SDNO 0.5 2016-6-6
+ *
+ * @author zhaozhongchao@huawei.com
+ * @version SDNO 0.5 Dec 1, 2016
  */
-@Target(ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-public @interface NotNullDesc {
+public interface ModelEnum {
+
+    String getAlias();
 
 }

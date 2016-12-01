@@ -21,12 +21,11 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.paradesc.IntegerDesc;
 
 /**
  * Check the integer field.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -37,12 +36,12 @@ public class IntegerChecker {
 
     /**
      * Check the integer field.<br>
-     * 
+     *
      * @param model The service model
      * @param field The field object
      * @since SDNO 0.5
      */
-    public static void checkInteger(final SvcModel model, final Field field) throws ServiceException {
+    public static void checkInteger(Object model, final Field field) throws ServiceException {
         final IntegerDesc integerDesc = field.getAnnotation(IntegerDesc.class);
         if(integerDesc == null) {
             return;
@@ -107,7 +106,7 @@ public class IntegerChecker {
 
     private static boolean checkValValue(final IntegerDesc integerDesc, long value) {
         final boolean hasDefault = integerDesc.hasDefault();
-        
+
         if(hasDefault && integerDesc.defaultVal() == value) {
             return true;
         }

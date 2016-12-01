@@ -16,11 +16,11 @@
 
 package org.openo.sdno.model.servicemodel.routeprotocol;
 
-import org.openo.sdno.model.paradesc.EnumDesc;
-import org.openo.sdno.model.paradesc.IPDesc;
-import org.openo.sdno.model.paradesc.IntegerDesc;
-import org.openo.sdno.model.paradesc.NoPrintField;
-import org.openo.sdno.model.paradesc.StringDesc;
+import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
+import org.openo.sdno.wanvpn.util.paradesc.IPDesc;
+import org.openo.sdno.wanvpn.util.paradesc.IntegerDesc;
+import org.openo.sdno.wanvpn.util.paradesc.NoPrintField;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.BooleanType;
 

@@ -18,8 +18,8 @@ package org.openo.sdno.model.servicemodel.tunnel;
 
 import java.util.List;
 
-import org.openo.sdno.model.paradesc.IntegerDesc;
-import org.openo.sdno.model.paradesc.StringDesc;
+import org.openo.sdno.wanvpn.util.paradesc.IntegerDesc;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 
 /**

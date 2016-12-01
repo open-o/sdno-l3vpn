@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of TP type.<br>
@@ -24,24 +24,24 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 August 9, 2016
  */
-public enum TunnelModeType implements CommonName {
+public enum TunnelModeType implements ModelEnum {
 
     DELEGATE("delegate"), ONE_TO_ONE("one_to_one"), N_TO_ONE("n_to_one");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    TunnelModeType(String commonName) {
-        this.commonName = commonName;
+    TunnelModeType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

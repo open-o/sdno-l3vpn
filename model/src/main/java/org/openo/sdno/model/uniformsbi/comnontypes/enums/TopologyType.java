@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of topology type.<br>
@@ -24,18 +24,18 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum TopologyType implements CommonName {
+public enum TopologyType implements ModelEnum {
     FULL_MESH("fullMesh"), POINT_TO_MULTIPOINT("point_to_multipoint"), POINT_TO_POINT("point-to-point"),
     SINGLEPOINT("singlePoint"), HUB_SPOKE("hubSpoke");
 
-    private String commonName;
+    private String alias;
 
-    TopologyType(String commonName) {
-        this.commonName = commonName;
+    TopologyType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

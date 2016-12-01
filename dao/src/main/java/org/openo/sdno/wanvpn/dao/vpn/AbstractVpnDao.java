@@ -24,8 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.common.query.BatchQueryParams;
-import org.openo.sdno.model.common.query.BatchQueryResult;
+import org.openo.sdno.wanvpn.util.query.BatchQueryParams;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.model.db.tp.AbstractTpPo;
 import org.openo.sdno.model.db.vpn.AbstractVpnBasicInfoPo;
 import org.openo.sdno.model.db.vpn.AbstractVpnPo;

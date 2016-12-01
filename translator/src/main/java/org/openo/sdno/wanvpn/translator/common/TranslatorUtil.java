@@ -110,9 +110,9 @@ public final class TranslatorUtil {
     public static String n2sAdminStatus(boolean strAdminStatus) {
 
         if(strAdminStatus) {
-            return AdminStatus.ACTIVE.getCommonName();
+            return AdminStatus.ACTIVE.getAlias();
         } else {
-            return AdminStatus.INACTIVE.getCommonName();
+            return AdminStatus.INACTIVE.getAlias();
         }
     }
 

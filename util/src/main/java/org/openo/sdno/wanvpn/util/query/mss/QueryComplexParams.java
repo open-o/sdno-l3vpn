@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.model.servicemodel.mss;
+package org.openo.sdno.wanvpn.util.query.mss;
 
 import java.util.ArrayList;
 import java.util.HashMap;

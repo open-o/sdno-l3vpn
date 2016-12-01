@@ -17,13 +17,12 @@
 package org.openo.sdno.wanvpn.util.checker;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
 
 /**
  * The tools of checker to get unsupported service exception.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -34,15 +33,15 @@ public class CheckerUtils {
 
     /**
      * Get unsupported field type service exception.<br>
-     * 
+     *
      * @param checkerClass Checker class object
      * @param model Service model
      * @param fieldName The field name
      * @return The ServiceException with commonArgs
      * @since SDNO 0.5
      */
-    public static ServiceException getUnSupportedFieldTypeServiceException(final Class<?> checkerClass,
-            final SvcModel model, final String fieldName) {
+    public static ServiceException getUnSupportedFieldTypeServiceException(final Class<?> checkerClass, Object model,
+            final String fieldName) {
         return ServiceExceptionUtil.getServiceExceptionWithCommonArgs(CommonErrorCode.CHECKER_UNSUPPORT_FIELD_TYPE,
                 new String[] {checkerClass.getClass().getName(), model.getClass().getName(), fieldName});
     }

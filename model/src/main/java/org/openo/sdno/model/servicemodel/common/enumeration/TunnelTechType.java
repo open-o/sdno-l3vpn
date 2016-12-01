@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of tunnel technology type.<br>
@@ -24,17 +24,17 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum TunnelTechType implements CommonName {
+public enum TunnelTechType implements ModelEnum {
     NOP("NOP"), LDP("LDP"), RSVP_TE("RSVP-TE"), SR_TE("SR-TE"), MPLS_TP("MPLS-TP"), TE_ANY("TE-ANY");
 
-    private String commonName;
+    private String alias;
 
-    TunnelTechType(String commonName) {
-        this.commonName = commonName;
+    TunnelTechType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

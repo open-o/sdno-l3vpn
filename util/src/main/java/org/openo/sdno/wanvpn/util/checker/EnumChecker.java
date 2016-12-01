@@ -21,7 +21,6 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.EnumUtil;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
@@ -29,7 +28,7 @@ import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
 
 /**
  * Check the field of enum.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -40,14 +39,14 @@ public class EnumChecker {
 
     /**
      * Check the field of enumeration.<br>
-     * 
+     *
      * @param model The service model
      * @param field The field to be checked
      * @throws ServiceException when the field class is not matched or the enum item is not string
      *             type or instance of string type
      * @since SDNO 0.5
      */
-    public static void checkEnum(final SvcModel model, final Field field) throws ServiceException {
+    public static void checkEnum(Object model, final Field field) throws ServiceException {
         final EnumDesc enumDesc = field.getAnnotation(EnumDesc.class);
         if(enumDesc == null) {
             return;

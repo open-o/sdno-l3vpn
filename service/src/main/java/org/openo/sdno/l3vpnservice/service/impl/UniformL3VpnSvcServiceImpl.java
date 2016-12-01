@@ -33,7 +33,7 @@ import org.openo.sdno.l3vpnservice.service.inf.L3vpnRouteAddSvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3vpnRouteDeleteSvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3vpnTpAddSvcService;
 import org.openo.sdno.l3vpnservice.service.inf.L3vpnTpDeleteSvcService;
-import org.openo.sdno.model.common.query.BatchQueryResult;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.routeprotocol.RouteProtocolSpec;
 import org.openo.sdno.model.servicemodel.tepath.TePath;
 import org.openo.sdno.model.servicemodel.tepath.TePathQueryKey;

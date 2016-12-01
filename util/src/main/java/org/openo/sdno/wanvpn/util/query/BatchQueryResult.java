@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.model.common.query;
+package org.openo.sdno.wanvpn.util.query;
 
 import java.util.List;
 

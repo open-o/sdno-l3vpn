@@ -29,15 +29,15 @@ import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.l3vpnservice.service.inf.NEService;
-import org.openo.sdno.model.common.query.BatchQueryParams;
-import org.openo.sdno.model.common.query.BatchQueryResult;
+import org.openo.sdno.model.common.TerminationPointUtil;
 import org.openo.sdno.model.servicemodel.brs.LtpMO;
 import org.openo.sdno.result.Result;
 import org.openo.sdno.wanvpn.inventory.sdk.inf.BaseInvDao;
 import org.openo.sdno.wanvpn.util.constant.InvConstants;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
-import org.openo.sdno.wanvpn.util.inventory.TerminationPointUtil;
+import org.openo.sdno.wanvpn.util.query.BatchQueryParams;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.wanvpn.util.query.BatchQueryUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +47,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * Network element service implement class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-5-31
  */

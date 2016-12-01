@@ -23,11 +23,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.common.query.BatchQueryParams;
-import org.openo.sdno.model.common.query.BatchQueryResult;
+import org.openo.sdno.wanvpn.util.query.BatchQueryParams;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.model.db.PoModel;
 import org.openo.sdno.model.servicemodel.SvcModel;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.dao.AbstractDao;
 import org.openo.sdno.wanvpn.dao.DaoUtil;
 import org.openo.sdno.wanvpn.dao.FilterUtil;

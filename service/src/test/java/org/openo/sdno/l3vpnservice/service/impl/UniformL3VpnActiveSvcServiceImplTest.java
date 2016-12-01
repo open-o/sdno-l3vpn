@@ -119,7 +119,7 @@ public class UniformL3VpnActiveSvcServiceImplTest {
     public void testDeactive() throws ServiceException, IOException {
         String filePath = new File("src/test/resources/vpn.json").getCanonicalPath();
         final Vpn vpn = JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath), Vpn.class);
-        vpn.getVpnBasicInfo().setServiceType(ServiceType.L3VPN.getCommonName());
+        vpn.getVpnBasicInfo().setServiceType(ServiceType.L3VPN.getAlias());
 
         l3VpnActiveSvcService.active(vpn, httpServletRequest);
         Tp tp = vpn.getAccessPointList().get(0);

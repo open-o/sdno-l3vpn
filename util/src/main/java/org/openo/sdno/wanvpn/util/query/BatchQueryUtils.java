@@ -29,19 +29,17 @@ import javax.ws.rs.core.Context;
 import org.apache.commons.lang3.StringUtils;
 import org.openo.baseservice.remoteservice.exception.ExceptionArgs;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.common.query.BatchQueryParams;
-import org.openo.sdno.model.common.query.BatchQueryResult;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.util.constant.PageQueryConstants;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
 import org.openo.sdno.wanvpn.util.error.ServiceExceptionUtil;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
 /**
  * Batch query utility class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -60,7 +58,7 @@ public class BatchQueryUtils {
 
     /**
      * Get batch query parameters from HTTP context.<br>
-     * 
+     *
      * @param request HttpServlet request
      * @return batch query parameters
      * @throws ServiceException when operate failed
@@ -118,7 +116,7 @@ public class BatchQueryUtils {
 
     /**
      * When do fake paging, create result constructor according to all data queried out.<br>
-     * 
+     *
      * @param datas data queried out
      * @param batchQueryParams batchQueryParams object
      * @return Batch query result
@@ -148,7 +146,7 @@ public class BatchQueryUtils {
 
     /**
      * Convert BatchQueryParams to QueryComplexParams.<br>
-     * 
+     *
      * @param batchQueryParams BatchQueryParams object
      * @return QueryComplexParams object
      * @since SDNO 0.5

@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of layer rate.<br>
@@ -24,24 +24,24 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum LayerRate implements CommonName {
+public enum LayerRate implements ModelEnum {
     LR_ETHERNET("LR_Ethernet"), LR_IP("LR_IP"), LR_VXLAN("LR_Vxlan"), LR_PW("LR_PW"), LR_NOP("LR_NOP"),
     LR_MPLS_TE("LR_MPLS_TE");
 
-    private String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
      * 
-     * @param commonName common name.
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    LayerRate(String commonName) {
-        this.commonName = commonName;
+    LayerRate(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

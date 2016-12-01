@@ -70,7 +70,7 @@ public class UniformL3VpnTpDeleteSvcServiceImpl implements L3vpnTpDeleteSvcServi
             throw ServiceExceptionUtil.getServiceException(L3VpnSvcErrorCode.L3VPN_DELETE_TPNOTEXIST);
         }
 
-        if(AdminStatus.ACTIVE.getCommonName().equals(tempTp.getAdminStatus())) {
+        if(AdminStatus.ACTIVE.getAlias().equals(tempTp.getAdminStatus())) {
             throw ServiceExceptionUtil.getServiceException(L3VpnSvcErrorCode.L3VPN_DELETE_ACTIVETP);
         }
 

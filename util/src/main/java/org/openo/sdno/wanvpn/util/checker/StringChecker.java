@@ -29,7 +29,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -128,7 +127,7 @@ public class StringChecker {
      * @param field The field object
      * @since SDNO 0.5
      */
-    public static void checkStirng(final SvcModel model, final Field field) throws ServiceException {
+    public static void checkStirng(Object model, final Field field) throws ServiceException {
         final StringDesc stringDesc = field.getAnnotation(StringDesc.class);
         if(stringDesc == null) {
             return;

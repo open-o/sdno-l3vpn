@@ -152,7 +152,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
     }
 
     private void translateTopologyType(final Vpn vpn, final L2Vpn object) {
-        object.setTopology(TranslatorUtil.s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getCommonName());
+        object.setTopology(TranslatorUtil.s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getAlias());
     }
 
     private void translateAdminStatus(final Vpn vpn, final L2Vpn object) {

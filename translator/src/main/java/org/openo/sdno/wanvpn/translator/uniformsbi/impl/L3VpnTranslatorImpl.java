@@ -118,7 +118,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
 
         for(final Tp tp : tpList) {
             ctx.addVal(VpnContextKeys.TP, tp);
-            if(TpType.LOOPBACK.getCommonName().equals(tp.getType())) {
+            if(TpType.LOOPBACK.getAlias().equals(tp.getType())) {
                 final L3LoopbackIf loopbackIf = l3LoopbackIfTranslator.translate(ctx);
                 l3LoopbackList.add(loopbackIf);
                 existLoopbackIf = true;
@@ -151,7 +151,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
 
         for(final Tp tp : tpList) {
             ctx.addVal(VpnContextKeys.TP, tp);
-            if(!TpType.LOOPBACK.getCommonName().equals(tp.getType())) {
+            if(!TpType.LOOPBACK.getAlias().equals(tp.getType())) {
                 final L3Ac ac = l3AcTranslator.translate(ctx);
                 l3AcList.add(ac);
             }
@@ -160,7 +160,7 @@ public class L3VpnTranslatorImpl implements L3VpnTranslator {
     }
 
     private void translateTopology(Vpn vpn, L3Vpn l3Vpn) {
-        l3Vpn.setTopology(TranslatorUtil.s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getCommonName());
+        l3Vpn.setTopology(TranslatorUtil.s2nTopologyType(vpn.getVpnBasicInfo().getTopology()).getAlias());
     }
 
     private void translateMtu(final Vpn vpn, final L3Vpn l3Vpn) {

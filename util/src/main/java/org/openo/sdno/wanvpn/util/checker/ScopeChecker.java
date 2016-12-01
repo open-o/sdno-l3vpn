@@ -18,14 +18,14 @@ package org.openo.sdno.wanvpn.util.checker;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
+import java.util.Enumeration;
 import java.util.Iterator;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
  * Check the scope.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -36,31 +36,36 @@ public class ScopeChecker {
 
     /**
      * Check the scope<br>
-     * 
+     *
      * @param model The service model
      * @throws ServiceException when the field check failed
      * @since SDNO 0.5
      */
-    public static void checkScope(final SvcModel model) throws ServiceException {
+    public static void checkScope(Object model) throws ServiceException {
         if(model == null) {
             return;
         }
         final Field[] fields = ReflectTool.getAllFields(model.getClass());
         for(final Field field : fields) {
             NotNullChecker.checkNotNull(model, field);
-            EnumChecker.checkEnum(model, field);
-            StringChecker.checkStirng(model, field);
-            IntegerChecker.checkInteger(model, field);
-            IPChecker.checkIP(model, field);
-            VlanScopeChecker.checkVlanScope(model, field);
-            if(SvcModel.class.isAssignableFrom(field.getType())) {
-                final SvcModel subVal = (SvcModel)ReflectTool.readVal(model, field.getName());
-                checkScope(subVal);
+            if(Enumeration.class.isAssignableFrom(field.getType())) {
+                StringChecker.checkStirng(model, field);
+                EnumChecker.checkEnum(model, field);
+            } else if(String.class.isAssignableFrom(field.getType())) {
+                StringChecker.checkStirng(model, field);
+                EnumChecker.checkEnum(model, field);
+                IntegerChecker.checkInteger(model, field);
+                IPChecker.checkIP(model, field);
+                VlanScopeChecker.checkVlanScope(model, field);
+            } else if(Integer.class.isAssignableFrom(field.getType())) {
+                StringChecker.checkStirng(model, field);
+                IntegerChecker.checkInteger(model, field);
             } else if(Collection.class.isAssignableFrom(field.getType())) {
                 final Collection<?> collection = (Collection<?>)ReflectTool.readVal(model, field.getName());
                 checkCollection(collection);
             } else {
-                continue;
+                Object subVal = ReflectTool.readVal(model, field.getName());
+                checkScope(subVal);
             }
         }
     }
@@ -72,13 +77,12 @@ public class ScopeChecker {
         final Iterator<?> it = collection.iterator();
         while(it.hasNext()) {
             final Object obj = it.next();
-            if(obj instanceof SvcModel) {
-                checkScope((SvcModel)obj);
-                continue;
-            }
+
             if(obj instanceof Collection) {
                 checkCollection((Collection<?>)obj);
                 continue;
+            } else {
+                checkScope(obj);
             }
         }
     }

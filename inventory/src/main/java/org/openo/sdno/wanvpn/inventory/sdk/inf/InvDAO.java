@@ -19,7 +19,7 @@ package org.openo.sdno.wanvpn.inventory.sdk.inf;
 import java.util.List;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.inventory.sdk.result.ResultRsp;
 
 /**

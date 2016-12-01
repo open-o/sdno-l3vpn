@@ -18,7 +18,7 @@ package org.openo.sdno.model.uniformsbi.l3vpn;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
-import org.openo.sdno.model.paradesc.NoPrintField;
+import org.openo.sdno.wanvpn.util.paradesc.NoPrintField;
 
 /**
  * BGP route class.<br>

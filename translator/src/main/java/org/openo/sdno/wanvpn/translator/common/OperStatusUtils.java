@@ -44,13 +44,13 @@ public class OperStatusUtils {
      * @since SDNO 0.5
      */
     public static void setVpnDefaultStatus(Vpn vpn) {
-        vpn.setOperStatus(OperStatus.NOP.getCommonName());
-        vpn.getVpnBasicInfo().setAdminStatus(AdminStatus.NOP.getCommonName());
+        vpn.setOperStatus(OperStatus.NOP.getAlias());
+        vpn.getVpnBasicInfo().setAdminStatus(AdminStatus.NOP.getAlias());
 
         final List<Tp> tps = vpn.getAccessPointList();
         for(final Tp tp : tps) {
-            tp.setOperStatus(OperStatus.NOP.getCommonName());
-            tp.setAdminStatus(AdminStatus.NOP.getCommonName());
+            tp.setOperStatus(OperStatus.NOP.getAlias());
+            tp.setAdminStatus(AdminStatus.NOP.getAlias());
         }
     }
 

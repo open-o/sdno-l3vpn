@@ -73,7 +73,7 @@ public class L3VpnRouteTranslatorImplTest {
         Assert.assertNotNull(route);
 
         routeSpec = new RouteProtocolSpec();
-        routeSpec.setType(RouteProtocolType.BGP.getCommonName());
+        routeSpec.setType(RouteProtocolType.BGP.getAlias());
         routeSpecLst = new ArrayList<RouteProtocolSpec>();
         routeSpecLst.add(routeSpec);
         ctx.addVal(VpnContextKeys.PROTOCOL, routeSpecLst);

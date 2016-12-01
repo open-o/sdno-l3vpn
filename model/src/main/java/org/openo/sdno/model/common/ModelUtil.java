@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.wanvpn.util;
+package org.openo.sdno.model.common;
 
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +24,7 @@ import org.openo.sdno.model.servicemodel.SvcModel;
 
 /**
  * Tools class of model.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-1
  */
@@ -35,7 +35,7 @@ public class ModelUtil {
 
     /**
      * Re-organize the list of svcModels to a map,with the uuid/id field as key
-     * 
+     *
      * @param svcModels The list of model
      * @return The map of model
      */

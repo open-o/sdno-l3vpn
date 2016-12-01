@@ -19,7 +19,7 @@ package org.openo.sdno.l3vpnservice.service.inf;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
-import org.openo.sdno.model.common.query.BatchQueryResult;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.tepath.TePath;
 import org.openo.sdno.model.servicemodel.tepath.TePathQueryKey;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;

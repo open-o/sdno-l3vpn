@@ -26,7 +26,7 @@ public interface SvcModel {
 
     /**
      * Get uuid.<br>
-     * 
+     *
      * @return Uuid as string
      * @since SDNO 0.5
      */
@@ -34,7 +34,7 @@ public interface SvcModel {
 
     /**
      * Set uuid.<br>
-     * 
+     *
      * @param uuid Uuid to set
      * @since SDNO 0.5
      */

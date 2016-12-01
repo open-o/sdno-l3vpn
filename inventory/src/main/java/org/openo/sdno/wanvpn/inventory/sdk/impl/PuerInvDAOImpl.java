@@ -25,7 +25,7 @@ import org.apache.commons.collections.MapUtils;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.exception.InnerErrorServiceException;
 import org.openo.sdno.model.servicemodel.mss.BatchQueryResponse;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.inventory.sdk.common.ErrorCode;
 import org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvComplexNbiBean;
 import org.openo.sdno.wanvpn.inventory.sdk.impl.nbi.PuerInvServiceNbiBean;

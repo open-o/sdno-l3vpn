@@ -49,7 +49,7 @@ public class TranslatorUtil {
     public static AdminStatus s2nAdminStatus(final String status) {
         AdminStatus adminStatus = AdminStatus.ADMIN_DOWN;
 
-        if(Objects.equals(ACTIVE.getCommonName(), status)) {
+        if(Objects.equals(ACTIVE.getAlias(), status)) {
             adminStatus = AdminStatus.ADMIN_UP;
         }
         return adminStatus;
@@ -65,9 +65,9 @@ public class TranslatorUtil {
     public static L2AccessType s2nL2AccessType(final String accessType) {
         L2AccessType l2AccessType = L2AccessType.DOT1Q;
 
-        if(Objects.equals(EncapType.QINQ.getCommonName(), accessType)) {
+        if(Objects.equals(EncapType.QINQ.getAlias(), accessType)) {
             l2AccessType = L2AccessType.QINQ;
-        } else if(Objects.equals(EncapType.UNTAG.getCommonName(), accessType)) {
+        } else if(Objects.equals(EncapType.UNTAG.getAlias(), accessType)) {
             l2AccessType = L2AccessType.PORT;
         }
         return l2AccessType;
@@ -162,18 +162,18 @@ public class TranslatorUtil {
      */
     public static String n2sOperStatus(OperStatus nOperStatus) {
         if(nOperStatus == null) {
-            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.DOWN.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.DOWN.getAlias();
         }
 
         switch(nOperStatus) {
         case OPERATE_UP:
-            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.UP.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.UP.getAlias();
 
         case OPERATE_DOWN:
-            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.DOWN.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.DOWN.getAlias();
 
         default:
-            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.PARTIAL.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.OperStatus.PARTIAL.getAlias();
         }
     }
 
@@ -201,18 +201,18 @@ public class TranslatorUtil {
      */
     public static String n2sAdminStatus(AdminStatus nAdminStatus) {
         if(nAdminStatus == null) {
-            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.INACTIVE.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.INACTIVE.getAlias();
         }
 
         switch(nAdminStatus) {
         case ADMIN_UP:
-            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.ACTIVE.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.ACTIVE.getAlias();
 
         case ADMIN_DOWN:
-            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.INACTIVE.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.INACTIVE.getAlias();
 
         default:
-            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.PARTIAL.getCommonName();
+            return org.openo.sdno.model.servicemodel.common.enumeration.AdminStatus.PARTIAL.getAlias();
         }
     }
 }

@@ -28,7 +28,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.model.db.l3vpn.L3VpnPo;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 import org.openo.sdno.wanvpn.dao.AbstractDao;
 import org.openo.sdno.wanvpn.inventory.sdk.common.ErrorCode;
 import org.openo.sdno.wanvpn.inventory.sdk.impl.PuerInvDAOImpl;

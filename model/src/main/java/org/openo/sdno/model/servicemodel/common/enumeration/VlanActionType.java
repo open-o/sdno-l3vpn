@@ -16,7 +16,7 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of VLAN action type.<br>
@@ -24,18 +24,18 @@ import org.openo.sdno.model.common.CommonName;
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum VlanActionType implements CommonName {
+public enum VlanActionType implements ModelEnum {
     NOP("nop"), UNTAG("untag"), CVLAN_1V1_MAPPING("cvlan 1:1 mapping"), M1V2_MAPPING("1:2 mapping"),
     M2V1_MAPPING("2:1 mapping"), STACKING("stacking");
 
-    private String commonName;
+    private String alias;
 
-    VlanActionType(String commonName) {
-        this.commonName = commonName;
+    VlanActionType(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 }

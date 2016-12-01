@@ -16,33 +16,33 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.model.common.CommonName;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of main domain constrain.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 9, 2016
  */
-public enum MainDomainConstrain implements CommonName {
+public enum MainDomainConstrain implements ModelEnum {
 
     MAIN("main"), NOP("nop"), MAIN_TRUE("true"), MAIN_FALSE("false");
 
-    private final String commonName;
+    private String alias;
 
     /**
      * Constructor<br>
-     * 
-     * @param commonName common name.
+     *
+     * @param alias Name used in serialization.
      * @since SDNO 0.5
      */
-    MainDomainConstrain(final String commonName) {
-        this.commonName = commonName;
+    MainDomainConstrain(String alias) {
+        this.alias = alias;
     }
 
     @Override
-    public String getCommonName() {
-        return commonName;
+    public String getAlias() {
+        return alias;
     }
 
 }

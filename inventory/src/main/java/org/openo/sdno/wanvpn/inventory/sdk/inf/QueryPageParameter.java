@@ -22,7 +22,7 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulParametes;
 import org.openo.sdno.framework.container.util.JsonUtil;
 import org.openo.sdno.model.servicemodel.mss.JoinAttrData;
-import org.openo.sdno.model.servicemodel.mss.QueryComplexParams;
+import org.openo.sdno.wanvpn.util.query.mss.QueryComplexParams;
 
 /**
  * Query page parameter class.<br>
