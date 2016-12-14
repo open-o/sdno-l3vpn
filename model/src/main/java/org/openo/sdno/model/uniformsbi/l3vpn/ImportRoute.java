@@ -16,40 +16,29 @@
 
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
-import java.util.List;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.ImportRouteType;
 
 /**
- * Spoke group class.<br>
+ * <br>
  *
- * @author
- * @version SDNO 0.5 July 22, 2016
+ * @author zhaozhongchao@huawei.com
+ * @version SDNO 0.5 Dec 6, 2016
  */
-public class SpokeGroup {
+public class ImportRoute {
 
-    private boolean localBridge;
-
-    private List<SpokeAc> spokeAcs;
+    private ImportRouteType routeType;
 
     /**
-     * check the localBridge is true or false.<br>
-     *
-     * @return true when localBridge is true
-     * @since SDNO 0.5
+     * @return Returns the routeType.
      */
-    public boolean isLocalBridge() {
-        return localBridge;
+    public ImportRouteType getRouteType() {
+        return routeType;
     }
 
-    public void setLocalBridge(boolean localBridge) {
-        this.localBridge = localBridge;
+    /**
+     * @param routeType The routeType to set.
+     */
+    public void setRouteType(ImportRouteType routeType) {
+        this.routeType = routeType;
     }
-
-    public List<SpokeAc> getSpokeAcs() {
-        return spokeAcs;
-    }
-
-    public void setSpokeAcs(List<SpokeAc> spokeAcs) {
-        this.spokeAcs = spokeAcs;
-    }
-
 }

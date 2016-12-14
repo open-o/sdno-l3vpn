@@ -41,6 +41,8 @@ public class L3Vpn extends Vpn {
      */
     private Boolean frr;
 
+    private String labelApplyMode;
+
     private L3Acs acs;
 
     @JsonProperty("loopbackifs")
@@ -48,7 +50,7 @@ public class L3Vpn extends Vpn {
 
     private TopologyService topologyService;
 
-    private ProtectGroup protectGroup;
+    private ProtectGroups protectGroups;
 
     private DiffServ diffServ;
 
@@ -84,12 +86,12 @@ public class L3Vpn extends Vpn {
         this.topologyService = topologyService;
     }
 
-    public ProtectGroup getProtectGroup() {
-        return protectGroup;
+    public ProtectGroups getProtectGroups() {
+        return protectGroups;
     }
 
-    public void setProtectGroup(ProtectGroup protectGroup) {
-        this.protectGroup = protectGroup;
+    public void setProtectGroups(ProtectGroups protectGroups) {
+        this.protectGroups = protectGroups;
     }
 
     public Boolean getFrr() {
@@ -106,6 +108,20 @@ public class L3Vpn extends Vpn {
 
     public void setDiffServ(DiffServ diffServ) {
         this.diffServ = diffServ;
+    }
+
+    /**
+     * @return Returns the labelApplyMode.
+     */
+    public String getLabelApplyMode() {
+        return labelApplyMode;
+    }
+
+    /**
+     * @param labelApplyMode The labelApplyMode to set.
+     */
+    public void setLabelApplyMode(String labelApplyMode) {
+        this.labelApplyMode = labelApplyMode;
     }
 
 }

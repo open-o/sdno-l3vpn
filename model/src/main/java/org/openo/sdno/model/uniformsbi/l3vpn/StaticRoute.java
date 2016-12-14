@@ -21,7 +21,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 /**
  * Static route class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 July 22, 2016
  */
@@ -31,6 +31,10 @@ public class StaticRoute {
     private String ipPrefix;
 
     private String nextHop;
+
+    private Integer routePreference;
+
+    private String trackBfdEnable;
 
     public String getIpPrefix() {
         return ipPrefix;
@@ -46,6 +50,34 @@ public class StaticRoute {
 
     public void setNextHop(String nextHop) {
         this.nextHop = nextHop;
+    }
+
+    /**
+     * @return Returns the routePreference.
+     */
+    public Integer getRoutePreference() {
+        return routePreference;
+    }
+
+    /**
+     * @param routePreference The routePreference to set.
+     */
+    public void setRoutePreference(Integer routePreference) {
+        this.routePreference = routePreference;
+    }
+
+    /**
+     * @return Returns the trackBfdEnable.
+     */
+    public String getTrackBfdEnable() {
+        return trackBfdEnable;
+    }
+
+    /**
+     * @param trackBfdEnable The trackBfdEnable to set.
+     */
+    public void setTrackBfdEnable(String trackBfdEnable) {
+        this.trackBfdEnable = trackBfdEnable;
     }
 
 }

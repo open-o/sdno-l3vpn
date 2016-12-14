@@ -37,6 +37,8 @@ public class Route {
 
     private IsisRoute isisRoute;
 
+    private OspfRoutes ospfRoutes;
+
     /**
      * Constructor<br>
      * 
@@ -98,6 +100,20 @@ public class Route {
 
     public void setIsisRoute(IsisRoute isisRoute) {
         this.isisRoute = isisRoute;
+    }
+
+    /**
+     * @return Returns the ospfRoutes.
+     */
+    public OspfRoutes getOspfRoutes() {
+        return ospfRoutes;
+    }
+
+    /**
+     * @param ospfRoutes The ospfRoutes to set.
+     */
+    public void setOspfRoutes(OspfRoutes ospfRoutes) {
+        this.ospfRoutes = ospfRoutes;
     }
 
 }

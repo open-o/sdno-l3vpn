@@ -48,6 +48,16 @@ public class BgpRoute {
 
     private boolean advertiseExtCommunity;
 
+    /**
+     * Not null
+     */
+    private String importRoutePolicyName;
+
+    /**
+     * Not null
+     */
+    private String exportRoutePolicyName;
+
     public String getRemoteAs() {
         return remoteAs;
     }
@@ -118,6 +128,34 @@ public class BgpRoute {
 
     public void setAdvertiseExtCommunity(boolean advertiseExtCommunity) {
         this.advertiseExtCommunity = advertiseExtCommunity;
+    }
+
+    /**
+     * @return Returns the importRoutePolicyName.
+     */
+    public String getImportRoutePolicyName() {
+        return importRoutePolicyName;
+    }
+
+    /**
+     * @param importRoutePolicyName The importRoutePolicyName to set.
+     */
+    public void setImportRoutePolicyName(String importRoutePolicyName) {
+        this.importRoutePolicyName = importRoutePolicyName;
+    }
+
+    /**
+     * @return Returns the exportRoutePolicyName.
+     */
+    public String getExportRoutePolicyName() {
+        return exportRoutePolicyName;
+    }
+
+    /**
+     * @param exportRoutePolicyName The exportRoutePolicyName to set.
+     */
+    public void setExportRoutePolicyName(String exportRoutePolicyName) {
+        this.exportRoutePolicyName = exportRoutePolicyName;
     }
 
 }

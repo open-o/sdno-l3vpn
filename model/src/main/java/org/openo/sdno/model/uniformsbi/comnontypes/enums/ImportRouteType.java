@@ -14,42 +14,36 @@
  * limitations under the License.
  */
 
-package org.openo.sdno.model.uniformsbi.l3vpn;
+package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
-import java.util.List;
+import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
- * Spoke group class.<br>
+ * <br>
  *
- * @author
- * @version SDNO 0.5 July 22, 2016
+ * @author zhaozhongchao@huawei.com
+ * @version SDNO 0.5 Dec 6, 2016
  */
-public class SpokeGroup {
+public enum ImportRouteType implements ModelEnum {
 
-    private boolean localBridge;
+    DEFAULT("default"), STATIC("static");
 
-    private List<SpokeAc> spokeAcs;
+    private String alias;
+
+    private ImportRouteType(String alias) {
+        this.alias = alias;
+    }
 
     /**
-     * check the localBridge is true or false.<br>
+     * <br>
      *
-     * @return true when localBridge is true
+     * @return
      * @since SDNO 0.5
      */
-    public boolean isLocalBridge() {
-        return localBridge;
-    }
-
-    public void setLocalBridge(boolean localBridge) {
-        this.localBridge = localBridge;
-    }
-
-    public List<SpokeAc> getSpokeAcs() {
-        return spokeAcs;
-    }
-
-    public void setSpokeAcs(List<SpokeAc> spokeAcs) {
-        this.spokeAcs = spokeAcs;
+    @Override
+    public String getAlias() {
+        // TODO Auto-generated method stub
+        return alias;
     }
 
 }

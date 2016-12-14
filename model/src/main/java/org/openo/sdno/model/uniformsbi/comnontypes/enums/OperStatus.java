@@ -25,7 +25,7 @@ import org.codehaus.jackson.annotate.JsonCreator;
  * @version SDNO 0.5 2016-6-6
  */
 public enum OperStatus {
-    OPERATE_UP("operateUp"), OPERATE_DOWN("operateDown");
+    OPERATE_UP("operateUp"), OPERATE_DOWN("operateDown"), PARTIAL_UP("partialUp");
 
     private String name;
 

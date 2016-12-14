@@ -16,22 +16,30 @@
 
 package org.openo.sdno.model.uniformsbi.l3vpn;
 
+import java.util.List;
+
 /**
- * Spoke ACS class.<br>
- * 
- * @author
- * @version SDNO 0.5 July 22, 2016
+ * <br>
+ *
+ * @author zhaozhongchao@huawei.com
+ * @version SDNO 0.5 Dec 6, 2016
  */
-public class SpokeAcs {
+public class ImportRoutes {
 
-    private String acId;
+    private List<ImportRoute> importRoute;
 
-    public String getAcId() {
-        return acId;
+    /**
+     * @return Returns the importRoute.
+     */
+    public List<ImportRoute> getImportRoute() {
+        return importRoute;
     }
 
-    public void setAcId(String acId) {
-        this.acId = acId;
+    /**
+     * @param importRoute The importRoute to set.
+     */
+    public void setImportRoute(List<ImportRoute> importRoute) {
+        this.importRoute = importRoute;
     }
 
 }

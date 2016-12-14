@@ -21,9 +21,11 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.uniformsbi.base.QosIfCar;
+import org.openo.sdno.model.uniformsbi.base.QosIfPhb;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AcDirection;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.AdminStatus;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.OperStatus;
+import org.openo.sdno.model.uniformsbi.comnontypes.enums.TopologyRole;
 
 /**
  * SBI model, AC model class.<br>
@@ -69,9 +71,29 @@ public class L3Ac extends AbstractSvcModel {
 
     private String outboundQueuePolicyId;
 
-    private String externalQosPolicyId;
+    private QosIfPhb inboundQosIfPhb;
+
+    private QosIfPhb outboundQosIfPhb;
+
+    private TopologyRole topologyRole;
 
     private AcDirection acDirection;
+
+    private OverrideFlows overrideFlows;
+
+    /**
+     * @return Returns the inboundQosIfPhb.
+     */
+    public QosIfPhb getInboundQosIfPhb() {
+        return inboundQosIfPhb;
+    }
+
+    /**
+     * @param inboundQosIfPhb The inboundQosIfPhb to set.
+     */
+    public void setInboundQosIfPhb(QosIfPhb inboundQosIfPhb) {
+        this.inboundQosIfPhb = inboundQosIfPhb;
+    }
 
     @Override
     public String getUuid() {
@@ -163,14 +185,6 @@ public class L3Ac extends AbstractSvcModel {
         this.downstreamBandwidth = downstreamBandwidth;
     }
 
-    public String getExternalQosPolicyId() {
-        return externalQosPolicyId;
-    }
-
-    public void setExternalQosPolicyId(String externalQosPolicyId) {
-        this.externalQosPolicyId = externalQosPolicyId;
-    }
-
     public String getInboundQosPolicyId() {
         return inboundQosPolicyId;
     }
@@ -231,6 +245,48 @@ public class L3Ac extends AbstractSvcModel {
      */
     public void setAcDirection(AcDirection acDirection) {
         this.acDirection = acDirection;
+    }
+
+    /**
+     * @return Returns the outboundQosIfPhb.
+     */
+    public QosIfPhb getOutboundQosIfPhb() {
+        return outboundQosIfPhb;
+    }
+
+    /**
+     * @param outboundQosIfPhb The outboundQosIfPhb to set.
+     */
+    public void setOutboundQosIfPhb(QosIfPhb outboundQosIfPhb) {
+        this.outboundQosIfPhb = outboundQosIfPhb;
+    }
+
+    /**
+     * @return Returns the topologyRole.
+     */
+    public TopologyRole getTopologyRole() {
+        return topologyRole;
+    }
+
+    /**
+     * @param topologyRole The topologyRole to set.
+     */
+    public void setTopologyRole(TopologyRole topologyRole) {
+        this.topologyRole = topologyRole;
+    }
+
+    /**
+     * @return Returns the overrideFlows.
+     */
+    public OverrideFlows getOverrideFlows() {
+        return overrideFlows;
+    }
+
+    /**
+     * @param overrideFlows The overrideFlows to set.
+     */
+    public void setOverrideFlows(OverrideFlows overrideFlows) {
+        this.overrideFlows = overrideFlows;
     }
 
 }

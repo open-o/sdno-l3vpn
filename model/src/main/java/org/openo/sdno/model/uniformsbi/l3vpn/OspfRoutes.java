@@ -19,37 +19,27 @@ package org.openo.sdno.model.uniformsbi.l3vpn;
 import java.util.List;
 
 /**
- * Spoke group class.<br>
+ * <br>
  *
- * @author
- * @version SDNO 0.5 July 22, 2016
+ * @author zhaozhongchao@huawei.com
+ * @version SDNO 0.5 Dec 6, 2016
  */
-public class SpokeGroup {
+public class OspfRoutes {
 
-    private boolean localBridge;
-
-    private List<SpokeAc> spokeAcs;
+    private List<OspfRoute> ospfRoute;
 
     /**
-     * check the localBridge is true or false.<br>
-     *
-     * @return true when localBridge is true
-     * @since SDNO 0.5
+     * @return Returns the ospfRoute.
      */
-    public boolean isLocalBridge() {
-        return localBridge;
+    public List<OspfRoute> getOspfRoute() {
+        return ospfRoute;
     }
 
-    public void setLocalBridge(boolean localBridge) {
-        this.localBridge = localBridge;
-    }
-
-    public List<SpokeAc> getSpokeAcs() {
-        return spokeAcs;
-    }
-
-    public void setSpokeAcs(List<SpokeAc> spokeAcs) {
-        this.spokeAcs = spokeAcs;
+    /**
+     * @param ospfRoute The ospfRoute to set.
+     */
+    public void setOspfRoute(List<OspfRoute> ospfRoute) {
+        this.ospfRoute = ospfRoute;
     }
 
 }
