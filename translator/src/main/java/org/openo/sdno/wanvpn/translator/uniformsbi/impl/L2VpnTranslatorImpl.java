@@ -144,7 +144,7 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
         if(tunnelSchemaObject != null) {
             TunnelSchema tunnelSchema = (TunnelSchema)tunnelSchemaObject;
             PWSpec pwSpec = tunnelSchema.getPwTech();
-            if((pwSpec != null) && (pwSpec.getControlWord() != null) && pwSpec.getControlWord().length() > 0) {
+            if((pwSpec != null) && pwSpec.isControlWord()) {
                 l2Vpn.setCtrlWordType(CtrlWordType.ENABLE);
             }
 

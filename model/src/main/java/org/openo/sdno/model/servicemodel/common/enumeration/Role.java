@@ -16,32 +16,22 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
-import org.openo.sdno.wanvpn.util.ModelEnum;
-
 /**
- * The enumeration class of object type.<br>
+ * <br>
  *
- * @author
- * @version SDNO 0.5 2016-6-6
+ * @author zhaozhongchao@huawei.com
+ * @version SDNO 0.5 Dec 15, 2016
  */
-public enum ObjectType implements ModelEnum {
-    NOP("Nop"), VPN("SEG-VPN"), TP("TP"), TPL("TPL"), NE("NE"), BUSINESSTYPE("BUSINESSTYPE"),
-    COMPOSEDVPN("COMPOSED-VPN"), RESOURCEPOOL("RESOURCE-POOL"), SUBNETWORK("SUBNETWORK"), TUNNEL_LSP("TUNNEL-LSP");
+public enum Role {
+
+    MASTER("master"), BACK_UP("backup");
 
     private String alias;
 
-    /**
-     * Constructor<br>
-     *
-     * @param alias Name used in serialization.
-     * @since SDNO 0.5
-     */
-    ObjectType(String alias) {
+    Role(String alias) {
+
         this.alias = alias;
+
     }
 
-    @Override
-    public String getAlias() {
-        return alias;
-    }
 }

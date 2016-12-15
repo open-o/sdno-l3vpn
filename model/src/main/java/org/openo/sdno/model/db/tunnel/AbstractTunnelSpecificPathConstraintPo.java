@@ -25,7 +25,7 @@ import org.springframework.util.CollectionUtils;
 
 /**
  * TunnelSpecificPathConstraintPo abstract class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 8, 2016
  */
@@ -45,7 +45,7 @@ public abstract class AbstractTunnelSpecificPathConstraintPo implements PoModel<
 
     private String tunnelTech;
 
-    private Integer bandwitdh;
+    private Long bandwitdh;
 
     private String bodMode;
 
@@ -83,11 +83,11 @@ public abstract class AbstractTunnelSpecificPathConstraintPo implements PoModel<
         this.tunnelTech = tunnelTech;
     }
 
-    public Integer getBandwitdh() {
+    public Long getBandwitdh() {
         return bandwitdh;
     }
 
-    public void setBandwitdh(final Integer bandwitdh) {
+    public void setBandwitdh(final Long bandwitdh) {
         this.bandwitdh = bandwitdh;
     }
 

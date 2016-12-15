@@ -18,18 +18,19 @@ package org.openo.sdno.model.servicemodel.tunnel;
 
 import java.util.List;
 
-import org.openo.sdno.wanvpn.util.paradesc.ContainerSizeDesc;
-import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
-import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.businesstype.PathConnection;
 import org.openo.sdno.model.servicemodel.common.enumeration.BodMode;
 import org.openo.sdno.model.servicemodel.common.enumeration.TunnelSelectMode;
 import org.openo.sdno.model.servicemodel.common.enumeration.TunnelTechType;
+import org.openo.sdno.wanvpn.util.paradesc.ContainerSizeDesc;
+import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
+import org.openo.sdno.wanvpn.util.paradesc.IntegerDesc;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 
 /**
  * Tunnel Specific Path Constraint Class<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 4, 2016
  */
@@ -49,12 +50,16 @@ public class TunnelSpecificPathConstraint extends AbstractSvcModel {
     @EnumDesc(BodMode.class)
     private String bodMode;
 
-    private int bandwidth;
+    @IntegerDesc(minVal = 0, maxVal = 4000000000L)
+    private long bandwidth;
+
+    @IntegerDesc(minVal = 0, maxVal = 60000000L)
+    private long latency;
 
     @ContainerSizeDesc(maxSize = 1000)
     private List<String> bindingTunnels;
 
-    public int getBandwidth() {
+    public long getBandwidth() {
         return bandwidth;
     }
 
@@ -79,7 +84,7 @@ public class TunnelSpecificPathConstraint extends AbstractSvcModel {
         return uuid;
     }
 
-    public void setBandwidth(int bandwidth) {
+    public void setBandwidth(long bandwidth) {
         this.bandwidth = bandwidth;
     }
 
@@ -110,6 +115,20 @@ public class TunnelSpecificPathConstraint extends AbstractSvcModel {
     @Override
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    /**
+     * @return Returns the latency.
+     */
+    public long getLatency() {
+        return latency;
+    }
+
+    /**
+     * @param latency The latency to set.
+     */
+    public void setLatency(long latency) {
+        this.latency = latency;
     }
 
 }

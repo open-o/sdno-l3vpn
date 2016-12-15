@@ -18,13 +18,12 @@ package org.openo.sdno.model.servicemodel.tunnel;
 
 import java.util.List;
 
-import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 
 /**
- * 
  * Path Constraints class<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 4, 2016
  */
@@ -34,6 +33,8 @@ public class PathConstraints extends AbstractSvcModel {
     private String uuid;
 
     private List<TunnelSpecificPathConstraint> tunnelConstraints;
+
+    private List<PWSpecPathConstraint> pwConstraints;
 
     public List<TunnelSpecificPathConstraint> getTunnelConstraints() {
         return tunnelConstraints;
@@ -51,5 +52,19 @@ public class PathConstraints extends AbstractSvcModel {
     @Override
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    /**
+     * @return Returns the pwConstraints.
+     */
+    public List<PWSpecPathConstraint> getPwConstraints() {
+        return pwConstraints;
+    }
+
+    /**
+     * @param pwConstraints The pwConstraints to set.
+     */
+    public void setPwConstraints(List<PWSpecPathConstraint> pwConstraints) {
+        this.pwConstraints = pwConstraints;
     }
 }

@@ -16,17 +16,16 @@
 
 package org.openo.sdno.model.servicemodel.common;
 
-import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
-import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.ObjectType;
-import org.openo.sdno.model.servicemodel.common.enumeration.RouteRole;
+import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 
 /**
  * Object Identifier<br>
  * <p>
  * </p>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 4, 2016
  */
@@ -41,11 +40,8 @@ public class ObjectIdentifier extends AbstractSvcModel {
     @StringDesc(maxLen = 36)
     private String objectId;
 
-    @EnumDesc(RouteRole.class)
-    private String objectRouteRole;
-
     @StringDesc(maxLen = 200)
-    private String appendix;
+    private String roleLabel;
 
     public String getObjectType() {
         return objectType;
@@ -63,22 +59,6 @@ public class ObjectIdentifier extends AbstractSvcModel {
         this.objectId = objectId;
     }
 
-    public String getObjectRouteRole() {
-        return objectRouteRole;
-    }
-
-    public void setObjectRouteRole(String objectRouteRole) {
-        this.objectRouteRole = objectRouteRole;
-    }
-
-    public String getAppendix() {
-        return appendix;
-    }
-
-    public void setAppendix(String appendix) {
-        this.appendix = appendix;
-    }
-
     @Override
     public String getUuid() {
         return uuid;
@@ -87,6 +67,20 @@ public class ObjectIdentifier extends AbstractSvcModel {
     @Override
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    /**
+     * @return Returns the roleLabel.
+     */
+    public String getRoleLabel() {
+        return roleLabel;
+    }
+
+    /**
+     * @param roleLabel The roleLabel to set.
+     */
+    public void setRoleLabel(String roleLabel) {
+        this.roleLabel = roleLabel;
     }
 
 }

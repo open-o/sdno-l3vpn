@@ -20,12 +20,12 @@ import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of tunnel select mode.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-6
  */
 public enum TunnelSelectMode implements ModelEnum {
-    AUTO_CREATE("AutoCreate"), AUTO_SELECT("AutoSelect"), MANUAL_BINDING("MannualSelect");
+    AUTO_CREATE("AutoCreate"), AUTO_SELECT("AutoSelect"), MANUAL_BINDING("MannualSelect"), NOP("NOP");
 
     private String alias;
 

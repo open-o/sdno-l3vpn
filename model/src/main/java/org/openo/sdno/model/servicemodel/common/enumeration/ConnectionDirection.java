@@ -20,18 +20,18 @@ import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of connection direction.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-6
  */
 public enum ConnectionDirection implements ModelEnum {
-    CD_UNI("uni"), CD_BI("bi");
+    CD_UNI("CD_UNI"), CD_BI("CD_BI");
 
     private String alias;
 
     /**
      * Constructor<br>
-     * 
+     *
      * @param alias Name used in serialization.
      * @since SDNO 0.5
      */

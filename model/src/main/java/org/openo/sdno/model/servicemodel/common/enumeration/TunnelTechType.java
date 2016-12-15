@@ -20,12 +20,13 @@ import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of tunnel technology type.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-6
  */
 public enum TunnelTechType implements ModelEnum {
-    NOP("NOP"), LDP("LDP"), RSVP_TE("RSVP-TE"), SR_TE("SR-TE"), MPLS_TP("MPLS-TP"), TE_ANY("TE-ANY");
+    NOP("NOP"), LDP("LDP"), RSVP_TE("RSVP-TE"), SR_TE("SR-TE"), MPLS_TP("MPLS-TP"), TE_ANY("TE-ANY"), TE("TE"),
+    GRE("GRE");
 
     private String alias;
 

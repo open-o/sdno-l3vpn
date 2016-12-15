@@ -21,18 +21,18 @@ import java.util.List;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.openo.sdno.framework.container.util.UuidUtils;
 import org.openo.sdno.model.common.NVString;
-import org.openo.sdno.wanvpn.util.paradesc.ContainerSizeDesc;
-import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
-import org.openo.sdno.wanvpn.util.paradesc.NotNullDesc;
-import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.OperStatus;
 import org.openo.sdno.model.servicemodel.common.enumeration.SyncStatus;
 import org.openo.sdno.model.servicemodel.tp.Tp;
+import org.openo.sdno.wanvpn.util.paradesc.ContainerSizeDesc;
+import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
+import org.openo.sdno.wanvpn.util.paradesc.NotNullDesc;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 
 /**
  * Virtual Private Network class<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 4, 2016
  */
@@ -66,9 +66,11 @@ public class Vpn extends AbstractSvcModel {
     @ContainerSizeDesc(maxSize = 1000)
     private List<NVString> addtionalInfo;
 
+    private List<NVString> actionState;
+
     /**
      * Constructor<br>
-     * 
+     *
      * @param composedVpn composeVpn to set
      * @since SDNO 0.5
      */
@@ -82,7 +84,7 @@ public class Vpn extends AbstractSvcModel {
 
     /**
      * Constructor<br>
-     * 
+     *
      * @since SDNO 0.5
      */
     public Vpn() {
@@ -163,6 +165,20 @@ public class Vpn extends AbstractSvcModel {
     @JsonIgnore
     public void setUuid(final String uuid) {
         id = uuid;
+    }
+
+    /**
+     * @return Returns the actionState.
+     */
+    public List<NVString> getActionState() {
+        return actionState;
+    }
+
+    /**
+     * @param actionState The actionState to set.
+     */
+    public void setActionState(List<NVString> actionState) {
+        this.actionState = actionState;
     }
 
 }

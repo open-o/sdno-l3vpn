@@ -16,15 +16,14 @@
 
 package org.openo.sdno.model.servicemodel.tunnel;
 
-import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
-import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 import org.openo.sdno.model.servicemodel.AbstractSvcModel;
 import org.openo.sdno.model.servicemodel.common.enumeration.PwVlanActionType;
+import org.openo.sdno.wanvpn.util.paradesc.EnumDesc;
+import org.openo.sdno.wanvpn.util.paradesc.StringDesc;
 
 /**
- * 
  * PW Specification Class <br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 4, 2016
  */
@@ -33,19 +32,10 @@ public class PWSpec extends AbstractSvcModel {
     @StringDesc(maxLen = 36)
     private String uuid;
 
-    @StringDesc(maxLen = 200)
-    private String controlWord;
+    private boolean controlWord;
 
     @EnumDesc(PwVlanActionType.class)
     private String pwVlanAction;
-
-    public String getControlWord() {
-        return controlWord;
-    }
-
-    public void setControlWord(String controlWord) {
-        this.controlWord = controlWord;
-    }
 
     public String getPwVlanAction() {
         return pwVlanAction;
@@ -63,5 +53,19 @@ public class PWSpec extends AbstractSvcModel {
     @Override
     public void setUuid(final String uuid) {
         this.uuid = uuid;
+    }
+
+    /**
+     * @return Returns the controlWord.
+     */
+    public boolean isControlWord() {
+        return controlWord;
+    }
+
+    /**
+     * @param controlWord The controlWord to set.
+     */
+    public void setControlWord(boolean controlWord) {
+        this.controlWord = controlWord;
     }
 }
