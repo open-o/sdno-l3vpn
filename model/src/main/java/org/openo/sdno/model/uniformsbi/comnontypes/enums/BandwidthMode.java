@@ -16,17 +16,36 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
-public enum BandwidthMode {
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
+import org.openo.sdno.wanvpn.util.ModelEnum;
+
+public enum BandwidthMode implements ModelEnum {
     ORIGINAL("original-bandwidth"), DYNAMIC("dynamic-bandwidth");
 
-    String name;
+    private String alias;
 
-    private BandwidthMode(String name) {
-        this.name = name;
+    private BandwidthMode(String alias) {
+        this.alias = alias;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String getAlias() {
+        return alias;
     }
 
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static BandwidthMode fromName(String name) {
+        return EnumUtil.valueOf(BandwidthMode.class, name);
+    }
 }

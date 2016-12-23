@@ -16,22 +16,42 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
+import org.openo.sdno.wanvpn.util.ModelEnum;
+
 /**
  * The enumeration class of different service.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum DiffServCLass {
+public enum DiffServCLass implements ModelEnum {
     BE("BE"), AF1("AF1"), AF2("AF2"), AF3("AF3"), AF4("AF4"), EF("EF"), CS6("CS6"), CS7("CS7");
 
-    private String name;
+    private String alias;
 
-    private DiffServCLass(String name) {
-        this.name = name;
+    private DiffServCLass(String alias) {
+        this.alias = alias;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String getAlias() {
+        return alias;
+    }
+
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static DiffServCLass fromName(String name) {
+        return EnumUtil.valueOf(DiffServCLass.class, name);
     }
 }

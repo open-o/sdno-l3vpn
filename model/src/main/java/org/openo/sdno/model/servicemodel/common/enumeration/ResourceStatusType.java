@@ -16,11 +16,13 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
 import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of resource status type.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 9, 2016
  */
@@ -29,13 +31,7 @@ public enum ResourceStatusType implements ModelEnum {
 
     private String alias;
 
-    /**
-     * Constructor<br>
-     * 
-     * @param alias Name used in serialization.
-     * @since SDNO 0.5
-     */
-    ResourceStatusType(String alias) {
+    private ResourceStatusType(String alias) {
         this.alias = alias;
     }
 
@@ -43,4 +39,20 @@ public enum ResourceStatusType implements ModelEnum {
     public String getAlias() {
         return alias;
     }
+
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static ResourceStatusType fromName(String name) {
+        return EnumUtil.valueOf(ResourceStatusType.class, name);
+    }
+
 }

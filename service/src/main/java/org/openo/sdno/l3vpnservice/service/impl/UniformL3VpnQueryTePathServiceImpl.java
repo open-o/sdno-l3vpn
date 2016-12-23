@@ -25,7 +25,6 @@ import javax.ws.rs.core.Context;
 
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.l3vpnservice.service.inf.L3VpnQueryTePathService;
-import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.openo.sdno.model.servicemodel.common.enumeration.PathRole;
 import org.openo.sdno.model.servicemodel.tepath.ServiceTePath;
 import org.openo.sdno.model.servicemodel.tepath.TePath;
@@ -33,11 +32,12 @@ import org.openo.sdno.model.servicemodel.tepath.TePathQueryKey;
 import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.uniformsbi.comnontypes.enums.PathStatus;
+import org.openo.sdno.wanvpn.util.query.BatchQueryResult;
 import org.springframework.stereotype.Service;
 
 /**
  * Uniform L3VPN query TE path service implement class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-5-31
  */
@@ -73,7 +73,7 @@ public class UniformL3VpnQueryTePathServiceImpl implements L3VpnQueryTePathServi
         }
 
         tePath.setPathRole(PathRole.WORK.getAlias());
-        tePath.setPathStatus(PathStatus.ACTIVE.getName());
+        tePath.setPathStatus(PathStatus.ACTIVE.getAlias());
         tePath.setIngressNeid(ingressNeId);
         tePath.setEgressNeid(egressNeId);
         tePath.setPathList(serviceTePathList);

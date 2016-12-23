@@ -34,7 +34,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * The implement class of the L2 access translator.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 1, 2016
  */
@@ -50,7 +50,7 @@ public class L3VpnL2AccessTranslatorImpl implements L3VpnL2AccessTranslator {
     public L2Access translate(TranslatorCtx ctx) throws ServiceException {
         final Object tp = ctx.getVal(VpnContextKeys.TP);
         if(tp instanceof Tp) {
-            return translateL2Access(ctx, (Tp) tp);
+            return translateL2Access(ctx, (Tp)tp);
         }
         LOGGER.error("invalid data type of key \"Tp\"");
         return null;
@@ -66,7 +66,7 @@ public class L3VpnL2AccessTranslatorImpl implements L3VpnL2AccessTranslator {
                 l2Access.setDot1qVlanBitmap(Integer.parseInt(ethernetTpSpec.getDot1qVlanList()));
                 l2Access.setQinqCvlanBitmap(ethernetTpSpec.getQinqCvlanList());
                 l2Access.setQinqSvlanBitmap(ethernetTpSpec.getQinqSvlanList());
-                l2Access.setL2AccessType(TranslatorUtil.s2nL2AccessType(ethernetTpSpec.getAccessType()).getName());
+                l2Access.setL2AccessType(TranslatorUtil.s2nL2AccessType(ethernetTpSpec.getAccessType()).getAlias());
             }
         }
         return l2Access;

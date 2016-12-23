@@ -16,11 +16,13 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
 import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
  * The enumeration class of pool apply policy.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 9, 2016
  */
@@ -29,13 +31,7 @@ public enum PoolApplyPolicy implements ModelEnum {
 
     private String alias;
 
-    /**
-     * Constructor<br>
-     * 
-     * @param alias Name used in serialization.
-     * @since SDNO 0.5
-     */
-    PoolApplyPolicy(String alias) {
+    private PoolApplyPolicy(String alias) {
         this.alias = alias;
     }
 
@@ -43,4 +39,20 @@ public enum PoolApplyPolicy implements ModelEnum {
     public String getAlias() {
         return alias;
     }
+
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static PoolApplyPolicy fromName(String name) {
+        return EnumUtil.valueOf(PoolApplyPolicy.class, name);
+    }
+
 }

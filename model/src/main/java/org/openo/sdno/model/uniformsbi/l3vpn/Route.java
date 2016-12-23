@@ -22,7 +22,7 @@ import org.openo.sdno.model.uniformsbi.comnontypes.enums.RouteType;
 
 /**
  * Route model class.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 August 4, 2016
  */
@@ -41,29 +41,29 @@ public class Route {
 
     /**
      * Constructor<br>
-     * 
+     *
      * @param staticRoutes Static routes to be set
      * @since SDNO 0.5
      */
     public Route(StaticRoutes staticRoutes) {
-        this.type = RouteType.STATIC.getName();
+        this.type = RouteType.STATIC.getAlias();
         this.staticRoutes = staticRoutes;
     }
 
     /**
      * Constructor<br>
-     * 
+     *
      * @param bgpRoutes BGP routes to be set
      * @since SDNO 0.5
      */
     public Route(BgpRoutes bgpRoutes) {
-        this.type = RouteType.BGP.getName();
+        this.type = RouteType.BGP.getAlias();
         this.bgpRoutes = bgpRoutes;
     }
 
     /**
      * Constructor<br>
-     * 
+     *
      * @since SDNO 0.5
      */
     public Route() {

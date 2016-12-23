@@ -16,22 +16,42 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
+import org.openo.sdno.wanvpn.util.ModelEnum;
+
 /**
  * The enumeration class of route type.<br>
- * 
+ *
  * @author
  * @version SDNO 0.5 2016-6-6
  */
-public enum RouteType {
+public enum RouteType implements ModelEnum {
     STATIC("static"), BGP("bgp");
 
-    private String name;
+    private String alias;
 
-    private RouteType(String name) {
-        this.name = name;
+    private RouteType(String alias) {
+        this.alias = alias;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String getAlias() {
+        return alias;
+    }
+
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static RouteType fromName(String name) {
+        return EnumUtil.valueOf(RouteType.class, name);
     }
 }

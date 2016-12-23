@@ -16,6 +16,8 @@
 
 package org.openo.sdno.model.servicemodel.common.enumeration;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
 import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
@@ -29,7 +31,7 @@ public enum TunnelSelectMode implements ModelEnum {
 
     private String alias;
 
-    TunnelSelectMode(String alias) {
+    private TunnelSelectMode(String alias) {
         this.alias = alias;
     }
 
@@ -37,4 +39,20 @@ public enum TunnelSelectMode implements ModelEnum {
     public String getAlias() {
         return alias;
     }
+
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static TunnelSelectMode fromName(String name) {
+        return EnumUtil.valueOf(TunnelSelectMode.class, name);
+    }
+
 }

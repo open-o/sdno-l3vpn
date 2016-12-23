@@ -16,6 +16,8 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
 import org.openo.sdno.wanvpn.util.ModelEnum;
 
 /**
@@ -33,16 +35,23 @@ public enum TopologyRole implements ModelEnum {
         this.alias = alias;
     }
 
-    /**
-     * <br>
-     *
-     * @return
-     * @since SDNO 0.5
-     */
     @Override
     public String getAlias() {
-        // TODO Auto-generated method stub
         return alias;
     }
 
+    @Override
+    public String toString() {
+        return alias;
+    }
+
+    /**
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
+     */
+    @JsonCreator
+    public static TopologyRole fromName(String name) {
+        return EnumUtil.valueOf(TopologyRole.class, name);
+    }
 }

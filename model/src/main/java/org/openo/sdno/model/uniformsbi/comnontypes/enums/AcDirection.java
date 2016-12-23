@@ -16,34 +16,43 @@
 
 package org.openo.sdno.model.uniformsbi.comnontypes.enums;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+import org.openo.sdno.wanvpn.util.EnumUtil;
+import org.openo.sdno.wanvpn.util.ModelEnum;
+
 /**
  * Enumeration of topology role of hubSpoke topology.
- * 
+ *
  * @author
  * @version SDNO 0.5 Oct 18, 2016
  */
-public enum AcDirection {
+public enum AcDirection implements ModelEnum {
 
     NONE("none"), IN("in"), OUT("out");
 
-    private String name;
+    private String alias;
 
-    AcDirection(String name) {
-        this.name = name;
+    private AcDirection(String alias) {
+        this.alias = alias;
+    }
+
+    @Override
+    public String getAlias() {
+        return alias;
+    }
+
+    @Override
+    public String toString() {
+        return alias;
     }
 
     /**
-     * @return Returns the name.
+     * @param name Can be name or alias.
+     * @return Enumeration instance
+     * @since SDNO 0.5
      */
-    public String getName() {
-        return name;
+    @JsonCreator
+    public static AcDirection fromName(String name) {
+        return EnumUtil.valueOf(AcDirection.class, name);
     }
-
-    /**
-     * @param name The name to set.
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
 }
