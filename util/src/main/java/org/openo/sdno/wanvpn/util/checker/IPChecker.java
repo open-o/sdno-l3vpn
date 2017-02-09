@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ import java.lang.reflect.Field;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.apache.log4j.Logger;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.util.ip.IpUtils;
 import org.openo.sdno.wanvpn.util.error.CommonErrorCode;
@@ -36,6 +37,8 @@ import org.openo.sdno.wanvpn.util.paradesc.IPDesc.IPType;
  * @version SDNO 0.5 2016-6-1
  */
 public class IPChecker {
+
+    private static Logger logger = Logger.getLogger(IPChecker.class);
 
     private IPChecker() {
     }
@@ -159,11 +162,13 @@ public class IPChecker {
             throws ServiceException {
         if(hasMask) {
             if(!IpUtils.isValidCidr(strVal)) {
+                logger.error("checkPattern exception, fieldName: " + fieldName + "; value: " + strVal + "; hasMask: " + hasMask);
                 throw getBadRequestServiceExceptionWithCommonArgs(CommonErrorCode.CHECKER_CIDR_INVALID,
                         new String[] {fieldName, strVal});
             }
         } else {
             if(!IpUtils.isValidAddress(strVal)) {
+                logger.error("checkPattern exception, fieldName: " + fieldName + "; value: " + strVal + "; hasMask: " + hasMask);
                 throw getBadRequestServiceExceptionWithCommonArgs(CommonErrorCode.CHECKER_IP_INVALID,
                         new String[] {fieldName, strVal});
             }
