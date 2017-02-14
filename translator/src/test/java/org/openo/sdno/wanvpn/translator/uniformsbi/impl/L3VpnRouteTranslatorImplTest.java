@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,8 +64,15 @@ public class L3VpnRouteTranslatorImplTest {
         String filePath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
                 + File.separator + "resources" + File.separator + "routeSpec.json";
         RouteProtocolSpec routeSpec = JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath), RouteProtocolSpec.class);
+
+        String filePath2 = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
+                + File.separator + "resources" + File.separator + "routeSpec2.json";
+        RouteProtocolSpec routeSpec2 =
+                JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath2), RouteProtocolSpec.class);
+
         List<RouteProtocolSpec> routeSpecLst = new ArrayList<RouteProtocolSpec>();
         routeSpecLst.add(routeSpec);
+        routeSpecLst.add(routeSpec2);
         ctx.addVal(VpnContextKeys.PROTOCOL, routeSpecLst);
         service.setL3VpnStaticRouteTranslator(new L3VpnStaticRouteTranslatorImpl());
         service.setL3VpnBgpRouteTranslator(new L3VpnBgpRouteTranslatorImpl());

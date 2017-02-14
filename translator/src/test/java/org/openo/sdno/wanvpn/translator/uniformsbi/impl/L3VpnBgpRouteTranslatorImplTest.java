@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 Huawei Technologies Co., Ltd.
+ * Copyright 2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 package org.openo.sdno.wanvpn.translator.uniformsbi.impl;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -24,47 +26,43 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.framework.container.util.JsonUtil;
-import org.openo.sdno.model.servicemodel.tp.Tp;
+import org.openo.sdno.model.servicemodel.routeprotocol.BgpProtocolItem;
+import org.openo.sdno.model.uniformsbi.l3vpn.BgpRoute;
 import org.openo.sdno.wanvpn.JsonFileUtil;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
-import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxImpl;
+import org.openo.sdno.wanvpn.translator.impl.TranslatorCtxFactoryImpl;
 import org.openo.sdno.wanvpn.translator.inf.TranslatorCtx;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import junit.framework.Assert;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:/spring/applicationContext.xml",
                 "classpath*:META-INF/spring/service.xml", "classpath*:spring/service.xml"})
-public class L3AcTranslatorImplTest {
+public class L3VpnBgpRouteTranslatorImplTest {
 
     @Autowired
-    L3AcTranslatorImpl service;
+    L3VpnBgpRouteTranslatorImpl l3VpnBgpRouteTranslatorImpl;
 
     @Before
-    public void setUp() {
-
+    public void setUp() throws Exception {
     }
 
     @Test
     public void testTranslate() throws ServiceException, IOException {
-        TranslatorCtx ctx = new TranslatorCtxImpl();
-        ctx.setOperType(OperType.CREATE);
-
-        String filePath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
-                + File.separator + "resources" + File.separator + "tp2.json";
-        Tp tp = JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath), Tp.class);
-        ctx.addVal(VpnContextKeys.TP, tp);
-        service.translate(ctx);
-
-        TranslatorCtx ctx2 = new TranslatorCtxImpl();
-        ctx2.addVal(VpnContextKeys.TP, null);
-        Assert.assertEquals(null, service.translate(ctx2));
-        Assert.assertNotNull(service.getL3VpnL2AccessTranslator());
-        Assert.assertNotNull(service.getL3VpnL3AccessTranslator());
+        final String filePath = new File("src/test/resources/bgpProtocolItem.json").getCanonicalPath();
+        BgpProtocolItem bgpProtocolItem =
+                JsonUtil.fromJson(JsonFileUtil.getJsonString(filePath), BgpProtocolItem.class);
+        bgpProtocolItem.setPassword("Test_1234");
+        bgpProtocolItem.setPeerAsNumber(3);
+        bgpProtocolItem.setPeerIp("127.0.0.2");
+        TranslatorCtxFactoryImpl translatorCtxFactory = new TranslatorCtxFactoryImpl();
+        final TranslatorCtx translatorCtx = translatorCtxFactory.getTranslatorCtx(OperType.CREATE);
+        translatorCtx.addVal(VpnContextKeys.BGPROUTE, bgpProtocolItem);
+        BgpRoute bgpRoute = l3VpnBgpRouteTranslatorImpl.translate(translatorCtx);
+        assertEquals(bgpRoute.getPassword(), bgpProtocolItem.getPassword());
+        assertEquals(bgpRoute.getPeerIp(), bgpProtocolItem.getPeerIp());
+        assertEquals(bgpRoute.getRemoteAs(), bgpProtocolItem.getPeerAsNumber().toString());
     }
-
 }

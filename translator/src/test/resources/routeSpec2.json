@@ -1,0 +1,19 @@
+{
+  "uuid": null,
+  "type": "bgp",
+  "staticRoute": null,
+  "bgpRoute": {
+    "id": "id",
+    "idx": 1,
+    "peerAsNumber": 2,
+    "keepAliveTime": 10,
+    "holdTime": 10,
+    "password": "password",
+    "bgpMaxPrefix": 1,
+    "bgpMaxPrefixAlarm": 2,
+    "peerIp": "2.2.2.2",
+    "community": "false",
+    "extCommunity": "true"
+  },
+  "addtionalInfo": null
+}

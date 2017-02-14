@@ -1,0 +1,44 @@
+{
+    "uuid": null,
+    "tunnelTech": "RSVP-TE",
+    "pwTech": {
+        "uuid": null,
+        "controlWord": "false",
+        "pwVlanAction": "Raw"
+    },
+    "tunnelLatency": 2000,
+    "tunnelSelectMode": null,
+    "tunnelCreatePolicy": {
+        "uuid": null,
+        "bestEffort": "false",
+        "shareMode": "delegate",
+        "coRoute": "true",
+        "bfdEnable": "true",
+        "pathConstraint": {
+            "uuid": null,
+            "setupPriority": 4,
+            "holdupPriority": 4
+        }
+    },
+    "tunnelAutoSelectPolicy": {
+        "uuid": null,
+        "loadBalanceNum": 1,
+        "selectTunnels": [
+        {
+            "uuid": null,
+            "tunnelTech": "LDP",
+            "priority": 1
+        },
+        {
+            "uuid": null,
+            "tunnelTech": "SR-TE",
+            "priority": 2
+        },
+        {
+            "uuid": null,
+            "tunnelTech": "RSVP-TE",
+            "priority": 3
+        }
+        ]
+    }
+}

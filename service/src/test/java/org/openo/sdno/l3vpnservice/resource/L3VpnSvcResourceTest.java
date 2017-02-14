@@ -25,6 +25,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.Context;
 
 import org.apache.commons.httpclient.HttpStatus;
 import org.junit.After;
@@ -111,6 +112,47 @@ public class L3VpnSvcResourceTest {
 
     @Test
     public void testDeleteSingleVpn() throws ServiceException {
+
+        new MockUp<Vpn>() {
+
+            @Mock
+            public VpnBasicInfo getVpnBasicInfo() {
+                return new VpnBasicInfo();
+            }
+
+            @Mock
+            public List<Tp> getAccessPointList() {
+                List<Tp> tps = new ArrayList<>();
+                tps.add(new Tp());
+                return tps;
+            }
+
+        };
+
+        new MockUp<ControllerUtils>() {
+
+            @Mock
+            public String getControllerUUID(final Vpn vpn) throws ServiceException {
+                return "controllerId";
+            }
+
+        };
+
+        Vpn rs = l3VpnSvcResource.deleteSingleVpn("uuid", request);
+        Assert.assertNotNull(rs);
+    }
+
+    @Test
+    public void testDeleteSingleVpnWhenGetVpnForDeleteIsNull() throws ServiceException {
+
+        new MockUp<L3VpnSvcResource>() {
+
+            @Mock
+            Vpn getVpnForDelete(final String uuid, @Context final HttpServletRequest request) throws ServiceException {
+                return null;
+            }
+
+        };
 
         new MockUp<Vpn>() {
 

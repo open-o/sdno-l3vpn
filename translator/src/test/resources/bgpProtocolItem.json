@@ -1,0 +1,13 @@
+{
+    "id": null,
+    "idx": 1,
+    "peerAsNumber": 2,
+    "keepAliveTime": 100,
+    "holdTime": 100,
+    "password": "Huawei123",
+    "bgpMaxPrefix": 100,
+    "bgpMaxPrefixAlarm": 50,
+    "peerIp": "10.1.0.1",
+    "community": "true",
+    "extCommunity": "false"
+}

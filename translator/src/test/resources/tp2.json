@@ -5,8 +5,8 @@
   "adminStatus": "inactive",
   "operStatus": "down",
   "neId": "2d9793c4-02dd-4b7d-975e-53dbc59c6d2b",
-  "edgePointRole": null,
-  "hubSpoke": null,
+  "edgePointRole": "ASBR",
+  "hubSpoke": "hub",
   "type": "CTP",
   "workingLayer": "LR_IP",
   "typeSpecList": [
@@ -16,12 +16,15 @@
       "ethernetTpSpec": {
         "uuid": "3a9efe5c-d6c4-426d-ac8e-141ebfed934d",
         "accessType": "dot1q",
-        "vlanAction": null,
-        "actionValue": null,
-        "qinqCvlanList": null,
-        "qinqSvlanList": null,
+        "vlanAction": "untag",
+        "actionValue": "111",
+        "qinqCvlanList": "222",
+        "qinqSvlanList": "333",
         "dot1qVlanList": "23",
-        "addtionalInfo": null
+        "addtionalInfo": [{
+            "name": "name1",
+            "value": "value1"
+        }]
       },
       "ipTpSpec": {
         "uuid": "5864f7e2-12d7-4493-aa73-37399d3aaca5",
@@ -41,8 +44,61 @@
     "location": null,
     "addtionalInfo": null
   },
-  "inboundQosPolicyId": null,
-  "outboundQosPolicyId": null,
+  "qosProfileId": "qosProfileId",
+  "inboundQosPolicyId": "inboundQosPolicyId",
+  "outboundQosPolicyId": "outboundQosPolicyId",
+  "inboundQueueProfileId": "inboundQueueProfileId",
+  "outboundQueueProfileId": "outboundQueueProfileId",
+  "routeProtocolSpecs": [{
+    "uuid": "uuid",
+    "type": "bgp",
+    "addtionalInfo": null,
+    "bgpRoute": {
+        "id": "id",
+        "idx": 1,
+        "peerAsNumber": 2,
+        "keepAliveTime": 10,
+        "holdTime": 10,
+        "password": "password",
+        "bgpMaxPrefix": 1,
+        "bgpMaxPrefixAlarm": 2,
+        "peerIp": "2.2.2.2",
+        "community": "false",
+        "extCommunity": "true"
+    },
+    "staticRoute": null
+  },
+  {
+    "uuid": "uuid2",
+    "type": "staticRouting",
+    "addtionalInfo": null,
+    "bgpRoute": null,
+    "staticRoute": {
+        "uuid": "uuid",
+        "destinationCidr": "destinationCidr",
+        "routePreference": "routePreference",
+        "nextHopIp": "10.21.1.1",
+        "type": "type",
+        "addtionalInfo": [{
+            "name": "name1",
+            "value": "value1"
+        }]
+    }
+  }],
+  "containedMainTP": "3eb1a10d-5d43-468c-80cc-5f067d784b8a",
+  "controllerMO": {
+    "id": "id",
+    "name": "name",
+    "objectId": "objectId",
+    "category": "category",
+    "productName": "productName",
+    "version": "version",
+    "hostName": "hostName",
+    "slaveHostName": "slaveHostName",
+    "description": "description",
+    "vendor": "vendor"
+  },
+  "direction": "IN",
   "inBoundTpCar": {
     "uuid": "e437859c-8b62-4155-9703-1be47287ff41",
     "enableCar": false,
@@ -59,7 +115,5 @@
     "cbs": 0,
     "pbs": 0
   },
-  "routeProtocolSpecs": null,
-  "containedMainTP": "3eb1a10d-5d43-468c-80cc-5f067d784b8a",
   "addtionalInfo": null
 }

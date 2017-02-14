@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,6 @@ import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.baseservice.roa.util.restclient.RestfulResponse;
 import org.openo.sdno.model.uniformsbi.base.AdapterResponseInfo;
 import org.openo.sdno.wanvpn.JsonFileUtil;
-import org.openo.sdno.wanvpn.translator.uniformsbi.impl.ResponsTranslatorImpl;
 
 public class ResponsTranslatorImplTest {
 
@@ -45,6 +44,25 @@ public class ResponsTranslatorImplTest {
         response.setStatus(200);
         AdapterResponseInfo rs = transService.tranlate(response);
         Assert.assertNotNull(rs);
+    }
+
+    @Test
+    public void testTranlateNull() throws IOException, ServiceException {
+        ResponsTranslatorImpl transService = new ResponsTranslatorImpl();
+        AdapterResponseInfo rs = transService.tranlate(null);
+        Assert.assertNull(rs);
+    }
+
+    @Test(expected = ServiceException.class)
+    public void testTranlateException() throws IOException, ServiceException {
+        ResponsTranslatorImpl transService = new ResponsTranslatorImpl();
+
+        String filePath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
+                + File.separator + "resources" + File.separator + "response.json";
+        RestfulResponse response = new RestfulResponse();
+        response.setResponseJson(JsonFileUtil.getJsonString(filePath));
+        response.setStatus(500);
+        transService.tranlate(response);
     }
 
 }
