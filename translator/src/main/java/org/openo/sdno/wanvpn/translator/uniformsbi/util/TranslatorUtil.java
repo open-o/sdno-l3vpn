@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -82,7 +82,7 @@ public class TranslatorUtil {
      */
     public static EncapType n2sL2AccessType(final String accessType) {
         EncapType l2AccessType = EncapType.DOT1Q;
-        if(Objects.equals(L2AccessType.QINQ.getAlias(), accessType)) {
+        if(Objects.equals(L2AccessType.DOT1Q.getAlias(), accessType)) {
             l2AccessType = EncapType.DOT1Q;
         } else if(Objects.equals(L2AccessType.PORT.getAlias(), accessType)) {
             l2AccessType = EncapType.UNTAG;
