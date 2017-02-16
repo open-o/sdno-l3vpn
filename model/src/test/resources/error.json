@@ -1,0 +1,12 @@
+{
+    "error-type": "error-type",
+    "error-tag": "OperateForbidden",
+    "error-path": "error-path",
+    "error-message": "error-message",
+    "error-info": {
+        "errorCode": "errorCode",
+        "errorParas": {
+            "errorPara": ["111"]
+        }
+    }
+}
