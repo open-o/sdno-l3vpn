@@ -1,0 +1,35 @@
+{
+    "mtu": 1,
+    "acs": {
+        "uuid": null,
+        "ac": [{
+            "l2Access": {
+                "accessType": "accessType",
+                "dot1qVlanBitmap": 1,
+                "qinqSvlanBitmap": "1",
+                "qinqCvlanBitmap": "2",
+                "pushVlanId": "3",
+                "swapVlanId": "4",
+                "accessAction": "keep"
+            },
+            "externalQosPolicyId": "1"
+        }]
+    },
+    "ctrlWordType": "disable",
+    "pws": {
+        "uuid": null,
+        "pws": [{
+            "uuid": null,
+            "name": "name",
+            "description": "description",
+            "tenantId": "tenantId",
+            "neId": "neId",
+            "peerAddress": "10.2.0.1",
+            "tunnelId": "tunnelId",
+            "topoRole": "hub",
+            "protectionRole": "primary"
+        }]
+    },
+    "singalingType": "rsvp-te",
+    "encapsulation": "vlan"
+}

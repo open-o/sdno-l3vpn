@@ -1,0 +1,32 @@
+{
+    "uuid": null,
+    "name": "name",
+    "tenantUUID": "111",
+    "description": "description",
+    "location": "location",
+    "cpes": [{
+        "id": null,
+        "name": "name",
+        "description": "description",
+        "version": "version",
+        "logicID": "11",
+        "phyNeID": "22",
+        "controllerID": ["1"],
+        "siteID": ["2"],
+        "productName": "productName",
+        "isVirtual": "isVirtual",
+        "ipAddress": "ipAddress",
+        "source": "source",
+        "owner": "owner",
+        "location": "location",
+        "serialNumber": "2",
+        "manufacturer": "manufacturer",
+        "manufactureDate": "manufactureDate",
+        "adminState": "adminState",
+        "operState": "operState",
+        "nativeID": "nativeID"
+    }],
+    "type": "type",
+    "asName": "asName",
+    "asUuid": "asUuid"
+}

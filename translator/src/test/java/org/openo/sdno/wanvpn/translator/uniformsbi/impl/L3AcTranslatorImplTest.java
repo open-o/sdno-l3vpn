@@ -65,6 +65,11 @@ public class L3AcTranslatorImplTest {
         Assert.assertEquals(null, service.translate(ctx2));
         Assert.assertNotNull(service.getL3VpnL2AccessTranslator());
         Assert.assertNotNull(service.getL3VpnL3AccessTranslator());
+
+        service.setL3VpnL3AccessTranslator(new L3VpnL3AccessTranslatorImpl());
+        service.setL3VpnL2AccessTranslator(new L3VpnL2AccessTranslatorImpl());
+        Assert.assertNotNull(service.getL3VpnL2AccessTranslator());
+        Assert.assertNotNull(service.getL3VpnL3AccessTranslator());
     }
 
 }

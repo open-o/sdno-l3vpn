@@ -17,7 +17,7 @@
         "uuid": "3a9efe5c-d6c4-426d-ac8e-141ebfed934d",
         "accessType": "dot1q",
         "vlanAction": "untag",
-        "actionValue": "111",
+        "actionValue": "KEEP",
         "qinqCvlanList": "222",
         "qinqSvlanList": "333",
         "dot1qVlanList": "23",
@@ -115,5 +115,8 @@
     "cbs": 0,
     "pbs": 0
   },
-  "addtionalInfo": null
+  "addtionalInfo": [{
+    "name": "pwPeerIp",
+    "value": "10.0.0.1"
+  }]
 }

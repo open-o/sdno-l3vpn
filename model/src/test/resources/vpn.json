@@ -1,0 +1,73 @@
+{
+    "id": "id",
+    "name": "name",
+    "tenantId": "tenantId",
+    "description": "description",
+    "topology": "topology",
+    "adminStatus": "adminUp",
+    "operStatus": "operateUp",
+    "tunnelService": {
+        "uuid": "uuid",
+        "type": "type",
+        "autoSelect": {
+            "uuid": null,
+            "loadBalanceNumber": 1,
+            "autoSelectTunnels": {
+                "autoSelectTunnel": [{
+                    "type": "type",
+                    "priority": 1
+                }]
+            }
+        },
+        "mplsTe": {
+            "signalType": "signalType",
+            "manageProtocol": "manageProtocol",
+            "sharing": false,
+            "besteffort": true,
+            "bandwidth": 1,
+            "coRoute": true,
+            "bfdEnable": true,
+            "pathConstraint": {
+                "latency": 10,
+                "setupPriority": 1,
+                "holdupPriority": 5
+            },
+            "pathProtectPolicy": {
+                "type": "type",
+                "hotStandbyEnable": true,
+                "revertive": false,
+                "bandwidthMode": 10,
+                "wtr": 10
+            }
+        },
+        "particularConstraints": {
+            "particularConstraint": [{
+                "ingressNe": "ingressNe",
+                "egressNe": "egressNe",
+                "type": "type",
+                "bindingTunnel": ["1"],
+                "mplsTe": {
+                    "signalType": "signalType",
+                    "manageProtocol": "manageProtocol",
+                    "sharing": false,
+                    "besteffort": false,
+                    "bandwidth": 100,
+                    "coRoute": true,
+                    "bfdEnable": false,
+                    "pathConstraint": {
+                        "latency": 1,
+                        "setupPriority": 1,
+                        "holdupPriority": 2
+                    },
+                    "pathProtectPolicy": {
+                        "type": "type",
+                        "hotStandbyEnable": false,
+                        "revertive": true,
+                        "bandwidthMode": 10,
+                        "wtr": 10
+                    }
+                }
+            }]
+        }
+    }
+}

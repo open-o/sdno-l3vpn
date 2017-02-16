@@ -1,0 +1,17 @@
+{
+    "direction": "IN",
+    "tePaths": [{
+        "pathRole": "pathRole",
+        "pathStatus": "pathStatus",
+        "ingressNeid": "ingressNeid",
+        "egressNeid": "egressNeid",
+        "pathList": [{
+            "neId": "neId",
+            "neName": "neName",
+            "ingressTpId": "ingressTpId",
+            "egressTpId": "egressTpId",
+            "ingressTpName": "ingressTpName",
+            "egressTpName": "egressTpName"
+        }]
+    }]
+}

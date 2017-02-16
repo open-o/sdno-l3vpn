@@ -1,0 +1,27 @@
+{
+    "uuid": null,
+    "name": "name",
+    "description": "description",
+    "tenantId": "111",
+    "businessTypeId": "1",
+    "vpnBasicInfo": {
+        "uuid": null,
+        "topology": "full-mesh",
+        "serviceType": "l3vpn",
+        "technology": "mpls",
+        "adminStatus": "partial",
+        "addtionalInfo": null,
+        "ipMtu": 50,
+        "ipVpnSpec": {
+            "id": null,
+            "labelMode": "PerRoute",
+            "frrEnable": "true"
+        }
+    },
+    "operStatus": "partial",
+    "syncStatus": "out-sync",
+    "startTime": "100",
+    "endTime": "200",
+    "accessPointList": null,
+    "addtionalInfo": null
+}

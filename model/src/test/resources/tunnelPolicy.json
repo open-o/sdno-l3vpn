@@ -1,0 +1,10 @@
+{
+    "uuid": null,
+    "selectMode": "auto",
+    "signalType": "static",
+    "protectionMode": "auto",
+    "reRouteMode": "never",
+    "reRouteDelay": 1,
+    "revertMode": true,
+    "revertDelay": "revertDelay"
+}

@@ -1,0 +1,9 @@
+{
+    "id": null,
+    "name": "name",
+    "type": "type",
+    "location": "location",
+    "description": "description",
+    "tenantID": "tenantID",
+    "tenantSiteIDs": ["1"]
+}

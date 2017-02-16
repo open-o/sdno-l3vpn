@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -63,6 +63,14 @@ public class L2VpnTranslatorImpl implements L2VpnTranslator {
 
     @Autowired
     private L3TunnelServiceTranslator l3TunnelServiceTranslator;
+
+    public void setL2AcTranslator(L2AcTranslator l2AcTranslator) {
+        this.l2AcTranslator = l2AcTranslator;
+    }
+
+    public void setL3TunnelServiceTranslator(L3TunnelServiceTranslator l3TunnelServiceTranslator) {
+        this.l3TunnelServiceTranslator = l3TunnelServiceTranslator;
+    }
 
     @Override
     public L2Vpn translate(final TranslatorCtx ctx) throws ServiceException {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Huawei Technologies Co., Ltd.
+ * Copyright 2016-2017 Huawei Technologies Co., Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,8 @@
 
 package org.openo.sdno.wanvpn.translator.uniformsbi.impl;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -23,8 +25,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openo.baseservice.remoteservice.exception.ServiceException;
 import org.openo.sdno.framework.container.util.JsonUtil;
+import org.openo.sdno.model.servicemodel.tp.Tp;
 import org.openo.sdno.model.servicemodel.vpn.Vpn;
 import org.openo.sdno.model.uniformsbi.l3vpn.L3Ac;
+import org.openo.sdno.model.uniformsbi.l3vpn.L3Vpn;
 import org.openo.sdno.wanvpn.JsonFileUtil;
 import org.openo.sdno.wanvpn.translator.common.OperType;
 import org.openo.sdno.wanvpn.translator.common.VpnContextKeys;
@@ -53,7 +57,7 @@ public class L3VpnTranslatorImplTest {
     }
 
     @Test
-    public void test() throws ServiceException, IOException {
+    public void testTranslate() throws ServiceException, IOException {
         TranslatorCtx ctx = new TranslatorCtxImpl();
         ctx.setOperType(OperType.CREATE);
 
@@ -67,5 +71,15 @@ public class L3VpnTranslatorImplTest {
 
         ctx.setOperType(OperType.DELETE);
         Assert.assertEquals(null, service.translate(ctx));
+    }
+
+    @Test
+    public void testTranslateNull() throws ServiceException, IOException {
+        TranslatorCtx ctx = new TranslatorCtxImpl();
+        ctx.setOperType(OperType.CREATE);
+
+        ctx.addVal(VpnContextKeys.TP, new Tp());
+        L3Vpn l3Vpn = service.translate(ctx);
+        assertEquals(l3Vpn, null);
     }
 }

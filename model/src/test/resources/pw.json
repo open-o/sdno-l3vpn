@@ -1,0 +1,11 @@
+{
+    "uuid": null,
+    "name": "name",
+    "description": "description",
+    "tenantId": "tenantId",
+    "neId": "neId",
+    "peerAddress": "10.2.0.1",
+    "tunnelId": "tunnelId",
+    "topoRole": "hub",
+    "protectionRole": "primary"
+}

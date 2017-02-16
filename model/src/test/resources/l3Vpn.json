@@ -1,0 +1,154 @@
+{
+    "mtu": 1,
+    "frr": false,
+    "labelApplyMode": "labelApplyMode",
+    "acs": {
+        "ac": [{
+            "id": null,
+            "neId": "neId",
+            "ltpId": "ltpId",
+            "name": "name",
+            "localName": "localName",
+            "tenantId": "tenantId",
+            "description": "description",
+            "adminStatus": "ADMIN_UP",
+            "operStatus": "OPERATE_DOWN",
+            "upstreamBandwidth": {
+                "uuid": null,
+                "enable": true,
+                "cir": 1,
+                "pir": 2,
+                "cbs": 3,
+                "pbs": 4
+            },
+            "downstreamBandwidth": null,
+            "l2Access": {
+                "accessType": "accessType",
+                "dot1qVlanBitmap": 1,
+                "qinqSvlanBitmap": "2",
+                "qinqCvlanBitmap": "3",
+                "pushVlanId": "4",
+                "swapVlanId": "5",
+                "accessAction": "POP"
+            },
+            "l3Access": {
+                "ipv4Address": "10.21.10.1",
+                "routes": {
+                    "route": [{
+                        "type": "type",
+                        "staticRoutes": {
+                            "staticRoute": [{
+                                "ipPrefix": "10",
+                                "nextHop": "2",
+                                "routePreference": 3,
+                                "trackBfdEnable": "true"
+                            }]
+                        },
+                        "bgpRoutes": {
+                            "bgpRoute": [{
+                                "remoteAs": "remoteAs",
+                                "localAs": "localAs",
+                                "peerIp": "10.1.1.1",
+                                "localIp": "10.1.1.2",
+                                "keepaliveTime": 100,
+                                "holdTime": 50,
+                                "password": "test",
+                                "advertiseCommunity": true,
+                                "advertiseExtCommunity": true,
+                                "importRoutePolicyName": "importRoutePolicyName",
+                                "exportRoutePolicyName": "exportRoutePolicyName"
+                            }]
+                        },
+                        "isisRoute": {
+                            "networkEntity": "networkEntity"
+                        },
+                        "ospfRoutes": {
+                            "ospfRoute": [{
+                                "id": null,
+                                "networks": {
+                                    "network": [{
+                                        "ip-prefix": "11"
+                                    }]
+                                },
+                                "importRoutes": {
+                                    "importRoute": [{
+                                        "routeType": "DEFAULT"
+                                    }]
+                                }
+                            }]
+                        }
+                    }]
+                }
+            },
+            "inboundQosPolicyId": "inboundQosPolicyId",
+            "outboundQosPolicyId": "outboundQosPolicyId",
+            "inboundQueuePolicyId": "inboundQueuePolicyId",
+            "outboundQueuePolicyId": "outboundQueuePolicyId",
+            "inboundQosIfPhb": {
+                "trust8021p": true,
+                "trustUpstream": true,
+                "phbMap": true
+            },
+            "outboundQosIfPhb": null,
+            "topologyRole": "SPOKE",
+            "acDirection": "IN",
+            "overrideFlows": {
+                "overrideFlow": [{
+                    "id": null,
+                    "externalFlowId": "externalFlowId",
+                    "name": "name",
+                    "direction": "INGRESS",
+                    "car": {
+                        "uuid": null,
+                        "enable": true,
+                        "cir": 1,
+                        "pir": 2,
+                        "cbs": 3,
+                        "pbs": 4
+                    }
+                }]
+            }
+        }]
+    },
+    "loopbackifs": {
+        "loopback": [{
+            "id": null,
+            "neId": "neId",
+            "description": "description",
+            "ipv4Address": "4.15.15.0"
+        }]
+    },
+    "topologyService": {
+        "hubGroups": {
+            "hubGroup": [{
+                "acId": "acId",
+                "hubDirection": "hubDirection"
+            }]
+        },
+        "spokeGroup": {
+            "localBridge": true,
+            "spokeAcs": [{
+                "acId": "acId"
+            }]
+        }
+    },
+    "protectGroups": {
+        "protectGroup": [{
+            "masterAc": "masterAc",
+            "backupAc": "backupAc",
+            "vrrp": {
+                "virtualIp": "10.4.5.6",
+                "vrrpTrackBfd": "vrrpTrackBfd",
+                "bfdParameter": {
+                    "minTxInterval": 1,
+                    "minRxInterval": 2
+                }
+            }
+        }]
+    },
+    "diffServ": {
+        "mode": "mode",
+        "serviceClass": "serviceClass",
+        "color": "color"
+    }
+}

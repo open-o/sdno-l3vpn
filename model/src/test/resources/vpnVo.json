@@ -1,0 +1,281 @@
+{
+    "pwSchema": {
+        "pwTech": "pwTech"
+    },
+    "tunnelSchema": {
+        "uuid": null,
+        "tunnelTech": "RSVP-TE",
+        "pwTech": {
+            "uuid": null,
+            "controlWord": "false",
+            "pwVlanAction": "Raw"
+        },
+        "tunnelLatency": 2000,
+        "tunnelSelectMode": null,
+        "tunnelCreatePolicy": {
+            "uuid": null,
+            "bestEffort": "false",
+            "shareMode": "delegate",
+            "coRoute": "true",
+            "bfdEnable": "true",
+            "pathConstraint": {
+                "uuid": null,
+                "setupPriority": 4,
+                "holdupPriority": 4
+            }
+        },
+        "tunnelAutoSelectPolicy": {
+            "uuid": null,
+            "loadBalanceNum": 1,
+            "selectTunnels": [
+                {
+                    "uuid": null,
+                    "tunnelTech": "LDP",
+                    "priority": 1
+                },
+                {
+                    "uuid": null,
+                    "tunnelTech": "SR-TE",
+                    "priority": 2
+                },
+                {
+                    "uuid": null,
+                    "tunnelTech": "RSVP-TE",
+                    "priority": 3
+                }
+            ]
+        }
+    },
+    "pathConstraints": {
+        "uuid": "7d58ddfa-2e77-4eb1-acc6-1493be75e29a",
+        "tunnelConstraints": [
+            {
+                "uuid": null,
+                "pathConnection": {
+                    "id": null,
+                    "aObject": null,
+                    "zObject": null,
+                    "direction": "CD_UNI",
+                    "linkPoolLabel": "1111"
+                },
+                "tunnelWorkMode": "AutoCreate",
+                "tunnelTech": "LDP",
+                "bodMode": "realBod",
+                "bandwidth": 100,
+                "latency": 200,
+                "bindingTunnels": [
+                    "1"
+                ]
+            }
+        ],
+        "pwConstraints": [
+            {
+                "uuid": null,
+                "role": "master",
+                "bSequence": true,
+                "passNEList": [
+                    "1"
+                ]
+            }
+        ]
+    },
+    "vpn": {
+        "id": "f5bb9634-35fd-4ff0-8387-5b20f1bc9ff1",
+        "name": "1515",
+        "description": "description",
+        "vpnBasicInfo": {
+            "uuid": "5bc9299f-8682-4404-8c6c-e283a996e751",
+            "topology": "point_to_point",
+            "serviceType": "l2vpn",
+            "technology": "mpls",
+            "adminStatus": "inactive",
+            "addtionalInfo": null,
+            "ipMtu": 46,
+            "ipVpnSpec": {
+                "id": "id",
+                "labelMode": "PerInstance",
+                "frrEnable": "frrEnable"
+            }
+        },
+        "operStatus": "down",
+        "syncStatus": "sync",
+        "accessPointList": [
+            {
+                "id": "c36dcb69-4124-421b-9997-115120fd88af",
+                "name": "Ethernet3/0/8",
+                "description": "",
+                "adminStatus": "nop",
+                "operStatus": "nop",
+                "neId": "53521966-4e98-40cb-83a1-ea70872c7b50",
+                "edgePointRole": "nop",
+                "hubSpoke": "spokeBridge",
+                "type": "CTP",
+                "workingLayer": "LR_IP",
+                "typeSpecList": [
+                    {
+                        "uuid": "9954ba0a-3655-4321-8f2d-3f19c391e958",
+                        "layerRate": "LR_MPLS_TE",
+                        "ethernetTpSpec": {
+                            "uuid": "222f45bd-91e1-49b3-a10c-0c9e3f894dd0",
+                            "accessType": "qinq",
+                            "vlanAction": "untag",
+                            "actionValue": "111",
+                            "qinqCvlanList": "111",
+                            "qinqSvlanList": "222",
+                            "dot1qVlanList": "333",
+                            "addtionalInfo": [
+                                {
+                                    "name": "name",
+                                    "value": "value"
+                                }
+                            ]
+                        },
+                        "ipTpSpec": {
+                            "uuid": "c3293561-4e83-4b14-b9ae-bab15d936505",
+                            "masterIp": "16.1.1.1/24",
+                            "addtionalInfo": null
+                        }
+                    }
+                ],
+                "peerCeTp": {
+                    "uuid": "9db7bf02-f253-4bb2-a67e-c21d63bfd6a0",
+                    "ceID": "111",
+                    "ceDirectNeID": "222",
+                    "ceDirectTPID": "333",
+                    "siteName": "CC",
+                    "ceName": "CC",
+                    "ceIfmasterIp": "16.1.1.2/24",
+                    "location": "b",
+                    "addtionalInfo": null
+                },
+                "qosProfileId": "111",
+                "inboundQosPolicyId": "222",
+                "outboundQosPolicyId": "333",
+                "inboundQueueProfileId": "444",
+                "outboundQueueProfileId": "555",
+                "routeProtocolSpecs": [
+                    {
+                        "uuid": "uuid",
+                        "type": "bgp",
+                        "addtionalInfo": null,
+                        "bgpRoute": {
+                            "id": "id",
+                            "idx": 1,
+                            "peerAsNumber": 2,
+                            "keepAliveTime": 10,
+                            "holdTime": 10,
+                            "password": "password",
+                            "bgpMaxPrefix": 1,
+                            "bgpMaxPrefixAlarm": 2,
+                            "peerIp": "2.2.2.2",
+                            "community": "false",
+                            "extCommunity": "true"
+                        },
+                        "staticRoute": null
+                    },
+                    {
+                        "uuid": "uuid2",
+                        "type": "staticRouting",
+                        "addtionalInfo": null,
+                        "bgpRoute": null,
+                        "staticRoute": {
+                            "uuid": "uuid",
+                            "destinationCidr": "destinationCidr",
+                            "routePreference": "routePreference",
+                            "nextHopIp": "10.21.1.1",
+                            "type": "type",
+                            "addtionalInfo": [
+                                {
+                                    "name": "name1",
+                                    "value": "value1"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "containedMainTP": "d7b6b69c-27ef-4ae1-aab1-da370b6f8a66",
+                "controllerMO": {
+                    "id": "id",
+                    "name": "name",
+                    "objectId": "objectId",
+                    "category": "category",
+                    "productName": "productName",
+                    "version": "version",
+                    "hostName": "hostName",
+                    "slaveHostName": "slaveHostName",
+                    "description": "description",
+                    "vendor": "vendor"
+                },
+                "direction": "IN",
+                "addtionalInfo": null
+            },
+            {
+                "id": "d0e5c20e-c4a1-4e1b-962b-5a776197ba06",
+                "name": "Pos3/1/2",
+                "description": "",
+                "adminStatus": null,
+                "operStatus": null,
+                "neId": "6fb99ecc-5791-4840-a1d7-b1df56ec385f",
+                "edgePointRole": null,
+                "hubSpoke": null,
+                "type": "CTP",
+                "workingLayer": null,
+                "typeSpecList": [
+                    {
+                        "uuid": "21765307-ec9e-41a5-8889-2975bcacee2a",
+                        "layerRate": null,
+                        "ethernetTpSpec": {
+                            "uuid": "0263ca14-aa8e-4a80-a41b-5f663b8c166c",
+                            "accessType": null,
+                            "vlanAction": null,
+                            "cvlanList": null,
+                            "svlanList": "1515",
+                            "mappingCvlanList": null,
+                            "mappingSvlanList": null,
+                            "addtionalInfo": null
+                        },
+                        "ipTpSpec": {
+                            "uuid": "8817fa19-bb10-4709-bb39-97444d9513c1",
+                            "masterIp": "15.1.1.1/24",
+                            "addtionalInfo": null
+                        }
+                    }
+                ],
+                "peerCeTp": {
+                    "uuid": "ebd6b8d2-cb9a-4a1a-96fb-678454645d74",
+                    "siteName": "CA",
+                    "ceName": "CA",
+                    "ceIfmasterIp": "15.1.1.2/24",
+                    "location": null,
+                    "addtionalInfo": null
+                },
+                "inboundQosPolicyId": null,
+                "outboundQosPolicyId": null,
+                "inBoundTpCar": {
+                    "enableCar": true,
+                    "cir": 100,
+                    "pir": 200,
+                    "cbs": 100,
+                    "pbs": 200
+                },
+                "outBoundTpCar": {
+                    "enableCar": true,
+                    "cir": 1,
+                    "pir": 2,
+                    "cbs": 1,
+                    "pbs": 2
+                },
+                "routeProtocolSpecs": null,
+                "containedMainTP": "3891f245-e230-4f21-8eae-4d5fc1dfde9f",
+                "addtionalInfo": null
+            }
+        ],
+        "addtionalInfo": null,
+        "actionState": [
+            {
+                "name": "name",
+                "value": "value"
+            }
+        ]
+    }
+}

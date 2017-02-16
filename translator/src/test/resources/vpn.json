@@ -36,6 +36,10 @@
                         "uuid" : "222f45bd-91e1-49b3-a10c-0c9e3f894dd0",
                         "accessType" : null,
                         "vlanAction" : null,
+                        "actionValue": "PUSH",
+                        "qinqCvlanList": "1",
+                        "qinqSvlanList": "2",
+                        "dot1qVlanList": "3",
                         "cvlanList" : null,
                         "svlanList" : "1515",
                         "mappingCvlanList" : null,
@@ -91,9 +95,13 @@
                     "uuid" : "21765307-ec9e-41a5-8889-2975bcacee2a",
                     "layerRate" : null,
                     "ethernetTpSpec" : {
-                        "uuid" : "0263ca14-aa8e-4a80-a41b-5f663b8c166c",
+                        "uuid" : "222f45bd-91e1-49b3-a10c-0c9e3f894dd1",
                         "accessType" : null,
                         "vlanAction" : null,
+                        "actionValue": "POP",
+                        "qinqCvlanList": "1",
+                        "qinqSvlanList": "2",
+                        "dot1qVlanList": "3",
                         "cvlanList" : null,
                         "svlanList" : "1515",
                         "mappingCvlanList" : null,
@@ -136,7 +144,10 @@
             "addtionalInfo" : null
         }
     ],
-    "addtionalInfo" : null,
+    "addtionalInfo" : [{
+        "name": "encapsulation",
+        "value": "eth"
+    }],
     "actionState": [{
         "name": "name",
         "value": "value"

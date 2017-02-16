@@ -1,0 +1,17 @@
+{
+    "id": null,
+    "name": "name",
+    "description": "description",
+    "direction": "CD_UNI",
+    "tunnelType": "RSVP-TE",
+    "pathinfo": {
+        "id": null,
+        "aObject": null,
+        "zObject": null,
+        "direction": "CD_BI",
+        "linkPoolLabel": "1"
+    },
+    "bandwidth": 100,
+    "remainedWidth": 200,
+    "tunnelLatency": 300
+}
