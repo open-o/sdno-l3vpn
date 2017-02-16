@@ -1,5 +1,6 @@
 [
 	{
+		"id": "NeId1",
 		"name": "Ne1",
 		"description": "TestNetworkElement",
 		"productName": "SNC",
@@ -15,6 +16,7 @@
 		"siteName": "Site1"
 	},
 	{
+		"id": "NeId2",
 		"name": "Ne2",
 		"description": "TestNetworkElement",
 		"productName": "SNC",

@@ -7,18 +7,18 @@
 		},
 		"json": {
 			"protectionSchema": {
-				"uuid": "7d58ddfa-2e77-4eb1-acc6-1493be75e29a",
+				"uuid": "7d58ddfa-2e77-4eb1-acc6-1493be75e299",
 				"protectType": "nop",
 				"layerRate": "LR_Ethernet",
 				"reversionMode": "RM_NON_REVERTIVE",
 				"wtr": 0
 			},
 			"vpn": {
-				"id": "0de4547b-50b1-4dcd-80a5-a65bd3c4a834",
-				"name": "L3VPNServiceA",
-				"description": "ASDDS",
+				"id": "0de4547b-50b1-4dcd-80a5-a65bd3c4a839",
+				"name": "L3VPNServiceB",
+				"description": "Error",
 				"vpnBasicInfo": {
-					"uuid": "fda495ce-d4d1-4d93-b6d2-ef129d595e17",
+					"uuid": "fda495ce-d4d1-4d93-b6d2-ef129d595e19",
 					"topology": "full-mesh",
 					"serviceType": "l3vpn",
 					"technology": "mpls",
@@ -30,8 +30,8 @@
 				"syncStatus": null,
 				"accessPointList": [
 					{
-						"id": "9912eaee-8eda-43b8-a991-6d056f57a454",
-						"name": "NEPort1",
+						"id": "Error",
+						"name": "NEError1",
 						"description": "",
 						"adminStatus": "inactive",
 						"operStatus": "down",
