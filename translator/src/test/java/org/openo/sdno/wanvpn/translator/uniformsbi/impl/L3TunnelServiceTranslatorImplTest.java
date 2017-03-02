@@ -63,16 +63,16 @@ public class L3TunnelServiceTranslatorImplTest {
         final TranslatorCtx translatorCtx = translatorCtxFactory.getTranslatorCtx(OperType.CREATE);
         translatorCtx.addVal(VpnContextKeys.TUNNEL_SCHEMA, tunnelSchema);
         TunnelService tunnelService = l3TunnelServiceTranslatorImpl.translate(translatorCtx);
-        assertEquals(tunnelService.getMplsTe().getSignalType(), SignalType.RSVP_TE.name());
+        assertEquals(tunnelService.getMplsTe().getSignalType(), SignalType.RSVP_TE.getAlias());
         assertEquals(PwVlanActionType.TAGGED, PwVlanActionType.fromName(tunnelSchema.getPwTech().getPwVlanAction()));
 
         tunnelSchema.setTunnelTech(TunnelTechType.LDP.getAlias());
         tunnelService = l3TunnelServiceTranslatorImpl.translate(translatorCtx);
-        assertEquals(tunnelService.getMplsTe().getSignalType(), SignalType.LDP.name());
+        assertEquals(tunnelService.getMplsTe().getSignalType(), SignalType.LDP.getAlias());
 
         tunnelSchema.setTunnelTech(TunnelTechType.SR_TE.getAlias());
         tunnelService = l3TunnelServiceTranslatorImpl.translate(translatorCtx);
-        assertEquals(tunnelService.getMplsTe().getSignalType(), SignalType.RSVP_TE.name());
+        assertEquals(tunnelService.getMplsTe().getSignalType(), SignalType.RSVP_TE.getAlias());
 
         tunnelSchema.setTunnelTech(TunnelTechType.GRE.getAlias());
         tunnelService = l3TunnelServiceTranslatorImpl.translate(translatorCtx);
